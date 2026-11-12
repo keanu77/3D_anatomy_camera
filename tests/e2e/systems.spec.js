@@ -53,10 +53,12 @@ test('three-system overview combines all requested layers and draws shared label
     // A settings change redraws after asynchronous bundle reconciliation.
     // Checkbox state alone does not mean the label canvas has been repainted.
     await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBe(0);
+    await expect(page.locator('#hud')).toBeHidden();
     const bare = PNG.sync.read(await page.locator('#stage').screenshot());
     const hudBefore = await page.locator('#hud').evaluate(canvas => canvas.toDataURL());
     await page.locator('#labels').check();
     await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBeGreaterThan(0);
+    await expect(page.locator('#hud')).toBeVisible();
     const labeled = PNG.sync.read(await page.locator('#stage').screenshot());
     const hudAfter = await page.locator('#hud').evaluate(canvas => canvas.toDataURL());
     const changed = pixelmatch(bare.data, labeled.data, null, bare.width, bare.height, { threshold: 0.1, includeAA: false });

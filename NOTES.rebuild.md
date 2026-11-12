@@ -415,9 +415,76 @@ A clean checkout has no cached tracking models. Asset preparation now invokes
 the existing pinned, checksum-verifying model fetcher before copying WASM;
 this makes the prescribed clean `npm ci && npm run check` self-contained.
 
-The release candidate is exported with `git archive` from the staged branch
-tree, allowing all R6 acceptance gates to finish before its milestone commit.
-The export contains no prior Git history or rebuild plan. Its separate initial
-commit, private repository, CI and preview will be verified before R6 is
-reported complete. The existing production site and repository main branch
-are outside these operations.
+The release candidate was exported with `git archive` from staged branch tree
+`7b20782a308a9d7facad6bef6cf091bfeeaad75c`, allowing all R6 acceptance gates to
+finish before its milestone commit. The export at `../anatomy-mirror-export/`
+contains no prior Git history or rebuild plan. Its exact `npm ci && npm run
+check` passed lint, **290 unit tests**, build and **71 browser tests** with zero
+skips (4.4 minutes). The three tracking models were downloaded into this clean
+tree and verified by their pinned checksums. Log:
+`tools/out/rebuild/r6-export-check.log`. The 159 exportable authored text files
+have zero forbidden path matches; whole-source overlap remains **0 / 2639**.
+
+The new repository is `https://github.com/keanu77/anatomy-mirror`, confirmed
+**private** through GitHub. Its initial, history-free commit is
+`6e99cecb3f2e53427e2df1e5064413ffd4ed8d5f`, with the exact archived tree above;
+the initial remote main SHA matched. Subsequent CI follow-up commits described
+below retain that history-free root and do not import the earlier repository.
+
+Initial preview deployment `9b73a05b` uses **rebuild-preview** only:
+`https://rebuild-preview.anatomy-mirror-cj3.pages.dev/`. Its version endpoint
+returns **3.0.0** and the new initial commit. All **46 assets / 47,608,039 bytes**
+match the local build by SHA-256; security and delivery headers pass. Desktop
+(1280 px) and mobile (390 px) browser emulation render and pause successfully,
+with zero horizontal overflow or browser errors. Images are in
+`tools/out/review/preview-desktop.png` and `preview-mobile.png`. The first
+ad-hoc preview check was stopped because it waited on development-only globals,
+which are deliberately absent from production; the completed check instead
+uses the visible controls and canvas. This is not physical-device camera QA.
+
+After deployment, production's version response is unchanged at **2.10.0**,
+commit `9194a2ab724ca731ed314247821d6eef460e0918`. The existing repository's
+remote main remains at that same SHA. No production deployment, DNS change,
+public-repository switch, force push or verification bypass was performed.
+
+The first CI run (`43281703125`) passed shard 1, but identified two test-harness
+portability issues. Shard 3 reported `solid labels are visibly drawn: expected
+> 100, received 0` (27 other tests passed). Settings changes asynchronously
+reconcile bundles before drawing; checking a checkbox is not a render-completion
+barrier. The test now waits for the actual label layout to clear and then become
+nonempty before each screenshot, while retaining the > 100 pixel assertion.
+The failure screenshot itself showed the solid labels present.
+
+Shard 2 passed 23 tests and failed only the text-bearing brain snapshot:
+`expected < 0.01, received 0.022106119791666667`. System font metrics differ
+between macOS and Linux. A reviewed Linux-only reference was extracted exactly
+from the CI stage rectangle (0,252,640,480); comparison reproduces the reported
+**6,791 pixels** exactly. Brain-core and right-hand-core comparison regions each
+have zero differing pixels. The macOS reference remains; all five geometry-only
+cases still share their original reference. Threshold 0.1, includeAA false and
+the 1% limit remain unchanged. No fonts or third-party data were added. The
+first follow-up changes only two test files and this additional rendered reference.
+All seven focused local cases passed after these changes. Remote CI is rerun
+before final acceptance; no successful-CI claim is made from the first run.
+
+The render-completion hypothesis alone did not resolve the solid-label case:
+run `43282877739` passed 70 browser cases and failed the same > 100 assertion
+with 0. Diagnostic commit `1a6e215` then retained both composite screenshots
+and both raw HUD images. In run `43283995962`, the solid-mode HUD before and
+after enabling labels had identical SHA-1 `50c4d575822138bde8468a2b1630672ab7f0aa92`
+and **75,625 nontransparent pixels**, despite the layout having reached zero.
+The composite screenshots were also byte-identical. The X-ray HUD cleared to
+zero, and the local solid HUD cleared to zero, localizing the retained surface
+to the Linux solid-mode path rather than missing label geometry or font metrics.
+
+The renderer now explicitly hides the HUD element when labels are disabled and
+shows it when enabled, in addition to clearing/redrawing its contents. This
+makes the disabled layer's visibility unambiguous even if a canvas surface is
+retained. A local regression first failed with `expected hidden, received visible`;
+after the two-line renderer change, all six visual references pass. The behavior
+case was interrupted by `Execution context was destroyed` during Vite reload,
+before reaching its assertions; the plan-directed rerun passed (1/1), including
+both visibility assertions and the unchanged > 100 pixel assertion. Whole-source
+overlap remains **0 / 2641**. Paired image receipts
+remain attached to the browser test. No upstream Chromium defect is claimed from
+this evidence. Full export and CI acceptance are rerun after the runtime change.

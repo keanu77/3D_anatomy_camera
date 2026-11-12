@@ -232,6 +232,8 @@ export async function createScene({ settings, state, onStats = () => {} }) {
       renderer.clearDepth(); renderer.render(portraitScene, perspective);
       renderer.clearDepth(); renderer.render(handScene, orthographic);
       labels.draw(labelContext);
+      // A disabled label layer must not retain a composited canvas surface.
+      hud.hidden = !settings.labels;
       frameCount++;
       if (frameTime !== null && frame.now > frameTime) fps = fps ? .9 * fps + .1 * 1000 / (frame.now - frameTime) : 1000 / (frame.now - frameTime);
       frameTime = frame.now;
