@@ -54,12 +54,17 @@ test('three-system overview combines all requested layers and draws shared label
     // Checkbox state alone does not mean the label canvas has been repainted.
     await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBe(0);
     const bare = PNG.sync.read(await page.locator('#stage').screenshot());
+    const hudBefore = await page.locator('#hud').evaluate(canvas => canvas.toDataURL());
     await page.locator('#labels').check();
     await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBeGreaterThan(0);
     const labeled = PNG.sync.read(await page.locator('#stage').screenshot());
+    const hudAfter = await page.locator('#hud').evaluate(canvas => canvas.toDataURL());
     const changed = pixelmatch(bare.data, labeled.data, null, bare.width, bare.height, { threshold: 0.1, includeAA: false });
-    expect(changed, `${style} labels are visibly drawn`).toBeGreaterThan(100);
+    await testInfo.attach(`systems-${style}-bare`, { body: PNG.sync.write(bare), contentType: 'image/png' });
     await testInfo.attach(`systems-${style}-labels`, { body: PNG.sync.write(labeled), contentType: 'image/png' });
+    await testInfo.attach(`systems-${style}-hud-before`, { body: Buffer.from(hudBefore.split(',')[1], 'base64'), contentType: 'image/png' });
+    await testInfo.attach(`systems-${style}-hud-after`, { body: Buffer.from(hudAfter.split(',')[1], 'base64'), contentType: 'image/png' });
+    expect(changed, `${style} labels are visibly drawn`).toBeGreaterThan(100);
   }
   expect(errors).toEqual([]);
 });
