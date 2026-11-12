@@ -2,7 +2,7 @@
 
 3D anatomy camera brings reference anatomy into your camera view. You can also explore with the camera-free demo.
 
-[**Open 3D anatomy camera**](https://3danatomycamara.sportsmedicine.tw/) · [Source code](https://github.com/keanu77/3D_anatomy_camera) · [繁體中文](README.zh-TW.md)
+[**Open 3D anatomy camera**](https://3danatomycamera.sportsmedicine.tw/) · [Source code](https://github.com/keanu77/3D_anatomy_camera) · [繁體中文](README.zh-TW.md)
 
 ![Animated camera-free anatomy demo](docs/demo.gif)
 

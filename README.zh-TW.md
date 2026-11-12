@@ -1,12 +1,12 @@
 # 3D anatomy camera 3.0
 
-[English](README.md) · [線上使用](https://3danatomycamara.sportsmedicine.tw/)
+[English](README.md) · [線上使用](https://3danatomycamera.sportsmedicine.tw/)
 
 ![3D anatomy camera 示範](docs/demo.gif)
 
 在攝影機畫面上探索三大系統：**骨骼與關節、肌肉、神經與感覺器官**。既有器官圖層仍可單獨開啟。使用 Three.js 與 MediaPipe Tasks Vision，所有影像及 landmark 都在瀏覽器內處理；沒有影像上傳、analytics 或第三方執行期請求。
 
-- 網站：<https://3danatomycamara.sportsmedicine.tw/>
+- 網站：<https://3danatomycamera.sportsmedicine.tw/>
 - 原始碼：<https://github.com/keanu77/3D_anatomy_camera>（公開 repository）
 - 構想受 Hashem Al-Ghaili 的 X-Ray Mirror 啟發，本專案的程式與資料為獨立製作（[原貼文](https://x.com/HashemGhaili/status/2120202746121085321)）。
 - 獨立重建與驗證紀錄：`NOTES.rebuild.md`；繪製設計：`NOTES.rendering.md`。

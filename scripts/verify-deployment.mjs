@@ -2,7 +2,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
 import { createHash } from 'node:crypto';
 
-const base = new URL(process.argv[2] || 'https://3danatomycamara.sportsmedicine.tw/');
+const base = new URL(process.argv[2] || 'https://3danatomycamera.sportsmedicine.tw/');
 if (base.protocol !== 'https:') throw new Error('Deployment verification requires HTTPS');
 const expected = JSON.parse(await readFile('dist/version.json', 'utf8'));
 if (expected.commit === 'local') throw new Error('Build with BUILD_SHA before verifying a release');
