@@ -1,0 +1,1840 @@
+{
+  "attribution": "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan. Simplified, quantized, and aligned for Anatomy Mirror.",
+  "binaryBytes": 636846,
+  "binarySha256": "741c60cfab6fabdf55e5e0e06b7ad2fd1df05954a9f8e9b325fe3b6ff738cad8",
+  "companionBodyBinarySha256": "8f8a0b6877e2a5ec8a2109212fae24d7e7c03fdf1b73a97573a7de30db18f950",
+  "coverage": {
+    "excluded": [
+      "No individually named source OBJ surfaces for knee/shoulder/hip articular cartilage, menisci, labra, cruciate or collateral ligaments were found in the supplied 3.0 inventory.",
+      "This layer does not provide complete joint capsules, all ligaments, all tendons or a complete cartilage atlas.",
+      "Nasal/thyroid cartilage, intermediate neck tendons, wrist retinacula and the pelvic tendinous arch are outside this torso/limb bundle."
+    ],
+    "regionCount": 15,
+    "regions": [
+      "cervical_discs",
+      "thoracic_discs",
+      "lumbar_discs",
+      "costal_cartilage",
+      "inguinal_ligament",
+      "forearm_membrane",
+      "leg_membrane",
+      "achilles_tendon",
+      "plantar_ligament"
+    ],
+    "scope": "Selected spinal/cartilage/ligament/tendon/membrane surfaces, not complete joint anatomy",
+    "sourceComponents": 49
+  },
+  "demoAspect": 1.3333333333333333,
+  "demoPose": [
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.56232041,
+      "y": 0.24010217,
+      "z": 0.00764917
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.43723433,
+      "y": 0.23997205,
+      "z": 0.00771972
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.58004372,
+      "y": 0.38032139,
+      "z": 0.01062896
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.41942861,
+      "y": 0.38033419,
+      "z": 0.01061224
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.49917902,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.49916366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.53939146,
+      "y": 0.50085393,
+      "z": 0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.46041493,
+      "y": 0.50025341,
+      "z": -0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5276471,
+      "y": 0.70753678,
+      "z": 0.00829172
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47153933,
+      "y": 0.70742745,
+      "z": 0.0081063
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52812686,
+      "y": 0.88444174,
+      "z": 0.01260175
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47136547,
+      "y": 0.88449861,
+      "z": 0.01258065
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52788574,
+      "y": 0.90864114,
+      "z": 0.03002452
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47130176,
+      "y": 0.90852277,
+      "z": 0.03013301
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5403024,
+      "y": 0.91953781,
+      "z": -0.05293796
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.45932815,
+      "y": 0.91948994,
+      "z": -0.05294199
+    }
+  ],
+  "format": "quantized-uint16-le",
+  "labels": [
+    {
+      "layer": "joints",
+      "mesh": "joint_cervical_discs",
+      "pts": [
+        [
+          0.0004928717882175518,
+          1.1710707085577234,
+          0.03955945253941832
+        ]
+      ],
+      "t": "Cerv discs"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_thoracic_discs",
+      "pts": [
+        [
+          -0.003961005298744875,
+          0.7657305052900173,
+          -0.034492182742491655
+        ]
+      ],
+      "t": "Thor discs"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_lumbar_discs",
+      "pts": [
+        [
+          0.0021763867391691575,
+          0.32433848212754907,
+          0.015920915693580638
+        ]
+      ],
+      "t": "Lumbar discs"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_costal_cartilage_L",
+      "pts": [
+        [
+          0.20735393245955652,
+          0.6752496609185749,
+          0.2856841172686296
+        ]
+      ],
+      "t": "Costal L"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_costal_cartilage_R",
+      "pts": [
+        [
+          -0.202909693872944,
+          0.677771500500655,
+          0.2871041119094934
+        ]
+      ],
+      "t": "Costal R"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_inguinal_ligament_L",
+      "pts": [
+        [
+          0.23928662002942855,
+          0.0782662187530903,
+          0.14673403196980356
+        ]
+      ],
+      "t": "Inguinal lig L"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_inguinal_ligament_R",
+      "pts": [
+        [
+          -0.23313728582312096,
+          0.0730021500006207,
+          0.1435551176159893
+        ]
+      ],
+      "t": "Inguinal lig R"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_forearm_membrane_L",
+      "pts": [
+        [
+          0.6249043794892659,
+          0.00014664003941500494,
+          8.415169634279832e-05
+        ]
+      ],
+      "t": "Forearm mem L"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_forearm_membrane_R",
+      "pts": [
+        [
+          0.6337150788695778,
+          8.815050056213103e-05,
+          -0.005420690662264129
+        ]
+      ],
+      "t": "Forearm mem R"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_leg_membrane_L",
+      "pts": [
+        [
+          0.5259393290167038,
+          0.0016358917513262423,
+          -0.0649580207187535
+        ]
+      ],
+      "t": "Leg membrane L"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_leg_membrane_R",
+      "pts": [
+        [
+          0.5331971083111408,
+          0.005486913837129203,
+          0.06709026151680338
+        ]
+      ],
+      "t": "Leg membrane R"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_achilles_tendon_L",
+      "pts": [
+        [
+          0.7884432102345815,
+          -0.10536071385419599,
+          -0.007759605074460578
+        ]
+      ],
+      "t": "Achilles L"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_achilles_tendon_R",
+      "pts": [
+        [
+          0.7671472442771053,
+          -0.1042065915872626,
+          0.00711539579087373
+        ]
+      ],
+      "t": "Achilles R"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_plantar_ligament_L",
+      "pts": [
+        [
+          0.3495507553445252,
+          0.07763041155219684,
+          -0.0013913275664262708
+        ]
+      ],
+      "t": "Plantar lig L"
+    },
+    {
+      "layer": "joints",
+      "mesh": "joint_plantar_ligament_R",
+      "pts": [
+        [
+          0.3393944976990396,
+          0.09161736140475872,
+          -0.0071496373927882545
+        ]
+      ],
+      "t": "Plantar lig R"
+    }
+  ],
+  "layer": "joints",
+  "license": "CC-BY-SA-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+  "limitations": [
+    "Reference anatomy for educational visualization, not patient-specific joint anatomy, ligament integrity or tendon pathology.",
+    "Rigid torso/limb/foot frames do not simulate joint articulation, ligament tension, tendon sliding or tissue deformation.",
+    "Achilles tendons follow the lower-leg frame across the ankle; plantar ligaments follow the foot as one rigid region.",
+    "Spinal disks follow the torso; individual vertebral motion and cervical bending are not modeled.",
+    "Source surfaces may overlap muscle OBJ tendon portions; this bundle does not imply separate nonoverlapping tissue compartments."
+  ],
+  "measuredSourceHeightCm": 164.04426000000004,
+  "meshes": [
+    {
+      "cervical": true,
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        -0.05042568516269378,
+        1.1001584096438444,
+        0.0024854040758540753
+      ],
+      "name": "joint_cervical_discs",
+      "ni": 10500,
+      "nv": 1754,
+      "offI": 10524,
+      "offV": 0,
+      "region": "cervical_discs",
+      "side": "M",
+      "size": [
+        0.09228643430081604,
+        0.16443403778985366,
+        0.07428309537543328
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13896",
+          "name": "intervertebral disk of third cervical vertebra"
+        },
+        {
+          "id": "FMA13897",
+          "name": "intervertebral disk of fourth cervical vertebra"
+        },
+        {
+          "id": "FMA13898",
+          "name": "intervertebral disk of fifth cervical vertebra"
+        },
+        {
+          "id": "FMA13899",
+          "name": "intervertebral disk of sixth cervical vertebra"
+        },
+        {
+          "id": "FMA13900",
+          "name": "intervertebral disk of seventh cervical vertebra"
+        },
+        {
+          "id": "FMA25058",
+          "name": "intervertebral disk of axis"
+        }
+      ],
+      "sourceElements": [
+        "FMA13896",
+        "FMA13897",
+        "FMA13898",
+        "FMA13899",
+        "FMA13900",
+        "FMA25058"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 4508,
+      "triangleBudget": 3500
+    },
+    {
+      "cervical": false,
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        -0.06659751109248614,
+        0.5069423456504745,
+        -0.1051609632436966
+      ],
+      "name": "joint_thoracic_discs",
+      "ni": 42000,
+      "nv": 7085,
+      "offI": 74034,
+      "offV": 31524,
+      "region": "thoracic_discs",
+      "side": "M",
+      "size": [
+        0.1321488278263464,
+        0.5841464542886865,
+        0.16268756668527315
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA10458",
+          "name": "intervertebral disk of first thoracic vertebra"
+        },
+        {
+          "id": "FMA13495",
+          "name": "intervertebral disk of second thoracic vertebra"
+        },
+        {
+          "id": "FMA13500",
+          "name": "intervertebral disk of third thoracic vertebra"
+        },
+        {
+          "id": "FMA13501",
+          "name": "intervertebral disk of fourth thoracic vertebra"
+        },
+        {
+          "id": "FMA13502",
+          "name": "intervertebral disk of fifth thoracic vertebra"
+        },
+        {
+          "id": "FMA13503",
+          "name": "intervertebral disk of sixth thoracic vertebra"
+        },
+        {
+          "id": "FMA13504",
+          "name": "intervertebral disk of seventh thoracic vertebra"
+        },
+        {
+          "id": "FMA13505",
+          "name": "intervertebral disk of eighth thoracic vertebra"
+        },
+        {
+          "id": "FMA13506",
+          "name": "intervertebral disk of ninth thoracic vertebra"
+        },
+        {
+          "id": "FMA13507",
+          "name": "intervertebral disk of tenth thoracic vertebra"
+        },
+        {
+          "id": "FMA13508",
+          "name": "intervertebral disk of eleventh thoracic vertebra"
+        },
+        {
+          "id": "FMA13509",
+          "name": "intervertebral disk of twelfth thoracic vertebra"
+        }
+      ],
+      "sourceElements": [
+        "FMA10458",
+        "FMA13495",
+        "FMA13500",
+        "FMA13501",
+        "FMA13502",
+        "FMA13503",
+        "FMA13504",
+        "FMA13505",
+        "FMA13506",
+        "FMA13507",
+        "FMA13508",
+        "FMA13509"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 23090,
+      "triangleBudget": 14000
+    },
+    {
+      "cervical": false,
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        -0.07619796947096548,
+        0.1705132852886886,
+        -0.059776564778694245
+      ],
+      "name": "joint_lumbar_discs",
+      "ni": 30000,
+      "nv": 5008,
+      "offI": 188082,
+      "offV": 158034,
+      "region": "lumbar_discs",
+      "side": "M",
+      "size": [
+        0.15941549719203,
+        0.3050712504727071,
+        0.13821132560451457
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA16033",
+          "name": "intervertebral disk of first lumbar vertebra"
+        },
+        {
+          "id": "FMA16034",
+          "name": "intervertebral disk of second lumbar vertebra"
+        },
+        {
+          "id": "FMA16035",
+          "name": "intervertebral disk of third lumbar vertebra"
+        },
+        {
+          "id": "FMA16036",
+          "name": "intervertebral disk of fourth lumbar vertebra"
+        },
+        {
+          "id": "FMA16037",
+          "name": "intervertebral disk of fifth lumbar vertebra"
+        }
+      ],
+      "sourceElements": [
+        "FMA16033",
+        "FMA16034",
+        "FMA16035",
+        "FMA16036",
+        "FMA16037"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 16282,
+      "triangleBudget": 10000
+    },
+    {
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        0.01858126530975537,
+        0.38486895271834504,
+        0.07317035646890034
+      ],
+      "name": "joint_costal_cartilage_L",
+      "ni": 21000,
+      "nv": 3524,
+      "offI": 269226,
+      "offV": 248082,
+      "region": "costal_cartilage",
+      "side": "L",
+      "size": [
+        0.3572302776333467,
+        0.6404123422410906,
+        0.24580234286834202
+      ],
+      "sourceConcepts": [
+        {
+          "id": "BP24",
+          "name": "left costal cartilage"
+        },
+        {
+          "id": "FMA8005",
+          "name": "left first costal cartilage"
+        },
+        {
+          "id": "FMA8031",
+          "name": "left second costal cartilage"
+        },
+        {
+          "id": "FMA8058",
+          "name": "left third costal cartilage"
+        },
+        {
+          "id": "FMA8112",
+          "name": "left fifth costal cartilage"
+        },
+        {
+          "id": "FMA8167",
+          "name": "left fourth costal cartilage"
+        },
+        {
+          "id": "FMA8221",
+          "name": "left sixth costal cartilage"
+        },
+        {
+          "id": "FMA8275",
+          "name": "left seventh costal cartilage"
+        }
+      ],
+      "sourceElements": [
+        "BP24",
+        "FMA8005",
+        "FMA8031",
+        "FMA8058",
+        "FMA8112",
+        "FMA8167",
+        "FMA8221",
+        "FMA8275"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 11098,
+      "triangleBudget": 7000
+    },
+    {
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        -0.3794514152149479,
+        0.38469725976510516,
+        0.07608109321094333
+      ],
+      "name": "joint_costal_cartilage_R",
+      "ni": 21000,
+      "nv": 3560,
+      "offI": 332586,
+      "offV": 311226,
+      "region": "costal_cartilage",
+      "side": "R",
+      "size": [
+        0.7020788124706592,
+        0.6394438301755264,
+        0.2428757176849066
+      ],
+      "sourceConcepts": [
+        {
+          "id": "BP28",
+          "name": "right costal cartilage"
+        },
+        {
+          "id": "FMA7875",
+          "name": "right first costal cartilage"
+        },
+        {
+          "id": "FMA7886",
+          "name": "right second costal cartilage"
+        },
+        {
+          "id": "FMA7913",
+          "name": "right third costal cartilage"
+        },
+        {
+          "id": "FMA7976",
+          "name": "right fourth costal cartilage"
+        },
+        {
+          "id": "FMA8070",
+          "name": "right fifth costal cartilage"
+        },
+        {
+          "id": "FMA8194",
+          "name": "right sixth costal cartilage"
+        },
+        {
+          "id": "FMA8248",
+          "name": "right seventh costal cartilage"
+        }
+      ],
+      "sourceElements": [
+        "BP28",
+        "FMA7875",
+        "FMA7886",
+        "FMA7913",
+        "FMA7976",
+        "FMA8070",
+        "FMA8194",
+        "FMA8248"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 11558,
+      "triangleBudget": 7000
+    },
+    {
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        0.04688760486032701,
+        -0.03780082082202072,
+        0.12726830318822913
+      ],
+      "name": "joint_inguinal_ligament_L",
+      "ni": 5400,
+      "nv": 939,
+      "offI": 380220,
+      "offV": 374586,
+      "region": "inguinal_ligament",
+      "side": "L",
+      "size": [
+        0.31994128154469126,
+        0.2145886368158789,
+        0.03112209627213844
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA21965",
+          "name": "left inguinal ligament"
+        }
+      ],
+      "sourceElements": [
+        "FMA21965"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 2566,
+      "triangleBudget": 1800
+    },
+    {
+      "frame": "torso",
+      "layer": "joints",
+      "min": [
+        -0.3689760594768045,
+        -0.037967557626598925,
+        0.12739397391397192
+      ],
+      "name": "joint_inguinal_ligament_R",
+      "ni": 5400,
+      "nv": 972,
+      "offI": 396852,
+      "offV": 391020,
+      "region": "inguinal_ligament",
+      "side": "R",
+      "size": [
+        0.32003102631439573,
+        0.21453497731766322,
+        0.03138859435816324
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA21964",
+          "name": "right inguinal ligament"
+        }
+      ],
+      "sourceElements": [
+        "FMA21964"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 2646,
+      "triangleBudget": 1800
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal reference joints; not tissue attachment sites",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        13,
+        15
+      ],
+      "layer": "joints",
+      "min": [
+        0.2732537523654961,
+        -0.04197198329543246,
+        -0.045334130761546854
+      ],
+      "name": "joint_forearm_membrane_L",
+      "ni": 6600,
+      "nv": 1098,
+      "offI": 414240,
+      "offV": 407652,
+      "region": "forearm_membrane",
+      "side": "L",
+      "size": [
+        0.6757132727278238,
+        0.07428939526597708,
+        0.09176505111561947
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA23708",
+          "name": "interosseous membrane of left forearm"
+        }
+      ],
+      "sourceElements": [
+        "FMA23708"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            4.693349999999999,
+            -23.21180000000001,
+            4.52008
+          ],
+          [
+            -0.7221388468002167,
+            4.4654141857341,
+            23.68089754009943
+          ],
+          [
+            -23.63677850157129,
+            -4.745390771974913,
+            0.1740263135657451
+          ]
+        ],
+        "originCm": [
+          20.8424,
+          105.17100000000002,
+          6.404305000000001
+        ]
+      },
+      "sourceTriangles": 2760,
+      "triangleBudget": 2200
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal reference joints; not tissue attachment sites",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        14,
+        16
+      ],
+      "layer": "joints",
+      "min": [
+        0.2723055009627121,
+        -0.04294266785608399,
+        -0.0488729281475069
+      ],
+      "name": "joint_forearm_membrane_R",
+      "ni": 6600,
+      "nv": 1123,
+      "offI": 434178,
+      "offV": 427440,
+      "region": "forearm_membrane",
+      "side": "R",
+      "size": [
+        0.6761293692213772,
+        0.07327479030554655,
+        0.09350972864618251
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA23707",
+          "name": "interosseous membrane of right forearm"
+        }
+      ],
+      "sourceElements": [
+        "FMA23707"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -4.731800000000003,
+            -23.206300000000013,
+            4.568275000000001
+          ],
+          [
+            0.7124512680100155,
+            4.516835659014887,
+            23.68294821650776
+          ],
+          [
+            -23.64093715055172,
+            4.7809270382507,
+            -0.2006357500858563
+          ]
+        ],
+        "originCm": [
+          -20.9798,
+          105.16850000000001,
+          6.40866
+        ]
+      },
+      "sourceTriangles": 2882,
+      "triangleBudget": 2200
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal reference joints; not tissue attachment sites",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        25,
+        27
+      ],
+      "layer": "joints",
+      "min": [
+        0.12412486749416918,
+        -0.02582380413326572,
+        -0.09782165065949908
+      ],
+      "name": "joint_leg_membrane_L",
+      "ni": 12000,
+      "nv": 2018,
+      "offI": 459486,
+      "offV": 447378,
+      "region": "leg_membrane",
+      "side": "L",
+      "size": [
+        0.8192322022176551,
+        0.05839468995579129,
+        0.06372904689989076
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA35193",
+          "name": "interosseous membrane of left leg"
+        }
+      ],
+      "sourceElements": [
+        "FMA35193"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            0.12492500000000106,
+            -34.54791,
+            -1.12228
+          ],
+          [
+            -0.00948357021767317,
+            -1.1223215435092857,
+            34.54813321204195
+          ],
+          [
+            -34.566132381688234,
+            -0.12455122239438372,
+            -0.013534649206336166
+          ]
+        ],
+        "originCm": [
+          7.198964999999999,
+          41.26885,
+          7.012895
+        ]
+      },
+      "sourceTriangles": 12708,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal reference joints; not tissue attachment sites",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        26,
+        28
+      ],
+      "layer": "joints",
+      "min": [
+        0.12400733498031301,
+        -0.027218169059513762,
+        0.033040214349406745
+      ],
+      "name": "joint_leg_membrane_R",
+      "ni": 12000,
+      "nv": 2001,
+      "offI": 495492,
+      "offV": 483486,
+      "region": "leg_membrane",
+      "side": "R",
+      "size": [
+        0.8192099286597703,
+        0.05878661237361802,
+        0.06347118416489211
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA35192",
+          "name": "interosseous membrane of right leg"
+        }
+      ],
+      "sourceElements": [
+        "FMA35192"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -0.04526999999999948,
+            -34.580365,
+            -1.1650650000000002
+          ],
+          [
+            -0.021796130753306026,
+            -1.1650372645535376,
+            34.58038869737059
+          ],
+          [
+            -34.59997897277011,
+            0.045978248407394895,
+            -0.020259439508610626
+          ]
+        ],
+        "originCm": [
+          -7.410810000000001,
+          41.2902,
+          7.061175
+        ]
+      },
+      "sourceTriangles": 12870,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal reference joints; not tissue attachment sites",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        25,
+        27
+      ],
+      "layer": "joints",
+      "min": [
+        0.5499020616368056,
+        -0.14273790437832612,
+        -0.11092376986550377
+      ],
+      "name": "joint_achilles_tendon_L",
+      "ni": 12000,
+      "nv": 2019,
+      "offI": 531606,
+      "offV": 519492,
+      "region": "achilles_tendon",
+      "side": "L",
+      "size": [
+        0.6160459618177179,
+        0.06359716195244618,
+        0.1771623140369177
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA264844",
+          "name": "left calcaneal tendon"
+        }
+      ],
+      "sourceElements": [
+        "FMA264844"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            0.12492500000000106,
+            -34.54791,
+            -1.12228
+          ],
+          [
+            -0.00948357021767317,
+            -1.1223215435092857,
+            34.54813321204195
+          ],
+          [
+            -34.566132381688234,
+            -0.12455122239438372,
+            -0.013534649206336166
+          ]
+        ],
+        "originCm": [
+          7.198964999999999,
+          41.26885,
+          7.012895
+        ]
+      },
+      "sourceTriangles": 9446,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal reference joints; not tissue attachment sites",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        26,
+        28
+      ],
+      "layer": "joints",
+      "min": [
+        0.5497911072255733,
+        -0.1432995509507634,
+        -0.06684414078724679
+      ],
+      "name": "joint_achilles_tendon_R",
+      "ni": 12000,
+      "nv": 1991,
+      "offI": 567552,
+      "offV": 555606,
+      "region": "achilles_tendon",
+      "side": "R",
+      "size": [
+        0.6162101094018123,
+        0.06385796696091325,
+        0.17661897729345766
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA258847",
+          "name": "right calcaneal tendon"
+        }
+      ],
+      "sourceElements": [
+        "FMA258847"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -0.04526999999999948,
+            -34.580365,
+            -1.1650650000000002
+          ],
+          [
+            -0.021796130753306026,
+            -1.1650372645535376,
+            34.58038869737059
+          ],
+          [
+            -34.59997897277011,
+            0.045978248407394895,
+            -0.020259439508610626
+          ]
+        ],
+        "originCm": [
+          -7.410810000000001,
+          41.2902,
+          7.061175
+        ]
+      },
+      "sourceTriangles": 9282,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "foot",
+      "landmarks": [
+        27,
+        29,
+        31
+      ],
+      "layer": "joints",
+      "min": [
+        0.13455955891226387,
+        -0.24648604443174335,
+        -0.21160555981727977
+      ],
+      "name": "joint_plantar_ligament_L",
+      "ni": 7500,
+      "nv": 1256,
+      "offI": 599088,
+      "offV": 591552,
+      "region": "plantar_ligament",
+      "side": "L",
+      "size": [
+        0.3250032616295956,
+        0.6534031755003527,
+        0.4086530992409116
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA44250",
+          "name": "left long plantar ligament"
+        }
+      ],
+      "sourceElements": [
+        "FMA44250"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            3.2331450000000004,
+            -2.12801915,
+            21.602408
+          ],
+          [
+            0.06278499999999987,
+            4.725919500000001,
+            4.536673
+          ],
+          [
+            -11.796429624748306,
+            -1.405223018461625,
+            1.627097588648438
+          ]
+        ],
+        "originCm": [
+          7.261105000000001,
+          1.9950204999999999,
+          1.3539420000000002
+        ]
+      },
+      "sourceTriangles": 5032,
+      "triangleBudget": 2500
+    },
+    {
+      "frame": "foot",
+      "landmarks": [
+        28,
+        30,
+        32
+      ],
+      "layer": "joints",
+      "min": [
+        0.13574036616789348,
+        -0.24995635791972898,
+        -0.1982305465559844
+      ],
+      "name": "joint_plantar_ligament_R",
+      "ni": 7500,
+      "nv": 1293,
+      "offI": 621846,
+      "offV": 614088,
+      "region": "plantar_ligament",
+      "side": "R",
+      "size": [
+        0.32425601819141825,
+        0.6587276600442735,
+        0.406346094691554
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA44249",
+          "name": "right long plantar ligament"
+        }
+      ],
+      "sourceElements": [
+        "FMA44249"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -3.1177800000000007,
+            -2.1417869499999997,
+            21.6317075
+          ],
+          [
+            0.016589999999999883,
+            4.6916975,
+            4.5704175
+          ],
+          [
+            -11.791849065722785,
+            1.5480140848623474,
+            -1.5462891597787563
+          ]
+        ],
+        "originCm": [
+          -7.47267,
+          2.0181375,
+          1.3256925000000002
+        ]
+      },
+      "sourceTriangles": 7092,
+      "triangleBudget": 2500
+    }
+  ],
+  "referenceMethods": {
+    "11": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.18442
+    },
+    "12": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.15827
+    },
+    "23": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.43862
+    },
+    "24": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.37394
+    }
+  },
+  "referencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      8.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -8.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  },
+  "schemaVersion": 1,
+  "source": {
+    "archiveDate": "2011-09-15",
+    "dataset": "BodyParts3D",
+    "downloads": [
+      {
+        "sha256": "2125f6d761b14ead4ee64f71713f56f3f0f29982693ff20aac63474470cb92f4",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip"
+      },
+      {
+        "sha256": "824a34ed939a53375037d0d68b88ad2b63b1f0ae15a585632af2a63c2ab2e4af",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/parts_list_e.txt"
+      },
+      {
+        "sha256": "17cd3611eb6b46558f983f890273fdb19f93806150ed95f6611acf4b81e90bc2",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/composite_parts.txt"
+      }
+    ],
+    "elementCount": 49,
+    "elementIds": [
+      "BP24",
+      "BP28",
+      "FMA10458",
+      "FMA13495",
+      "FMA13500",
+      "FMA13501",
+      "FMA13502",
+      "FMA13503",
+      "FMA13504",
+      "FMA13505",
+      "FMA13506",
+      "FMA13507",
+      "FMA13508",
+      "FMA13509",
+      "FMA13896",
+      "FMA13897",
+      "FMA13898",
+      "FMA13899",
+      "FMA13900",
+      "FMA16033",
+      "FMA16034",
+      "FMA16035",
+      "FMA16036",
+      "FMA16037",
+      "FMA21964",
+      "FMA21965",
+      "FMA23707",
+      "FMA23708",
+      "FMA25058",
+      "FMA258847",
+      "FMA264844",
+      "FMA35192",
+      "FMA35193",
+      "FMA44249",
+      "FMA44250",
+      "FMA7875",
+      "FMA7886",
+      "FMA7913",
+      "FMA7976",
+      "FMA8005",
+      "FMA8031",
+      "FMA8058",
+      "FMA8070",
+      "FMA8112",
+      "FMA8167",
+      "FMA8194",
+      "FMA8221",
+      "FMA8248",
+      "FMA8275"
+    ],
+    "officialLicensePage": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "outputUnit": "cm",
+    "sourceUnit": "mm",
+    "transform": "[x, z, -y] / 10",
+    "version": "3.0"
+  },
+  "torsoReferencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      10.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -10.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  }
+}

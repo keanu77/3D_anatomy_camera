@@ -1,0 +1,381 @@
+{
+  "files": {
+    "public/anatomy/body.bin": "8f8a0b6877e2a5ec8a2109212fae24d7e7c03fdf1b73a97573a7de30db18f950",
+    "public/anatomy/body.json": "dd308ea3a567f8043e35c21cd318f449ad3bba55af4aa4239de2948edf7c565b",
+    "public/anatomy/muscles.bin": "d7b85c252518916e7ed05df98e96ea99d3c736e173332417678e9a0bf3fd8d6d",
+    "public/anatomy/muscles.json": "83d4ea746a7aa4504330dd703bedcb741ee70602b3732b945c3e9c4d1752a53e",
+    "public/anatomy/joints.bin": "741c60cfab6fabdf55e5e0e06b7ad2fd1df05954a9f8e9b325fe3b6ff738cad8",
+    "public/anatomy/joints.json": "45697b18b01bb72cc905cccdb75672dd8b71bc3906a00409eba4216f67674209",
+    "public/anatomy/individual-body.bin": "ee0e6abbe6e56ea6e1e538905202510d4d475f6eb8625e5c605e7ade9444e5f0",
+    "public/anatomy/individual-body.json": "68dd5a032db908be487c5a95cc24dcfe4d0adf04052f06182c8c859e9d5eef83",
+    "src/nerve-names.js": "0dc6025019802f7a25cce2a136f9d220d8db0548a2784301feff90d931794df2",
+    "src/anatomy-names.js": "281351eb886b78bac68508a8daff600bd2f2136ede689aa06e301c76ee6f1c6b",
+    "src/label-names.js": "fd22e43cda5a279c71b86fa801c297f5c7224b473f382356bb0a6f1bdbce00fa"
+  },
+  "meshes": {
+    "nerves": [
+      {
+        "name": "cord_cervical",
+        "frame": "torso",
+        "nv": 2200,
+        "ni": 11880,
+        "min": [
+          -0.023728608106453723,
+          1.1149406913169793,
+          -0.023051294781951663
+        ],
+        "size": [
+          0.04306760322886379,
+          0.18260587766424274,
+          0.07418762752252073
+        ],
+        "vertexBytesSHA256": "b26483298d9569e2248a32843aeed65621d4ee576dbab76c48cac77b60e398f0",
+        "indexBytesSHA256": "43c72411214bb32a5ad0178f0aef067118df7b283666fc17c57655060fec2805"
+      },
+      {
+        "name": "cord_thoracic",
+        "frame": "torso",
+        "nv": 4700,
+        "ni": 26208,
+        "min": [
+          -0.027664362079830883,
+          0.6660696807444109,
+          -0.12170498070474309
+        ],
+        "size": [
+          0.03944984219168707,
+          0.4553788795799467,
+          0.11571088218262823
+        ],
+        "vertexBytesSHA256": "d02fa3ae5af8849bad34b413bec5368526d89683b571258375f2a1b39dbc537b",
+        "indexBytesSHA256": "183dc2c22384c551dd2c63006aa1afd79219268b2bf78a4963dc602e32cae306"
+      },
+      {
+        "name": "cord_lumbar",
+        "frame": "torso",
+        "nv": 1131,
+        "ni": 5940,
+        "min": [
+          -0.01387512962995547,
+          0.5565629123058301,
+          -0.10110721859130369
+        ],
+        "size": [
+          0.026946725523552477,
+          0.11101038311105194,
+          0.045750372708282555
+        ],
+        "vertexBytesSHA256": "1259e98c9e31c5190b5040b7155a9c137a0179fd298c8f4f0fcb749fab9b5058",
+        "indexBytesSHA256": "ca2d3297be4d2b7bbf953006df380ba45bb3356e9499a96982e77345a5948c8c"
+      },
+      {
+        "name": "cord_sacral",
+        "frame": "torso",
+        "nv": 962,
+        "ni": 5046,
+        "min": [
+          -0.01185425811511841,
+          0.47963370668328864,
+          -0.07183990329491101
+        ],
+        "size": [
+          0.02464743075204265,
+          0.08270862630824483,
+          0.03442320377771451
+        ],
+        "vertexBytesSHA256": "3077dbd43fc8741e78d8a5a2c53fae93fdf3398092e72a46bc616c6a3b752e4e",
+        "indexBytesSHA256": "a8a37d3ec5fadcb2b7fd630e35623ec42fbe21e769867ba15db9a31e36cd00ac"
+      }
+    ],
+    "peripheral": [
+      {
+        "name": "pn_trunk_L",
+        "frame": "torso",
+        "nv": 1797,
+        "ni": 10650,
+        "min": [
+          0.030128125224294228,
+          0.22915012247008212,
+          -0.16308604842394359
+        ],
+        "size": [
+          0.37648627123276357,
+          0.8726905060790647,
+          0.46585558498278623
+        ],
+        "vertexBytesSHA256": "2250edfa7926f6c9a26d5d369ed153fa5795b51a8152e10ef67273d05b1714d1",
+        "indexBytesSHA256": "43398be14b837b09ec0e802a9a011b36268d20fd90c7cdaaa793693108e3122a"
+      },
+      {
+        "name": "pn_brachial_L",
+        "frame": "torso",
+        "nv": 1700,
+        "ni": 9660,
+        "min": [
+          0.03792199681875823,
+          0.6450101038328073,
+          -0.20185108876833108
+        ],
+        "size": [
+          0.4491833178342921,
+          0.5872433625167051,
+          0.5540846283124762
+        ],
+        "vertexBytesSHA256": "4c884603baac4d210a13cb656ad4699193bf1af2790c3fbcc3cad1945e1ceb40",
+        "indexBytesSHA256": "11e41fb6901c119c40f2b94cef8e780741d168af5e662d11b9bdffeefb347756"
+      },
+      {
+        "name": "pn_upperarm_L",
+        "frame": "bone",
+        "nv": 787,
+        "ni": 4530,
+        "min": [
+          0.021878513994564707,
+          -0.2151760991504569,
+          -0.20325814199109232
+        ],
+        "size": [
+          0.9887398285891562,
+          0.31172731471034415,
+          0.3327381044024145
+        ],
+        "vertexBytesSHA256": "0bf2e3d964a868558159837c2584d76f14720764bd30705a89fb7edea46b39f3",
+        "indexBytesSHA256": "b90239cce4d430d36f03de3e1957d18519cf9f7364dc52a6dd69c450a4358adc"
+      },
+      {
+        "name": "pn_forearm_L",
+        "frame": "bone",
+        "nv": 876,
+        "ni": 4980,
+        "min": [
+          -0.018359123645915645,
+          -0.1359031566983661,
+          -0.19580412159219748
+        ],
+        "size": [
+          1.020606741029361,
+          0.27473136740630477,
+          0.3573708485901157
+        ],
+        "vertexBytesSHA256": "3f42e9fdbbc3596048924e423617976bfd927ad76dc7c0eca9548d2c819d9ef8",
+        "indexBytesSHA256": "5971de2c2e05cb5cfc0adf105bbbf73fa44cbb53f981c3ac127e1a96df19bbf7"
+      },
+      {
+        "name": "pn_lumbosacral_L",
+        "frame": "torso",
+        "nv": 2039,
+        "ni": 11790,
+        "min": [
+          0.031369337621255905,
+          -0.2404504001746108,
+          -0.2253339275906517
+        ],
+        "size": [
+          0.35063673846074705,
+          0.767737518555356,
+          0.3873177455399426
+        ],
+        "vertexBytesSHA256": "a23e047571ff05a9c6e58b2bc7eb634d7551bb265fd88b8f0308d9b3ccc4a7d0",
+        "indexBytesSHA256": "594e796ad900f02fb31454ab43b8775b785c9f27e1c899d4fc519b7b65b9479d"
+      },
+      {
+        "name": "pn_thigh_L",
+        "frame": "bone",
+        "nv": 606,
+        "ni": 3480,
+        "min": [
+          -0.03849121444544289,
+          -0.19714087303026662,
+          -0.19930689771339297
+        ],
+        "size": [
+          1.0404256888077412,
+          0.37656406626242883,
+          0.3349964564586019
+        ],
+        "vertexBytesSHA256": "abaec18e5774af5cede9596856061512d9ea82578dc933977e59719d913502b3",
+        "indexBytesSHA256": "bf8ca34a1c6343cabcce188868ef7837bc820378755aee40823e71abf60174b9"
+      },
+      {
+        "name": "pn_shin_L",
+        "frame": "bone",
+        "nv": 703,
+        "ni": 4050,
+        "min": [
+          -0.013894304000567504,
+          -0.20379729449324618,
+          -0.14484139636638826
+        ],
+        "size": [
+          1.0155226046821697,
+          0.3213204559822978,
+          0.25203635442748196
+        ],
+        "vertexBytesSHA256": "4a06dfb2bd9fb9903cb51671e1fa9df1b1e841d283f19e0b7210c8bb7be96f18",
+        "indexBytesSHA256": "971a7642cd686c87dccb18d276a59bc01f611ade4ffad0335717f33406d21521"
+      },
+      {
+        "name": "pn_foot_L",
+        "frame": "foot",
+        "nv": 1310,
+        "ni": 7380,
+        "min": [
+          -0.11755537116480846,
+          -0.283358539236307,
+          -0.37785006295179707
+        ],
+        "size": [
+          1.1025697027769064,
+          1.3311920357557052,
+          0.6815984182482739
+        ],
+        "vertexBytesSHA256": "d8aaf142affafa43daa7fa74a78f2ae8a4fe7954a86cb8c5a35017378146c58a",
+        "indexBytesSHA256": "4407e26a4cbd28ebaa8f69185ef3e811c32d3c62c5b8bdd186f71db63811e504"
+      },
+      {
+        "name": "pn_trunk_R",
+        "frame": "torso",
+        "nv": 1797,
+        "ni": 10650,
+        "min": [
+          -0.4102035197712586,
+          0.2288999115361046,
+          -0.16329191554283742
+        ],
+        "size": [
+          0.37584565847725143,
+          0.8729631782930245,
+          0.46565569932290807
+        ],
+        "vertexBytesSHA256": "33ae2115ecb460ac219778b733f21ef1f7e25d341e9fc104051b160b2a5be7e4",
+        "indexBytesSHA256": "43398be14b837b09ec0e802a9a011b36268d20fd90c7cdaaa793693108e3122a"
+      },
+      {
+        "name": "pn_brachial_R",
+        "frame": "torso",
+        "nv": 1705,
+        "ni": 9690,
+        "min": [
+          -0.47169475111984466,
+          0.6446997253224818,
+          -0.2020544289967571
+        ],
+        "size": [
+          0.4340723786399768,
+          0.5877490051105541,
+          0.5550020542526833
+        ],
+        "vertexBytesSHA256": "784621f7a8355b7bdbe3fb20666d56ff6249645b5572c6fdb4dc985e356603f4",
+        "indexBytesSHA256": "fa6c599ec5775ed0f67ff9cecd534bb6f3897a59cba9eafeb032bfa4eb106ce5"
+      },
+      {
+        "name": "pn_upperarm_R",
+        "frame": "bone",
+        "nv": 789,
+        "ni": 4530,
+        "min": [
+          0.022791041458006218,
+          -0.21511461682917446,
+          -0.12808588036172738
+        ],
+        "size": [
+          0.9872643622613956,
+          0.31145224664725657,
+          0.33127819578737483
+        ],
+        "vertexBytesSHA256": "6359ea9422550d8d01cbda097455168703df87efb546356cd85c2a1d850e04e1",
+        "indexBytesSHA256": "7e5a47728108f9702ea2fab84d2ac2105bb1371ce59464646a81c02bedc10d90"
+      },
+      {
+        "name": "pn_forearm_R",
+        "frame": "bone",
+        "nv": 881,
+        "ni": 5010,
+        "min": [
+          -0.01886151261328934,
+          -0.13637733035142496,
+          -0.16073582290519814
+        ],
+        "size": [
+          1.0208658434077198,
+          0.2748497077958002,
+          0.35566013630985915
+        ],
+        "vertexBytesSHA256": "a552cccb3b8c8cc609033a5ab6993e4a4ba86d356614d3032368097a40b1a2b2",
+        "indexBytesSHA256": "4a5999eadc10b5cda06a282cfc6f164665b13e50611dda8610f6f25a68d56f86"
+      },
+      {
+        "name": "pn_lumbosacral_R",
+        "frame": "torso",
+        "nv": 2049,
+        "ni": 11850,
+        "min": [
+          -0.38248148452237124,
+          -0.22548993389887897,
+          -0.2238502184280861
+        ],
+        "size": [
+          0.34947511167437834,
+          0.7525089234563451,
+          0.386179074782814
+        ],
+        "vertexBytesSHA256": "1a8516a905e6e9d057ec065cd3f9e82522e75e705769e5d1ba3a252893857c9a",
+        "indexBytesSHA256": "4a40f6096301e7aa8e6d819b40d095f9c4ab0fa1ca0b2f8e076d2196bc3f5de6"
+      },
+      {
+        "name": "pn_thigh_R",
+        "frame": "bone",
+        "nv": 606,
+        "ni": 3480,
+        "min": [
+          -0.03457107029486587,
+          -0.1988915725189606,
+          -0.13695966740233192
+        ],
+        "size": [
+          1.0376363289194843,
+          0.3763349600212022,
+          0.3344207829670849
+        ],
+        "vertexBytesSHA256": "242cdba5d1b39c2034acf80457ad0b526c10dfd53da4e9bf92bb66c794be6a5b",
+        "indexBytesSHA256": "1e01a1940cbd1a19e66a583862166b86f0b50c07a06f4748a7ebb7a3193b91cb"
+      },
+      {
+        "name": "pn_shin_R",
+        "frame": "bone",
+        "nv": 703,
+        "ni": 4050,
+        "min": [
+          -0.012757075102236027,
+          -0.20429273788240315,
+          -0.11029782153792152
+        ],
+        "size": [
+          1.0140417860111208,
+          0.32008361637910776,
+          0.2520261850607268
+        ],
+        "vertexBytesSHA256": "523affb28b7c2ba8d30f835b798b9cb813d056baee25b86136764ec5797a549a",
+        "indexBytesSHA256": "971a7642cd686c87dccb18d276a59bc01f611ade4ffad0335717f33406d21521"
+      },
+      {
+        "name": "pn_foot_R",
+        "frame": "foot",
+        "nv": 1310,
+        "ni": 7380,
+        "min": [
+          -0.11827385516434505,
+          -0.301074576997398,
+          -0.30731507435231004
+        ],
+        "size": [
+          1.1035245793166024,
+          1.3507365515002794,
+          0.6809964343824053
+        ],
+        "vertexBytesSHA256": "d4aefe629c4de073606dbc98905d1f7ea234ccca9bc82bca128e7a02865f0f7a",
+        "indexBytesSHA256": "4407e26a4cbd28ebaa8f69185ef3e811c32d3c62c5b8bdd186f71db63811e504"
+      }
+    ]
+  }
+}

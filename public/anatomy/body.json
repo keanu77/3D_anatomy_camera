@@ -1,0 +1,2392 @@
+{
+  "attribution": "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan. Simplified, quantized, and aligned for Anatomy Mirror.",
+  "binaryBytes": 1224018,
+  "binarySha256": "8f8a0b6877e2a5ec8a2109212fae24d7e7c03fdf1b73a97573a7de30db18f950",
+  "demoAspect": 1.3333333333333333,
+  "demoPose": [
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.56232041,
+      "y": 0.24010217,
+      "z": 0.00764917
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.43723433,
+      "y": 0.23997205,
+      "z": 0.00771972
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.58004372,
+      "y": 0.38032139,
+      "z": 0.01062896
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.41942861,
+      "y": 0.38033419,
+      "z": 0.01061224
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.49917902,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.49916366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.53939146,
+      "y": 0.50085393,
+      "z": 0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.46041493,
+      "y": 0.50025341,
+      "z": -0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5276471,
+      "y": 0.70753678,
+      "z": 0.00829172
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47153933,
+      "y": 0.70742745,
+      "z": 0.0081063
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52812686,
+      "y": 0.88444174,
+      "z": 0.01260175
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47136547,
+      "y": 0.88449861,
+      "z": 0.01258065
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52788574,
+      "y": 0.90864114,
+      "z": 0.03002452
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47130176,
+      "y": 0.90852277,
+      "z": 0.03013301
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5403024,
+      "y": 0.91953781,
+      "z": -0.05293796
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.45932815,
+      "y": 0.91948994,
+      "z": -0.05294199
+    }
+  ],
+  "format": "quantized-uint16-le",
+  "labels": [
+    {
+      "layer": "spine",
+      "mesh": "torso_skel",
+      "pts": [
+        [
+          0.012121679435808894,
+          0.7070784458074747,
+          -0.03817910220049053
+        ]
+      ],
+      "t": "Torso skeleton"
+    },
+    {
+      "layer": "spine",
+      "mesh": "cervical_skel",
+      "pts": [
+        [
+          -0.008955708829205117,
+          1.1696178395086623,
+          0.030630208281933236
+        ]
+      ],
+      "t": "Cervical spine"
+    },
+    {
+      "layer": "organs",
+      "mesh": "organs_heart",
+      "pts": [
+        [
+          0.05677658007607292,
+          0.8106859854880786,
+          0.1299014504475561
+        ]
+      ],
+      "t": "Heart"
+    },
+    {
+      "layer": "organs",
+      "mesh": "organs_lungs",
+      "pts": [
+        [
+          -0.014717433848927862,
+          0.7869075716904073,
+          0.034221323798019794
+        ]
+      ],
+      "t": "Lungs"
+    },
+    {
+      "layer": "organs",
+      "mesh": "organs_liver",
+      "pts": [
+        [
+          -0.09136453916913469,
+          0.5962258019201193,
+          0.1325094262724884
+        ]
+      ],
+      "t": "Liver"
+    },
+    {
+      "layer": "organs",
+      "mesh": "organs_stomach",
+      "pts": [
+        [
+          0.09310385586292176,
+          0.602518624624211,
+          0.13534054900689343
+        ]
+      ],
+      "t": "Stomach"
+    },
+    {
+      "layer": "organs",
+      "mesh": "organs_intestine",
+      "pts": [
+        [
+          0.021712517712822486,
+          0.27324086943586867,
+          0.15921417262132426
+        ]
+      ],
+      "t": "Intestines"
+    },
+    {
+      "layer": "organs",
+      "mesh": "organs_kidneys",
+      "pts": [
+        [
+          0.0843157820764332,
+          0.5223642693060404,
+          -0.009784034059304694
+        ]
+      ],
+      "t": "Kidneys"
+    },
+    {
+      "layer": "arms",
+      "mesh": "arm_humerus_L",
+      "pts": [
+        [
+          0.5055555246876753,
+          0.006076571273485403,
+          -0.0049444069523645025
+        ]
+      ],
+      "t": "Left Humerus"
+    },
+    {
+      "layer": "arms",
+      "mesh": "arm_forearm_L",
+      "pts": [
+        [
+          0.41697902605318704,
+          -0.007235980630654941,
+          -0.01309595152083042
+        ]
+      ],
+      "t": "Left Radius / ulna"
+    },
+    {
+      "layer": "legs",
+      "mesh": "leg_femur_L",
+      "pts": [
+        [
+          0.5239171962560747,
+          -0.00025125265323208554,
+          -0.034842034055523635
+        ]
+      ],
+      "t": "Left Femur / patella"
+    },
+    {
+      "layer": "legs",
+      "mesh": "leg_shin_L",
+      "pts": [
+        [
+          0.5034739416252325,
+          0.0057095271198603186,
+          -0.006666718219996707
+        ]
+      ],
+      "t": "Left Tibia / fibula"
+    },
+    {
+      "layer": "legs",
+      "mesh": "foot_L",
+      "pts": [
+        [
+          0.530587728708303,
+          0.25736590291709094,
+          -0.0872102197339812
+        ]
+      ],
+      "t": "Left foot bones"
+    },
+    {
+      "layer": "arms",
+      "mesh": "arm_humerus_R",
+      "pts": [
+        [
+          0.4747534330846132,
+          0.014256733423363073,
+          0.017198597016642565
+        ]
+      ],
+      "t": "Right Humerus"
+    },
+    {
+      "layer": "arms",
+      "mesh": "arm_forearm_R",
+      "pts": [
+        [
+          0.41708290106141543,
+          -0.00141202113844046,
+          0.028452388677466547
+        ]
+      ],
+      "t": "Right Radius / ulna"
+    },
+    {
+      "layer": "legs",
+      "mesh": "leg_femur_R",
+      "pts": [
+        [
+          0.5257395594554759,
+          -0.0016482993421363006,
+          0.03443161855726372
+        ]
+      ],
+      "t": "Right Femur / patella"
+    },
+    {
+      "layer": "legs",
+      "mesh": "leg_shin_R",
+      "pts": [
+        [
+          0.530522797120252,
+          0.003221495337278592,
+          0.033170627581710535
+        ]
+      ],
+      "t": "Right Tibia / fibula"
+    },
+    {
+      "layer": "legs",
+      "mesh": "foot_R",
+      "pts": [
+        [
+          0.4633352429143862,
+          0.28566471584938724,
+          0.06304234308804219
+        ]
+      ],
+      "t": "Right foot bones"
+    }
+  ],
+  "license": "CC-BY-SA-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+  "limitations": [
+    "An adult reference anatomy, not a scan or patient-specific reconstruction.",
+    "Joint centers are geometry-derived approximations for educational alignment.",
+    "Torso hip reference points are femoral-head centers offset laterally by 2 cm.",
+    "Source rest pose and shared torso affine frame do not model scapulothoracic or spinal articulation."
+  ],
+  "measuredSourceHeightCm": 164.04426000000004,
+  "meshes": [
+    {
+      "frame": "torso",
+      "layer": "spine",
+      "min": [
+        -0.5159931856685861,
+        -0.11178200200934618,
+        -0.2137897455985857
+      ],
+      "name": "torso_skel",
+      "ni": 165000,
+      "nv": 27547,
+      "offI": 165282,
+      "offV": 0,
+      "size": [
+        1.0315496637863337,
+        1.2464023161780964,
+        0.5325020529073237
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA9165",
+          "name": "first thoracic vertebra"
+        },
+        {
+          "id": "FMA9187",
+          "name": "second thoracic vertebra"
+        },
+        {
+          "id": "FMA9209",
+          "name": "third thoracic vertebra"
+        },
+        {
+          "id": "FMA9248",
+          "name": "fourth thoracic vertebra"
+        },
+        {
+          "id": "FMA9922",
+          "name": "fifth thoracic vertebra"
+        },
+        {
+          "id": "FMA9945",
+          "name": "sixth thoracic vertebra"
+        },
+        {
+          "id": "FMA9968",
+          "name": "seventh thoracic vertebra"
+        },
+        {
+          "id": "FMA9991",
+          "name": "eighth thoracic vertebra"
+        },
+        {
+          "id": "FMA10014",
+          "name": "ninth thoracic vertebra"
+        },
+        {
+          "id": "FMA10037",
+          "name": "tenth thoracic vertebra"
+        },
+        {
+          "id": "FMA10059",
+          "name": "eleventh thoracic vertebra"
+        },
+        {
+          "id": "FMA10081",
+          "name": "twelfth thoracic vertebra"
+        },
+        {
+          "id": "FMA13072",
+          "name": "first lumbar vertebra"
+        },
+        {
+          "id": "FMA13073",
+          "name": "second lumbar vertebra"
+        },
+        {
+          "id": "FMA13074",
+          "name": "third lumbar vertebra"
+        },
+        {
+          "id": "FMA13075",
+          "name": "fourth lumbar vertebra"
+        },
+        {
+          "id": "FMA13076",
+          "name": "fifth lumbar vertebra"
+        },
+        {
+          "id": "FMA16202",
+          "name": "sacrum"
+        },
+        {
+          "id": "FMA7485",
+          "name": "sternum"
+        },
+        {
+          "id": "FMA13323",
+          "name": "left clavicle"
+        },
+        {
+          "id": "FMA13322",
+          "name": "right clavicle"
+        },
+        {
+          "id": "FMA13396",
+          "name": "left scapula"
+        },
+        {
+          "id": "FMA13395",
+          "name": "right scapula"
+        },
+        {
+          "id": "FMA16587",
+          "name": "left hip bone"
+        },
+        {
+          "id": "FMA16586",
+          "name": "right hip bone"
+        },
+        {
+          "id": "FMA7987",
+          "name": "left first rib"
+        },
+        {
+          "id": "FMA8012",
+          "name": "left second rib"
+        },
+        {
+          "id": "FMA8039",
+          "name": "left third rib"
+        },
+        {
+          "id": "FMA8148",
+          "name": "left fourth rib"
+        },
+        {
+          "id": "FMA8093",
+          "name": "left fifth rib"
+        },
+        {
+          "id": "FMA8202",
+          "name": "left sixth rib"
+        },
+        {
+          "id": "FMA8256",
+          "name": "left seventh rib"
+        },
+        {
+          "id": "FMA8310",
+          "name": "left eighth rib"
+        },
+        {
+          "id": "FMA8391",
+          "name": "left ninth rib"
+        },
+        {
+          "id": "FMA8472",
+          "name": "left tenth rib"
+        },
+        {
+          "id": "FMA8532",
+          "name": "left eleventh rib"
+        },
+        {
+          "id": "FMA8534",
+          "name": "left twelfth rib"
+        },
+        {
+          "id": "FMA7857",
+          "name": "right first rib"
+        },
+        {
+          "id": "FMA7882",
+          "name": "right second rib"
+        },
+        {
+          "id": "FMA7909",
+          "name": "right third rib"
+        },
+        {
+          "id": "FMA7957",
+          "name": "right fourth rib"
+        },
+        {
+          "id": "FMA8066",
+          "name": "right fifth rib"
+        },
+        {
+          "id": "FMA8175",
+          "name": "right sixth rib"
+        },
+        {
+          "id": "FMA8229",
+          "name": "right seventh rib"
+        },
+        {
+          "id": "FMA8283",
+          "name": "right eighth rib"
+        },
+        {
+          "id": "FMA8364",
+          "name": "right ninth rib"
+        },
+        {
+          "id": "FMA8445",
+          "name": "right tenth rib"
+        },
+        {
+          "id": "FMA8531",
+          "name": "right eleventh rib"
+        },
+        {
+          "id": "FMA8533",
+          "name": "right twelfth rib"
+        }
+      ],
+      "sourceElements": [
+        "FMA10014",
+        "FMA10037",
+        "FMA10059",
+        "FMA10081",
+        "FMA13072",
+        "FMA13073",
+        "FMA13074",
+        "FMA13075",
+        "FMA13076",
+        "FMA13322",
+        "FMA13323",
+        "FMA13395",
+        "FMA13396",
+        "FMA16202",
+        "FMA16586",
+        "FMA16587",
+        "FMA7486",
+        "FMA7487",
+        "FMA7488",
+        "FMA7857",
+        "FMA7882",
+        "FMA7909",
+        "FMA7957",
+        "FMA7987",
+        "FMA8012",
+        "FMA8039",
+        "FMA8066",
+        "FMA8093",
+        "FMA8148",
+        "FMA8175",
+        "FMA8202",
+        "FMA8229",
+        "FMA8256",
+        "FMA8283",
+        "FMA8310",
+        "FMA8364",
+        "FMA8391",
+        "FMA8445",
+        "FMA8472",
+        "FMA8531",
+        "FMA8532",
+        "FMA8533",
+        "FMA8534",
+        "FMA9165",
+        "FMA9187",
+        "FMA9209",
+        "FMA9248",
+        "FMA9922",
+        "FMA9945",
+        "FMA9968",
+        "FMA9991"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 276650,
+      "triangleBudget": 55000
+    },
+    {
+      "cervical": true,
+      "frame": "torso",
+      "layer": "spine",
+      "min": [
+        -0.10565587883182433,
+        1.1049451667972294,
+        -0.11437996102957039
+      ],
+      "name": "cervical_skel",
+      "ni": 15000,
+      "nv": 2480,
+      "offI": 510162,
+      "offV": 495282,
+      "size": [
+        0.2035891011655438,
+        0.1542901081786816,
+        0.19123961533963085
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA12521",
+          "name": "third cervical vertebra"
+        },
+        {
+          "id": "FMA12522",
+          "name": "fourth cervical vertebra"
+        },
+        {
+          "id": "FMA12523",
+          "name": "fifth cervical vertebra"
+        },
+        {
+          "id": "FMA12524",
+          "name": "sixth cervical vertebra"
+        },
+        {
+          "id": "FMA12525",
+          "name": "seventh cervical vertebra"
+        }
+      ],
+      "sourceElements": [
+        "FMA12521",
+        "FMA12522",
+        "FMA12523",
+        "FMA12524",
+        "FMA12525"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 9944,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "torso",
+      "layer": "organs",
+      "min": [
+        -0.10965597293889064,
+        0.71835359522514,
+        -0.0200920218535392
+      ],
+      "name": "organs_heart",
+      "ni": 24000,
+      "nv": 4522,
+      "offI": 567294,
+      "offV": 540162,
+      "size": [
+        0.3549076397920785,
+        0.20825027597949097,
+        0.2684909032774777
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA7088",
+          "name": "heart"
+        }
+      ],
+      "sourceElements": [
+        "FMA3802",
+        "FMA3818",
+        "FMA3840nsn",
+        "FMA3862nsn",
+        "FMA3895",
+        "FMA4685",
+        "FMA4706",
+        "FMA4707",
+        "FMA4713",
+        "FMA71567",
+        "FMA71669",
+        "FMA71670",
+        "FMA7234",
+        "FMA7235",
+        "FMA7246",
+        "FMA7260",
+        "FMA7261",
+        "FMA7262",
+        "FMA7266",
+        "FMA7274",
+        "FMA76751",
+        "FMA76994",
+        "FMA9352nsn"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 207960,
+      "triangleBudget": 8000
+    },
+    {
+      "frame": "torso",
+      "layer": "organs",
+      "min": [
+        -0.39188625449309267,
+        0.582568162384289,
+        -0.14873449844539385
+      ],
+      "name": "organs_lungs",
+      "ni": 36000,
+      "nv": 6010,
+      "offI": 651354,
+      "offV": 615294,
+      "size": [
+        0.7776612448747027,
+        0.5103588856889513,
+        0.44351855791659356
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA7309",
+          "name": "right lung"
+        },
+        {
+          "id": "FMA7310",
+          "name": "left lung"
+        }
+      ],
+      "sourceElements": [
+        "FMA7333",
+        "FMA7337",
+        "FMA7370",
+        "FMA7371",
+        "FMA7383"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 40880,
+      "triangleBudget": 12000
+    },
+    {
+      "frame": "torso",
+      "layer": "organs",
+      "min": [
+        -0.3606907060384339,
+        0.4175997062562612,
+        -0.09182569801380809
+      ],
+      "name": "organs_liver",
+      "ni": 11646,
+      "nv": 1943,
+      "offI": 735012,
+      "offV": 723354,
+      "size": [
+        0.6110851281713885,
+        0.33953127072054645,
+        0.37118423754468455
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA7197",
+          "name": "liver"
+        }
+      ],
+      "sourceElements": [
+        "FMA7197"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 3882,
+      "triangleBudget": 8000
+    },
+    {
+      "frame": "torso",
+      "layer": "organs",
+      "min": [
+        -0.08312763507809857,
+        0.47417695229952656,
+        0.005181371611654221
+      ],
+      "name": "organs_stomach",
+      "ni": 5628,
+      "nv": 940,
+      "offI": 763944,
+      "offV": 758304,
+      "size": [
+        0.43516649108579614,
+        0.2407524958424328,
+        0.27535090115973687
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA7148",
+          "name": "stomach"
+        }
+      ],
+      "sourceElements": [
+        "FMA7148"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 1876,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "torso",
+      "layer": "organs",
+      "min": [
+        -0.3276928326450685,
+        0.01345331820179968,
+        -0.069879590332983
+      ],
+      "name": "organs_intestine",
+      "ni": 36000,
+      "nv": 6120,
+      "offI": 811920,
+      "offV": 775200,
+      "size": [
+        0.669576611418381,
+        0.5420369025322032,
+        0.3290905715383129
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA7200",
+          "name": "small intestine"
+        },
+        {
+          "id": "FMA7201",
+          "name": "large intestine"
+        }
+      ],
+      "sourceElements": [
+        "FMA14543nsn",
+        "FMA7206",
+        "FMA7207",
+        "FMA7208",
+        "FMA76891",
+        "FMA76892",
+        "FMA76893"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 53730,
+      "triangleBudget": 12000
+    },
+    {
+      "frame": "torso",
+      "layer": "organs",
+      "min": [
+        -0.29187748573033867,
+        0.3590292701674449,
+        -0.09063317654301258
+      ],
+      "name": "organs_kidneys",
+      "ni": 16644,
+      "nv": 2778,
+      "offI": 900588,
+      "offV": 883920,
+      "size": [
+        0.5543686857243434,
+        0.23307512094116856,
+        0.12600306263524944
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA7205",
+          "name": "left kidney"
+        },
+        {
+          "id": "FMA7204",
+          "name": "right kidney"
+        }
+      ],
+      "sourceElements": [
+        "FMA7204",
+        "FMA7205"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 5548,
+      "triangleBudget": 6000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        11,
+        13
+      ],
+      "layer": "arms",
+      "min": [
+        -0.07764194993255734,
+        -0.07644326318257465,
+        -0.12056684950552855
+      ],
+      "name": "arm_humerus_L",
+      "ni": 10152,
+      "nv": 1694,
+      "offI": 944040,
+      "offV": 933876,
+      "side": "L",
+      "size": [
+        1.1152783568331217,
+        0.1661050562485595,
+        0.22790670914073236
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA23131",
+          "name": "left humerus"
+        }
+      ],
+      "sourceElements": [
+        "FMA23131"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            4.614931246145691,
+            -27.383521583457735,
+            -0.7759011990078184
+          ],
+          [
+            0.2938227987215306,
+            -0.737310637872185,
+            27.76917191014527
+          ],
+          [
+            -27.39293604463145,
+            -4.621253736872073,
+            0.16714108754663476
+          ]
+        ],
+        "originCm": [
+          16.22746875385431,
+          132.55452158345776,
+          7.180206199007819
+        ]
+      },
+      "sourceTriangles": 3384,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        13,
+        15
+      ],
+      "layer": "arms",
+      "min": [
+        -0.05553137925377366,
+        -0.10092194487376971,
+        -0.1242555403383731
+      ],
+      "name": "arm_forearm_L",
+      "ni": 4182,
+      "nv": 701,
+      "offI": 968550,
+      "offV": 964344,
+      "side": "L",
+      "size": [
+        1.0904370636682132,
+        0.1657720601681233,
+        0.22193305329954338
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA23465",
+          "name": "left radius"
+        },
+        {
+          "id": "FMA23468",
+          "name": "left ulna"
+        }
+      ],
+      "sourceElements": [
+        "FMA23465",
+        "FMA23468"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            4.693349999999999,
+            -23.21180000000001,
+            4.52008
+          ],
+          [
+            -0.7221388468002167,
+            4.4654141857341,
+            23.68089754009943
+          ],
+          [
+            -23.63677850157129,
+            -4.745390771974913,
+            0.1740263135657451
+          ]
+        ],
+        "originCm": [
+          20.8424,
+          105.17100000000002,
+          6.404305000000001
+        ]
+      },
+      "sourceTriangles": 1394,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        23,
+        25
+      ],
+      "layer": "legs",
+      "min": [
+        -0.06570939492564096,
+        -0.07498416741818588,
+        -0.15181288065861517
+      ],
+      "name": "leg_femur_L",
+      "ni": 9366,
+      "nv": 1565,
+      "offI": 986304,
+      "offV": 976914,
+      "side": "L",
+      "size": [
+        1.098981764624307,
+        0.1871198956004108,
+        0.25173699816397543
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA24475",
+          "name": "left femur"
+        },
+        {
+          "id": "FMA24487",
+          "name": "left patella"
+        }
+      ],
+      "sourceElements": [
+        "FMA24475",
+        "FMA24487"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -1.0580861322069008,
+            -40.36325449977119,
+            -2.1135660301034314
+          ],
+          [
+            -0.11880571861227021,
+            -2.1111751172577984,
+            40.377070798481306
+          ],
+          [
+            -40.41837899246,
+            1.0628486491722424,
+            -0.06335464384145001
+          ]
+        ],
+        "originCm": [
+          8.2570511322069,
+          81.63210449977119,
+          9.126461030103432
+        ]
+      },
+      "sourceTriangles": 3122,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        25,
+        27
+      ],
+      "layer": "legs",
+      "min": [
+        0.01979805965171089,
+        -0.09370669538338153,
+        -0.15354309746674838
+      ],
+      "name": "leg_shin_L",
+      "ni": 7320,
+      "nv": 1224,
+      "offI": 1012380,
+      "offV": 1005036,
+      "side": "L",
+      "size": [
+        1.0592118399506454,
+        0.19160252576269565,
+        0.25242900609326246
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA24478",
+          "name": "left tibia"
+        },
+        {
+          "id": "FMA24481",
+          "name": "left fibula"
+        }
+      ],
+      "sourceElements": [
+        "FMA24478",
+        "FMA24481"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            0.12492500000000106,
+            -34.54791,
+            -1.12228
+          ],
+          [
+            -0.00948357021767317,
+            -1.1223215435092857,
+            34.54813321204195
+          ],
+          [
+            -34.566132381688234,
+            -0.12455122239438372,
+            -0.013534649206336166
+          ]
+        ],
+        "originCm": [
+          7.198964999999999,
+          41.26885,
+          7.012895
+        ]
+      },
+      "sourceTriangles": 2440,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "foot",
+      "landmarks": [
+        27,
+        29,
+        31
+      ],
+      "layer": "legs",
+      "min": [
+        -0.06348602913848427,
+        -0.3985470627916543,
+        -0.3824299308304367
+      ],
+      "name": "foot_L",
+      "ni": 18000,
+      "nv": 3052,
+      "offI": 1045332,
+      "offV": 1027020,
+      "side": "L",
+      "size": [
+        1.0714826941453928,
+        1.4759159841789329,
+        0.6708083601815598
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA32651",
+          "name": "distal phalanx of left big toe"
+        },
+        {
+          "id": "FMA32657",
+          "name": "distal phalanx of left fourth toe"
+        },
+        {
+          "id": "FMA32659",
+          "name": "distal phalanx of left little toe"
+        },
+        {
+          "id": "FMA32653",
+          "name": "distal phalanx of left second toe"
+        },
+        {
+          "id": "FMA32655",
+          "name": "distal phalanx of left third toe"
+        },
+        {
+          "id": "FMA24498",
+          "name": "left calcaneus"
+        },
+        {
+          "id": "FMA24529",
+          "name": "left cuboid bone"
+        },
+        {
+          "id": "FMA24516",
+          "name": "left fifth metatarsal bone"
+        },
+        {
+          "id": "FMA24508",
+          "name": "left first metatarsal bone"
+        },
+        {
+          "id": "FMA24514",
+          "name": "left fourth metatarsal bone"
+        },
+        {
+          "id": "FMA24524",
+          "name": "left intermediate cuneiform bone"
+        },
+        {
+          "id": "FMA24526",
+          "name": "left lateral cuneiform bone"
+        },
+        {
+          "id": "FMA24522",
+          "name": "left medial cuneiform bone"
+        },
+        {
+          "id": "FMA24510",
+          "name": "left second metatarsal bone"
+        },
+        {
+          "id": "FMA24483",
+          "name": "left talus"
+        },
+        {
+          "id": "FMA24512",
+          "name": "left third metatarsal bone"
+        },
+        {
+          "id": "FMA32647",
+          "name": "middle phalanx of left fourth toe"
+        },
+        {
+          "id": "FMA230988",
+          "name": "middle phalanx of left little toe"
+        },
+        {
+          "id": "FMA32643",
+          "name": "middle phalanx of left second toe"
+        },
+        {
+          "id": "FMA32645",
+          "name": "middle phalanx of left third toe"
+        },
+        {
+          "id": "FMA24501",
+          "name": "navicular bone of left foot"
+        },
+        {
+          "id": "FMA43254",
+          "name": "proximal phalanx of left big toe"
+        },
+        {
+          "id": "FMA32639",
+          "name": "proximal phalanx of left fourth toe"
+        },
+        {
+          "id": "FMA32641",
+          "name": "proximal phalanx of left little toe"
+        },
+        {
+          "id": "FMA32635",
+          "name": "proximal phalanx of left second toe"
+        },
+        {
+          "id": "FMA32637",
+          "name": "proximal phalanx of left third toe"
+        }
+      ],
+      "sourceElements": [
+        "FMA230988",
+        "FMA24483",
+        "FMA24498",
+        "FMA24501",
+        "FMA24508",
+        "FMA24510",
+        "FMA24512",
+        "FMA24514",
+        "FMA24516",
+        "FMA24522",
+        "FMA24524",
+        "FMA24526",
+        "FMA24529",
+        "FMA32635",
+        "FMA32637",
+        "FMA32639",
+        "FMA32641",
+        "FMA32643",
+        "FMA32645",
+        "FMA32647",
+        "FMA32651",
+        "FMA32653",
+        "FMA32655",
+        "FMA32657",
+        "FMA32659",
+        "FMA43254"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            3.2331450000000004,
+            -2.12801915,
+            21.602408
+          ],
+          [
+            0.06278499999999987,
+            4.725919500000001,
+            4.536673
+          ],
+          [
+            -11.796429624748306,
+            -1.405223018461625,
+            1.627097588648438
+          ]
+        ],
+        "originCm": [
+          7.261105000000001,
+          1.9950204999999999,
+          1.3539420000000002
+        ]
+      },
+      "sourceTriangles": 15442,
+      "triangleBudget": 6000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        12,
+        14
+      ],
+      "layer": "arms",
+      "min": [
+        -0.07620376351306324,
+        -0.07578611883784653,
+        -0.1074172642874548
+      ],
+      "name": "arm_humerus_R",
+      "ni": 9756,
+      "nv": 1628,
+      "offI": 1091100,
+      "offV": 1081332,
+      "side": "R",
+      "size": [
+        1.1136727796862038,
+        0.1660838915561909,
+        0.2278676105062281
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA23130",
+          "name": "right humerus"
+        }
+      ],
+      "sourceElements": [
+        "FMA23130"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -4.6363906523604825,
+            -27.41143248097974,
+            -0.7531777119076306
+          ],
+          [
+            -0.3201510072299246,
+            -0.7097056083640477,
+            27.80006918855325
+          ],
+          [
+            -27.419909019863564,
+            4.643243790333078,
+            -0.19723603184840283
+          ]
+        ],
+        "originCm": [
+          -16.34340934763952,
+          132.57993248097975,
+          7.161837711907631
+        ]
+      },
+      "sourceTriangles": 3252,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        14,
+        16
+      ],
+      "layer": "arms",
+      "min": [
+        -0.05583519185966279,
+        -0.10077590687269578,
+        -0.10109284006514309
+      ],
+      "name": "arm_forearm_R",
+      "ni": 4200,
+      "nv": 704,
+      "offI": 1114836,
+      "offV": 1110612,
+      "side": "R",
+      "size": [
+        1.0906789932598877,
+        0.16386567967873414,
+        0.22411943008638363
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA23464",
+          "name": "right radius"
+        },
+        {
+          "id": "FMA23467",
+          "name": "right ulna"
+        }
+      ],
+      "sourceElements": [
+        "FMA23464",
+        "FMA23467"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -4.731800000000003,
+            -23.206300000000013,
+            4.568275000000001
+          ],
+          [
+            0.7124512680100155,
+            4.516835659014887,
+            23.68294821650776
+          ],
+          [
+            -23.64093715055172,
+            4.7809270382507,
+            -0.2006357500858563
+          ]
+        ],
+        "originCm": [
+          -20.9798,
+          105.16850000000001,
+          6.40866
+        ]
+      },
+      "sourceTriangles": 1400,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        24,
+        26
+      ],
+      "layer": "legs",
+      "min": [
+        -0.06299467649607736,
+        -0.0759678509204222,
+        -0.10174986546451291
+      ],
+      "name": "leg_femur_R",
+      "ni": 8592,
+      "nv": 1436,
+      "offI": 1131852,
+      "offV": 1123236,
+      "side": "R",
+      "size": [
+        1.096890392314673,
+        0.1859727407143504,
+        0.25482737740570904
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA24474",
+          "name": "right femur"
+        },
+        {
+          "id": "FMA24486",
+          "name": "right patella"
+        }
+      ],
+      "sourceElements": [
+        "FMA24474",
+        "FMA24486"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            0.8966551108258587,
+            -40.459181954118634,
+            -2.1562777336990067
+          ],
+          [
+            0.06152871301893904,
+            -2.15544347801585,
+            40.46911422405547
+          ],
+          [
+            -40.516554052372214,
+            -0.8986587036774267,
+            0.013736979315218225
+          ]
+        ],
+        "originCm": [
+          -8.30746511082586,
+          81.74938195411863,
+          9.217452733699007
+        ]
+      },
+      "sourceTriangles": 2864,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "source anatomical references transformed by inverse source bone frame",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        26,
+        28
+      ],
+      "layer": "legs",
+      "min": [
+        0.02014375598260951,
+        -0.09517839302968782,
+        -0.10124064867976296
+      ],
+      "name": "leg_shin_R",
+      "ni": 6882,
+      "nv": 1151,
+      "offI": 1155942,
+      "offV": 1149036,
+      "side": "R",
+      "size": [
+        1.058271599067136,
+        0.19189521452098507,
+        0.25267257162899914
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA24477",
+          "name": "right tibia"
+        },
+        {
+          "id": "FMA24480",
+          "name": "right fibula"
+        }
+      ],
+      "sourceElements": [
+        "FMA24477",
+        "FMA24480"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -0.04526999999999948,
+            -34.580365,
+            -1.1650650000000002
+          ],
+          [
+            -0.021796130753306026,
+            -1.1650372645535376,
+            34.58038869737059
+          ],
+          [
+            -34.59997897277011,
+            0.045978248407394895,
+            -0.020259439508610626
+          ]
+        ],
+        "originCm": [
+          -7.410810000000001,
+          41.2902,
+          7.061175
+        ]
+      },
+      "sourceTriangles": 2294,
+      "triangleBudget": 5000
+    },
+    {
+      "frame": "foot",
+      "landmarks": [
+        28,
+        30,
+        32
+      ],
+      "layer": "legs",
+      "min": [
+        -0.06378391715467742,
+        -0.3998932670519484,
+        -0.28682227318825265
+      ],
+      "name": "foot_R",
+      "ni": 18000,
+      "nv": 3052,
+      "offI": 1188018,
+      "offV": 1169706,
+      "side": "R",
+      "size": [
+        1.0723066171097955,
+        1.4775483713730302,
+        0.6692791610004794
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA32650",
+          "name": "distal phalanx of right big toe"
+        },
+        {
+          "id": "FMA32656",
+          "name": "distal phalanx of right fourth toe"
+        },
+        {
+          "id": "FMA32658",
+          "name": "distal phalanx of right little toe"
+        },
+        {
+          "id": "FMA32652",
+          "name": "distal phalanx of right second toe"
+        },
+        {
+          "id": "FMA32654",
+          "name": "distal phalanx of right third toe"
+        },
+        {
+          "id": "FMA32646",
+          "name": "middle phalanx of right fourth toe"
+        },
+        {
+          "id": "FMA230986",
+          "name": "middle phalanx of right little toe"
+        },
+        {
+          "id": "FMA32642",
+          "name": "middle phalanx of right second toe"
+        },
+        {
+          "id": "FMA32644",
+          "name": "middle phalanx of right third toe"
+        },
+        {
+          "id": "FMA24500",
+          "name": "navicular bone of right foot"
+        },
+        {
+          "id": "FMA43253",
+          "name": "proximal phalanx of right big toe"
+        },
+        {
+          "id": "FMA32638",
+          "name": "proximal phalanx of right fourth toe"
+        },
+        {
+          "id": "FMA32640",
+          "name": "proximal phalanx of right little toe"
+        },
+        {
+          "id": "FMA32634",
+          "name": "proximal phalanx of right second toe"
+        },
+        {
+          "id": "FMA32636",
+          "name": "proximal phalanx of right third toe"
+        },
+        {
+          "id": "FMA24497",
+          "name": "right calcaneus"
+        },
+        {
+          "id": "FMA24528",
+          "name": "right cuboid bone"
+        },
+        {
+          "id": "FMA24515",
+          "name": "right fifth metatarsal bone"
+        },
+        {
+          "id": "FMA24507",
+          "name": "right first metatarsal bone"
+        },
+        {
+          "id": "FMA24513",
+          "name": "right fourth metatarsal bone"
+        },
+        {
+          "id": "FMA24523",
+          "name": "right intermediate cuneiform bone"
+        },
+        {
+          "id": "FMA24525",
+          "name": "right lateral cuneiform bone"
+        },
+        {
+          "id": "FMA24521",
+          "name": "right medial cuneiform bone"
+        },
+        {
+          "id": "FMA24509",
+          "name": "right second metatarsal bone"
+        },
+        {
+          "id": "FMA24482",
+          "name": "right talus"
+        },
+        {
+          "id": "FMA24511",
+          "name": "right third metatarsal bone"
+        }
+      ],
+      "sourceElements": [
+        "FMA230986",
+        "FMA24482",
+        "FMA24497",
+        "FMA24500",
+        "FMA24507",
+        "FMA24509",
+        "FMA24511",
+        "FMA24513",
+        "FMA24515",
+        "FMA24521",
+        "FMA24523",
+        "FMA24525",
+        "FMA24528",
+        "FMA32634",
+        "FMA32636",
+        "FMA32638",
+        "FMA32640",
+        "FMA32642",
+        "FMA32644",
+        "FMA32646",
+        "FMA32650",
+        "FMA32652",
+        "FMA32654",
+        "FMA32656",
+        "FMA32658",
+        "FMA43253"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -3.1177800000000007,
+            -2.1417869499999997,
+            21.6317075
+          ],
+          [
+            0.016589999999999883,
+            4.6916975,
+            4.5704175
+          ],
+          [
+            -11.791849065722785,
+            1.5480140848623474,
+            -1.5462891597787563
+          ]
+        ],
+        "originCm": [
+          -7.47267,
+          2.0181375,
+          1.3256925000000002
+        ]
+      },
+      "sourceTriangles": 14048,
+      "triangleBudget": 6000
+    }
+  ],
+  "referenceMethods": {
+    "11": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.18442
+    },
+    "12": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.15827
+    },
+    "23": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.43862
+    },
+    "24": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.37394
+    }
+  },
+  "referencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      8.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -8.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  },
+  "schemaVersion": 1,
+  "source": {
+    "archiveDate": "2011-09-15",
+    "dataset": "BodyParts3D",
+    "downloads": [
+      {
+        "sha256": "2125f6d761b14ead4ee64f71713f56f3f0f29982693ff20aac63474470cb92f4",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip"
+      },
+      {
+        "sha256": "824a34ed939a53375037d0d68b88ad2b63b1f0ae15a585632af2a63c2ab2e4af",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/parts_list_e.txt"
+      },
+      {
+        "sha256": "17cd3611eb6b46558f983f890273fdb19f93806150ed95f6611acf4b81e90bc2",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/composite_parts.txt"
+      }
+    ],
+    "elementCount": 161,
+    "officialLicensePage": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "outputUnit": "cm",
+    "sourceUnit": "mm",
+    "transform": "[x, z, -y] / 10",
+    "version": "3.0"
+  },
+  "torsoReferencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      10.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -10.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  }
+}

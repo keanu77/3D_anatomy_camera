@@ -1,0 +1,4762 @@
+{
+  "attribution": "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan. Simplified, quantized, and aligned for Anatomy Mirror.",
+  "binaryBytes": 1463556,
+  "binarySha256": "d7b85c252518916e7ed05df98e96ea99d3c736e173332417678e9a0bf3fd8d6d",
+  "companionBodyBinarySha256": "8f8a0b6877e2a5ec8a2109212fae24d7e7c03fdf1b73a97573a7de30db18f950",
+  "coverage": {
+    "bilateral": true,
+    "excluded": [
+      "Intrinsic hand muscles (existing hand layer displays bones).",
+      "Facial and masticatory muscles in this bundle (existing head muscles remain available separately).",
+      "Internal thoracic/intercostal, diaphragm, pelvic-floor and perineal muscles.",
+      "Deep suboccipital, suprahyoid/infrahyoid and individual segmental interspinal/intertransverse/rotator muscles.",
+      "Separate fascial sheets, retinacula and standalone tendons; source muscle OBJ geometry may already include its tendon portions."
+    ],
+    "regionCount": 24,
+    "regions": [
+      "neck",
+      "chest",
+      "back",
+      "abdomen",
+      "scapular",
+      "deltoid",
+      "upperarm",
+      "forearm",
+      "hip",
+      "thigh",
+      "shin",
+      "foot"
+    ],
+    "sourceComponents": 276
+  },
+  "demoAspect": 1.3333333333333333,
+  "demoPose": [
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.56232041,
+      "y": 0.24010217,
+      "z": 0.00764917
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.43723433,
+      "y": 0.23997205,
+      "z": 0.00771972
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.58004372,
+      "y": 0.38032139,
+      "z": 0.01062896
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.41942861,
+      "y": 0.38033419,
+      "z": 0.01061224
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.49917902,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.49916366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.53939146,
+      "y": 0.50085393,
+      "z": 0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.46041493,
+      "y": 0.50025341,
+      "z": -0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5276471,
+      "y": 0.70753678,
+      "z": 0.00829172
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47153933,
+      "y": 0.70742745,
+      "z": 0.0081063
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52812686,
+      "y": 0.88444174,
+      "z": 0.01260175
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47136547,
+      "y": 0.88449861,
+      "z": 0.01258065
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52788574,
+      "y": 0.90864114,
+      "z": 0.03002452
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47130176,
+      "y": 0.90852277,
+      "z": 0.03013301
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5403024,
+      "y": 0.91953781,
+      "z": -0.05293796
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.45932815,
+      "y": 0.91948994,
+      "z": -0.05294199
+    }
+  ],
+  "format": "quantized-uint16-le",
+  "labels": [
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_neck_L",
+      "pts": [
+        [
+          0.10842850756661128,
+          1.1487751895996017,
+          0.0795881695331832
+        ]
+      ],
+      "t": "Neck L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_neck_R",
+      "pts": [
+        [
+          -0.11062826814870305,
+          1.153148821216762,
+          0.08766046200534641
+        ]
+      ],
+      "t": "Neck R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_chest_L",
+      "pts": [
+        [
+          0.36874953957735485,
+          0.8732017699544593,
+          0.09391835518040827
+        ]
+      ],
+      "t": "Pectorals L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_chest_R",
+      "pts": [
+        [
+          -0.3696687779011679,
+          0.8728103840888046,
+          0.09424487607077957
+        ]
+      ],
+      "t": "Pectorals R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_back_L",
+      "pts": [
+        [
+          0.10267406857822642,
+          0.7806873931853597,
+          -0.14196471783484438
+        ]
+      ],
+      "t": "Back L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_back_R",
+      "pts": [
+        [
+          -0.13065495802058932,
+          0.8141712859503477,
+          -0.1599759128215224
+        ]
+      ],
+      "t": "Back R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_abdomen_L",
+      "pts": [
+        [
+          0.1940254644030435,
+          0.38614425581845646,
+          0.21311882444366226
+        ]
+      ],
+      "t": "Abdominals L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_abdomen_R",
+      "pts": [
+        [
+          -0.1860739493116719,
+          0.39692141623228433,
+          0.21619434558045825
+        ]
+      ],
+      "t": "Abdominals R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_scapular_L",
+      "pts": [
+        [
+          0.4033253272341625,
+          0.9481977243682457,
+          -0.09276697274428226
+        ]
+      ],
+      "t": "Scapular L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_scapular_R",
+      "pts": [
+        [
+          -0.396239453446108,
+          0.9448749612637385,
+          -0.09211306222382908
+        ]
+      ],
+      "t": "Scapular R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_deltoid_L",
+      "pts": [
+        [
+          0.08293638763718625,
+          -0.0834867545583403,
+          -0.07908129392229936
+        ]
+      ],
+      "t": "Deltoid L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_deltoid_R",
+      "pts": [
+        [
+          0.10148499234569472,
+          -0.06323631361682223,
+          0.0896178466732104
+        ]
+      ],
+      "t": "Deltoid R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_upperarm_L",
+      "pts": [
+        [
+          0.5699986207959529,
+          -0.009632905668792085,
+          0.005030449560517758
+        ]
+      ],
+      "t": "Upper arm L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_upperarm_R",
+      "pts": [
+        [
+          0.5945994416038844,
+          -0.02197152655035175,
+          -0.003711831235585157
+        ]
+      ],
+      "t": "Upper arm R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_forearm_L",
+      "pts": [
+        [
+          0.631930874233492,
+          0.010466543708694,
+          -0.022271989227854092
+        ]
+      ],
+      "t": "Forearm L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_forearm_R",
+      "pts": [
+        [
+          0.6308518378667352,
+          0.0027836504304429234,
+          0.015800746764509457
+        ]
+      ],
+      "t": "Forearm R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_hip_L",
+      "pts": [
+        [
+          0.23670047211322648,
+          0.08910170325794523,
+          -0.044678995582061114
+        ]
+      ],
+      "t": "Hip/gluteal L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_hip_R",
+      "pts": [
+        [
+          -0.2463442724592926,
+          0.1077149865966384,
+          -0.029406988724955025
+        ]
+      ],
+      "t": "Hip/gluteal R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_thigh_L",
+      "pts": [
+        [
+          0.5294632905812123,
+          0.03736692379347161,
+          -0.010273683646337734
+        ]
+      ],
+      "t": "Thigh L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_thigh_R",
+      "pts": [
+        [
+          0.5217101438419741,
+          0.037102376317172,
+          -0.00033794778167697934
+        ]
+      ],
+      "t": "Thigh R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_shin_L",
+      "pts": [
+        [
+          0.5616182621060762,
+          0.008352338808016049,
+          -0.037786370702284314
+        ]
+      ],
+      "t": "Lower leg L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_shin_R",
+      "pts": [
+        [
+          0.5711306108488922,
+          0.008425763725755847,
+          0.033759360265218766
+        ]
+      ],
+      "t": "Lower leg R"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_foot_L",
+      "pts": [
+        [
+          0.5067573580159043,
+          0.10383006596731587,
+          -0.042660654324441924
+        ]
+      ],
+      "t": "Foot L"
+    },
+    {
+      "layer": "bodyMuscles",
+      "mesh": "muscle_foot_R",
+      "pts": [
+        [
+          0.4798034264851182,
+          0.0806388193547766,
+          0.009859998019747674
+        ]
+      ],
+      "t": "Foot R"
+    }
+  ],
+  "layer": "bodyMuscles",
+  "license": "CC-BY-SA-2.1-JP",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+  "limitations": [
+    "Reference adult anatomy for education, not patient-specific muscle position, volume, strength, or pathology.",
+    "Regional rigid rigs do not simulate contraction, muscle bulging, tendon sliding, skin deformation, or tissue collision.",
+    "Multi-joint muscles keep their source shape; they do not stretch independently between moving attachments.",
+    "Scapular and hip muscles follow the torso basis; scapulothoracic motion and pelvic-femoral attachments are approximate.",
+    "Forearm regions do not independently articulate pronation/supination or finger tendons; foot muscles do not articulate individual toes.",
+    "Neck regions follow the torso and do not bend with cervical joints or independently match head pose."
+  ],
+  "measuredSourceHeightCm": 164.04426000000004,
+  "meshes": [
+    {
+      "cervical": true,
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        0.011177665453918576,
+        0.9914957192303345,
+        -0.03530580672090203
+      ],
+      "name": "muscle_neck_L",
+      "ni": 10500,
+      "nv": 1778,
+      "offI": 10668,
+      "offV": 0,
+      "region": "neck",
+      "selectedFamilies": [
+        {
+          "id": "FMA13407",
+          "name": "sternocleidomastoid"
+        },
+        {
+          "id": "FMA13385",
+          "name": "scalenus anterior"
+        },
+        {
+          "id": "FMA13386",
+          "name": "scalenus medius"
+        },
+        {
+          "id": "FMA13387",
+          "name": "scalenus posterior"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.19605807421639812,
+        0.37601863260598634,
+        0.252606192631496
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13389",
+          "name": "left scalenus posterior"
+        },
+        {
+          "id": "FMA13391",
+          "name": "left scalenus medius"
+        },
+        {
+          "id": "FMA13393",
+          "name": "left scalenus anterior"
+        },
+        {
+          "id": "FMA13409",
+          "name": "left sternocleidomastoid"
+        }
+      ],
+      "sourceElements": [
+        "FMA13389",
+        "FMA13391",
+        "FMA13393",
+        "FMA13409"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 19672,
+      "triangleBudget": 3500
+    },
+    {
+      "cervical": true,
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.20767436207275433,
+        0.9916371915555235,
+        -0.03535218859523998
+      ],
+      "name": "muscle_neck_R",
+      "ni": 10500,
+      "nv": 1755,
+      "offI": 42198,
+      "offV": 31668,
+      "region": "neck",
+      "selectedFamilies": [
+        {
+          "id": "FMA13407",
+          "name": "sternocleidomastoid"
+        },
+        {
+          "id": "FMA13385",
+          "name": "scalenus anterior"
+        },
+        {
+          "id": "FMA13386",
+          "name": "scalenus medius"
+        },
+        {
+          "id": "FMA13387",
+          "name": "scalenus posterior"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.19690702714643843,
+        0.37563750602518464,
+        0.2526705197399725
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13388",
+          "name": "right scalenus posterior"
+        },
+        {
+          "id": "FMA13390",
+          "name": "right scalenus medius"
+        },
+        {
+          "id": "FMA13392",
+          "name": "right scalenus anterior"
+        },
+        {
+          "id": "FMA13408",
+          "name": "right sternocleidomastoid"
+        }
+      ],
+      "sourceElements": [
+        "FMA13388",
+        "FMA13390",
+        "FMA13392",
+        "FMA13408"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 19972,
+      "triangleBudget": 3500
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        0.009791208517009724,
+        0.5526949051180485,
+        -0.20638151012036823
+      ],
+      "name": "muscle_chest_L",
+      "ni": 21000,
+      "nv": 3516,
+      "offI": 84294,
+      "offV": 63198,
+      "region": "chest",
+      "selectedFamilies": [
+        {
+          "id": "FMA9627",
+          "name": "pectoralis major"
+        },
+        {
+          "id": "FMA13109",
+          "name": "pectoralis minor"
+        },
+        {
+          "id": "FMA13397",
+          "name": "serratus anterior"
+        },
+        {
+          "id": "FMA13410",
+          "name": "subclavius"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.5843249523670704,
+        0.5234757129441323,
+        0.559617666627968
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13376",
+          "name": "left pectoralis minor"
+        },
+        {
+          "id": "FMA13399",
+          "name": "left serratus anterior"
+        },
+        {
+          "id": "FMA13411",
+          "name": "left subclavius"
+        },
+        {
+          "id": "FMA34691",
+          "name": "clavicular part of left pectoralis major"
+        },
+        {
+          "id": "FMA45875",
+          "name": "abdominal part of left pectoralis major"
+        },
+        {
+          "id": "FMA79980",
+          "name": "sternocostal part of left pectoralis major"
+        }
+      ],
+      "sourceElements": [
+        "FMA13376",
+        "FMA13399",
+        "FMA13411",
+        "FMA34691",
+        "FMA45875",
+        "FMA79980"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 75872,
+      "triangleBudget": 7000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.5949999975899827,
+        0.5529349092986517,
+        -0.2065542512786949
+      ],
+      "name": "muscle_chest_R",
+      "ni": 21000,
+      "nv": 3564,
+      "offI": 147678,
+      "offV": 126294,
+      "region": "chest",
+      "selectedFamilies": [
+        {
+          "id": "FMA9627",
+          "name": "pectoralis major"
+        },
+        {
+          "id": "FMA13109",
+          "name": "pectoralis minor"
+        },
+        {
+          "id": "FMA13397",
+          "name": "serratus anterior"
+        },
+        {
+          "id": "FMA13410",
+          "name": "subclavius"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.5853166732908187,
+        0.522754565415505,
+        0.5599479540592429
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13375",
+          "name": "right pectoralis minor"
+        },
+        {
+          "id": "FMA13398",
+          "name": "right serratus anterior"
+        },
+        {
+          "id": "FMA13412",
+          "name": "right subclavius"
+        },
+        {
+          "id": "FMA34690",
+          "name": "clavicular part of right pectoralis major"
+        },
+        {
+          "id": "FMA45874",
+          "name": "abdominal part of right pectoralis major"
+        },
+        {
+          "id": "FMA79979",
+          "name": "sternocostal part of right pectoralis major"
+        }
+      ],
+      "sourceElements": [
+        "FMA13375",
+        "FMA13398",
+        "FMA13412",
+        "FMA34690",
+        "FMA45874",
+        "FMA79979"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 71802,
+      "triangleBudget": 7000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.0021708503489696732,
+        0.05684267525643183,
+        -0.25309019662651394
+      ],
+      "name": "muscle_back_L",
+      "ni": 30000,
+      "nv": 5146,
+      "offI": 220554,
+      "offV": 189678,
+      "region": "back",
+      "selectedFamilies": [
+        {
+          "id": "FMA9626",
+          "name": "trapezius"
+        },
+        {
+          "id": "FMA13357",
+          "name": "latissimus dorsi"
+        },
+        {
+          "id": "FMA13379",
+          "name": "rhomboid major"
+        },
+        {
+          "id": "FMA13380",
+          "name": "rhomboid minor"
+        },
+        {
+          "id": "FMA32519",
+          "name": "levator scapulae"
+        },
+        {
+          "id": "FMA13402",
+          "name": "serratus posterior inferior"
+        },
+        {
+          "id": "FMA13401",
+          "name": "serratus posterior superior"
+        },
+        {
+          "id": "FMA77177",
+          "name": "iliocostalis"
+        },
+        {
+          "id": "FMA77178",
+          "name": "longissimus"
+        },
+        {
+          "id": "FMA77179",
+          "name": "spinalis"
+        },
+        {
+          "id": "FMA77180",
+          "name": "splenius"
+        },
+        {
+          "id": "FMA22827",
+          "name": "multifidus"
+        },
+        {
+          "id": "FMA22823",
+          "name": "semispinalis"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.5498536846283708,
+        1.3119957022026787,
+        0.32182160274490185
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13359",
+          "name": "left latissimus dorsi"
+        },
+        {
+          "id": "FMA13382",
+          "name": "left rhomboid major"
+        },
+        {
+          "id": "FMA13384",
+          "name": "left rhomboid minor"
+        },
+        {
+          "id": "FMA13404",
+          "name": "left serratus posterior superior"
+        },
+        {
+          "id": "FMA13406",
+          "name": "left serratus posterior inferior"
+        },
+        {
+          "id": "FMA22727",
+          "name": "left splenius cervicis"
+        },
+        {
+          "id": "FMA22729",
+          "name": "left splenius capitis"
+        },
+        {
+          "id": "FMA22741",
+          "name": "left iliocostalis lumborum"
+        },
+        {
+          "id": "FMA22743",
+          "name": "left iliocostalis thoracis"
+        },
+        {
+          "id": "FMA22745",
+          "name": "left iliocostalis cervicis"
+        },
+        {
+          "id": "FMA22753",
+          "name": "left longissimus thoracis"
+        },
+        {
+          "id": "FMA22756",
+          "name": "left longissimus capitis"
+        },
+        {
+          "id": "FMA22758",
+          "name": "left longissimus cervicis"
+        },
+        {
+          "id": "FMA22780",
+          "name": "left spinalis thoracis"
+        },
+        {
+          "id": "FMA22782",
+          "name": "left spinalis cervicis"
+        },
+        {
+          "id": "FMA22873",
+          "name": "left semispinalis thoracis"
+        },
+        {
+          "id": "FMA22875",
+          "name": "left semispinalis cervicis"
+        },
+        {
+          "id": "FMA22877",
+          "name": "left semispinalis capitis"
+        },
+        {
+          "id": "FMA22879",
+          "name": "left multifidus"
+        },
+        {
+          "id": "FMA32541",
+          "name": "left levator scapulae"
+        },
+        {
+          "id": "FMA33583",
+          "name": "ascending part of left trapezius"
+        },
+        {
+          "id": "FMA33585",
+          "name": "transverse part of left trapezius"
+        },
+        {
+          "id": "FMA33587",
+          "name": "descending part of left trapezius"
+        }
+      ],
+      "sourceElements": [
+        "FMA13359",
+        "FMA13382",
+        "FMA13384",
+        "FMA13404",
+        "FMA13406",
+        "FMA22727",
+        "FMA22729",
+        "FMA22741",
+        "FMA22743",
+        "FMA22745",
+        "FMA22753",
+        "FMA22756",
+        "FMA22758",
+        "FMA22780",
+        "FMA22782",
+        "FMA22873",
+        "FMA22875",
+        "FMA22877",
+        "FMA22879",
+        "FMA32541",
+        "FMA33583",
+        "FMA33585",
+        "FMA33587"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 253852,
+      "triangleBudget": 10000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.5494563929949686,
+        0.0553706859550484,
+        -0.25234545680945486
+      ],
+      "name": "muscle_back_R",
+      "ni": 30000,
+      "nv": 5323,
+      "offI": 312492,
+      "offV": 280554,
+      "region": "back",
+      "selectedFamilies": [
+        {
+          "id": "FMA9626",
+          "name": "trapezius"
+        },
+        {
+          "id": "FMA13357",
+          "name": "latissimus dorsi"
+        },
+        {
+          "id": "FMA13379",
+          "name": "rhomboid major"
+        },
+        {
+          "id": "FMA13380",
+          "name": "rhomboid minor"
+        },
+        {
+          "id": "FMA32519",
+          "name": "levator scapulae"
+        },
+        {
+          "id": "FMA13402",
+          "name": "serratus posterior inferior"
+        },
+        {
+          "id": "FMA13401",
+          "name": "serratus posterior superior"
+        },
+        {
+          "id": "FMA77177",
+          "name": "iliocostalis"
+        },
+        {
+          "id": "FMA77178",
+          "name": "longissimus"
+        },
+        {
+          "id": "FMA77179",
+          "name": "spinalis"
+        },
+        {
+          "id": "FMA77180",
+          "name": "splenius"
+        },
+        {
+          "id": "FMA22827",
+          "name": "multifidus"
+        },
+        {
+          "id": "FMA22823",
+          "name": "semispinalis"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.5630932476783798,
+        1.3132613047837784,
+        0.31855270583615153
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13358",
+          "name": "right latissimus dorsi"
+        },
+        {
+          "id": "FMA13381",
+          "name": "right rhomboid major"
+        },
+        {
+          "id": "FMA13383",
+          "name": "right rhomboid minor"
+        },
+        {
+          "id": "FMA13403",
+          "name": "right serratus posterior superior"
+        },
+        {
+          "id": "FMA13405",
+          "name": "right serratus posterior inferior"
+        },
+        {
+          "id": "FMA22726",
+          "name": "right splenius cervicis"
+        },
+        {
+          "id": "FMA22728",
+          "name": "right splenius capitis"
+        },
+        {
+          "id": "FMA22740",
+          "name": "right iliocostalis lumborum"
+        },
+        {
+          "id": "FMA22742",
+          "name": "right iliocostalis thoracis"
+        },
+        {
+          "id": "FMA22744",
+          "name": "right iliocostalis cervicis"
+        },
+        {
+          "id": "FMA22751",
+          "name": "right longissimus thoracis"
+        },
+        {
+          "id": "FMA22754",
+          "name": "right longissimus capitis"
+        },
+        {
+          "id": "FMA22757",
+          "name": "right longissimus cervicis"
+        },
+        {
+          "id": "FMA22779",
+          "name": "right spinalis thoracis"
+        },
+        {
+          "id": "FMA22781",
+          "name": "right spinalis cervicis"
+        },
+        {
+          "id": "FMA22872",
+          "name": "right semispinalis thoracis"
+        },
+        {
+          "id": "FMA22874",
+          "name": "right semispinalis cervicis"
+        },
+        {
+          "id": "FMA22876",
+          "name": "right semispinalis capitis"
+        },
+        {
+          "id": "FMA22878",
+          "name": "right multifidus"
+        },
+        {
+          "id": "FMA32540",
+          "name": "right levator scapulae"
+        },
+        {
+          "id": "FMA33581",
+          "name": "ascending part of right trapezius"
+        },
+        {
+          "id": "FMA33584",
+          "name": "transverse part of right trapezius"
+        },
+        {
+          "id": "FMA33586",
+          "name": "descending part of right trapezius"
+        }
+      ],
+      "sourceElements": [
+        "FMA13358",
+        "FMA13381",
+        "FMA13383",
+        "FMA13403",
+        "FMA13405",
+        "FMA22726",
+        "FMA22728",
+        "FMA22740",
+        "FMA22742",
+        "FMA22744",
+        "FMA22751",
+        "FMA22754",
+        "FMA22757",
+        "FMA22779",
+        "FMA22781",
+        "FMA22872",
+        "FMA22874",
+        "FMA22876",
+        "FMA22878",
+        "FMA32540",
+        "FMA33581",
+        "FMA33584",
+        "FMA33586"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 256896,
+      "triangleBudget": 10000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.13786827965170165,
+        -0.03479473824275533,
+        -0.15048329245828057
+      ],
+      "name": "muscle_abdomen_L",
+      "ni": 19500,
+      "nv": 3321,
+      "offI": 392418,
+      "offV": 372492,
+      "region": "abdomen",
+      "selectedFamilies": [
+        {
+          "id": "FMA13378",
+          "name": "left rectus abdominis"
+        },
+        {
+          "id": "FMA13377",
+          "name": "right rectus abdominis"
+        },
+        {
+          "id": "FMA13337",
+          "name": "left external oblique"
+        },
+        {
+          "id": "FMA13336",
+          "name": "right external oblique"
+        },
+        {
+          "id": "FMA13891",
+          "name": "internal oblique"
+        },
+        {
+          "id": "FMA15570",
+          "name": "transversus abdominis"
+        },
+        {
+          "id": "FMA15569",
+          "name": "quadratus lumborum"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.5629083352179068,
+        0.8404994548329013,
+        0.49001947078766817
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13337",
+          "name": "left external oblique"
+        },
+        {
+          "id": "FMA13378",
+          "name": "left rectus abdominis"
+        },
+        {
+          "id": "FMA13893",
+          "name": "left internal oblique"
+        },
+        {
+          "id": "FMA22345",
+          "name": "left transversus abdominis"
+        },
+        {
+          "id": "FMA22349",
+          "name": "left quadratus lumborum"
+        }
+      ],
+      "sourceElements": [
+        "FMA13337",
+        "FMA13378",
+        "FMA13893",
+        "FMA22345",
+        "FMA22349"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 293318,
+      "triangleBudget": 6500
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.42590701595006264,
+        -0.03503860676222783,
+        -0.15041805596504187
+      ],
+      "name": "muscle_abdomen_R",
+      "ni": 19500,
+      "nv": 3288,
+      "offI": 451146,
+      "offV": 431418,
+      "region": "abdomen",
+      "selectedFamilies": [
+        {
+          "id": "FMA13378",
+          "name": "left rectus abdominis"
+        },
+        {
+          "id": "FMA13377",
+          "name": "right rectus abdominis"
+        },
+        {
+          "id": "FMA13337",
+          "name": "left external oblique"
+        },
+        {
+          "id": "FMA13336",
+          "name": "right external oblique"
+        },
+        {
+          "id": "FMA13891",
+          "name": "internal oblique"
+        },
+        {
+          "id": "FMA15570",
+          "name": "transversus abdominis"
+        },
+        {
+          "id": "FMA15569",
+          "name": "quadratus lumborum"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.41680825293049373,
+        0.8388424055129908,
+        0.49029478114144154
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13336",
+          "name": "right external oblique"
+        },
+        {
+          "id": "FMA13377",
+          "name": "right rectus abdominis"
+        },
+        {
+          "id": "FMA13892",
+          "name": "right internal oblique"
+        },
+        {
+          "id": "FMA22344",
+          "name": "right transversus abdominis"
+        },
+        {
+          "id": "FMA22348",
+          "name": "right quadratus lumborum"
+        }
+      ],
+      "sourceElements": [
+        "FMA13336",
+        "FMA13377",
+        "FMA13892",
+        "FMA22344",
+        "FMA22348"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 295116,
+      "triangleBudget": 6500
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        0.1874829657136594,
+        0.7766055705289138,
+        -0.22067230984726444
+      ],
+      "name": "muscle_scapular_L",
+      "ni": 18000,
+      "nv": 2988,
+      "offI": 508074,
+      "offV": 490146,
+      "region": "scapular",
+      "selectedFamilies": [
+        {
+          "id": "FMA9629",
+          "name": "supraspinatus"
+        },
+        {
+          "id": "FMA32546",
+          "name": "infraspinatus muscle"
+        },
+        {
+          "id": "FMA32550",
+          "name": "teres minor"
+        },
+        {
+          "id": "FMA32549",
+          "name": "teres major"
+        },
+        {
+          "id": "FMA13413",
+          "name": "subscapularis"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.39865913847800505,
+        0.27900169602400393,
+        0.2812736078970424
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13415",
+          "name": "left subscapularis"
+        },
+        {
+          "id": "FMA32545",
+          "name": "left supraspinatus"
+        },
+        {
+          "id": "FMA32548",
+          "name": "left infraspinatus muscle"
+        },
+        {
+          "id": "FMA32552",
+          "name": "left teres major"
+        },
+        {
+          "id": "FMA32554",
+          "name": "left teres minor"
+        }
+      ],
+      "sourceElements": [
+        "FMA13415",
+        "FMA32545",
+        "FMA32548",
+        "FMA32552",
+        "FMA32554"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 21926,
+      "triangleBudget": 6000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.5865860627682726,
+        0.7760543653300465,
+        -0.22033428780417627
+      ],
+      "name": "muscle_scapular_R",
+      "ni": 18000,
+      "nv": 2998,
+      "offI": 562062,
+      "offV": 544074,
+      "region": "scapular",
+      "selectedFamilies": [
+        {
+          "id": "FMA9629",
+          "name": "supraspinatus"
+        },
+        {
+          "id": "FMA32546",
+          "name": "infraspinatus muscle"
+        },
+        {
+          "id": "FMA32550",
+          "name": "teres minor"
+        },
+        {
+          "id": "FMA32549",
+          "name": "teres major"
+        },
+        {
+          "id": "FMA13413",
+          "name": "subscapularis"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.3989820186720344,
+        0.27901768629428325,
+        0.2813994211545997
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA13414",
+          "name": "right subscapularis"
+        },
+        {
+          "id": "FMA32544",
+          "name": "right supraspinatus"
+        },
+        {
+          "id": "FMA32547",
+          "name": "right infraspinatus muscle"
+        },
+        {
+          "id": "FMA32551",
+          "name": "right teres major"
+        },
+        {
+          "id": "FMA32553",
+          "name": "right teres minor"
+        }
+      ],
+      "sourceElements": [
+        "FMA13414",
+        "FMA32544",
+        "FMA32547",
+        "FMA32551",
+        "FMA32553"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 21794,
+      "triangleBudget": 6000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        11,
+        13
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.1627516376572324,
+        -0.2654423176539682,
+        -0.20604265781962378
+      ],
+      "name": "muscle_deltoid_L",
+      "ni": 10500,
+      "nv": 1756,
+      "offI": 608598,
+      "offV": 598062,
+      "region": "deltoid",
+      "selectedFamilies": [
+        {
+          "id": "FMA32521",
+          "name": "deltoid"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.6412089073226572,
+        0.4316827533368968,
+        0.47708716000702
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA34681",
+          "name": "clavicular part of left deltoid"
+        },
+        {
+          "id": "FMA34683",
+          "name": "acromial part of left deltoid"
+        },
+        {
+          "id": "FMA34685",
+          "name": "spinal part of left deltoid"
+        }
+      ],
+      "sourceElements": [
+        "FMA34681",
+        "FMA34683",
+        "FMA34685"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            4.614931246145691,
+            -27.383521583457735,
+            -0.7759011990078184
+          ],
+          [
+            0.2938227987215306,
+            -0.737310637872185,
+            27.76917191014527
+          ],
+          [
+            -27.39293604463145,
+            -4.621253736872073,
+            0.16714108754663476
+          ]
+        ],
+        "originCm": [
+          16.22746875385431,
+          132.55452158345776,
+          7.180206199007819
+        ]
+      },
+      "sourceTriangles": 20434,
+      "triangleBudget": 3500
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        12,
+        14
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.1615804700869906,
+        -0.26432808031302585,
+        -0.27071575166811923
+      ],
+      "name": "muscle_deltoid_R",
+      "ni": 10500,
+      "nv": 1772,
+      "offI": 640230,
+      "offV": 629598,
+      "region": "deltoid",
+      "selectedFamilies": [
+        {
+          "id": "FMA32521",
+          "name": "deltoid"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.6408101138798212,
+        0.43191690892954226,
+        0.4771080033303824
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA34680",
+          "name": "clavicular part of right deltoid"
+        },
+        {
+          "id": "FMA34682",
+          "name": "acromial part of right deltoid"
+        },
+        {
+          "id": "FMA34684",
+          "name": "spinal part of right deltoid"
+        }
+      ],
+      "sourceElements": [
+        "FMA34680",
+        "FMA34682",
+        "FMA34684"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -4.6363906523604825,
+            -27.41143248097974,
+            -0.7531777119076306
+          ],
+          [
+            -0.3201510072299246,
+            -0.7097056083640477,
+            27.80006918855325
+          ],
+          [
+            -27.419909019863564,
+            4.643243790333078,
+            -0.19723603184840283
+          ]
+        ],
+        "originCm": [
+          -16.34340934763952,
+          132.57993248097975,
+          7.161837711907631
+        ]
+      },
+      "sourceTriangles": 20554,
+      "triangleBudget": 3500
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        11,
+        13
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.09290750784197911,
+        -0.18981461898952273,
+        -0.1370706141696169
+      ],
+      "name": "muscle_upperarm_L",
+      "ni": 18000,
+      "nv": 3014,
+      "offI": 679314,
+      "offV": 661230,
+      "region": "upperarm",
+      "selectedFamilies": [
+        {
+          "id": "FMA37670",
+          "name": "biceps brachii"
+        },
+        {
+          "id": "FMA37667",
+          "name": "brachialis"
+        },
+        {
+          "id": "FMA37664",
+          "name": "coracobrachialis"
+        },
+        {
+          "id": "FMA37688",
+          "name": "triceps brachii"
+        }
+      ],
+      "side": "L",
+      "size": [
+        1.2675018069832158,
+        0.3271599326065633,
+        0.2838941713914716
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA37666",
+          "name": "left coracobrachialis"
+        },
+        {
+          "id": "FMA37669",
+          "name": "left brachialis"
+        },
+        {
+          "id": "FMA37685",
+          "name": "short head of left biceps brachii"
+        },
+        {
+          "id": "FMA37687",
+          "name": "long head of left biceps brachii"
+        },
+        {
+          "id": "FMA37696",
+          "name": "medial head of left triceps brachii"
+        },
+        {
+          "id": "FMA37698",
+          "name": "lateral head of left triceps brachii"
+        },
+        {
+          "id": "FMA37700",
+          "name": "long head of left triceps brachii"
+        }
+      ],
+      "sourceElements": [
+        "FMA37666",
+        "FMA37669",
+        "FMA37685",
+        "FMA37687",
+        "FMA37696",
+        "FMA37698",
+        "FMA37700"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            4.614931246145691,
+            -27.383521583457735,
+            -0.7759011990078184
+          ],
+          [
+            0.2938227987215306,
+            -0.737310637872185,
+            27.76917191014527
+          ],
+          [
+            -27.39293604463145,
+            -4.621253736872073,
+            0.16714108754663476
+          ]
+        ],
+        "originCm": [
+          16.22746875385431,
+          132.55452158345776,
+          7.180206199007819
+        ]
+      },
+      "sourceTriangles": 41540,
+      "triangleBudget": 6000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        12,
+        14
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.09089839226647492,
+        -0.18940743183168696,
+        -0.1463349764840756
+      ],
+      "name": "muscle_upperarm_R",
+      "ni": 18000,
+      "nv": 3045,
+      "offI": 733584,
+      "offV": 715314,
+      "region": "upperarm",
+      "selectedFamilies": [
+        {
+          "id": "FMA37670",
+          "name": "biceps brachii"
+        },
+        {
+          "id": "FMA37667",
+          "name": "brachialis"
+        },
+        {
+          "id": "FMA37664",
+          "name": "coracobrachialis"
+        },
+        {
+          "id": "FMA37688",
+          "name": "triceps brachii"
+        }
+      ],
+      "side": "R",
+      "size": [
+        1.2674717371987663,
+        0.3280504997656588,
+        0.2822667643471532
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA37665",
+          "name": "right coracobrachialis"
+        },
+        {
+          "id": "FMA37668",
+          "name": "right brachialis"
+        },
+        {
+          "id": "FMA37684",
+          "name": "short head of right biceps brachii"
+        },
+        {
+          "id": "FMA37686",
+          "name": "long head of right biceps brachii"
+        },
+        {
+          "id": "FMA37695",
+          "name": "medial head of right triceps brachii"
+        },
+        {
+          "id": "FMA37697",
+          "name": "lateral head of right triceps brachii"
+        },
+        {
+          "id": "FMA37699",
+          "name": "long head of right triceps brachii"
+        }
+      ],
+      "sourceElements": [
+        "FMA37665",
+        "FMA37668",
+        "FMA37684",
+        "FMA37686",
+        "FMA37695",
+        "FMA37697",
+        "FMA37699"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -4.6363906523604825,
+            -27.41143248097974,
+            -0.7531777119076306
+          ],
+          [
+            -0.3201510072299246,
+            -0.7097056083640477,
+            27.80006918855325
+          ],
+          [
+            -27.419909019863564,
+            4.643243790333078,
+            -0.19723603184840283
+          ]
+        ],
+        "originCm": [
+          -16.34340934763952,
+          132.57993248097975,
+          7.161837711907631
+        ]
+      },
+      "sourceTriangles": 41882,
+      "triangleBudget": 6000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        13,
+        15
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.431562577626941,
+        -0.13710489275846077,
+        -0.20352949189366937
+      ],
+      "name": "muscle_forearm_L",
+      "ni": 27000,
+      "nv": 4535,
+      "offI": 796794,
+      "offV": 769584,
+      "region": "forearm",
+      "selectedFamilies": [
+        {
+          "id": "FMA37704",
+          "name": "anconeus"
+        },
+        {
+          "id": "FMA38450",
+          "name": "pronator teres"
+        },
+        {
+          "id": "FMA38459",
+          "name": "flexor carpi radialis"
+        },
+        {
+          "id": "FMA38462",
+          "name": "palmaris longus"
+        },
+        {
+          "id": "FMA38465",
+          "name": "flexor carpi ulnaris"
+        },
+        {
+          "id": "FMA38469",
+          "name": "flexor digitorum superficialis"
+        },
+        {
+          "id": "FMA38478",
+          "name": "flexor digitorum profundus"
+        },
+        {
+          "id": "FMA38481",
+          "name": "flexor pollicis longus"
+        },
+        {
+          "id": "FMA38453",
+          "name": "pronator quadratus"
+        },
+        {
+          "id": "FMA38485",
+          "name": "brachioradialis"
+        },
+        {
+          "id": "FMA38494",
+          "name": "extensor carpi radialis longus"
+        },
+        {
+          "id": "FMA38497",
+          "name": "extensor carpi radialis brevis"
+        },
+        {
+          "id": "FMA38500",
+          "name": "extensor digitorum"
+        },
+        {
+          "id": "FMA38503",
+          "name": "extensor digiti minimi"
+        },
+        {
+          "id": "BP44",
+          "name": "humeral head of left extensor carpi ulnaris"
+        },
+        {
+          "id": "BP45",
+          "name": "humeral head of right extensor carpi ulnaris"
+        },
+        {
+          "id": "BP46",
+          "name": "ulnar head of left extensor carpi ulnaris"
+        },
+        {
+          "id": "BP47",
+          "name": "ulnar head of right extensor carpi ulnaris"
+        },
+        {
+          "id": "FMA38512",
+          "name": "supinator"
+        },
+        {
+          "id": "FMA38515",
+          "name": "abductor pollicis longus"
+        },
+        {
+          "id": "FMA38518",
+          "name": "extensor pollicis brevis"
+        },
+        {
+          "id": "FMA38521",
+          "name": "extensor pollicis longus"
+        },
+        {
+          "id": "FMA38524",
+          "name": "extensor indicis"
+        }
+      ],
+      "side": "L",
+      "size": [
+        2.0803402817143675,
+        0.33185318136200537,
+        0.44611139512999437
+      ],
+      "sourceConcepts": [
+        {
+          "id": "BP44",
+          "name": "humeral head of left extensor carpi ulnaris"
+        },
+        {
+          "id": "BP46",
+          "name": "ulnar head of left extensor carpi ulnaris"
+        },
+        {
+          "id": "FMA37706",
+          "name": "left anconeus"
+        },
+        {
+          "id": "FMA38455",
+          "name": "left pronator quadratus"
+        },
+        {
+          "id": "FMA38461",
+          "name": "left flexor carpi radialis"
+        },
+        {
+          "id": "FMA38464",
+          "name": "left palmaris longus"
+        },
+        {
+          "id": "FMA38480",
+          "name": "left flexor digitorum profundus"
+        },
+        {
+          "id": "FMA38484",
+          "name": "left flexor pollicis longus"
+        },
+        {
+          "id": "FMA38487",
+          "name": "left brachioradialis"
+        },
+        {
+          "id": "FMA38496",
+          "name": "left extensor carpi radialis longus"
+        },
+        {
+          "id": "FMA38499",
+          "name": "left extensor carpi radialis brevis"
+        },
+        {
+          "id": "FMA38502",
+          "name": "left extensor digitorum"
+        },
+        {
+          "id": "FMA38505",
+          "name": "left extensor digiti minimi"
+        },
+        {
+          "id": "FMA38514",
+          "name": "left supinator"
+        },
+        {
+          "id": "FMA38517",
+          "name": "left abductor pollicis longus"
+        },
+        {
+          "id": "FMA38520",
+          "name": "left extensor pollicis brevis"
+        },
+        {
+          "id": "FMA38523",
+          "name": "left extensor pollicis longus"
+        },
+        {
+          "id": "FMA38526",
+          "name": "left extensor indicis"
+        },
+        {
+          "id": "FMA38561",
+          "name": "humeral head of left pronator teres"
+        },
+        {
+          "id": "FMA38563",
+          "name": "ulnar head of left pronator teres"
+        },
+        {
+          "id": "FMA38618",
+          "name": "humeral head of left flexor carpi ulnaris"
+        },
+        {
+          "id": "FMA38620",
+          "name": "ulnar head of left flexor carpi ulnaris"
+        },
+        {
+          "id": "FMA38639",
+          "name": "humeroulnar head of left flexor digitorum superficialis"
+        },
+        {
+          "id": "FMA38641",
+          "name": "radial head of left flexor digitorum superficialis"
+        }
+      ],
+      "sourceElements": [
+        "BP44",
+        "BP46",
+        "FMA37706",
+        "FMA38455",
+        "FMA38461",
+        "FMA38464",
+        "FMA38480",
+        "FMA38484",
+        "FMA38487",
+        "FMA38496",
+        "FMA38499",
+        "FMA38502",
+        "FMA38505",
+        "FMA38514",
+        "FMA38517",
+        "FMA38520",
+        "FMA38523",
+        "FMA38526",
+        "FMA38561",
+        "FMA38563",
+        "FMA38618",
+        "FMA38620",
+        "FMA38639",
+        "FMA38641"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            4.693349999999999,
+            -23.21180000000001,
+            4.52008
+          ],
+          [
+            -0.7221388468002167,
+            4.4654141857341,
+            23.68089754009943
+          ],
+          [
+            -23.63677850157129,
+            -4.745390771974913,
+            0.1740263135657451
+          ]
+        ],
+        "originCm": [
+          20.8424,
+          105.17100000000002,
+          6.404305000000001
+        ]
+      },
+      "sourceTriangles": 156634,
+      "triangleBudget": 9000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        14,
+        16
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.42990573400550336,
+        -0.13810655180406675,
+        -0.24531027959341578
+      ],
+      "name": "muscle_forearm_R",
+      "ni": 27000,
+      "nv": 4664,
+      "offI": 878778,
+      "offV": 850794,
+      "region": "forearm",
+      "selectedFamilies": [
+        {
+          "id": "FMA37704",
+          "name": "anconeus"
+        },
+        {
+          "id": "FMA38450",
+          "name": "pronator teres"
+        },
+        {
+          "id": "FMA38459",
+          "name": "flexor carpi radialis"
+        },
+        {
+          "id": "FMA38462",
+          "name": "palmaris longus"
+        },
+        {
+          "id": "FMA38465",
+          "name": "flexor carpi ulnaris"
+        },
+        {
+          "id": "FMA38469",
+          "name": "flexor digitorum superficialis"
+        },
+        {
+          "id": "FMA38478",
+          "name": "flexor digitorum profundus"
+        },
+        {
+          "id": "FMA38481",
+          "name": "flexor pollicis longus"
+        },
+        {
+          "id": "FMA38453",
+          "name": "pronator quadratus"
+        },
+        {
+          "id": "FMA38485",
+          "name": "brachioradialis"
+        },
+        {
+          "id": "FMA38494",
+          "name": "extensor carpi radialis longus"
+        },
+        {
+          "id": "FMA38497",
+          "name": "extensor carpi radialis brevis"
+        },
+        {
+          "id": "FMA38500",
+          "name": "extensor digitorum"
+        },
+        {
+          "id": "FMA38503",
+          "name": "extensor digiti minimi"
+        },
+        {
+          "id": "BP44",
+          "name": "humeral head of left extensor carpi ulnaris"
+        },
+        {
+          "id": "BP45",
+          "name": "humeral head of right extensor carpi ulnaris"
+        },
+        {
+          "id": "BP46",
+          "name": "ulnar head of left extensor carpi ulnaris"
+        },
+        {
+          "id": "BP47",
+          "name": "ulnar head of right extensor carpi ulnaris"
+        },
+        {
+          "id": "FMA38512",
+          "name": "supinator"
+        },
+        {
+          "id": "FMA38515",
+          "name": "abductor pollicis longus"
+        },
+        {
+          "id": "FMA38518",
+          "name": "extensor pollicis brevis"
+        },
+        {
+          "id": "FMA38521",
+          "name": "extensor pollicis longus"
+        },
+        {
+          "id": "FMA38524",
+          "name": "extensor indicis"
+        }
+      ],
+      "side": "R",
+      "size": [
+        2.0785097919303643,
+        0.3301601857823454,
+        0.4486623265738817
+      ],
+      "sourceConcepts": [
+        {
+          "id": "BP45",
+          "name": "humeral head of right extensor carpi ulnaris"
+        },
+        {
+          "id": "BP47",
+          "name": "ulnar head of right extensor carpi ulnaris"
+        },
+        {
+          "id": "FMA37705",
+          "name": "right anconeus"
+        },
+        {
+          "id": "FMA38454",
+          "name": "right pronator quadratus"
+        },
+        {
+          "id": "FMA38460",
+          "name": "right flexor carpi radialis"
+        },
+        {
+          "id": "FMA38463",
+          "name": "right palmaris longus"
+        },
+        {
+          "id": "FMA38479",
+          "name": "right flexor digitorum profundus"
+        },
+        {
+          "id": "FMA38482",
+          "name": "right flexor pollicis longus"
+        },
+        {
+          "id": "FMA38486",
+          "name": "right brachioradialis"
+        },
+        {
+          "id": "FMA38495",
+          "name": "right extensor carpi radialis longus"
+        },
+        {
+          "id": "FMA38498",
+          "name": "right extensor carpi radialis brevis"
+        },
+        {
+          "id": "FMA38501",
+          "name": "right extensor digitorum"
+        },
+        {
+          "id": "FMA38504",
+          "name": "right extensor digiti minimi"
+        },
+        {
+          "id": "FMA38513",
+          "name": "right supinator"
+        },
+        {
+          "id": "FMA38516",
+          "name": "right abductor pollicis longus"
+        },
+        {
+          "id": "FMA38519",
+          "name": "right extensor pollicis brevis"
+        },
+        {
+          "id": "FMA38522",
+          "name": "right extensor pollicis longus"
+        },
+        {
+          "id": "FMA38525",
+          "name": "right extensor indicis"
+        },
+        {
+          "id": "FMA38560",
+          "name": "humeral head of right pronator teres"
+        },
+        {
+          "id": "FMA38562",
+          "name": "ulnar head of right pronator teres"
+        },
+        {
+          "id": "FMA38617",
+          "name": "humeral head of right flexor carpi ulnaris"
+        },
+        {
+          "id": "FMA38619",
+          "name": "ulnar head of right flexor carpi ulnaris"
+        },
+        {
+          "id": "FMA38638",
+          "name": "humeroulnar head of right flexor digitorum superficialis"
+        },
+        {
+          "id": "FMA38640",
+          "name": "radial head of right flexor digitorum superficialis"
+        }
+      ],
+      "sourceElements": [
+        "BP45",
+        "BP47",
+        "FMA37705",
+        "FMA38454",
+        "FMA38460",
+        "FMA38463",
+        "FMA38479",
+        "FMA38482",
+        "FMA38486",
+        "FMA38495",
+        "FMA38498",
+        "FMA38501",
+        "FMA38504",
+        "FMA38513",
+        "FMA38516",
+        "FMA38519",
+        "FMA38522",
+        "FMA38525",
+        "FMA38560",
+        "FMA38562",
+        "FMA38617",
+        "FMA38619",
+        "FMA38638",
+        "FMA38640"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -4.731800000000003,
+            -23.206300000000013,
+            4.568275000000001
+          ],
+          [
+            0.7124512680100155,
+            4.516835659014887,
+            23.68294821650776
+          ],
+          [
+            -23.64093715055172,
+            4.7809270382507,
+            -0.2006357500858563
+          ]
+        ],
+        "originCm": [
+          -20.9798,
+          105.16850000000001,
+          6.40866
+        ]
+      },
+      "sourceTriangles": 156358,
+      "triangleBudget": 9000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        0.002139670058823243,
+        -0.2799836074913543,
+        -0.2506347058897061
+      ],
+      "name": "muscle_hip_L",
+      "ni": 21000,
+      "nv": 3572,
+      "offI": 954210,
+      "offV": 932778,
+      "region": "hip",
+      "selectedFamilies": [
+        {
+          "id": "FMA22314",
+          "name": "gluteus maximus"
+        },
+        {
+          "id": "FMA22315",
+          "name": "gluteus medius"
+        },
+        {
+          "id": "FMA22317",
+          "name": "gluteus minimus"
+        },
+        {
+          "id": "FMA64918",
+          "name": "iliopsoas"
+        },
+        {
+          "id": "FMA19082",
+          "name": "piriformis"
+        },
+        {
+          "id": "FMA22298",
+          "name": "obturator internus"
+        },
+        {
+          "id": "FMA22318",
+          "name": "gemellus superior"
+        },
+        {
+          "id": "FMA22320",
+          "name": "gemellus inferior"
+        },
+        {
+          "id": "FMA22321",
+          "name": "quadratus femoris"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.443219696381047,
+        0.8472143337450436,
+        0.38897035734863317
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA22323",
+          "name": "left iliacus"
+        },
+        {
+          "id": "FMA22325",
+          "name": "left obturator internus"
+        },
+        {
+          "id": "FMA22329",
+          "name": "left gluteus maximus"
+        },
+        {
+          "id": "FMA22331",
+          "name": "left gluteus medius"
+        },
+        {
+          "id": "FMA22333",
+          "name": "left gluteus minimus"
+        },
+        {
+          "id": "FMA22335",
+          "name": "left gemellus superior"
+        },
+        {
+          "id": "FMA22337",
+          "name": "left gemellus inferior"
+        },
+        {
+          "id": "FMA22339",
+          "name": "left quadratus femoris"
+        },
+        {
+          "id": "FMA22341",
+          "name": "left piriformis"
+        },
+        {
+          "id": "FMA22343",
+          "name": "left psoas major"
+        }
+      ],
+      "sourceElements": [
+        "FMA22323",
+        "FMA22325",
+        "FMA22329",
+        "FMA22331",
+        "FMA22333",
+        "FMA22335",
+        "FMA22337",
+        "FMA22339",
+        "FMA22341",
+        "FMA22343"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 65302,
+      "triangleBudget": 7000
+    },
+    {
+      "frame": "torso",
+      "layer": "bodyMuscles",
+      "min": [
+        -0.4475908577518999,
+        -0.28040178228958346,
+        -0.25100167023674474
+      ],
+      "name": "muscle_hip_R",
+      "ni": 21000,
+      "nv": 3708,
+      "offI": 1018458,
+      "offV": 996210,
+      "region": "hip",
+      "selectedFamilies": [
+        {
+          "id": "FMA22314",
+          "name": "gluteus maximus"
+        },
+        {
+          "id": "FMA22315",
+          "name": "gluteus medius"
+        },
+        {
+          "id": "FMA22317",
+          "name": "gluteus minimus"
+        },
+        {
+          "id": "FMA64918",
+          "name": "iliopsoas"
+        },
+        {
+          "id": "FMA19082",
+          "name": "piriformis"
+        },
+        {
+          "id": "FMA22298",
+          "name": "obturator internus"
+        },
+        {
+          "id": "FMA22318",
+          "name": "gemellus superior"
+        },
+        {
+          "id": "FMA22320",
+          "name": "gemellus inferior"
+        },
+        {
+          "id": "FMA22321",
+          "name": "quadratus femoris"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.44238220804010103,
+        0.8473895782427319,
+        0.38956699246547166
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA22322",
+          "name": "right iliacus"
+        },
+        {
+          "id": "FMA22324",
+          "name": "right obturator internus"
+        },
+        {
+          "id": "FMA22328",
+          "name": "right gluteus maximus"
+        },
+        {
+          "id": "FMA22330",
+          "name": "right gluteus medius"
+        },
+        {
+          "id": "FMA22332",
+          "name": "right gluteus minimus"
+        },
+        {
+          "id": "FMA22334",
+          "name": "right gemellus superior"
+        },
+        {
+          "id": "FMA22336",
+          "name": "right gemellus inferior"
+        },
+        {
+          "id": "FMA22338",
+          "name": "right quadratus femoris"
+        },
+        {
+          "id": "FMA22340",
+          "name": "right piriformis"
+        },
+        {
+          "id": "FMA22342",
+          "name": "right psoas major"
+        }
+      ],
+      "sourceElements": [
+        "FMA22322",
+        "FMA22324",
+        "FMA22328",
+        "FMA22330",
+        "FMA22332",
+        "FMA22334",
+        "FMA22336",
+        "FMA22338",
+        "FMA22340",
+        "FMA22342"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 66814,
+      "triangleBudget": 7000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        23,
+        25
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.2645334327399878,
+        -0.13966421186421335,
+        -0.18448450476407752
+      ],
+      "name": "muscle_thigh_L",
+      "ni": 30000,
+      "nv": 5140,
+      "offI": 1091298,
+      "offV": 1060458,
+      "region": "thigh",
+      "selectedFamilies": [
+        {
+          "id": "FMA22423",
+          "name": "tensor fasciae latae"
+        },
+        {
+          "id": "FMA22353",
+          "name": "sartorius"
+        },
+        {
+          "id": "FMA22428",
+          "name": "quadriceps femoris"
+        },
+        {
+          "id": "FMA22440",
+          "name": "pectineus"
+        },
+        {
+          "id": "FMA22441",
+          "name": "adductor longus"
+        },
+        {
+          "id": "FMA22442",
+          "name": "adductor brevis"
+        },
+        {
+          "id": "FMA22443",
+          "name": "adductor magnus"
+        },
+        {
+          "id": "FMA43885",
+          "name": "adductor minimus"
+        },
+        {
+          "id": "FMA43882",
+          "name": "gracilis"
+        },
+        {
+          "id": "FMA22299",
+          "name": "obturator externus"
+        },
+        {
+          "id": "FMA22356",
+          "name": "biceps femoris"
+        },
+        {
+          "id": "FMA22357",
+          "name": "semitendinosus"
+        },
+        {
+          "id": "FMA22438",
+          "name": "semimembranosus"
+        }
+      ],
+      "side": "L",
+      "size": [
+        1.4899857842525628,
+        0.32291640232574803,
+        0.36491060710009915
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA22327",
+          "name": "left obturator externus"
+        },
+        {
+          "id": "FMA22355",
+          "name": "left sartorius"
+        },
+        {
+          "id": "FMA22359",
+          "name": "left semitendinosus"
+        },
+        {
+          "id": "FMA22426",
+          "name": "left tensor fasciae latae"
+        },
+        {
+          "id": "FMA22449",
+          "name": "left semimembranosus"
+        },
+        {
+          "id": "FMA22451",
+          "name": "left pectineus"
+        },
+        {
+          "id": "FMA22454",
+          "name": "left adductor brevis"
+        },
+        {
+          "id": "FMA22457",
+          "name": "left adductor longus"
+        },
+        {
+          "id": "FMA22460",
+          "name": "left adductor magnus"
+        },
+        {
+          "id": "FMA38929",
+          "name": "left rectus femoris"
+        },
+        {
+          "id": "FMA38931",
+          "name": "left vastus lateralis"
+        },
+        {
+          "id": "FMA38933",
+          "name": "left vastus medialis"
+        },
+        {
+          "id": "FMA38935",
+          "name": "left vastus intermedius"
+        },
+        {
+          "id": "FMA43884",
+          "name": "left gracilis"
+        },
+        {
+          "id": "FMA43887",
+          "name": "left adductor minimus"
+        },
+        {
+          "id": "FMA45889",
+          "name": "long head of left biceps femoris"
+        },
+        {
+          "id": "FMA45892",
+          "name": "short head of left biceps femoris"
+        }
+      ],
+      "sourceElements": [
+        "FMA22327",
+        "FMA22355",
+        "FMA22359",
+        "FMA22426",
+        "FMA22449",
+        "FMA22451",
+        "FMA22454",
+        "FMA22457",
+        "FMA22460",
+        "FMA38929",
+        "FMA38931",
+        "FMA38933",
+        "FMA38935",
+        "FMA43884",
+        "FMA43887",
+        "FMA45889",
+        "FMA45892"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -1.0580861322069008,
+            -40.36325449977119,
+            -2.1135660301034314
+          ],
+          [
+            -0.11880571861227021,
+            -2.1111751172577984,
+            40.377070798481306
+          ],
+          [
+            -40.41837899246,
+            1.0628486491722424,
+            -0.06335464384145001
+          ]
+        ],
+        "originCm": [
+          8.2570511322069,
+          81.63210449977119,
+          9.126461030103432
+        ]
+      },
+      "sourceTriangles": 163902,
+      "triangleBudget": 10000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        24,
+        26
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.2609502170901115,
+        -0.13913141188204725,
+        -0.17807025253836306
+      ],
+      "name": "muscle_thigh_R",
+      "ni": 30000,
+      "nv": 5103,
+      "offI": 1181916,
+      "offV": 1151298,
+      "region": "thigh",
+      "selectedFamilies": [
+        {
+          "id": "FMA22423",
+          "name": "tensor fasciae latae"
+        },
+        {
+          "id": "FMA22353",
+          "name": "sartorius"
+        },
+        {
+          "id": "FMA22428",
+          "name": "quadriceps femoris"
+        },
+        {
+          "id": "FMA22440",
+          "name": "pectineus"
+        },
+        {
+          "id": "FMA22441",
+          "name": "adductor longus"
+        },
+        {
+          "id": "FMA22442",
+          "name": "adductor brevis"
+        },
+        {
+          "id": "FMA22443",
+          "name": "adductor magnus"
+        },
+        {
+          "id": "FMA43885",
+          "name": "adductor minimus"
+        },
+        {
+          "id": "FMA43882",
+          "name": "gracilis"
+        },
+        {
+          "id": "FMA22299",
+          "name": "obturator externus"
+        },
+        {
+          "id": "FMA22356",
+          "name": "biceps femoris"
+        },
+        {
+          "id": "FMA22357",
+          "name": "semitendinosus"
+        },
+        {
+          "id": "FMA22438",
+          "name": "semimembranosus"
+        }
+      ],
+      "side": "R",
+      "size": [
+        1.4866961234881118,
+        0.3209751630306895,
+        0.3631947495360308
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA22326",
+          "name": "right obturator externus"
+        },
+        {
+          "id": "FMA22354",
+          "name": "right sartorius"
+        },
+        {
+          "id": "FMA22358",
+          "name": "right semitendinosus"
+        },
+        {
+          "id": "FMA22425",
+          "name": "right tensor fasciae latae"
+        },
+        {
+          "id": "FMA22448",
+          "name": "right semimembranosus"
+        },
+        {
+          "id": "FMA22450",
+          "name": "right pectineus"
+        },
+        {
+          "id": "FMA22452",
+          "name": "right adductor brevis"
+        },
+        {
+          "id": "FMA22456",
+          "name": "right adductor longus"
+        },
+        {
+          "id": "FMA22459",
+          "name": "right adductor magnus"
+        },
+        {
+          "id": "FMA38928",
+          "name": "right rectus femoris"
+        },
+        {
+          "id": "FMA38930",
+          "name": "right vastus lateralis"
+        },
+        {
+          "id": "FMA38932",
+          "name": "right vastus medialis"
+        },
+        {
+          "id": "FMA38934",
+          "name": "right vastus intermedius"
+        },
+        {
+          "id": "FMA43883",
+          "name": "right gracilis"
+        },
+        {
+          "id": "FMA43886",
+          "name": "right adductor minimus"
+        },
+        {
+          "id": "FMA45888",
+          "name": "long head of right biceps femoris"
+        },
+        {
+          "id": "FMA45891",
+          "name": "short head of right biceps femoris"
+        }
+      ],
+      "sourceElements": [
+        "FMA22326",
+        "FMA22354",
+        "FMA22358",
+        "FMA22425",
+        "FMA22448",
+        "FMA22450",
+        "FMA22452",
+        "FMA22456",
+        "FMA22459",
+        "FMA38928",
+        "FMA38930",
+        "FMA38932",
+        "FMA38934",
+        "FMA43883",
+        "FMA43886",
+        "FMA45888",
+        "FMA45891"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            0.8966551108258587,
+            -40.459181954118634,
+            -2.1562777336990067
+          ],
+          [
+            0.06152871301893904,
+            -2.15544347801585,
+            40.46911422405547
+          ],
+          [
+            -40.516554052372214,
+            -0.8986587036774267,
+            0.013736979315218225
+          ]
+        ],
+        "originCm": [
+          -8.30746511082586,
+          81.74938195411863,
+          9.217452733699007
+        ]
+      },
+      "sourceTriangles": 165070,
+      "triangleBudget": 10000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        25,
+        27
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.19983166426276702,
+        -0.20869334713246704,
+        -0.18933067215656513
+      ],
+      "name": "muscle_shin_L",
+      "ni": 24000,
+      "nv": 4193,
+      "offI": 1267074,
+      "offV": 1241916,
+      "region": "shin",
+      "selectedFamilies": [
+        {
+          "id": "FMA22532",
+          "name": "tibialis anterior"
+        },
+        {
+          "id": "FMA22534",
+          "name": "extensor digitorum longus"
+        },
+        {
+          "id": "FMA22538",
+          "name": "fibularis tertius"
+        },
+        {
+          "id": "FMA22533",
+          "name": "extensor hallucis longus"
+        },
+        {
+          "id": "FMA22539",
+          "name": "fibularis longus"
+        },
+        {
+          "id": "FMA22540",
+          "name": "fibularis brevis"
+        },
+        {
+          "id": "FMA22541",
+          "name": "gastrocnemius"
+        },
+        {
+          "id": "FMA22542",
+          "name": "soleus"
+        },
+        {
+          "id": "FMA22543",
+          "name": "plantaris"
+        },
+        {
+          "id": "FMA22590",
+          "name": "popliteus"
+        },
+        {
+          "id": "FMA51099",
+          "name": "tibialis posterior"
+        },
+        {
+          "id": "FMA51071",
+          "name": "flexor digitorum longus"
+        },
+        {
+          "id": "FMA22593",
+          "name": "flexor hallucis longus"
+        }
+      ],
+      "side": "L",
+      "size": [
+        1.4023380812933162,
+        0.6873563998979917,
+        0.3024732258077543
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA22545",
+          "name": "left tibialis anterior"
+        },
+        {
+          "id": "FMA22547",
+          "name": "left extensor hallucis longus"
+        },
+        {
+          "id": "FMA22549",
+          "name": "left extensor digitorum longus"
+        },
+        {
+          "id": "FMA22551",
+          "name": "left fibularis tertius"
+        },
+        {
+          "id": "FMA22553",
+          "name": "left fibularis longus"
+        },
+        {
+          "id": "FMA22555",
+          "name": "left fibularis brevis"
+        },
+        {
+          "id": "FMA22559",
+          "name": "left soleus"
+        },
+        {
+          "id": "FMA22561",
+          "name": "left plantaris"
+        },
+        {
+          "id": "FMA22592",
+          "name": "left popliteus"
+        },
+        {
+          "id": "FMA45958",
+          "name": "medial head of left gastrocnemius"
+        },
+        {
+          "id": "FMA45961",
+          "name": "lateral head of left gastrocnemius"
+        },
+        {
+          "id": "FMA65015",
+          "name": "left flexor hallucis longus"
+        },
+        {
+          "id": "FMA65017",
+          "name": "left flexor digitorum longus"
+        },
+        {
+          "id": "FMA65019",
+          "name": "left tibialis posterior"
+        }
+      ],
+      "sourceElements": [
+        "FMA22545",
+        "FMA22547",
+        "FMA22549",
+        "FMA22551",
+        "FMA22553",
+        "FMA22555",
+        "FMA22559",
+        "FMA22561",
+        "FMA22592",
+        "FMA45958",
+        "FMA45961",
+        "FMA65015",
+        "FMA65017",
+        "FMA65019"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            0.12492500000000106,
+            -34.54791,
+            -1.12228
+          ],
+          [
+            -0.00948357021767317,
+            -1.1223215435092857,
+            34.54813321204195
+          ],
+          [
+            -34.566132381688234,
+            -0.12455122239438372,
+            -0.013534649206336166
+          ]
+        ],
+        "originCm": [
+          7.198964999999999,
+          41.26885,
+          7.012895
+        ]
+      },
+      "sourceTriangles": 130048,
+      "triangleBudget": 8000
+    },
+    {
+      "frame": "bone",
+      "jointAnchorMethod": "companion skeletal joint references; not muscle origins or insertions",
+      "jointAnchors": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "landmarks": [
+        26,
+        28
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        -0.1975645873770556,
+        -0.2088779212906118,
+        -0.11558615668791301
+      ],
+      "name": "muscle_shin_R",
+      "ni": 24000,
+      "nv": 4374,
+      "offI": 1341318,
+      "offV": 1315074,
+      "region": "shin",
+      "selectedFamilies": [
+        {
+          "id": "FMA22532",
+          "name": "tibialis anterior"
+        },
+        {
+          "id": "FMA22534",
+          "name": "extensor digitorum longus"
+        },
+        {
+          "id": "FMA22538",
+          "name": "fibularis tertius"
+        },
+        {
+          "id": "FMA22533",
+          "name": "extensor hallucis longus"
+        },
+        {
+          "id": "FMA22539",
+          "name": "fibularis longus"
+        },
+        {
+          "id": "FMA22540",
+          "name": "fibularis brevis"
+        },
+        {
+          "id": "FMA22541",
+          "name": "gastrocnemius"
+        },
+        {
+          "id": "FMA22542",
+          "name": "soleus"
+        },
+        {
+          "id": "FMA22543",
+          "name": "plantaris"
+        },
+        {
+          "id": "FMA22590",
+          "name": "popliteus"
+        },
+        {
+          "id": "FMA51099",
+          "name": "tibialis posterior"
+        },
+        {
+          "id": "FMA51071",
+          "name": "flexor digitorum longus"
+        },
+        {
+          "id": "FMA22593",
+          "name": "flexor hallucis longus"
+        }
+      ],
+      "side": "R",
+      "size": [
+        1.3993908067630716,
+        0.6864108700039668,
+        0.3036741152880858
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA22544",
+          "name": "right tibialis anterior"
+        },
+        {
+          "id": "FMA22546",
+          "name": "right extensor hallucis longus"
+        },
+        {
+          "id": "FMA22548",
+          "name": "right extensor digitorum longus"
+        },
+        {
+          "id": "FMA22550",
+          "name": "right fibularis tertius"
+        },
+        {
+          "id": "FMA22552",
+          "name": "right fibularis longus"
+        },
+        {
+          "id": "FMA22554",
+          "name": "right fibularis brevis"
+        },
+        {
+          "id": "FMA22558",
+          "name": "right soleus"
+        },
+        {
+          "id": "FMA22560",
+          "name": "right plantaris"
+        },
+        {
+          "id": "FMA22591",
+          "name": "right popliteus"
+        },
+        {
+          "id": "FMA45957",
+          "name": "medial head of right gastrocnemius"
+        },
+        {
+          "id": "FMA45960",
+          "name": "lateral head of right gastrocnemius"
+        },
+        {
+          "id": "FMA65014",
+          "name": "right flexor hallucis longus"
+        },
+        {
+          "id": "FMA65016",
+          "name": "right flexor digitorum longus"
+        },
+        {
+          "id": "FMA65018",
+          "name": "right tibialis posterior"
+        }
+      ],
+      "sourceElements": [
+        "FMA22544",
+        "FMA22546",
+        "FMA22548",
+        "FMA22550",
+        "FMA22552",
+        "FMA22554",
+        "FMA22558",
+        "FMA22560",
+        "FMA22591",
+        "FMA45957",
+        "FMA45960",
+        "FMA65014",
+        "FMA65016",
+        "FMA65018"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -0.04526999999999948,
+            -34.580365,
+            -1.1650650000000002
+          ],
+          [
+            -0.021796130753306026,
+            -1.1650372645535376,
+            34.58038869737059
+          ],
+          [
+            -34.59997897277011,
+            0.045978248407394895,
+            -0.020259439508610626
+          ]
+        ],
+        "originCm": [
+          -7.410810000000001,
+          41.2902,
+          7.061175
+        ]
+      },
+      "sourceTriangles": 130532,
+      "triangleBudget": 8000
+    },
+    {
+      "frame": "foot",
+      "landmarks": [
+        27,
+        29,
+        31
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        0.12987748128547175,
+        -0.37962828203943,
+        -0.3278027016755101
+      ],
+      "name": "muscle_foot_L",
+      "ni": 12000,
+      "nv": 2185,
+      "offI": 1402428,
+      "offV": 1389318,
+      "region": "foot",
+      "selectedFamilies": [
+        {
+          "id": "FMA51141",
+          "name": "extensor hallucis brevis"
+        },
+        {
+          "id": "FMA51140",
+          "name": "extensor digitorum brevis"
+        },
+        {
+          "id": "FMA37448",
+          "name": "abductor hallucis"
+        },
+        {
+          "id": "FMA37449",
+          "name": "flexor hallucis brevis"
+        },
+        {
+          "id": "FMA37454",
+          "name": "adductor hallucis"
+        },
+        {
+          "id": "FMA37451",
+          "name": "abductor digiti minimi of foot"
+        },
+        {
+          "id": "FMA86033",
+          "name": "opponens digiti minimi of foot"
+        },
+        {
+          "id": "FMA37455",
+          "name": "flexor digiti minimi brevis of foot"
+        },
+        {
+          "id": "FMA37450",
+          "name": "flexor digitorum brevis"
+        },
+        {
+          "id": "FMA37452",
+          "name": "flexor accessorius"
+        },
+        {
+          "id": "FMA71321",
+          "name": "set of lumbricals of foot"
+        },
+        {
+          "id": "FMA71322",
+          "name": "set of dorsal interossei of foot"
+        },
+        {
+          "id": "FMA71323",
+          "name": "set of plantar interossei of foot"
+        }
+      ],
+      "side": "L",
+      "size": [
+        0.789655360047675,
+        1.309555638320866,
+        0.6577785331340877
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA37460",
+          "name": "left abductor hallucis"
+        },
+        {
+          "id": "FMA37462",
+          "name": "left flexor digitorum brevis"
+        },
+        {
+          "id": "FMA37464",
+          "name": "abductor digiti minimi of left foot"
+        },
+        {
+          "id": "FMA37466",
+          "name": "left flexor accessorius"
+        },
+        {
+          "id": "FMA37472",
+          "name": "flexor digiti minimi brevis of left foot"
+        },
+        {
+          "id": "FMA37484",
+          "name": "fourth lumbrical of left foot"
+        },
+        {
+          "id": "FMA37486",
+          "name": "third lumbrical of left foot"
+        },
+        {
+          "id": "FMA37718",
+          "name": "first lumbrical of left foot"
+        },
+        {
+          "id": "FMA37720",
+          "name": "second lumbrical of left foot"
+        },
+        {
+          "id": "FMA37742",
+          "name": "third plantar interosseous of left foot"
+        },
+        {
+          "id": "FMA37744",
+          "name": "second plantar interosseous of left foot"
+        },
+        {
+          "id": "FMA37746",
+          "name": "first plantar interosseous of left foot"
+        },
+        {
+          "id": "FMA45972",
+          "name": "medial head of left flexor hallucis brevis"
+        },
+        {
+          "id": "FMA45974",
+          "name": "lateral head of left flexor hallucis brevis"
+        },
+        {
+          "id": "FMA46019",
+          "name": "oblique head of left adductor hallucis"
+        },
+        {
+          "id": "FMA46021",
+          "name": "transverse head of left adductor hallucis"
+        },
+        {
+          "id": "FMA51143",
+          "name": "left extensor digitorum brevis"
+        },
+        {
+          "id": "FMA51145",
+          "name": "left extensor hallucis brevis"
+        },
+        {
+          "id": "FMA74141",
+          "name": "set of dorsal interossei of left foot"
+        },
+        {
+          "id": "FMA86035",
+          "name": "opponens digiti minimi of left foot"
+        }
+      ],
+      "sourceElements": [
+        "FMA37460",
+        "FMA37462",
+        "FMA37464",
+        "FMA37466",
+        "FMA37472",
+        "FMA37484",
+        "FMA37486",
+        "FMA37718",
+        "FMA37720",
+        "FMA37742",
+        "FMA37744",
+        "FMA37746",
+        "FMA45972",
+        "FMA45974",
+        "FMA46019",
+        "FMA46021",
+        "FMA51143",
+        "FMA51145",
+        "FMA74141",
+        "FMA86035"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            3.2331450000000004,
+            -2.12801915,
+            21.602408
+          ],
+          [
+            0.06278499999999987,
+            4.725919500000001,
+            4.536673
+          ],
+          [
+            -11.796429624748306,
+            -1.405223018461625,
+            1.627097588648438
+          ]
+        ],
+        "originCm": [
+          7.261105000000001,
+          1.9950204999999999,
+          1.3539420000000002
+        ]
+      },
+      "sourceTriangles": 42202,
+      "triangleBudget": 4000
+    },
+    {
+      "frame": "foot",
+      "landmarks": [
+        28,
+        30,
+        32
+      ],
+      "layer": "bodyMuscles",
+      "min": [
+        0.12909743894893372,
+        -0.38239237740203197,
+        -0.3289518856178278
+      ],
+      "name": "muscle_foot_R",
+      "ni": 12000,
+      "nv": 2188,
+      "offI": 1439556,
+      "offV": 1426428,
+      "region": "foot",
+      "selectedFamilies": [
+        {
+          "id": "FMA51141",
+          "name": "extensor hallucis brevis"
+        },
+        {
+          "id": "FMA51140",
+          "name": "extensor digitorum brevis"
+        },
+        {
+          "id": "FMA37448",
+          "name": "abductor hallucis"
+        },
+        {
+          "id": "FMA37449",
+          "name": "flexor hallucis brevis"
+        },
+        {
+          "id": "FMA37454",
+          "name": "adductor hallucis"
+        },
+        {
+          "id": "FMA37451",
+          "name": "abductor digiti minimi of foot"
+        },
+        {
+          "id": "FMA86033",
+          "name": "opponens digiti minimi of foot"
+        },
+        {
+          "id": "FMA37455",
+          "name": "flexor digiti minimi brevis of foot"
+        },
+        {
+          "id": "FMA37450",
+          "name": "flexor digitorum brevis"
+        },
+        {
+          "id": "FMA37452",
+          "name": "flexor accessorius"
+        },
+        {
+          "id": "FMA71321",
+          "name": "set of lumbricals of foot"
+        },
+        {
+          "id": "FMA71322",
+          "name": "set of dorsal interossei of foot"
+        },
+        {
+          "id": "FMA71323",
+          "name": "set of plantar interossei of foot"
+        }
+      ],
+      "side": "R",
+      "size": [
+        0.792007324680557,
+        1.304608041407464,
+        0.6566954159820636
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA37459",
+          "name": "right abductor hallucis"
+        },
+        {
+          "id": "FMA37461",
+          "name": "right flexor digitorum brevis"
+        },
+        {
+          "id": "FMA37463",
+          "name": "abductor digiti minimi of right foot"
+        },
+        {
+          "id": "FMA37465",
+          "name": "right flexor accessorius"
+        },
+        {
+          "id": "FMA37471",
+          "name": "flexor digiti minimi brevis of right foot"
+        },
+        {
+          "id": "FMA37483",
+          "name": "fourth lumbrical of right foot"
+        },
+        {
+          "id": "FMA37485",
+          "name": "third lumbrical of right foot"
+        },
+        {
+          "id": "FMA37717",
+          "name": "first lumbrical of right foot"
+        },
+        {
+          "id": "FMA37719",
+          "name": "second lumbrical of right foot"
+        },
+        {
+          "id": "FMA37741",
+          "name": "third plantar interosseous of right foot"
+        },
+        {
+          "id": "FMA37743",
+          "name": "second plantar interosseous of right foot"
+        },
+        {
+          "id": "FMA37745",
+          "name": "first plantar interosseous of right foot"
+        },
+        {
+          "id": "FMA45971",
+          "name": "medial head of right flexor hallucis brevis"
+        },
+        {
+          "id": "FMA45973",
+          "name": "lateral head of right flexor hallucis brevis"
+        },
+        {
+          "id": "FMA46018",
+          "name": "oblique head of right adductor hallucis"
+        },
+        {
+          "id": "FMA46020",
+          "name": "transverse head of right adductor hallucis"
+        },
+        {
+          "id": "FMA51142",
+          "name": "right extensor digitorum brevis"
+        },
+        {
+          "id": "FMA51144",
+          "name": "right extensor hallucis brevis"
+        },
+        {
+          "id": "FMA74140",
+          "name": "set of dorsal interossei of right foot"
+        },
+        {
+          "id": "FMA86034",
+          "name": "opponens digiti minimi of right foot"
+        }
+      ],
+      "sourceElements": [
+        "FMA37459",
+        "FMA37461",
+        "FMA37463",
+        "FMA37465",
+        "FMA37471",
+        "FMA37483",
+        "FMA37485",
+        "FMA37717",
+        "FMA37719",
+        "FMA37741",
+        "FMA37743",
+        "FMA37745",
+        "FMA45971",
+        "FMA45973",
+        "FMA46018",
+        "FMA46020",
+        "FMA51142",
+        "FMA51144",
+        "FMA74140",
+        "FMA86034"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            -3.1177800000000007,
+            -2.1417869499999997,
+            21.6317075
+          ],
+          [
+            0.016589999999999883,
+            4.6916975,
+            4.5704175
+          ],
+          [
+            -11.791849065722785,
+            1.5480140848623474,
+            -1.5462891597787563
+          ]
+        ],
+        "originCm": [
+          -7.47267,
+          2.0181375,
+          1.3256925000000002
+        ]
+      },
+      "sourceTriangles": 41190,
+      "triangleBudget": 4000
+    }
+  ],
+  "referenceMethods": {
+    "11": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.18442
+    },
+    "12": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.15827
+    },
+    "23": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.43862
+    },
+    "24": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.37394
+    }
+  },
+  "referencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      8.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -8.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  },
+  "schemaVersion": 1,
+  "source": {
+    "archiveDate": "2011-09-15",
+    "dataset": "BodyParts3D",
+    "downloads": [
+      {
+        "sha256": "2125f6d761b14ead4ee64f71713f56f3f0f29982693ff20aac63474470cb92f4",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip"
+      },
+      {
+        "sha256": "824a34ed939a53375037d0d68b88ad2b63b1f0ae15a585632af2a63c2ab2e4af",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/parts_list_e.txt"
+      },
+      {
+        "sha256": "17cd3611eb6b46558f983f890273fdb19f93806150ed95f6611acf4b81e90bc2",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/composite_parts.txt"
+      }
+    ],
+    "elementCount": 276,
+    "elementIds": [
+      "BP44",
+      "BP45",
+      "BP46",
+      "BP47",
+      "FMA13336",
+      "FMA13337",
+      "FMA13358",
+      "FMA13359",
+      "FMA13375",
+      "FMA13376",
+      "FMA13377",
+      "FMA13378",
+      "FMA13381",
+      "FMA13382",
+      "FMA13383",
+      "FMA13384",
+      "FMA13388",
+      "FMA13389",
+      "FMA13390",
+      "FMA13391",
+      "FMA13392",
+      "FMA13393",
+      "FMA13398",
+      "FMA13399",
+      "FMA13403",
+      "FMA13404",
+      "FMA13405",
+      "FMA13406",
+      "FMA13408",
+      "FMA13409",
+      "FMA13411",
+      "FMA13412",
+      "FMA13414",
+      "FMA13415",
+      "FMA13892",
+      "FMA13893",
+      "FMA22322",
+      "FMA22323",
+      "FMA22324",
+      "FMA22325",
+      "FMA22326",
+      "FMA22327",
+      "FMA22328",
+      "FMA22329",
+      "FMA22330",
+      "FMA22331",
+      "FMA22332",
+      "FMA22333",
+      "FMA22334",
+      "FMA22335",
+      "FMA22336",
+      "FMA22337",
+      "FMA22338",
+      "FMA22339",
+      "FMA22340",
+      "FMA22341",
+      "FMA22342",
+      "FMA22343",
+      "FMA22344",
+      "FMA22345",
+      "FMA22348",
+      "FMA22349",
+      "FMA22354",
+      "FMA22355",
+      "FMA22358",
+      "FMA22359",
+      "FMA22425",
+      "FMA22426",
+      "FMA22448",
+      "FMA22449",
+      "FMA22450",
+      "FMA22451",
+      "FMA22452",
+      "FMA22454",
+      "FMA22456",
+      "FMA22457",
+      "FMA22459",
+      "FMA22460",
+      "FMA22544",
+      "FMA22545",
+      "FMA22546",
+      "FMA22547",
+      "FMA22548",
+      "FMA22549",
+      "FMA22550",
+      "FMA22551",
+      "FMA22552",
+      "FMA22553",
+      "FMA22554",
+      "FMA22555",
+      "FMA22558",
+      "FMA22559",
+      "FMA22560",
+      "FMA22561",
+      "FMA22591",
+      "FMA22592",
+      "FMA22726",
+      "FMA22727",
+      "FMA22728",
+      "FMA22729",
+      "FMA22740",
+      "FMA22741",
+      "FMA22742",
+      "FMA22743",
+      "FMA22744",
+      "FMA22745",
+      "FMA22751",
+      "FMA22753",
+      "FMA22754",
+      "FMA22756",
+      "FMA22757",
+      "FMA22758",
+      "FMA22779",
+      "FMA22780",
+      "FMA22781",
+      "FMA22782",
+      "FMA22872",
+      "FMA22873",
+      "FMA22874",
+      "FMA22875",
+      "FMA22876",
+      "FMA22877",
+      "FMA22878",
+      "FMA22879",
+      "FMA32540",
+      "FMA32541",
+      "FMA32544",
+      "FMA32545",
+      "FMA32547",
+      "FMA32548",
+      "FMA32551",
+      "FMA32552",
+      "FMA32553",
+      "FMA32554",
+      "FMA33581",
+      "FMA33583",
+      "FMA33584",
+      "FMA33585",
+      "FMA33586",
+      "FMA33587",
+      "FMA34680",
+      "FMA34681",
+      "FMA34682",
+      "FMA34683",
+      "FMA34684",
+      "FMA34685",
+      "FMA34690",
+      "FMA34691",
+      "FMA37459",
+      "FMA37460",
+      "FMA37461",
+      "FMA37462",
+      "FMA37463",
+      "FMA37464",
+      "FMA37465",
+      "FMA37466",
+      "FMA37471",
+      "FMA37472",
+      "FMA37483",
+      "FMA37484",
+      "FMA37485",
+      "FMA37486",
+      "FMA37665",
+      "FMA37666",
+      "FMA37668",
+      "FMA37669",
+      "FMA37684",
+      "FMA37685",
+      "FMA37686",
+      "FMA37687",
+      "FMA37695",
+      "FMA37696",
+      "FMA37697",
+      "FMA37698",
+      "FMA37699",
+      "FMA37700",
+      "FMA37705",
+      "FMA37706",
+      "FMA37717",
+      "FMA37718",
+      "FMA37719",
+      "FMA37720",
+      "FMA37741",
+      "FMA37742",
+      "FMA37743",
+      "FMA37744",
+      "FMA37745",
+      "FMA37746",
+      "FMA38454",
+      "FMA38455",
+      "FMA38460",
+      "FMA38461",
+      "FMA38463",
+      "FMA38464",
+      "FMA38479",
+      "FMA38480",
+      "FMA38482",
+      "FMA38484",
+      "FMA38486",
+      "FMA38487",
+      "FMA38495",
+      "FMA38496",
+      "FMA38498",
+      "FMA38499",
+      "FMA38501",
+      "FMA38502",
+      "FMA38504",
+      "FMA38505",
+      "FMA38513",
+      "FMA38514",
+      "FMA38516",
+      "FMA38517",
+      "FMA38519",
+      "FMA38520",
+      "FMA38522",
+      "FMA38523",
+      "FMA38525",
+      "FMA38526",
+      "FMA38560",
+      "FMA38561",
+      "FMA38562",
+      "FMA38563",
+      "FMA38617",
+      "FMA38618",
+      "FMA38619",
+      "FMA38620",
+      "FMA38638",
+      "FMA38639",
+      "FMA38640",
+      "FMA38641",
+      "FMA38928",
+      "FMA38929",
+      "FMA38930",
+      "FMA38931",
+      "FMA38932",
+      "FMA38933",
+      "FMA38934",
+      "FMA38935",
+      "FMA43883",
+      "FMA43884",
+      "FMA43886",
+      "FMA43887",
+      "FMA45874",
+      "FMA45875",
+      "FMA45888",
+      "FMA45889",
+      "FMA45891",
+      "FMA45892",
+      "FMA45957",
+      "FMA45958",
+      "FMA45960",
+      "FMA45961",
+      "FMA45971",
+      "FMA45972",
+      "FMA45973",
+      "FMA45974",
+      "FMA46018",
+      "FMA46019",
+      "FMA46020",
+      "FMA46021",
+      "FMA51142",
+      "FMA51143",
+      "FMA51144",
+      "FMA51145",
+      "FMA65014",
+      "FMA65015",
+      "FMA65016",
+      "FMA65017",
+      "FMA65018",
+      "FMA65019",
+      "FMA74140",
+      "FMA74141",
+      "FMA79979",
+      "FMA79980",
+      "FMA86034",
+      "FMA86035"
+    ],
+    "officialLicensePage": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+    "outputUnit": "cm",
+    "sourceUnit": "mm",
+    "transform": "[x, z, -y] / 10",
+    "version": "3.0"
+  },
+  "torsoReferencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      10.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -10.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  }
+}

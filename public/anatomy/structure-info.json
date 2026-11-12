@@ -1,0 +1,2053 @@
+{
+ "schemaVersion": 1,
+ "source": "English Wikipedia (en.wikipedia.org), infobox fields and opening paragraphs of the listed article revisions",
+ "license": "CC-BY-SA-4.0",
+ "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+ "attribution": "Text by Wikipedia contributors. Each entry names its article and the exact revision. Markup, citations and pronunciations were removed and opening paragraphs end at a sentence; the few repaired stray characters and omitted fields are listed in tools/structure-info/sources.json.",
+ "articles": {
+  "Abdominal external oblique muscle": {
+   "rev": 1360606362,
+   "origin": "Ribs 5-12",
+   "insertion": "Xiphoid process,outer lip of the iliac crest, pubic crest, pubic tubercle, linea alba, inguinal ligament, anterior superior iliac spine (ASIS)",
+   "action": "Flexion of the torso and contralateral rotation of torso",
+   "nerve": "Thoraco-abdominal nerves (T7-11) and subcostal nerve (T12)"
+  },
+  "Abdominal internal oblique muscle": {
+   "rev": 1335108303,
+   "origin": "Inguinal ligament, iliac crest and the lumbodorsal fascia",
+   "insertion": "Linea alba, pectineal line of pubis (via conjoint tendon) and ribs 10-12.",
+   "action": "Bilateral: Compresses abdomen\nUnilateral: Ipsilateral trunk rotation",
+   "nerve": "Thoracoabdominal nn. (T7-T11), subcostal n. (T12), iliohypogastric n. (L1) and ilioinguinal n. (L1)",
+   "blood": "Subcostal arteries"
+  },
+  "Abducens nerve": {
+   "rev": 1345738873,
+   "from": "Abducens nucleus",
+   "supplies": "Lateral rectus muscle"
+  },
+  "Abductor digiti minimi muscle of foot": {
+   "rev": 1352526324,
+   "origin": "Plantar aponeurosis",
+   "insertion": "Fifth toe or phalanges",
+   "action": "Flexion and abduction of the fifth toe",
+   "nerve": "Lateral plantar nerve",
+   "blood": "Lateral plantar artery"
+  },
+  "Abductor hallucis muscle": {
+   "rev": 1380881716,
+   "origin": "Medial process of calcaneal tuberosity, Plantar aponeurosis, Flexor retinaculum",
+   "insertion": "Medial aspect of base of 1st phalanx of hallux",
+   "action": "Abducts hallux",
+   "nerve": "Medial plantar nerve",
+   "blood": "Medial plantar artery"
+  },
+  "Abductor pollicis longus muscle": {
+   "rev": 1360606370,
+   "origin": "Ulna, radius, Interosseous membrane",
+   "insertion": "Base of 1st metacarpal",
+   "action": "Abduction, extension of thumb",
+   "nerve": "Radial nerve\nC8, T1",
+   "blood": "Posterior interosseous artery"
+  },
+  "Adductor brevis muscle": {
+   "rev": 1355350325,
+   "origin": "Anterior surface of the inferior ramus and body of the pubis",
+   "insertion": "The lesser trochanter and linea aspera of the femur",
+   "action": "Adduction of hip",
+   "nerve": "Obturator nerve",
+   "blood": "Deep femoral artery"
+  },
+  "Adductor hallucis muscle": {
+   "rev": 1380892479,
+   "origin": "Oblique head: proximal ends of middle 3 metatarsal bones; Transverse head: MTP ligaments of lateral 3 toes",
+   "insertion": "Lateral side of base of first phalanx of the 1st toe; sesamoid apparatus",
+   "action": "Adducts hallux",
+   "nerve": "Lateral plantar nerve",
+   "blood": "Lateral plantar artery"
+  },
+  "Adductor longus muscle": {
+   "rev": 1366565862,
+   "origin": "Pubic body just below the pubic crest",
+   "insertion": "Middle third of linea aspera",
+   "action": "Adduction of hip, flexion of hip joint",
+   "nerve": "Anterior branch of obturator nerve",
+   "blood": "Deep femoral artery"
+  },
+  "Adductor magnus muscle": {
+   "rev": 1385135631,
+   "origin": "Pubis, tuberosity of the ischium",
+   "insertion": "Linea aspera and adductor tubercle of femur",
+   "action": "Adduction of hip (both portions)\nflexion of hip (adductor portion)\nextension of hip (hamstring portion)",
+   "nerve": "Posterior branch of obturator nerve (adductor) and sciatic nerve (hamstring)",
+   "blood": "Deep femoral artery"
+  },
+  "Adductor minimus muscle": {
+   "rev": 1222231493,
+   "origin": "Inferior ramus",
+   "insertion": "Linea aspera of the femur",
+   "action": "Adduction and lateral rotation of thigh",
+   "nerve": "Obturator and tibial nerves",
+   "blood": "Obturator artery and the medial circumflex femoral artery of the femoral artery"
+  },
+  "Anconeus muscle": {
+   "rev": 1345459781,
+   "origin": "Lateral epicondyle of the humerus proximally",
+   "insertion": "Lateral surface of the olecranon process of the ulna and the superior proximal part of the posterior ulna",
+   "action": "It is partly blended in with the triceps, which it assists in extension of the elbow. It also stabilizes the elbow during pronation and supination and pulls slack out of the elbow joint capsule during extension to prevent impingement.",
+   "nerve": "Radial nerve (C5, C6, C7, C8, and T1)",
+   "blood": "Deep brachial artery, recurrent interosseous artery"
+  },
+  "Anterior branch of obturator nerve": {
+   "rev": 1380894117,
+   "from": "Obturator nerve"
+  },
+  "Anterior cutaneous branches of the femoral nerve": {
+   "rev": 1263791483,
+   "from": "Femoral nerve"
+  },
+  "Anterior interosseous nerve": {
+   "rev": 1319231200,
+   "from": "Median nerve"
+  },
+  "Axillary nerve": {
+   "rev": 1360615075,
+   "from": "Posterior cord (C5, C6)",
+   "supplies": "Deltoid, teres minor"
+  },
+  "Biceps": {
+   "rev": 1383126595,
+   "origin": "Short head: coracoid process of the scapula.\nLong head: supraglenoid tubercle",
+   "insertion": "Radial tuberosity and bicipital aponeurosis into deep fascia on medial part of forearm",
+   "action": "Flexes elbow\nflexes and abducts shoulder\nsupinates radioulnar joint in the forearm",
+   "nerve": "Musculocutaneous nerve (C5–C7)",
+   "blood": "Brachial artery"
+  },
+  "Biceps femoris muscle": {
+   "rev": 1380891884,
+   "origin": "Tuberosity of the ischium, linea aspera, femur",
+   "insertion": "The head of the fibula which articulates with the back of the lateral tibial condyle",
+   "action": "Flexes knee joint, laterally rotates knee joint (when knee is flexed), extends hip joint (long head only)",
+   "nerve": "Long head: tibial nerve\nshort head: common fibular nerve",
+   "blood": "Deep femoral artery, perforating arteries; long head of biceps femoris: perforating branches from profunda femoris artery"
+  },
+  "Brachialis muscle": {
+   "rev": 1369774255,
+   "origin": "Anterior surface of the humerus, particularly the distal half of this bone",
+   "insertion": "Coronoid process and the tuberosity of the ulna",
+   "action": "Flexion at elbow joint",
+   "nerve": "Musculocutaneous nerve (C5-C7) and radial nerve (C5, C6)",
+   "blood": "Radial recurrent artery, brachial artery"
+  },
+  "Brachioradialis": {
+   "rev": 1378846149,
+   "origin": "Lateral supracondylar ridge of the humerus and the orbicular ligament of the radius",
+   "insertion": "Distal radius (radial styloid process)",
+   "action": "Flexion of elbow, supination and pronation of the radioulnar joint to 90°",
+   "nerve": "Radial nerve (C5–C8 & T1)",
+   "blood": "Radial recurrent artery"
+  },
+  "Buccal nerve": {
+   "rev": 1370138964,
+   "from": "Mandibular nerve",
+   "supplies": "Lateral pterygoid muscle and cheek"
+  },
+  "Bucinator muscle": {
+   "rev": 1354805370,
+   "origin": "From the alveolar processes of maxilla and mandible, buccinator crest and pterygomandibular raphe",
+   "insertion": "In the fibers of the orbicularis oris",
+   "action": "The buccinator compresses the cheeks against the teeth and is used in acts such as blowing. It is an assistant muscle of mastication (chewing) and in neonates it is used to suckle.",
+   "nerve": "Buccal branch of the facial nerve (VII cranial nerve)",
+   "blood": "Buccal artery"
+  },
+  "Calcaneus": {
+   "rev": 1372908718,
+   "description": "The calcaneus (from the Latin calcaneus or calcaneum, meaning heel; pl.: calcanei or calcanea) or heel bone is a bone of the tarsus of the foot which constitutes the heel. In humans, it attaches several muscles and the plantar fascia. In some animals, it is the point of the hock."
+  },
+  "Capitate bone": {
+   "rev": 1373211802,
+   "description": "The capitate bone, also known as os magnum, is a bone in the human wrist found in the center of the carpal bone region, located at the distal end of the radius and ulna bones. It articulates with the third metacarpal bone (the middle finger) and forms the third carpometacarpal joint. The capitate bone is the largest of the carpal bones in the human hand."
+  },
+  "Cervical vertebrae": {
+   "rev": 1373214649,
+   "description": "In tetrapods, cervical vertebrae (sg.: vertebra) are the vertebrae of the neck, immediately below the skull. Truncal vertebrae (divided into thoracic and lumbar vertebrae in mammals) lie caudal (toward the tail) of cervical vertebrae. In sauropsid species, the cervical vertebrae bear cervical ribs."
+  },
+  "Chorda tympani": {
+   "rev": 1384928012,
+   "from": "Facial nerve",
+   "supplies": "Taste (anterior 2/3 of tongue)\nSubmandibular gland\nSublingual gland"
+  },
+  "Clavicle": {
+   "rev": 1381562536,
+   "description": "The clavicle, collarbone, or keybone is a slender, S-shaped long bone approximately 15 cm long that serves as a strut between the shoulder blade and the sternum (breastbone). There are two clavicles, one on each side of the body. The clavicle is the only long bone in the body that lies horizontally. Together with the shoulder blade, it makes up the shoulder girdle."
+  },
+  "Common fibular nerve": {
+   "rev": 1380881638,
+   "from": "Sacral plexus via sciatic nerve (L4-S2)",
+   "branches": "Deep fibular nerve and superficial fibular nerve",
+   "supplies": "Anterior compartment of leg, lateral compartment of leg, extensor digitorum brevis"
+  },
+  "Common palmar digital nerves of median nerve": {
+   "rev": 1263792139,
+   "from": "Median nerve"
+  },
+  "Common palmar digital nerves of ulnar nerve": {
+   "rev": 1190611320,
+   "from": "superficial branch of ulnar nerve",
+   "branches": "proper palmar digital nerves of ulnar nerve"
+  },
+  "Common plantar digital nerves of lateral plantar nerve": {
+   "rev": 1372346466,
+   "from": "lateral plantar nerve"
+  },
+  "Common plantar digital nerves of medial plantar nerve": {
+   "rev": 1375446615,
+   "from": "medial plantar nerve"
+  },
+  "Coracobrachialis muscle": {
+   "rev": 1378219774,
+   "origin": "Coracoid process of scapula",
+   "insertion": "Anteromedial surface of humerus distal to crest of lesser tubercle",
+   "action": "Adducts humerus, flexes the arm at glenohumeral joint",
+   "nerve": "Musculocutaneous nerve (C5, C6, and C7)",
+   "blood": "Brachial artery"
+  },
+  "Corrugator supercilii muscle": {
+   "rev": 1292342825,
+   "origin": "Supraorbital ridge (superciliary arches)",
+   "insertion": "Forehead skin, near eyebrow",
+   "action": "Wrinkles forehead",
+   "nerve": "Facial nerve",
+   "blood": "Ophthalmic artery"
+  },
+  "Cuboid bone": {
+   "rev": 1372908385,
+   "description": "In the human body, the cuboid bone is one of the seven tarsal bones of the foot.",
+   "articulations": "Calcaneocuboid, cuboideonavicular and cuneocuboid articulation"
+  },
+  "Cuneiform bones": {
+   "rev": 1372908628,
+   "description": "There are three cuneiform (\"wedge-shaped\") bones in the human foot:\nthe first or medial cuneiform\nthe second or intermediate cuneiform, also known as the middle cuneiform\nthe third or lateral cuneiform"
+  },
+  "Deep branch of radial nerve": {
+   "rev": 1222893072,
+   "from": "Radial nerve"
+  },
+  "Deep branch of ulnar nerve": {
+   "rev": 1314385020,
+   "from": "palmar branch of ulnar nerve",
+   "supplies": "dorsal interossei, palmar interossei, lumbricals #3 and 4, adductor pollicis, hypothenar eminence"
+  },
+  "Deep fibular nerve": {
+   "rev": 1380880889,
+   "from": "Common fibular nerve",
+   "supplies": "Anterior compartment of leg"
+  },
+  "Deltoid muscle": {
+   "rev": 1380880370,
+   "origin": "The anterior border and upper surface of the lateral third of the clavicle, acromion, spine of the scapula",
+   "insertion": "Deltoid tuberosity of humerus",
+   "action": "Shoulder abduction, flexion and extension",
+   "nerve": "Axillary nerve",
+   "blood": "Thoracoacromial artery, anterior and posterior humeral circumflex artery"
+  },
+  "Depressor anguli oris muscle": {
+   "rev": 1291865209,
+   "origin": "Tubercle of mandible",
+   "insertion": "Modiolus of mouth",
+   "action": "Depresses angle of mouth",
+   "nerve": "Marginal mandibular branch of the facial nerve",
+   "blood": "Facial artery"
+  },
+  "Depressor labii inferioris muscle": {
+   "rev": 1353353797,
+   "origin": "Oblique line of the mandible, between the symphysis and the mental foramen",
+   "insertion": "Integument of the lower lip, orbicularis oris fibers, its fellow of the opposite side",
+   "action": "Depression of the lower lip",
+   "nerve": "Marginal mandibular branch of the facial nerve"
+  },
+  "Dorsal branch of ulnar nerve": {
+   "rev": 1365976105,
+   "from": "Ulnar nerve"
+  },
+  "Dorsal digital nerves of radial nerve": {
+   "rev": 1263792170,
+   "from": "Radial nerve"
+  },
+  "Dorsal digital nerves of ulnar nerve": {
+   "rev": 1263792311,
+   "from": "Dorsal branch of ulnar nerve"
+  },
+  "Dorsal interossei of the foot": {
+   "rev": 1354942041,
+   "origin": "Metatarsals",
+   "insertion": "Proximal phalanges",
+   "action": "Abduct toes",
+   "nerve": "Lateral plantar nerve"
+  },
+  "Dorsal scapular nerve": {
+   "rev": 1375917716,
+   "from": "C5 of brachial plexus",
+   "supplies": "Rhomboid minor, rhomboid major, levator scapulae"
+  },
+  "Ethmoid bone": {
+   "rev": 1381765570,
+   "description": "The ethmoid bone (from Ancient Greek: ἡθμός) is an unpaired bone in the skull that separates the nasal cavity from the brain. It is located at the roof of the nose, between the two orbits. The cubical (cube-shaped) bone is lightweight due to a spongy construction. The ethmoid bone is one of the bones that make up the orbit of the eye."
+  },
+  "Extensor carpi radialis brevis muscle": {
+   "rev": 1355535817,
+   "origin": "Humerus at the anterior of lateral epicondyle (common extensor tendon)",
+   "insertion": "Posterior base of the 3rd metacarpal",
+   "action": "Extensor and abductor of the hand at the wrist joint",
+   "nerve": "Deep branch of the radial nerve",
+   "blood": "Radial artery"
+  },
+  "Extensor carpi radialis longus muscle": {
+   "rev": 1360657171,
+   "origin": "Lateral supracondylar ridge",
+   "insertion": "2nd metacarpal",
+   "action": "Extensor at the wrist joint, abducts the hand at the wrist",
+   "nerve": "Radial nerve",
+   "blood": "Radial artery"
+  },
+  "Extensor carpi ulnaris muscle": {
+   "rev": 1345277848,
+   "origin": "Humeral head: Lateral epicondyle of the humerus.\nUlnar head: Olecranon, posterior surface of ulna, antebrachial fascia",
+   "insertion": "5th metacarpal",
+   "action": "Extends and adducts the wrist",
+   "nerve": "Posterior interosseous nerve",
+   "blood": "Ulnar artery"
+  },
+  "Extensor digiti minimi muscle": {
+   "rev": 1365975936,
+   "origin": "The anterior portion of the lateral epicondyle of the humerus (common extensor tendon)",
+   "insertion": "At the extensor expansion, located at the base of the middle and distal phalanx of digit V on the dorsal side",
+   "action": "Extends the wrist and the little finger at all joints",
+   "nerve": "Posterior interosseous nerve (C7, 8)",
+   "blood": "Posterior interosseous artery"
+  },
+  "Extensor digitorum brevis muscle": {
+   "rev": 1380881768,
+   "origin": "Dorsal surface of calcaneus",
+   "insertion": "Proximal dorsal region of middle phalanges 2, 3 and 4",
+   "action": "Extends digits 2 through 4",
+   "nerve": "Deep fibular nerve",
+   "blood": "Dorsalis pedis artery"
+  },
+  "Extensor digitorum longus muscle": {
+   "rev": 1380884194,
+   "origin": "Anterior lateral condyle of tibia, anterior shaft of fibula and superior 3/4 of interosseous membrane",
+   "insertion": "Dorsal surface; middle and distal phalanges of lateral four digits",
+   "action": "Extension of toes and dorsiflexion of ankle",
+   "nerve": "Deep fibular nerve",
+   "blood": "Anterior tibial artery"
+  },
+  "Extensor digitorum muscle": {
+   "rev": 1360657173,
+   "origin": "Lateral epicondyle (common extensor tendon)",
+   "insertion": "Extensor expansion of middle and distal phalanges of the 2nd, 3rd, 4th, and 5th fingers",
+   "action": "Extension of hand, wrist and fingers",
+   "nerve": "Posterior interosseous nerve",
+   "blood": "Posterior interosseous artery"
+  },
+  "Extensor hallucis brevis muscle": {
+   "rev": 1374105534,
+   "origin": "Calcaneus",
+   "insertion": "Proximal phalanx of digit 1 (hallux, or the great toe)",
+   "action": "Extend hallux",
+   "nerve": "Deep fibular nerve",
+   "blood": "Dorsalis pedis artery"
+  },
+  "Extensor hallucis longus muscle": {
+   "rev": 1380879008,
+   "origin": "Arises from the middle portion of the fibula on the anterior surface and the interosseous membrane",
+   "insertion": "Inserts on the dorsal side of the base of the distal phalanx of the big toe",
+   "action": "Extends (raises) the big toe and assists in dorsiflexion of the foot at the ankle. Also is a weak evertor/invertor",
+   "nerve": "Deep fibular nerve, L5 (L4-S1)",
+   "blood": "Anterior tibial artery"
+  },
+  "Extensor indicis muscle": {
+   "rev": 1380884676,
+   "origin": "Posterior distal third of ulna and interosseous membrane",
+   "insertion": "Index finger (extensor hood)",
+   "action": "Extends index finger, wrist",
+   "nerve": "Posterior interosseous nerve",
+   "blood": "Posterior interosseous artery"
+  },
+  "Extensor pollicis brevis muscle": {
+   "rev": 1352367762,
+   "origin": "Radius and the Interosseous membrane",
+   "insertion": "Thumb, proximal phalanx",
+   "action": "Extension of thumb at metacarpophalangeal joint",
+   "nerve": "Posterior interosseous nerve",
+   "blood": "Posterior interosseous artery"
+  },
+  "Extensor pollicis longus muscle": {
+   "rev": 1380252781,
+   "origin": "Middle third of posterior surface of ulna, interosseous membrane",
+   "insertion": "Thumb, distal phalanx",
+   "action": "Extension of the thumb (metacarpophalangeal and interphalangeal)",
+   "nerve": "Posterior interosseous nerve (branching from the radial nerve)",
+   "blood": "Posterior interosseous artery"
+  },
+  "External obturator muscle": {
+   "rev": 1303877904,
+   "origin": "Obturator foramen and obturator membrane",
+   "insertion": "Trochanteric fossa of femur",
+   "action": "Abduct thigh, laterally rotates thigh",
+   "nerve": "Posterior branch of obturator nerve (third and fourth lumbar nerves)",
+   "blood": "Obturator artery"
+  },
+  "Facial nerve": {
+   "rev": 1370520111,
+   "from": "Facial nerve nucleus, intermediate nerve",
+   "branches": "Greater superficial petrosal nerve",
+   "supplies": "Motor: Muscles of facial expression, posterior belly of digastric, stylohyoid, stapedius\nSpecial sensory: taste to anterior two-thirds of tongue\nParasympathetic: submandibular gland, sublingual gland, lacrimal glands"
+  },
+  "Femoral nerve": {
+   "rev": 1380880847,
+   "supplies": "Anterior compartment of thigh"
+  },
+  "Femur": {
+   "rev": 1383828671,
+   "description": "The femur (pl.: femurs or femora), or thigh bone is the only bone in the thigh — the region of the lower limb between the hip and the knee. In many four-legged animals, the femur is the upper bone of the hindleg.",
+   "articulations": "Hip: acetabulum of pelvis superiorly\nknee: with the tibia and patella inferiorly"
+  },
+  "Fibula": {
+   "rev": 1380880559,
+   "description": "The fibula (pl.: fibulae or fibulas) or calf bone is a leg bone on the lateral side of the tibia, to which it is connected above and below. It is the smaller of the two bones and, in proportion to its length, the most slender of all the long bones. Its upper extremity is small, placed toward the back of the head of the tibia, below the knee joint and excluded from the formation of this joint.",
+   "articulations": "Superior and inferior tibiofibular joint\nAnkle"
+  },
+  "Fibularis brevis": {
+   "rev": 1380881166,
+   "origin": "Lower two-thirds of lateral fibula",
+   "insertion": "Fifth metatarsal",
+   "action": "Plantarflexion, eversion",
+   "nerve": "Superficial fibular nerve",
+   "blood": "Fibular (peroneal) artery"
+  },
+  "Fibularis longus": {
+   "rev": 1360659007,
+   "origin": "Proximal part of lateral surface of shaft of fibula and head of fibula",
+   "insertion": "First metatarsal, medial cuneiform",
+   "action": "Plantarflexion, eversion, support arches",
+   "nerve": "Superficial fibular nerve",
+   "blood": "Fibular (peroneal) artery"
+  },
+  "Fibularis tertius": {
+   "rev": 1380884628,
+   "origin": "Distal anterior surface of the fibula also the interosseous membrane",
+   "insertion": "Dorsal surface of metatarsal 5",
+   "action": "Dorsiflexion and eversion of the foot",
+   "nerve": "Deep fibular nerve",
+   "blood": "Anterior tibial artery"
+  },
+  "Fifth metacarpal bone": {
+   "rev": 1316779043,
+   "description": "The fifth metacarpal bone (metacarpal bone of the little finger or pinky finger) is the most medial and second-shortest of the metacarpal bones."
+  },
+  "Fifth metatarsal bone": {
+   "rev": 1301060478,
+   "description": "The fifth metatarsal bone is a long bone in the foot, and is palpable along the distal outer edges of the feet. It is the second smallest of the five metatarsal bones. The fifth metatarsal is analogous to the fifth metacarpal bone in the hand."
+  },
+  "First metacarpal bone": {
+   "rev": 1351512958,
+   "description": "The first metacarpal bone or the metacarpal bone of the thumb is the first bone proximal to the thumb. It is connected to the trapezium of the carpus at the first carpometacarpal joint and to the proximal thumb phalanx at the first metacarpophalangeal joint."
+  },
+  "First metatarsal bone": {
+   "rev": 1333057195,
+   "description": "The first metatarsal bone is the bone in the foot just behind the big toe. The first metatarsal bone is the shortest of the metatarsal bones and by far the thickest and strongest of them.",
+   "articulations": "Proximal phalange and medial cuneiform"
+  },
+  "Flexor carpi radialis muscle": {
+   "rev": 1344437114,
+   "origin": "Medial epicondyle of humerus (common flexor tendon)",
+   "insertion": "Bases of second and third metacarpal bones",
+   "action": "Flexion and abduction at wrist",
+   "nerve": "Median nerve",
+   "blood": "Ulnar artery"
+  },
+  "Flexor carpi ulnaris muscle": {
+   "rev": 1344841887,
+   "origin": "Medial epicondyle (common flexor tendon) and medial margin on olecranon of ulna",
+   "insertion": "Pisiform, hook of the hamate, base of the fifth metacarpal bone (volar aspect)",
+   "action": "Flexion and adduction of wrist",
+   "nerve": "Muscular branches of ulnar nerve (from C8 and T1)",
+   "blood": "Ulnar artery"
+  },
+  "Flexor digiti minimi brevis muscle of foot": {
+   "rev": 1352578921,
+   "origin": "Fifth metatarsal bone",
+   "insertion": "First phalanx of the fifth toe",
+   "action": "Flexion and adduction of the fifth toe",
+   "nerve": "Superficial branch of lateral plantar nerve"
+  },
+  "Flexor digitorum brevis muscle": {
+   "rev": 1380880954,
+   "origin": "Calcaneus",
+   "insertion": "Middle phalanges of toe 2-5",
+   "action": "Flexion of the lateral four digits",
+   "nerve": "Medial plantar nerve",
+   "blood": "Medial and lateral plantar arteries and plantar arch, plantar metatarsal and plantar digital arteries"
+  },
+  "Flexor digitorum longus muscle": {
+   "rev": 1380880760,
+   "origin": "Posterior surface of the body of the tibia",
+   "insertion": "Plantar surface; base of the distal phalanges of the four lesser toes",
+   "action": "Flexion of the four smaller digits",
+   "nerve": "Tibial nerve",
+   "blood": "Posterior tibial artery"
+  },
+  "Flexor digitorum profundus muscle": {
+   "rev": 1360993083,
+   "origin": "Upper 3/4 of the anterior and medial surfaces of the body of the ulna, interosseous membrane and deep fascia of the forearm",
+   "insertion": "Base of the distal phalanges of the fingers",
+   "action": "Flex hand and both interphalangeal joints",
+   "nerve": "Lateral part of the muscle by median (anterior interosseous), medial (ulnar) part of the muscle by muscular branches of ulnar",
+   "blood": "Anterior interosseous artery"
+  },
+  "Flexor digitorum superficialis muscle": {
+   "rev": 1361709869,
+   "origin": "Medial epicondyle of the humerus (common flexor tendon) as well as parts of the radius and ulna",
+   "insertion": "Anterior margins on the base of the middle phalanges of the four fingers",
+   "action": "Flexor of fingers (primarily at proximal interphalangeal joints)",
+   "nerve": "Median nerve",
+   "blood": "Radial artery"
+  },
+  "Flexor hallucis brevis muscle": {
+   "rev": 1360659628,
+   "origin": "Plantar aspect of the cuneiforms, plantar calcaneocuboid ligament, long plantar ligament",
+   "insertion": "Medial Head: Medial sesamoid bone of the metatarsophalangeal joint, proximal phalanx of great toe. Lateral head: Lateral sesamoid bone of the metatarsophalangeal joint, proximal phalanx of great toe",
+   "action": "Flex hallux",
+   "nerve": "Medial plantar nerve"
+  },
+  "Flexor hallucis longus muscle": {
+   "rev": 1380890547,
+   "origin": "Fibula, posterior aspect of middle 1/3",
+   "insertion": "Plantar surface; base of distal phalanx of hallux",
+   "action": "Flexes all joints of the big toe, plantar flexion of the ankle joint",
+   "nerve": "Tibial nerve, S2 and S3"
+  },
+  "Flexor pollicis longus muscle": {
+   "rev": 1344838149,
+   "origin": "The middle 1/2 of the anterior surface of the radius and adjacent to the interosseus membrane.",
+   "insertion": "The base of the distal phalanx of the thumb",
+   "action": "Flexion of the thumb",
+   "nerve": "Anterior interosseous nerve (branch of median nerve) (C8, T1)",
+   "blood": "Anterior interosseous artery"
+  },
+  "Fourth metacarpal bone": {
+   "rev": 1209360261,
+   "description": "The fourth metacarpal bone (metacarpal bone of the ring finger) is shorter and smaller than the third."
+  },
+  "Fourth metatarsal bone": {
+   "rev": 1201854648,
+   "description": "The fourth metatarsal bone is a long bone in the foot. It is smaller in size than the third metatarsal bone and is the third longest (and smallest) of the five metatarsal bones. The fourth metatarsal is analogous to the fourth metacarpal bone in the hand"
+  },
+  "Frontal bone": {
+   "rev": 1381766426,
+   "description": "In the human skull, the frontal bone or sincipital bone is an unpaired bone which consists of two portions. These are the vertically oriented squamous part, and the horizontally oriented orbital part, making up the bony part of the forehead, part of the bony orbital cavity holding the eye, and part of the bony part of the nose respectively. The name comes from the Latin word frons (meaning \"forehead\").",
+   "articulations": "Twelve bones: the sphenoid, the ethmoid, the two parietals, the two nasals, the two maxillae, the two lacrimals, and the two zygomatics"
+  },
+  "Frontalis muscle": {
+   "rev": 1259582090,
+   "origin": "Galea aponeurotica (epicranial aponeurotis)",
+   "insertion": "Orbicularis oculi muscle",
+   "action": "Raises eyebrows and wrinkles forehead",
+   "nerve": "Facial nerve\nTemporal branch",
+   "blood": "Supraorbital and supratrochlear arteries"
+  },
+  "Gastrocnemius muscle": {
+   "rev": 1380879124,
+   "origin": "Proximal to articular surfaces of lateral condyle of femur and medial condyle of femur",
+   "insertion": "Tendo calcaneus (Achilles tendon) into mid-posterior calcaneus",
+   "action": "Plantar flexes foot, flexes knee",
+   "nerve": "Tibial nerve from the sciatic, specifically, nerve roots S1–S2",
+   "blood": "Sural arteries"
+  },
+  "Genital branch of genitofemoral nerve": {
+   "rev": 1380894876,
+   "from": "Genitofemoral nerve",
+   "supplies": "Cremaster and dartos muscle"
+  },
+  "Genitofemoral nerve": {
+   "rev": 1380880016,
+   "from": "Lumbar plexus",
+   "branches": "Lumboinguinal, genital branch",
+   "supplies": "Cremaster muscle\nAnterior scrotum in males\nMons pubis in females"
+  },
+  "Glossopharyngeal nerve": {
+   "rev": 1360678906,
+   "branches": "Tympanic nerve",
+   "supplies": "Motor: stylopharyngeus\nSensory: Oropharynx, Eustachian tube, middle ear, posterior third of tongue, carotid sinus, carotid body\nSpecial sensory: Taste to posterior third of tongue"
+  },
+  "Gluteus maximus": {
+   "rev": 1359877966,
+   "origin": "Gluteal surface of ilium, lumbar fascia, sacrum, sacrotuberous ligament",
+   "insertion": "Gluteal tuberosity of the femur and iliotibial tract",
+   "action": "External rotation and extension of the hip joint, supports the extended knee through the iliotibial tract, chief antigravity muscle in sitting and abduction of the hip",
+   "nerve": "Inferior gluteal nerve (L5, S1 and S2 nerve roots)",
+   "blood": "Superior and inferior gluteal arteries"
+  },
+  "Gluteus medius": {
+   "rev": 1380890721,
+   "origin": "Gluteal surface of ilium, under gluteus maximus, Aponeurosis glutea",
+   "insertion": "Greater trochanter of the femur",
+   "action": "Abduction of the hip; preventing adduction of the hip. Medial/internal rotation and flexion of the hip (anterior fibers). Extension and lateral/external rotation of the hip (posterior fibers)",
+   "nerve": "Superior gluteal nerve (L4, L5, S1 nerve roots)",
+   "blood": "Superior gluteal artery"
+  },
+  "Gluteus minimus": {
+   "rev": 1380879741,
+   "origin": "From area in between the anterior gluteal line and inferior gluteal line of gluteal surface ilium, under gluteus medius.",
+   "insertion": "Greater trochanter of the femur",
+   "action": "Works in concert with gluteus medius: abduction of the hip; preventing adduction of the hip. Medial rotation of thigh.",
+   "nerve": "Superior gluteal nerve (L4, L5, S1 nerve roots)",
+   "blood": "Superior gluteal artery"
+  },
+  "Gracilis muscle": {
+   "rev": 1380395616,
+   "origin": "Ischiopubic ramus",
+   "insertion": "Tibia (pes anserinus)",
+   "action": "Flexes, medially rotates, and adducts the hip",
+   "nerve": "Anterior branch of obturator nerve",
+   "blood": "Medial circumflex femoral artery"
+  },
+  "Hamate bone": {
+   "rev": 1377891059,
+   "description": "The hamate bone (from Latin hamatus, 'hooked'), or unciform bone (from Latin uncus, 'hook'), Latin os hamatum and occasionally abbreviated as just hamatum, is a bone in the human wrist readily distinguishable by its wedge shape and a hook-like process (\"hamulus\") projecting from its palmar surface.",
+   "articulations": "Articulates with five bones:\nthe lunate proximally\nthe fourth and fifth metacarpals distally\nthe triquetrum medially\nthe capitate laterally"
+  },
+  "Hip bone": {
+   "rev": 1358025730,
+   "description": "The hip bone (os coxae, innominate bone, or coxal bone) is a large flat bone, constricted in the center and expanded above and below. In some vertebrates (including humans before puberty) it is composed of three parts: the ilium, ischium, and the pubis."
+  },
+  "Humerus": {
+   "rev": 1362607692,
+   "description": "The humerus (pl.: humeri) is a long bone in the arm that runs from the shoulder to the elbow. It connects the scapula and the two bones of the lower arm, the radius and ulna, and consists of three sections. The humeral upper extremity consists of a rounded head, a narrow neck, and two short processes (tubercles, sometimes called tuberosities). The shaft is cylindrical in its upper portion, and more prismatic below."
+  },
+  "Hypoglossal nerve": {
+   "rev": 1383851184,
+   "supplies": "Genioglossus, hyoglossus, styloglossus, intrinsic muscles of the tongue"
+  },
+  "Iliacus muscle": {
+   "rev": 1360690546,
+   "origin": "Upper two-thirds of the iliac fossa",
+   "insertion": "Base of the lesser trochanter of femur",
+   "action": "Flexes and rotates medially thigh",
+   "nerve": "Femoral nerve",
+   "blood": "Medial femoral circumflex artery, iliac branch of iliolumbar artery"
+  },
+  "Iliocostalis": {
+   "rev": 1349919788,
+   "origin": "Sacrum, iliac crest, thoracolumbar fascia, spinous processes of vertebrae from T11 - L5",
+   "insertion": "Ribs",
+   "action": "Unilaterally: laterally flex the vertebral column to the same side. Bilaterally: Extend the vertebral column.",
+   "nerve": "Posterior branch of spinal nerve",
+   "blood": "Intercostal and lumbar arteries"
+  },
+  "Iliohypogastric nerve": {
+   "rev": 1380881143,
+   "from": "Lumbar plexus",
+   "supplies": "Sensory: Skin over the lateral gluteal region and above the pubis\nMotor: internal oblique and transverse abdominal muscles"
+  },
+  "Ilioinguinal nerve": {
+   "rev": 1380886769,
+   "from": "lumbar plexus",
+   "supplies": "Skin over the root of the penis and upper part of the scrotum (male), skin covering the mons pubis and labium majus (female). Motor innervation of the transverse abdominus and obliques."
+  },
+  "Inferior alveolar nerve": {
+   "rev": 1379568503,
+   "from": "Mandibular nerve",
+   "branches": "Mylohyoid, dental, incisive, and mental",
+   "supplies": "Dental alveolus"
+  },
+  "Inferior lateral cutaneous nerve of arm": {
+   "rev": 1319191018,
+   "from": "radial nerve"
+  },
+  "Inferior nasal concha": {
+   "rev": 1353690565,
+   "description": "The inferior nasal concha (inferior turbinated bone or inferior turbinal/turbinate) is one of the three paired nasal conchae in the nose. It extends horizontally along the lateral wall of the nasal cavity and consists of a lamina of spongy bone, curled upon itself like a scroll, (turbinate meaning inverted cone). The inferior nasal conchae are considered a pair of facial bones.",
+   "articulations": "Ethmoid, maxilla, lacrimal and palatine bone"
+  },
+  "Infrapatellar branch of saphenous nerve": {
+   "rev": 1314832443,
+   "from": "saphenous nerve"
+  },
+  "Infraspinatus muscle": {
+   "rev": 1300467547,
+   "origin": "Infraspinous fossa of the scapula",
+   "insertion": "Middle facet of greater tubercle of the humerus",
+   "action": "External rotation of arm and stabilization of glenohumeral joint",
+   "nerve": "Suprascapular nerve",
+   "blood": "Suprascapular and circumflex scapular arteries"
+  },
+  "Intercostal nerves": {
+   "rev": 1360692005,
+   "from": "Thoracic nerves (T1-T11)",
+   "supplies": "Intercostal muscle"
+  },
+  "Intermediate dorsal cutaneous nerve": {
+   "rev": 1225276057,
+   "from": "superficial fibular nerve"
+  },
+  "Internal obturator muscle": {
+   "rev": 1380879176,
+   "origin": "Ischiopubic ramus and obturator membrane",
+   "insertion": "Medial aspect of the greater trochanter",
+   "action": "Abducts and laterally rotates the extended hip and abducts the flexed thigh at the hip, and stabilizes the hip during walking",
+   "nerve": "Nerve to obturator internus (L5, S1, S2)",
+   "blood": "Inferior gluteal artery"
+  },
+  "Lacrimal bone": {
+   "rev": 1381765988,
+   "description": "The lacrimal bones are two small and fragile bones of the facial skeleton; in humans, they are roughly the size of the little fingernail and situated at the front part of the medial wall of the orbit. They each have two surfaces and four borders. Several bony landmarks of the lacrimal bones function in the process of lacrimation."
+  },
+  "Lateral cutaneous nerve of forearm": {
+   "rev": 1365975988,
+   "from": "Musculocutaneous nerve"
+  },
+  "Lateral cutaneous nerve of thigh": {
+   "rev": 1385241710,
+   "from": "Lumbar plexus (L2–L3)",
+   "supplies": "Skin on the lateral part of the thigh"
+  },
+  "Lateral pectoral nerve": {
+   "rev": 1380884543,
+   "from": "Lateral cord",
+   "supplies": "Pectoralis major"
+  },
+  "Lateral plantar nerve": {
+   "rev": 1317441023,
+   "from": "Tibial nerve",
+   "supplies": "Sole, abductor digiti minimi muscle (foot), flexor digiti minimi brevis muscle (foot), quadratus plantae, 3 lateral lumbricals of the foot, adductor hallucis muscle, plantar interossei muscles, dorsal interossei muscles"
+  },
+  "Lateral pterygoid muscle": {
+   "rev": 1291880834,
+   "origin": "Superior head: infratemporal surface of sphenoid bone. Inferior head: lateral pterygoid plate",
+   "insertion": "Superior head: anterior side of the mandibular condyle. Inferior head: pterygoid fovea",
+   "action": "Depresses and protrudes mandible, side to side movement of mandible",
+   "nerve": "Lateral pterygoid nerve from mandibular nerve",
+   "blood": "Pterygoid branches of maxillary artery"
+  },
+  "Latissimus dorsi muscle": {
+   "rev": 1382512580,
+   "origin": "Spinous processes of vertebrae T7-S5, thoracolumbar fascia, iliac crest, inferior 4 ribs and inferior angle of scapula",
+   "insertion": "Floor of intertubercular groove of the humerus",
+   "action": "Adducts, extends and internally rotates the arm when the insertion is moved towards the origin. When observing the muscle action of the origin towards the insertion, the lats are a very powerful rotator of the trunk.",
+   "nerve": "Thoracodorsal nerve (C6, C7, C8)",
+   "blood": "Thoracodorsal branch of the subscapular artery"
+  },
+  "Levator anguli oris": {
+   "rev": 1254139580,
+   "origin": "Maxilla",
+   "insertion": "Modiolus",
+   "action": "Smile (elevates angle of mouth)",
+   "nerve": "Buccal branches of the facial nerve",
+   "blood": "Facial artery"
+  },
+  "Levator labii superioris": {
+   "rev": 1258120423,
+   "origin": "Medial infra-orbital margin",
+   "insertion": "Skin and muscle of the upper lip (labii superioris)",
+   "action": "Elevates the upper lip",
+   "nerve": "Buccal branch of the facial nerve (C.N. VII)",
+   "blood": "Facial artery"
+  },
+  "Levator labii superioris alaeque nasi muscle": {
+   "rev": 1326888343,
+   "origin": "Nasal bone",
+   "insertion": "Nostril and upper lip",
+   "action": "Dilates the nostril; elevates the upper lip and wing of the nose",
+   "nerve": "Buccal branch of facial nerve"
+  },
+  "Levator scapulae muscle": {
+   "rev": 1381764154,
+   "origin": "Posterior tubercles of transverse processes of C1 - C4 vertebrae",
+   "insertion": "Superior part of medial border of scapula",
+   "action": "Elevates scapula and tilts its glenoid cavity inferiorly by downwardly rotating the scapula",
+   "nerve": "Cervical nerve (C3, C4) and dorsal scapular nerve (C5)",
+   "blood": "Dorsal scapular artery"
+  },
+  "Lingual nerve": {
+   "rev": 1276046511,
+   "from": "Mandibular nerve",
+   "supplies": "Tongue"
+  },
+  "Long thoracic nerve": {
+   "rev": 1360704682,
+   "from": "Brachial plexus (C5-C7)",
+   "supplies": "Serratus anterior muscle"
+  },
+  "Longissimus": {
+   "rev": 1350050293,
+   "origin": "Transverse process",
+   "insertion": "Transverse process",
+   "action": "Laterally: Flex the head and neck to the same side. Bilaterally: Extend the vertebral column.",
+   "nerve": "Posterior branch of spinal nerve",
+   "blood": "Lateral sacral artery"
+  },
+  "Lower subscapular nerve": {
+   "rev": 1360704922,
+   "from": "Posterior cord",
+   "supplies": "Subscapularis and teres major muscle"
+  },
+  "Lumbar vertebrae": {
+   "rev": 1380677177,
+   "description": "The lumbar vertebrae are located between the thoracic vertebrae and sacrum. They form the lower part of the back in humans, and the region of the spine between the rib cage and pelvis in quadrupedal mammals. In humans, there are typically five lumbar vertebrae."
+  },
+  "Lumboinguinal nerve": {
+   "rev": 1263791465,
+   "from": "Genitofemoral nerve"
+  },
+  "Lumbricals of the foot": {
+   "rev": 1296966274,
+   "origin": "Medial borders of long flexor tendons",
+   "insertion": "Proximal phalanges and extensor tendons of the 4 lateral toes",
+   "action": "Flexes metatarsophalangeal joints, extends interphalangeal joints",
+   "nerve": "Medial and lateral plantar nerves (S3)",
+   "blood": "Medial and lateral plantar arteries"
+  },
+  "Lunate bone": {
+   "rev": 1378981286,
+   "description": "The lunate bone (semilunar bone) is a carpal bone in the human hand. It is distinguished by its deep concavity and crescentic outline. It is situated in the center of the proximal row carpal bones, which lie between the ulna and radius and the hand. The lunate carpal bone is situated between the lateral scaphoid bone and medial triquetral bone.",
+   "articulations": "Radius proximally\ncapitate and hamate distally\nscaphoid laterally\ntriquetrum medially\ntriangular fibrocartilage"
+  },
+  "Mandible": {
+   "rev": 1368668773,
+   "description": "In jawed vertebrates, the mandible (from the Latin mandibula, 'for chewing'), lower jaw, or jawbone is a bone that makes up the lower – and typically more mobile – component of the mouth (the upper jaw being known as the maxilla)."
+  },
+  "Mandibular nerve": {
+   "rev": 1345741132,
+   "from": "Trigeminal nerve (CN V)"
+  },
+  "Masseter muscle": {
+   "rev": 1314488567,
+   "origin": "Zygomatic arch and maxillary process of zygomatic bone",
+   "insertion": "Angle surface of ramus of mandible, coronoid process",
+   "action": "Elevation (as in closing of the mouth) and protrusion of mandible",
+   "nerve": "Mandibular nerve (V3)",
+   "blood": "Masseteric artery"
+  },
+  "Maxilla": {
+   "rev": 1381765876,
+   "description": "In vertebrates, the maxilla (pl.: maxillae) is the upper fixed (not fixed in Neopterygii) bone of the jaw formed from the fusion of two maxillary bones. In humans, the upper jaw includes the hard palate in the front of the mouth. The two maxillary bones are fused at the intermaxillary suture, forming the anterior nasal spine."
+  },
+  "Maxillary nerve": {
+   "rev": 1248929170,
+   "from": "Trigeminal nerve",
+   "branches": "Infraorbital nerve, zygomatic nerve, palatine nerve, nasopalatine nerve, sphenopalatine ganglion"
+  },
+  "Medial cutaneous nerve of arm": {
+   "rev": 1365976013,
+   "from": "T1 (medial cord)"
+  },
+  "Medial cutaneous nerve of forearm": {
+   "rev": 1365976006,
+   "from": "Medial cord"
+  },
+  "Medial dorsal cutaneous nerve": {
+   "rev": 1293529517,
+   "from": "superficial fibular nerve"
+  },
+  "Medial pectoral nerve": {
+   "rev": 1380881465,
+   "from": "Medial cord",
+   "supplies": "Pectoralis minor, pectoralis major"
+  },
+  "Medial plantar nerve": {
+   "rev": 1223876031,
+   "from": "Tibial nerve",
+   "supplies": "Sole\nabductor hallucis muscle\nflexor digitorum brevis muscle\nflexor hallucis brevis muscle\n1 medial lumbrical"
+  },
+  "Medial pterygoid muscle": {
+   "rev": 1292248156,
+   "origin": "Deep head: medial side of lateral pterygoid plate behind the upper teeth\nSuperficial head: pyramidal process of palatine bone and maxillary tuberosity",
+   "insertion": "Medial angle of the mandible",
+   "action": "Elevates mandible, closes jaw, helps lateral pterygoids in moving the jaw from side to side",
+   "nerve": "Mandibular nerve via nerve to medial pterygoid",
+   "blood": "Pterygoid branches of maxillary artery"
+  },
+  "Medial sural cutaneous nerve": {
+   "rev": 1380893668,
+   "from": "Tibial nerve"
+  },
+  "Median nerve": {
+   "rev": 1365975915,
+   "from": "Lateral cord and medial cord",
+   "supplies": "Anterior compartment of the forearm (with two exceptions), thenar eminence, lumbricals, skin of the hand"
+  },
+  "Mental nerve": {
+   "rev": 1380884576,
+   "from": "Inferior alveolar nerve",
+   "supplies": "Chin, lower lip"
+  },
+  "Mentalis": {
+   "rev": 1301133906,
+   "origin": "Anterior mandible",
+   "insertion": "Chin",
+   "action": "Elevates and wrinkles skin of chin, protrudes lower lip",
+   "nerve": "Mandibular branch of facial nerve"
+  },
+  "Middle meningeal nerve": {
+   "rev": 1364076559,
+   "supplies": "Meninges"
+  },
+  "Multifidus muscle": {
+   "rev": 1349962618,
+   "origin": "Sacrum, erector spinae aponeurosis, PSIS, and iliac crest",
+   "insertion": "Spinous process",
+   "action": "Provides proprioceptive feedback and input due to high muscle spindle density; Bilateral backward extension, unilateral ipsilateral side-bending and contralateral rotation.",
+   "nerve": "Posterior branches"
+  },
+  "Muscular branches of the radial nerve": {
+   "rev": 1222896718,
+   "from": "Radial nerve",
+   "supplies": "Posterior compartment of the arm, mobile wad"
+  },
+  "Muscular branches of ulnar nerve": {
+   "rev": 1301144678,
+   "from": "ulnar nerve",
+   "supplies": "Flexor carpi ulnaris, Flexor digitorum profundus"
+  },
+  "Musculocutaneous nerve": {
+   "rev": 1365975941,
+   "from": "Lateral cord (C5-C7)",
+   "branches": "Lateral cutaneous nerve of forearm",
+   "supplies": "Anterior compartment of the arm"
+  },
+  "Mylohyoid nerve": {
+   "rev": 1380894621,
+   "from": "Inferior alveolar nerve",
+   "supplies": "Mylohyoid muscle, anterior belly of digastric muscle"
+  },
+  "Nasal bone": {
+   "rev": 1380878906,
+   "description": "The nasal bones are two small oblong bones, varying in size and form in different individuals; they are placed side by side at the middle and upper part of the face and by their junction, form the bridge of the upper one third of the nose."
+  },
+  "Nasalis muscle": {
+   "rev": 1313468684,
+   "origin": "Maxilla",
+   "insertion": "Nasal bone",
+   "action": "Compresses bridge of nose, depresses tip of nose, elevates corners of nostrils",
+   "nerve": "Buccal branch of the facial nerve",
+   "blood": "Superior labial artery"
+  },
+  "Navicular bone": {
+   "rev": 1372908464,
+   "description": "The navicular bone is a small bone found in the feet of most mammals."
+  },
+  "Nerve to quadratus femoris": {
+   "rev": 1375128423,
+   "from": "Sacral plexus (L4, L5, S1)",
+   "supplies": "Quadratus femoris muscle, inferior gemellus muscle"
+  },
+  "Obturator nerve": {
+   "rev": 1380881494,
+   "from": "Lumbar plexus L2-L4",
+   "branches": "Posterior branch of obturator nerve, anterior branch of obturator nerve",
+   "supplies": "Medial compartment of thigh"
+  },
+  "Occipital bone": {
+   "rev": 1364280307,
+   "description": "The occipital bone is a cranial dermal bone and the main bone of the occiput (back and lower part of the skull). It is trapezoidal in shape and curved on itself like a shallow dish. The occipital bone lies over the occipital lobes of the cerebrum. At the base of the skull in the occipital bone, there is a large oval opening called the foramen magnum, which allows the passage of the spinal cord.",
+   "articulations": "The two parietals, the two temporals, the sphenoid, and the atlas"
+  },
+  "Occipitalis muscle": {
+   "rev": 1263737633,
+   "origin": "Superior nuchal line of the occipital bone and mastoid process of the temporal bone",
+   "insertion": "Galea aponeurosis",
+   "action": "Moves the scalp back",
+   "nerve": "Posterior auricular nerve (a branch of the facial nerve)",
+   "blood": "Occipital artery"
+  },
+  "Oculomotor nerve": {
+   "rev": 1377548794,
+   "from": "Oculomotor nucleus, Edinger-Westphal nucleus",
+   "branches": "Superior branch, inferior branch",
+   "supplies": "Superior rectus, inferior rectus, medial rectus, inferior oblique, levator palpebrae superioris, sphincter pupillae (parasympathetics), ciliaris muscle (parasympathetics)"
+  },
+  "Olfactory nerve": {
+   "rev": 1345741982,
+   "supplies": "Smell"
+  },
+  "Ophthalmic nerve": {
+   "rev": 1354753863,
+   "from": "Trigeminal nerve",
+   "branches": "Frontal nerve, lacrimal nerve, nasociliary nerve"
+  },
+  "Orbicularis oculi muscle": {
+   "rev": 1357503437,
+   "origin": "Frontal bone; medial palpebral ligament; lacrimal bone",
+   "insertion": "Lateral palpebral raphe",
+   "action": "Closes eyelids",
+   "nerve": "Temporal (orbital, palpebral) and zygomatic (lacrimal) branches of facial nerve",
+   "blood": "Ophthalmic, zygomatico-orbital, angular"
+  },
+  "Orbicularis oris muscle": {
+   "rev": 1311495846,
+   "origin": "Maxilla and mandible",
+   "insertion": "Skin around the lips",
+   "action": "It is sometimes known as the kissing muscle because it is used to pucker the lips.",
+   "nerve": "Cranial nerve VII, buccal branch",
+   "blood": "Inferior labial artery and superior labial artery."
+  },
+  "Palatine bone": {
+   "rev": 1382931115,
+   "description": "In anatomy, the palatine bones (derived from the Latin palatum) are two irregular bones of the facial skeleton in many animal species, located above the uvula in the throat. Together with the maxilla, they comprise the hard palate."
+  },
+  "Palmar branch of the median nerve": {
+   "rev": 1263792235,
+   "from": "Median nerve"
+  },
+  "Palmar branch of ulnar nerve": {
+   "rev": 1365976090,
+   "from": "Ulnar nerve",
+   "branches": "Superficial branch, deep branch"
+  },
+  "Palmaris longus muscle": {
+   "rev": 1382460841,
+   "origin": "Medial epicondyle of humerus (common flexor tendon)",
+   "insertion": "Palmar aponeurosis and flexor retinaculum of the hand",
+   "action": "Wrist flexor",
+   "nerve": "Median nerve",
+   "blood": "Ulnar artery"
+  },
+  "Parietal bone": {
+   "rev": 1364171996,
+   "description": "The parietal bones are two bones in the skull which, when joined at a fibrous joint known as a cranial suture, form the sides and roof of the neurocranium. In humans, each bone is roughly quadrilateral in form, and has two surfaces, four borders, and four angles. It is named from the Latin paries (-ietis), wall.",
+   "articulations": "Five bones: the opposite parietal, the occipital, the frontal, the temporal, and the sphenoid"
+  },
+  "Patella": {
+   "rev": 1382758513,
+   "description": "The patella (pl.: patellae or patellas), also known as the kneecap, is a flat, rounded triangular bone which articulates with the femur (thigh bone) and covers and protects the anterior articular surface of the knee joint. The patella is found in many tetrapods, such as mice, cats, birds, humans, and dogs, but not in whales, or most reptiles."
+  },
+  "Pectineus muscle": {
+   "rev": 1368156766,
+   "origin": "Pectineal line of the pubic bone",
+   "insertion": "Pectineal line of the femur",
+   "action": "Thigh - flexion, adduction, external rotation",
+   "nerve": "Femoral nerve, sometimes obturator nerve",
+   "blood": "Obturator artery"
+  },
+  "Pectoralis major": {
+   "rev": 1377970174,
+   "origin": "Clavicular head: anterior surface of the medial half of the clavicle.\nSternocostal head: anterior surface of the sternum, the superior six costal cartilages, and the aponeurosis of the external oblique muscle",
+   "insertion": "Lateral lip of the bicipital groove of the humerus\n(anteromedial proximal humerus)",
+   "action": "Clavicular head: flexes the humerus\nSternocostal head: horizontal and vertical adduction, extension, and internal rotation of the humerus\nDepression and abduction of the scapula.",
+   "nerve": "Lateral pectoral nerve and medial pectoral nerve\nClavicular head: C5 and C6\nSternocostal head: C7, C8 and T1",
+   "blood": "Pectoral branch of the thoracoacromial trunk"
+  },
+  "Pectoralis minor": {
+   "rev": 1380880935,
+   "origin": "Third to fifth ribs, near the costochondral junction",
+   "insertion": "Medial border and superior surface of the coracoid process of the scapula",
+   "action": "Stabilizes the scapula by drawing it inferiorly and anteriorly against the thoracic wall, raises ribs in inhalation",
+   "nerve": "Medial pectoral nerve (C8)",
+   "blood": "Pectoral branch of the thoracoacromial trunk"
+  },
+  "Phalanx bone": {
+   "rev": 1378011921,
+   "description": "The phalanges (sg.: phalanx) are digital bones in the hands and feet of most vertebrates. In primates, the thumbs and big toes have two phalanges each, while the other digits have three phalanges each. The phalanges are classed as long bones.",
+   "articulations": "Metacarpophalangeal, metatarsophalangeal, interphalangeal"
+  },
+  "Piriformis muscle": {
+   "rev": 1380879535,
+   "origin": "Sacrum",
+   "insertion": "Greater trochanter",
+   "action": "External rotator of the thigh",
+   "nerve": "Nerve to the piriformis (L5, S1, and S2)",
+   "blood": "Inferior gluteal, lateral sacral and superior gluteal artery"
+  },
+  "Piriformis nerve": {
+   "rev": 1380722537,
+   "from": "Sacral plexus (S1–S2)",
+   "supplies": "Piriformis muscle"
+  },
+  "Pisiform bone": {
+   "rev": 1373212050,
+   "description": "The pisiform bone, also spelled pisiforme (from the Latin pisiformis, pea-shaped), is a small knobbly, sesamoid bone that is found in the wrist. It forms the ulnar border of the carpal tunnel.",
+   "articulations": "Triangular"
+  },
+  "Plantar interossei muscles": {
+   "rev": 1354938444,
+   "origin": "Metatarsals, long plantar ligament",
+   "insertion": "Medial side of proximal phalanges of 3rd to 5th toe",
+   "action": "Adduct toes",
+   "nerve": "Lateral plantar nerve",
+   "blood": "Plantar artery, and dorsal metatarsal A"
+  },
+  "Plantaris muscle": {
+   "rev": 1380881097,
+   "origin": "Lateral supracondylar ridge of femur above lateral head of gastrocnemius",
+   "insertion": "Tendo calcaneus (medial side, deep to gastrocnemius tendon)",
+   "action": "Plantar flexes foot and flexes knee",
+   "nerve": "Tibial nerve from anterior rami of S1-S2",
+   "blood": "Sural arteries"
+  },
+  "Popliteus muscle": {
+   "rev": 1380881418,
+   "origin": "Lateral femoral epicondyle",
+   "insertion": "Posterior surface of the tibia proximal to the soleus line",
+   "action": "Medially rotates tibia on the femur if the femur is fixed (sitting down) or laterally rotates femur on the tibia if tibia is fixed (standing up), unlocks the knee to allow flexion (bending), helps to prevent the forward dislocation of the femur while crouching",
+   "nerve": "Tibial nerve",
+   "blood": "Popliteal artery"
+  },
+  "Posterior branch of obturator nerve": {
+   "rev": 1380894584,
+   "from": "Obturator nerve",
+   "supplies": "Adductor magnus muscle"
+  },
+  "Posterior cord": {
+   "rev": 1375373989,
+   "from": "Brachial plexus - posterior divisions of the three trunks",
+   "branches": "Subscapular, up. and low.\nthoracodorsal\naxillary\nradial"
+  },
+  "Posterior cutaneous nerve of forearm": {
+   "rev": 1263792117,
+   "from": "Radial nerve"
+  },
+  "Posterior cutaneous nerve of thigh": {
+   "rev": 1385241786,
+   "from": "Sacral plexus (S1, S2, S3)",
+   "branches": "Inferior clunial nerves, perineal branches"
+  },
+  "Posterior interosseous nerve": {
+   "rev": 1179141836,
+   "from": "Deep branch of the radial nerve",
+   "supplies": "Extensor carpi radialis brevis\nExtensor digitorum\nExtensor digiti minimi\nExtensor carpi ulnaris\nSupinator muscle\nAbductor pollicis longus\nExtensor pollicis brevis\nExtensor pollicis longus\nExtensor indicis"
+  },
+  "Procerus muscle": {
+   "rev": 1279617870,
+   "origin": "From fascia over the lower part of the nasal bone",
+   "insertion": "Into the skin of the lower part of the forehead between the eyebrows",
+   "action": "Draws down the medial angle of the eyebrow giving expressions of frowning",
+   "nerve": "Temporal branch of the facial nerve",
+   "blood": "Facial artery"
+  },
+  "Pronator quadratus muscle": {
+   "rev": 1360730200,
+   "origin": "Medial, anterior surface of the ulna",
+   "insertion": "Lateral, anterior surface of the radius",
+   "action": "Pronates the forearm",
+   "nerve": "Median nerve (anterior interosseous nerve)",
+   "blood": "Anterior interosseous artery"
+  },
+  "Pronator teres muscle": {
+   "rev": 1345264622,
+   "origin": "Humeral head: medial supracondylar ridge of humerus slightly above the medial epicondyle of humerus (common flexor tendon)\nUlnar head: coronoid process of ulna",
+   "insertion": "Middle of the lateral surface of the body of the radius",
+   "action": "Pronation of forearm, flexes elbow",
+   "nerve": "Median nerve",
+   "blood": "Ulnar artery and radial artery"
+  },
+  "Proper palmar digital nerves of median nerve": {
+   "rev": 1263792197,
+   "from": "Common palmar digital nerves of median nerve"
+  },
+  "Proper palmar digital nerves of ulnar nerve": {
+   "rev": 1263792121,
+   "from": "Common palmar digital nerves of ulnar nerve"
+  },
+  "Proper plantar digital nerves of lateral plantar nerve": {
+   "rev": 1379408917,
+   "from": "lateral plantar nerve"
+  },
+  "Proper plantar digital nerves of medial plantar nerve": {
+   "rev": 1326377136,
+   "from": "medial plantar nerve"
+  },
+  "Psoas major muscle": {
+   "rev": 1373821279,
+   "origin": "Transverse processes of T12–L4 and the lateral aspects of the discs between them",
+   "insertion": "In the lesser trochanter of the femur",
+   "action": "Flexion in the hip joint",
+   "nerve": "Lumbar plexus via anterior branches of L1–L3 nerves",
+   "blood": "lumbar branch of iliolumbar artery"
+  },
+  "Pudendal nerve": {
+   "rev": 1370996861,
+   "from": "Sacral nerves S2, S3, S4",
+   "branches": "Inferior rectal nerves\nperineal nerve\ndorsal nerve of the penis\ndorsal nerve of the clitoris"
+  },
+  "Quadratus femoris muscle": {
+   "rev": 1380879690,
+   "origin": "Ischial tuberosity",
+   "insertion": "Intertrochanteric crest",
+   "action": "Lateral rotation and adduction of thigh",
+   "nerve": "Nerve to quadratus femoris (L4-S1)",
+   "blood": "Inferior gluteal artery\nmedial circumflex femoral artery"
+  },
+  "Quadratus lumborum muscle": {
+   "rev": 1340238342,
+   "origin": "Posterior border of iliac crest",
+   "insertion": "Inferior border of 12th rib and L1-L4",
+   "action": "Alone (unilateral), lateral flexion of vertebral column; Together (bilateral), depression of thoracic rib cage",
+   "nerve": "The twelfth thoracic and first through fourth ventral rami of lumbar nerves (T12, L1-L4)",
+   "blood": "Lumbar arteries, lumbar branch of iliolumbar artery"
+  },
+  "Quadratus plantae muscle": {
+   "rev": 1355549311,
+   "origin": "Calcaneus, long plantar ligament",
+   "insertion": "Tendons of flexor digitorum longus",
+   "action": "Assists flexor digitorum longus in flexion of DIP joints",
+   "nerve": "Lateral plantar nerve (S1, 2)"
+  },
+  "Radial nerve": {
+   "rev": 1360731087,
+   "from": "Posterior cord",
+   "branches": "Posterior interosseous nerve",
+   "supplies": "Posterior compartment of the arm, posterior compartment of the forearm"
+  },
+  "Radius (bone)": {
+   "rev": 1373353791,
+   "description": "The radius or radial bone (pl.: radii or radiuses) is one of the two large bones of the forearm, the other being the ulna. It extends from the lateral side of the elbow to the thumb side of the wrist and runs parallel to the ulna. The ulna is longer than the radius, but the radius is thicker. The radius is a long bone, prism-shaped and slightly curved longitudinally."
+  },
+  "Rectus abdominis muscle": {
+   "rev": 1380878886,
+   "origin": "Crest of pubic",
+   "insertion": "Costal cartilages of ribs 5-7 xiphoid process of sternum",
+   "action": "Flexion of the lumbar spine",
+   "nerve": "Segmentally by thoraco-abdominal nerves (T7 to T11) and subcostal (T12)",
+   "blood": "Inferior epigastric artery"
+  },
+  "Rectus femoris muscle": {
+   "rev": 1378245670,
+   "origin": "Anterior inferior iliac spine and the exterior surface of the bony ridge which forms the groove on the iliac portion of the acetabulum",
+   "insertion": "Inserts into the patellar tendon as one of the four quadriceps muscles",
+   "action": "Knee extension; hip flexion",
+   "nerve": "Femoral nerve",
+   "blood": "Descending branch of the lateral femoral circumflex artery"
+  },
+  "Rhomboid major muscle": {
+   "rev": 1349920065,
+   "origin": "Spinous processes of the T2 to T5 vertebrae",
+   "insertion": "Medial border of the scapula, inferior to the insertion of rhomboid minor muscle",
+   "action": "Retracts the scapula and rotates it to depress the glenoid cavity. It also fixes the scapula to the thoracic wall.",
+   "nerve": "Dorsal scapular nerve (C5)",
+   "blood": "Dorsal scapular artery"
+  },
+  "Rhomboid minor muscle": {
+   "rev": 1380886856,
+   "origin": "Nuchal ligaments and spinous processes of C7-T1",
+   "insertion": "Medial border of scapula, superior to the insertion of rhomboid major muscle",
+   "action": "Retracts and rotates scapula, fixes scapula to thoracic wall",
+   "nerve": "Dorsal scapular nerve (C4–5)",
+   "blood": "Deep branch of transverse cervical artery"
+  },
+  "Rib": {
+   "rev": 1377870564,
+   "description": "In vertebrate anatomy, ribs (Latin: costae) are the long curved bones which form the rib cage, part of the axial skeleton. In most tetrapods, ribs surround the thoracic cavity, enabling the lungs to expand and thus facilitate breathing by expanding the thoracic cavity. They serve to protect the lungs, heart, and other vital organs of the thorax."
+  },
+  "Risorius": {
+   "rev": 1377830845,
+   "origin": "Parotid fascia",
+   "insertion": "Modiolus",
+   "action": "Draws back angle of mouth",
+   "nerve": "Buccal branch of the facial nerve",
+   "blood": "Facial artery"
+  },
+  "Sacrum": {
+   "rev": 1380889600,
+   "description": "The sacrum (pl.: sacra or sacrums), in human anatomy, is a triangular bone at the base of the spine that forms by the fusing of the sacral vertebrae (S1–S5) between ages 18 and 30."
+  },
+  "Saphenous nerve": {
+   "rev": 1380892220,
+   "from": "Femoral nerve (L3, L4)"
+  },
+  "Sartorius muscle": {
+   "rev": 1383063554,
+   "origin": "Anterior superior iliac spine of the pelvic bone",
+   "insertion": "Anteromedial surface of the proximal tibia in the pes anserinus",
+   "action": "Flexion, abduction, and lateral rotation of the hip, flexion of the knee",
+   "nerve": "Femoral nerve (sometimes from the intermediate cutaneous nerve of thigh)",
+   "blood": "Femoral artery"
+  },
+  "Scalene muscles": {
+   "rev": 1326382532,
+   "origin": "Cervical vertebrae (CII-CVII)",
+   "insertion": "First and second ribs",
+   "action": "Elevation of first and second ribs",
+   "nerve": "Cervical nerves (C3-C8)",
+   "blood": "Ascending cervical artery\n(branch of Inferior thyroid artery)"
+  },
+  "Scaphoid bone": {
+   "rev": 1369788418,
+   "description": "The scaphoid bone is one of the carpal bones of the wrist. It is situated between the hand and forearm on the thumb side of the wrist (also called the lateral or radial side). It forms the radial border of the carpal tunnel. The scaphoid bone is the largest bone of the proximal row of wrist bones, its long axis being from above downward, lateralward, and forward.",
+   "articulations": "Articulates with five bones\nradius proximally\ntrapezoid bone and trapezium bone distally\ncapitate and lunate medially"
+  },
+  "Scapula": {
+   "rev": 1382393488,
+   "description": "The scapula (pl.: scapulae or scapulas), also known as the shoulder blade, is the bone that connects the humerus (upper arm bone) with the clavicle (collar bone). Like their connected bones, the scapulae are paired, with each scapula on either side of the body being roughly a mirror image of the other. The name derives from the Classical Latin word for trowel or small shovel, which it was thought to resemble."
+  },
+  "Sciatic nerve": {
+   "rev": 1371477905,
+   "from": "Lumbar and sacral plexus (L4-S3)",
+   "branches": "Tibial and common fibular nerve",
+   "supplies": "Lateral rotator group (except piriformis and quadratus femoris) and the posterior compartment of thigh"
+  },
+  "Second metacarpal bone": {
+   "rev": 1296093365,
+   "description": "The second metacarpal bone (metacarpal bone of the index finger) is the longest, and its base the largest, of all the metacarpal bones."
+  },
+  "Second metatarsal bone": {
+   "rev": 1243621839,
+   "description": "The second metatarsal bone is a long bone in the foot. It is the longest of the metatarsal bones, being prolonged backward and held firmly into the recess formed by the three cuneiform bones. The second metatarsal forms joints with the second proximal phalanx (a bone in the second toe) through the metatarsophalangeal joint, the cuneiform bones, third metatarsal and occasionally the first metatarsal bone."
+  },
+  "Semimembranosus muscle": {
+   "rev": 1380886656,
+   "origin": "Ischial tuberosity",
+   "insertion": "Medial condyle of tibia",
+   "action": "Extension of hip and flexion of knee",
+   "nerve": "Tibial part of sciatic nerve\n(L5, S1 and S2)",
+   "blood": "Profunda femoris and gluteal arteries"
+  },
+  "Semitendinosus muscle": {
+   "rev": 1306233203,
+   "origin": "Lower quadrangular part of tuberosity of the ischium",
+   "insertion": "Pes anserinus (tibia)",
+   "action": "Flexion of knee, extension of the hip joint",
+   "nerve": "Sciatic (tibial, L5, S1, S2)",
+   "blood": "Inferior gluteal artery, perforating arteries"
+  },
+  "Serratus anterior muscle": {
+   "rev": 1377969850,
+   "origin": "Fleshy slips from the outer surface of upper from 1st to 9 ribs",
+   "insertion": "Costal aspect of medial margin of the scapula",
+   "action": "Protracts and stabilizes scapula, assists in upward rotation, assists in inspiration (when shoulder girdle is fixed)",
+   "nerve": "Long thoracic nerve (from roots of brachial plexus C5-C7)",
+   "blood": "Lateral thoracic artery, superior thoracic artery (upper part), thoracodorsal artery (lower part)"
+  },
+  "Serratus posterior inferior muscle": {
+   "rev": 1360735373,
+   "origin": "Vertebrae: Spinous processes of T11 - L2",
+   "insertion": "The inferior borders of the 9th through 12th ribs",
+   "action": "Depress the lower ribs 9-12, aiding in expiration",
+   "nerve": "Intercostal nerves T9 through T12",
+   "blood": "Intercostal arteries"
+  },
+  "Serratus posterior superior muscle": {
+   "rev": 1350051520,
+   "origin": "Nuchal ligament (or ligamentum nuchae) and the spinous processes of the vertebrae C7 through T3",
+   "insertion": "The upper borders of the 2nd through 5th ribs",
+   "action": "Elevates ribs 2-5",
+   "nerve": "2nd through 5th intercostal nerves",
+   "blood": "Intercostal arteries"
+  },
+  "Soleus muscle": {
+   "rev": 1384716970,
+   "origin": "Fibula, medial border of tibia (soleal line)",
+   "insertion": "Tendo calcaneus",
+   "action": "Plantar flexion",
+   "nerve": "Tibial nerve, specifically, nerve roots L5–S2",
+   "blood": "Popliteal artery, posterior tibial artery, peroneal artery"
+  },
+  "Sphenoid bone": {
+   "rev": 1381766223,
+   "description": "The sphenoid bone is an unpaired bone of the neurocranium in mammals. It is situated in the middle of the skull towards the front, in front of the basilar part of the occipital bone. The sphenoid bone is one of the seven bones that articulate to form the orbit. The name originates from the Ancient Greek word sphekodes (σφηκώδης), meaning 'wasp-like', presumably referring to the bone's winged appearance."
+  },
+  "Spinalis": {
+   "rev": 1349912549,
+   "origin": "Thoracis: Spinous process of upper lumbar and lower thoracic vertebrae.\nCervicis: nuchal ligament and spinous process of C7.",
+   "insertion": "Thoracis: Spinous process of upper thoracic vertebrae.\nCervicis: Spinous process of cervical vertebrae except atlas.",
+   "action": "Laterally: Flex the head and neck to the same side. Bilaterally: Extend the vertebral column.",
+   "nerve": "Posterior branch of spinal nerve",
+   "blood": "Lateral sacral artery"
+  },
+  "Splenius capitis muscle": {
+   "rev": 1350024993,
+   "origin": "Nuchal ligament and spinous process of C7-T3",
+   "insertion": "Mastoid process of temporal and occipital bone",
+   "action": "Extend, rotate, and laterally flex the head",
+   "nerve": "Posterior ramus of spinal nerves C3 and C4",
+   "blood": "Muscular branches of the aorta"
+  },
+  "Splenius cervicis muscle": {
+   "rev": 1350050737,
+   "origin": "Spinous processes of T3-T6",
+   "insertion": "Transverse processes of C1-C3",
+   "action": "Bilaterally: Extend the head and neck, Unilaterally: Lateral flexion to the same side, Rotation to the same side.",
+   "nerve": "Posterior rami of the lower Cervical spinal nerves",
+   "blood": "Transverse cervical artery and occipital artery"
+  },
+  "Sternocleidomastoid muscle": {
+   "rev": 1360739152,
+   "origin": "Manubrium and medial portion of the clavicle",
+   "insertion": "Mastoid process of the temporal bone, superior nuchal line",
+   "action": "Unilaterally: contralateral cervical rotation, ipsilateral cervical flexion\nBilaterally: cervical flexion, elevation of sternum and assists in forced inhalation.",
+   "nerve": "Motor: spinal accessory nerve\nsensory: cervical plexus\nProprioceptive: ventral primary rami of C2 and C3",
+   "blood": "Occipital artery and the superior thyroid artery"
+  },
+  "Sternum": {
+   "rev": 1367199442,
+   "description": "The sternum (pl.: sternums or sterna) or breastbone is a long flat bone located in the central part of the chest. It connects to the ribs via cartilage and forms the front of the rib cage, thus helping to protect the heart, lungs, and major blood vessels from injury. Shaped roughly like a necktie, it is one of the largest and longest flat bones of the body."
+  },
+  "Subclavian nerve": {
+   "rev": 1301224395,
+   "from": "Upper trunk (C5-C6) of brachial plexus",
+   "branches": "Sometimes the accessory phrenic nerve",
+   "supplies": "Subclavius muscle"
+  },
+  "Subclavius muscle": {
+   "rev": 1292233586,
+   "origin": "First rib and cartilage",
+   "insertion": "Subclavian groove of clavicle (inferior surface of middle one third of the clavicle)",
+   "action": "Depression of clavicle\nelevation of first rib",
+   "nerve": "Subclavian nerve",
+   "blood": "Thoracoacromial trunk, clavicular branch"
+  },
+  "Subscapularis muscle": {
+   "rev": 1378347173,
+   "origin": "Subscapular fossa",
+   "insertion": "Lesser tubercle of humerus",
+   "action": "Internally rotates and adducts humerus; stabilizes shoulder",
+   "nerve": "Upper subscapular nerve, lower subscapular nerve (C5, C6)",
+   "blood": "Subscapular artery"
+  },
+  "Superficial branch of radial nerve": {
+   "rev": 1365976023,
+   "from": "Radial nerve"
+  },
+  "Superficial branch of ulnar nerve": {
+   "rev": 1360739710,
+   "from": "Ulnar nerve",
+   "supplies": "Palmaris brevis"
+  },
+  "Superficial fibular nerve": {
+   "rev": 1380880480,
+   "from": "Common fibular nerve",
+   "branches": "Medial dorsal cutaneous nerve, intermediate dorsal cutaneous nerve"
+  },
+  "Superior gluteal nerve": {
+   "rev": 1360739720,
+   "from": "Sacral plexus (L4-S1)",
+   "supplies": "Gluteus medius, gluteus minimus, tensor fasciæ latæ"
+  },
+  "Superior lateral cutaneous nerve of arm": {
+   "rev": 1263792163,
+   "from": "axillary nerve"
+  },
+  "Supinator muscle": {
+   "rev": 1360739757,
+   "origin": "Lateral epicondyle of humerus, supinator crest of ulna, radial collateral ligament, annular ligament",
+   "insertion": "Lateral proximal radial shaft",
+   "action": "Supinates forearm",
+   "nerve": "Deep branch of the radial nerve",
+   "blood": "Radial recurrent artery"
+  },
+  "Suprascapular nerve": {
+   "rev": 1314878072,
+   "from": "Upper trunk (C5–C6) of brachial plexus",
+   "supplies": "Supraspinatus, infraspinatus"
+  },
+  "Supraspinatus muscle": {
+   "rev": 1379905252,
+   "origin": "Supraspinous fossa of scapula",
+   "insertion": "Superior facet of greater tubercle of humerus",
+   "action": "Abduction of arm and stabilizes humerus",
+   "nerve": "Suprascapular nerve",
+   "blood": "Suprascapular artery"
+  },
+  "Sural communicating branch of common peroneal nerve": {
+   "rev": 1380894759,
+   "from": "Lateral sural cutaneous nerve",
+   "branches": "Medial sural cutaneous nerve"
+  },
+  "Sural nerve": {
+   "rev": 1380887166,
+   "from": "Union of Medial sural cutaneous nerve + sural communicating nerve",
+   "branches": "Sural nerve forms after piercing out of deep fascia or after an anastomosis, terminates as lateral dorsal cutaneous nerve",
+   "supplies": "Supplies cutaneous sensation to the skin of the posterolateral leg and lateral ankle."
+  },
+  "Talus bone": {
+   "rev": 1369787639,
+   "description": "The talus (Latin for ankle or ankle bone; pl.: tali), talus bone, astragalus, or ankle bone is one of the group of foot bones known as the tarsus. The tarsus forms the lower part of the ankle joint. It transmits the entire weight of the body from the lower legs to the foot."
+  },
+  "Temporal bone": {
+   "rev": 1363102419,
+   "description": "The temporal bone is a paired bone situated at the sides and base of the skull, lateral to the temporal lobe of the cerebral cortex.",
+   "articulations": "Occipital, parietal, sphenoid, mandible and zygomatic"
+  },
+  "Temporalis muscle": {
+   "rev": 1380879793,
+   "origin": "Temporal lines on the parietal bone of the skull and the superior temporal surface of the sphenoid bone",
+   "insertion": "Coronoid process of the mandible and retromolar fossa",
+   "action": "Elevation and retraction of mandible",
+   "nerve": "Deep temporal nerves, branches of the anterior division of the mandibular nerve (V3)",
+   "blood": "Deep temporal arteries"
+  },
+  "Temporoparietalis muscle": {
+   "rev": 1352707536,
+   "origin": "Auriculares muscles",
+   "insertion": "Galea aponeurotica",
+   "nerve": "Temporal branches of the facial nerve"
+  },
+  "Tensor fasciae latae muscle": {
+   "rev": 1347097167,
+   "origin": "Iliac crest",
+   "insertion": "Iliotibial tract (via greater trochanter)",
+   "action": "Hip - flexion, medial rotation, abduction, knee - lateral rotation, torso - stabilization",
+   "nerve": "Superior gluteal nerve (L4, L5, S1)",
+   "blood": "Primarily lateral circumflex femoral artery, superior gluteal artery"
+  },
+  "Teres major muscle": {
+   "rev": 1360741033,
+   "origin": "Posterior aspect of the inferior angle of the scapula",
+   "insertion": "Medial lip of the intertubercular sulcus of the humerus",
+   "action": "Adduct the humerus, internal rotation (medial rotation) of the humerus, extend the humerus from flexed position",
+   "nerve": "Lower subscapular nerve (segmental levels C5 and C6)",
+   "blood": "Subscapular and circumflex scapular arteries"
+  },
+  "Teres minor muscle": {
+   "rev": 1313769663,
+   "origin": "Lateral border of the scapula",
+   "insertion": "Inferior facet of greater tubercle of the humerus",
+   "action": "Laterally rotates the arm, stabilizes humerus",
+   "nerve": "Axillary nerve (C5-C6)",
+   "blood": "Posterior circumflex humeral artery and the circumflex scapular artery"
+  },
+  "Third metacarpal bone": {
+   "rev": 1209360192,
+   "description": "The third metacarpal bone (metacarpal bone of the middle finger) is a little smaller than the second."
+  },
+  "Third metatarsal bone": {
+   "rev": 1215099964,
+   "description": "The third metatarsal bone is a long bone in the foot. It is the second longest metatarsal, the longest being the second metatarsal. The third metatarsal is analogous to the third metacarpal bone in the hand"
+  },
+  "Thoracic vertebrae": {
+   "rev": 1380617422,
+   "description": "In vertebrates, thoracic vertebrae compose the middle segment of the vertebral column, between the cervical vertebrae and the lumbar vertebrae. In humans, there are twelve thoracic vertebrae of intermediate size between the cervical and lumbar vertebrae; they increase in size going towards the lumbar vertebrae."
+  },
+  "Thoracodorsal nerve": {
+   "rev": 1360742162,
+   "from": "Posterior cord (C6-C8)",
+   "supplies": "Latissimus dorsi muscle"
+  },
+  "Tibia": {
+   "rev": 1372908895,
+   "description": "The tibia (pl.: tibiae or tibias), also known as the shinbone, shankbone or simply the shin, is the larger, stronger, and anterior (frontal) of the two bones in the leg below the knee in vertebrates (the other being the fibula, behind and to the outside of the tibia); it connects the knee with the ankle. The tibia is found on the medial side of the leg next to the fibula and closer to the median plane.",
+   "articulations": "Knee, ankle, superior and\ninferior tibiofibular joint"
+  },
+  "Tibial nerve": {
+   "rev": 1347308937,
+   "from": "Sacral plexus via sciatic nerve",
+   "branches": "Medial plantar nerve, lateral plantar nerve",
+   "supplies": "Origin: Flexor digitorum longus, flexor hallucis longus\nAnterior: semimembranosus, semitendinosus, long head of biceps femoris\nMedial: abductor hallucis, flexor digitorum brevis, flexor hallucis brevis, first lumbrical\nLateral: quadratus plantae, flexor digiti minimi, adductor hallucis, the interossei, three lumbricals and abductor digiti minimi"
+  },
+  "Tibialis anterior muscle": {
+   "rev": 1380879440,
+   "origin": "From the upper 1/2 or 2/3 of the lateral surface of the tibia and the adjacent interosseous membrane",
+   "insertion": "Medial cuneiform and the base of first metatarsal bone of the foot",
+   "action": "Dorsiflexion and inversion of the foot",
+   "nerve": "Deep fibular (peroneal) nerve (L5)",
+   "blood": "Anterior tibial artery"
+  },
+  "Tibialis posterior muscle": {
+   "rev": 1382821012,
+   "origin": "Tibia and fibula",
+   "insertion": "Navicular and medial cuneiform bone",
+   "action": "Inversion of the foot and plantar flexion of the foot at the ankle",
+   "nerve": "Tibial nerve",
+   "blood": "Posterior tibial artery"
+  },
+  "Transverse abdominal muscle": {
+   "rev": 1380886702,
+   "origin": "Iliac crest, inguinal ligament, thoracolumbar fascia, and costal cartilages 7-12",
+   "insertion": "Xiphoid process, linea alba, pubic crest and pecten pubis via conjoint tendon",
+   "action": "Compresses abdominal contents (bilateral), rotates trunk ipsilaterally (unilateral)",
+   "nerve": "Thoracoabdominal nn. (T6-T11), Subcostal n. (T12), iliohypogastric nerve (L1), and ilioinguinal nerve (L1)",
+   "blood": "Subcostal arteries"
+  },
+  "Trapezium (bone)": {
+   "rev": 1373211955,
+   "description": "The trapezium bone (greater multangular bone) is a carpal bone in the hand. It forms the radial border of the carpal tunnel.",
+   "articulations": "1st metacarpal distally\nscaphoid proximally\ntrapezoid medially\n2nd metacarpal medially"
+  },
+  "Trapezius": {
+   "rev": 1377970464,
+   "origin": "Medial one-third of superior nuchal line, external occipital protuberance, spinous processes of vertebrae C7-T12, Nuchal ligament",
+   "insertion": "Posterior border of the lateral one-third of the clavicle, acromion process, and spine of scapula",
+   "action": "Rotation, retraction, elevation, and depression of scapula",
+   "nerve": "Accessory nerve (motor)\ncervical spinal nerves C3 and C4 (motor and sensation)",
+   "blood": "Superficial branch of transverse cervical artery or superficial cervical artery"
+  },
+  "Trapezoid bone": {
+   "rev": 1373211899,
+   "description": "The trapezoid bone (lesser multangular bone) is a carpal bone in tetrapods, including humans. It is the smallest bone in the distal row of carpal bones that give structure to the palm of the hand. It may be known by its wedge-shaped form, the broad end of the wedge constituting the dorsal, the narrow end the palmar surface; and by its having four articular facets touching each other, and separated by sharp edges.",
+   "articulations": "Articulates with four bones:\nscaphoid proximally\nsecond metacarpal distally\ntrapezium bone laterally\ncapitate medially"
+  },
+  "Triceps": {
+   "rev": 1380879033,
+   "origin": "Long head: infraglenoid tubercle of scapula\nLateral head: above the radial groove\nMedial head: below the radial groove",
+   "insertion": "Olecranon process of ulna",
+   "action": "Extends forearm, long head extends, adducts arm, extends shoulder",
+   "nerve": "Radial nerve",
+   "blood": "Deep brachial artery, posterior circumflex humeral artery (long head only)"
+  },
+  "Trigeminal nerve": {
+   "rev": 1361728502,
+   "branches": "Ophthalmic nerve\nMaxillary nerve\nMandibular nerve",
+   "supplies": "Motor: Muscles of mastication, tensor tympani, tensor veli palatini, mylohyoid, anterior belly of the digastric\nSensory: Face, mouth, temporomandibular joint"
+  },
+  "Triquetral bone": {
+   "rev": 1373212187,
+   "description": "The triquetral bone (also called triquetrum, pyramidal, three-faced, and formerly cuneiform bone) is located in the wrist on the medial side of the proximal row of the carpus between the lunate and pisiform bones. It is on the ulnar side of the hand, but does not directly articulate with the ulna.",
+   "articulations": "Articulates with three bones:\nlunate laterally\npisiform in front\nhamate distally\ntriangular articular disk which separates it from the lower end of the ulna."
+  },
+  "Trochlear nerve": {
+   "rev": 1333126839,
+   "supplies": "Superior oblique muscle"
+  },
+  "Ulna": {
+   "rev": 1380921236,
+   "description": "The ulna or ulnar bone (pl.: ulnae or ulnas) is a long bone in the forearm stretching from the elbow to the wrist. It is on the same side of the forearm as the little finger, running parallel to the radius, the forearm's other long bone. Longer and thinner than the radius, the ulna is considered to be the smaller long bone of the lower arm. The corresponding bone in the lower leg is the fibula."
+  },
+  "Ulnar nerve": {
+   "rev": 1365975930,
+   "from": "C8, T1 (branch from medial cord)",
+   "supplies": "Flexor carpi ulnaris\nflexor digitorum profundus\nlumbrical muscles\nopponens digiti minimi\nflexor digiti minimi\nabductor digiti minimi\ninterossei\nadductor pollicis"
+  },
+  "Upper subscapular nerve": {
+   "rev": 1360744689,
+   "from": "Posterior cord",
+   "supplies": "Subscapularis"
+  },
+  "Upper trunk": {
+   "rev": 1369377402,
+   "from": "Ventral rami of C5 and C6",
+   "branches": "Anterior division of upper trunk, posterior division of upper trunk, subclavian nerve, suprascapular nerve"
+  },
+  "Vastus intermedius muscle": {
+   "rev": 1338088416,
+   "origin": "Anterolateral femur",
+   "insertion": "Quadriceps tendon",
+   "action": "Extension of knee joint",
+   "nerve": "Femoral nerve",
+   "blood": "Femoral artery"
+  },
+  "Vastus lateralis muscle": {
+   "rev": 1282030801,
+   "origin": "Greater trochanter, intertrochanteric line, and linea aspera of the femur",
+   "insertion": "Patella by the quadriceps tendon and tibial tuberosity by the patellar ligament",
+   "action": "Extends and stabilizes knee",
+   "nerve": "Femoral nerve",
+   "blood": "Lateral circumflex femoral artery"
+  },
+  "Vastus medialis": {
+   "rev": 1336718053,
+   "origin": "Medial side of femur",
+   "insertion": "Quadriceps tendon",
+   "action": "Extends knee",
+   "nerve": "Femoral nerve",
+   "blood": "Femoral artery"
+  },
+  "Vestibular nerve": {
+   "rev": 1236471594,
+   "from": "Vestibulocochlear nerve"
+  },
+  "Vestibulocochlear nerve": {
+   "rev": 1336069064,
+   "branches": "Cochlear nerve, vestibular nerve",
+   "supplies": "Hearing, balance"
+  },
+  "Vomer": {
+   "rev": 1383506812,
+   "description": "The vomer (Latin: vomer) is one of the unpaired facial bones of the skull. It is located in the midsagittal line, and articulates with the sphenoid, the ethmoid, the left and right palatine bones, and the left and right maxillary bones. The vomer forms the inferior part of the nasal septum in humans, with the superior part formed by the perpendicular plate of the ethmoid bone."
+  },
+  "Xiphoid process": {
+   "rev": 1319507224,
+   "description": "The xiphoid process, also referred to as the ensiform process, xiphisternum, or metasternum, constitutes a small cartilaginous process (extension) located in the inferior segment of the sternum, typically ossified in adult humans. Both the Greek-derived term xiphoid and its Latin equivalent, ensiform, connote a \"swordlike\" or \"sword-shaped\" morphology."
+  },
+  "Zygomatic bone": {
+   "rev": 1384569521,
+   "description": "In the human skull, the zygomatic bone (from Ancient Greek: ζῠγόν), also called cheekbone or malar bone, is a paired irregular bone, situated at the upper and lateral part of the face and forming part of the lateral wall and floor of the orbit, of the temporal fossa and the infratemporal fossa.",
+   "articulations": "Maxilla, temporal bone, sphenoid bone and frontal bone"
+  },
+  "Zygomaticus major muscle": {
+   "rev": 1345448933,
+   "origin": "Anterior of zygomatic",
+   "insertion": "Modiolus of the mouth",
+   "action": "Draws the angle of the mouth upward laterally",
+   "nerve": "Zygomatic and buccal branches of the facial nerve",
+   "blood": "Facial artery"
+  },
+  "Zygomaticus minor muscle": {
+   "rev": 1384343991,
+   "origin": "Zygomatic bone",
+   "insertion": "Skin of the upper lip",
+   "action": "Elevates upper lip",
+   "nerve": "Buccal branch",
+   "blood": "Facial artery"
+  }
+ },
+ "muscle": {
+  "abductor digiti minimi of foot": "Abductor digiti minimi muscle of foot",
+  "abductor hallucis": "Abductor hallucis muscle",
+  "abductor pollicis longus": "Abductor pollicis longus muscle",
+  "adductor brevis": "Adductor brevis muscle",
+  "adductor hallucis": "Adductor hallucis muscle",
+  "adductor longus": "Adductor longus muscle",
+  "adductor magnus": "Adductor magnus muscle",
+  "adductor minimus": "Adductor minimus muscle",
+  "anconeus": "Anconeus muscle",
+  "biceps brachii": "Biceps",
+  "biceps femoris": "Biceps femoris muscle",
+  "brachialis": "Brachialis muscle",
+  "brachioradialis": "Brachioradialis",
+  "buccinator": "Bucinator muscle",
+  "coracobrachialis": "Coracobrachialis muscle",
+  "corrugator supercilii": "Corrugator supercilii muscle",
+  "deltoid": "Deltoid muscle",
+  "depressor anguli oris": "Depressor anguli oris muscle",
+  "depressor labii inferioris": "Depressor labii inferioris muscle",
+  "extensor carpi radialis brevis": "Extensor carpi radialis brevis muscle",
+  "extensor carpi radialis longus": "Extensor carpi radialis longus muscle",
+  "extensor carpi ulnaris": "Extensor carpi ulnaris muscle",
+  "extensor digiti minimi": "Extensor digiti minimi muscle",
+  "extensor digitorum": "Extensor digitorum muscle",
+  "extensor digitorum brevis": "Extensor digitorum brevis muscle",
+  "extensor digitorum longus": "Extensor digitorum longus muscle",
+  "extensor hallucis brevis": "Extensor hallucis brevis muscle",
+  "extensor hallucis longus": "Extensor hallucis longus muscle",
+  "extensor indicis": "Extensor indicis muscle",
+  "extensor pollicis brevis": "Extensor pollicis brevis muscle",
+  "extensor pollicis longus": "Extensor pollicis longus muscle",
+  "external oblique": "Abdominal external oblique muscle",
+  "fibularis brevis": "Fibularis brevis",
+  "fibularis longus": "Fibularis longus",
+  "fibularis tertius": "Fibularis tertius",
+  "flexor accessorius": "Quadratus plantae muscle",
+  "flexor carpi radialis": "Flexor carpi radialis muscle",
+  "flexor carpi ulnaris": "Flexor carpi ulnaris muscle",
+  "flexor digiti minimi brevis of foot": "Flexor digiti minimi brevis muscle of foot",
+  "flexor digitorum brevis": "Flexor digitorum brevis muscle",
+  "flexor digitorum longus": "Flexor digitorum longus muscle",
+  "flexor digitorum profundus": "Flexor digitorum profundus muscle",
+  "flexor digitorum superficialis": "Flexor digitorum superficialis muscle",
+  "flexor hallucis brevis": "Flexor hallucis brevis muscle",
+  "flexor hallucis longus": "Flexor hallucis longus muscle",
+  "flexor pollicis longus": "Flexor pollicis longus muscle",
+  "frontalis": "Frontalis muscle",
+  "gastrocnemius": "Gastrocnemius muscle",
+  "gemellus inferior": null,
+  "gemellus superior": null,
+  "gluteus maximus": "Gluteus maximus",
+  "gluteus medius": "Gluteus medius",
+  "gluteus minimus": "Gluteus minimus",
+  "gracilis": "Gracilis muscle",
+  "iliacus": "Iliacus muscle",
+  "iliocostalis cervicis": "Iliocostalis",
+  "iliocostalis lumborum": "Iliocostalis",
+  "iliocostalis thoracis": "Iliocostalis",
+  "infraspinatus": "Infraspinatus muscle",
+  "internal oblique": "Abdominal internal oblique muscle",
+  "lateral pterygoid": "Lateral pterygoid muscle",
+  "latissimus dorsi": "Latissimus dorsi muscle",
+  "levator anguli oris": "Levator anguli oris",
+  "levator labii superioris": "Levator labii superioris",
+  "levator labii superioris alaeque nasi": "Levator labii superioris alaeque nasi muscle",
+  "levator scapulae": "Levator scapulae muscle",
+  "longissimus capitis": "Longissimus",
+  "longissimus cervicis": "Longissimus",
+  "longissimus thoracis": "Longissimus",
+  "lumbrical of foot": "Lumbricals of the foot",
+  "masseter": "Masseter muscle",
+  "medial pterygoid": "Medial pterygoid muscle",
+  "mentalis": "Mentalis",
+  "multifidus": "Multifidus muscle",
+  "nasalis": "Nasalis muscle",
+  "obturator externus": "External obturator muscle",
+  "obturator internus": "Internal obturator muscle",
+  "occipitalis": "Occipitalis muscle",
+  "opponens digiti minimi of foot": null,
+  "orbicularis oculi": "Orbicularis oculi muscle",
+  "orbicularis oris": "Orbicularis oris muscle",
+  "palmaris longus": "Palmaris longus muscle",
+  "pectineus": "Pectineus muscle",
+  "pectoralis major": "Pectoralis major",
+  "pectoralis minor": "Pectoralis minor",
+  "piriformis": "Piriformis muscle",
+  "plantar interosseous of foot": "Plantar interossei muscles",
+  "plantaris": "Plantaris muscle",
+  "popliteus": "Popliteus muscle",
+  "procerus": "Procerus muscle",
+  "pronator quadratus": "Pronator quadratus muscle",
+  "pronator teres": "Pronator teres muscle",
+  "psoas major": "Psoas major muscle",
+  "quadratus femoris": "Quadratus femoris muscle",
+  "quadratus lumborum": "Quadratus lumborum muscle",
+  "rectus abdominis": "Rectus abdominis muscle",
+  "rectus femoris": "Rectus femoris muscle",
+  "rhomboid major": "Rhomboid major muscle",
+  "rhomboid minor": "Rhomboid minor muscle",
+  "risorius": "Risorius",
+  "sartorius": "Sartorius muscle",
+  "scalenus anterior": "Scalene muscles",
+  "scalenus medius": "Scalene muscles",
+  "scalenus posterior": "Scalene muscles",
+  "semimembranosus": "Semimembranosus muscle",
+  "semispinalis capitis": null,
+  "semispinalis cervicis": null,
+  "semispinalis thoracis": null,
+  "semitendinosus": "Semitendinosus muscle",
+  "serratus anterior": "Serratus anterior muscle",
+  "serratus posterior inferior": "Serratus posterior inferior muscle",
+  "serratus posterior superior": "Serratus posterior superior muscle",
+  "set of dorsal interossei of foot": "Dorsal interossei of the foot",
+  "soleus": "Soleus muscle",
+  "spinalis cervicis": "Spinalis",
+  "spinalis thoracis": "Spinalis",
+  "splenius capitis": "Splenius capitis muscle",
+  "splenius cervicis": "Splenius cervicis muscle",
+  "sternocleidomastoid": "Sternocleidomastoid muscle",
+  "subclavius": "Subclavius muscle",
+  "subscapularis": "Subscapularis muscle",
+  "supinator": "Supinator muscle",
+  "supraspinatus": "Supraspinatus muscle",
+  "temporalis": "Temporalis muscle",
+  "temporoparietalis": "Temporoparietalis muscle",
+  "tensor fasciae latae": "Tensor fasciae latae muscle",
+  "teres major": "Teres major muscle",
+  "teres minor": "Teres minor muscle",
+  "tibialis anterior": "Tibialis anterior muscle",
+  "tibialis posterior": "Tibialis posterior muscle",
+  "transversus abdominis": "Transverse abdominal muscle",
+  "trapezius": "Trapezius",
+  "triceps brachii": "Triceps",
+  "vastus intermedius": "Vastus intermedius muscle",
+  "vastus lateralis": "Vastus lateralis muscle",
+  "vastus medialis": "Vastus medialis",
+  "zygomaticus major": "Zygomaticus major muscle",
+  "zygomaticus minor": "Zygomaticus minor muscle"
+ },
+ "nerve": {
+  "abducens nerve (vi)": "Abducens nerve",
+  "anterior branch of medial antebrachial cutaneous nerve": "Medial cutaneous nerve of forearm",
+  "anterior branch of obturator nerve": "Anterior branch of obturator nerve",
+  "anterior cutaneous branches of femoral nerve": "Anterior cutaneous branches of the femoral nerve",
+  "anterior division of inferior trunk of brachial plexus": null,
+  "anterior division of mandibular nerve": "Mandibular nerve",
+  "anterior division of middle trunk of brachial plexus": null,
+  "anterior division of superior trunk of brachial plexus": null,
+  "anterior interosseous nerve of forearm": "Anterior interosseous nerve",
+  "axillary nerve": "Axillary nerve",
+  "buccal nerve": "Buccal nerve",
+  "chorda tympani": "Chorda tympani",
+  "common fibular nerve": "Common fibular nerve",
+  "common palmar digital branches of median nerve": "Common palmar digital nerves of median nerve",
+  "common palmar digital branches of ulnar nerve": "Common palmar digital nerves of ulnar nerve",
+  "common plantar digital branches of lateral plantar nerve": "Common plantar digital nerves of lateral plantar nerve",
+  "common plantar digital branches of medial plantar nerve": "Common plantar digital nerves of medial plantar nerve",
+  "deep branch of radial nerve": "Deep branch of radial nerve",
+  "deep branch of ulnar nerve": "Deep branch of ulnar nerve",
+  "deep fibular nerve": "Deep fibular nerve",
+  "dorsal branch of ulnar nerve": "Dorsal branch of ulnar nerve",
+  "dorsal digital branches of deep fibular nerve": "Deep fibular nerve",
+  "dorsal digital branches of radial nerve": "Dorsal digital nerves of radial nerve",
+  "dorsal digital branches of superficial fibular nerve": "Superficial fibular nerve",
+  "dorsal digital branches of ulnar nerve": "Dorsal digital nerves of ulnar nerve",
+  "dorsal scapular nerve": "Dorsal scapular nerve",
+  "facial nerve (vii)": "Facial nerve",
+  "femoral branch of genitofemoral nerve": "Lumboinguinal nerve",
+  "femoral nerve": "Femoral nerve",
+  "genital branch of genitofemoral nerve": "Genital branch of genitofemoral nerve",
+  "genitofemoral nerve": "Genitofemoral nerve",
+  "glossopharyngeal nerve (ix)": "Glossopharyngeal nerve",
+  "hypoglossal nerve (xii)": "Hypoglossal nerve",
+  "ilio-inguinal nerve": "Ilioinguinal nerve",
+  "iliohypogastric nerve": "Iliohypogastric nerve",
+  "inferior alveolar nerve": "Inferior alveolar nerve",
+  "inferior lateral brachial cutaneous nerve": "Inferior lateral cutaneous nerve of arm",
+  "inferior subscapular nerve": "Lower subscapular nerve",
+  "inferior trunk of brachial plexus": null,
+  "infrapatellar branch of saphenous nerve": "Infrapatellar branch of saphenous nerve",
+  "intercostal nerves": "Intercostal nerves",
+  "intermediate dorsal cutaneous nerve of foot": "Intermediate dorsal cutaneous nerve",
+  "lateral antebrachial cutaneous nerve": "Lateral cutaneous nerve of forearm",
+  "lateral femoral cutaneous nerve": "Lateral cutaneous nerve of thigh",
+  "lateral pectoral nerve": "Lateral pectoral nerve",
+  "lateral plantar nerve": "Lateral plantar nerve",
+  "lingual nerve": "Lingual nerve",
+  "long thoracic nerve": "Long thoracic nerve",
+  "maxillary nerve": "Maxillary nerve",
+  "medial antebrachial cutaneous nerve": "Medial cutaneous nerve of forearm",
+  "medial brachial cutaneous nerve": "Medial cutaneous nerve of arm",
+  "medial dorsal cutaneous nerve of foot": "Medial dorsal cutaneous nerve",
+  "medial pectoral nerve": "Medial pectoral nerve",
+  "medial plantar nerve": "Medial plantar nerve",
+  "medial sural cutaneous nerve": "Medial sural cutaneous nerve",
+  "median nerve": "Median nerve",
+  "meningeal branch of maxillary nerve": "Middle meningeal nerve",
+  "mental nerve": "Mental nerve",
+  "middle trunk of brachial plexus": null,
+  "muscular branches of axillary nerve": "Axillary nerve",
+  "muscular branches of deep fibular nerve": "Deep fibular nerve",
+  "muscular branches of median nerve": "Median nerve",
+  "muscular branches of radial nerve": "Muscular branches of the radial nerve",
+  "muscular branches of ulnar nerve": "Muscular branches of ulnar nerve",
+  "musculocutaneous nerve": "Musculocutaneous nerve",
+  "nerve to mylohyoid muscle": "Mylohyoid nerve",
+  "nerve to piriformis muscle": "Piriformis nerve",
+  "nerve to quadratus femoris muscle": "Nerve to quadratus femoris",
+  "obturator nerve": "Obturator nerve",
+  "oculomotor nerve (iii)": "Oculomotor nerve",
+  "olfactory nerve (i)": "Olfactory nerve",
+  "ophthalmic nerve": "Ophthalmic nerve",
+  "palmar branch of median nerve": "Palmar branch of the median nerve",
+  "palmar branch of ulnar nerve": "Palmar branch of ulnar nerve",
+  "posterior antebrachial cutaneous nerve": "Posterior cutaneous nerve of forearm",
+  "posterior branch of medial antebrachial cutaneous nerve": "Medial cutaneous nerve of forearm",
+  "posterior branch of obturator nerve": "Posterior branch of obturator nerve",
+  "posterior cord of brachial plexus": "Posterior cord",
+  "posterior division of inferior trunk of brachial plexus": null,
+  "posterior division of mandibular nerve": "Mandibular nerve",
+  "posterior division of middle trunk of brachial plexus": null,
+  "posterior division of superior trunk of brachial plexus": null,
+  "posterior femoral cutaneous nerve": "Posterior cutaneous nerve of thigh",
+  "posterior interosseous nerve of forearm": "Posterior interosseous nerve",
+  "proper palmar digital branches of median nerve": "Proper palmar digital nerves of median nerve",
+  "proper palmar digital branches of ulnar nerve": "Proper palmar digital nerves of ulnar nerve",
+  "proper plantar digital branches of lateral plantar nerve": "Proper plantar digital nerves of lateral plantar nerve",
+  "proper plantar digital branches of medial plantar nerve": "Proper plantar digital nerves of medial plantar nerve",
+  "pudendal nerve": "Pudendal nerve",
+  "radial nerve": "Radial nerve",
+  "roots of brachial plexus": null,
+  "saphenous nerve": "Saphenous nerve",
+  "sciatic nerve": "Sciatic nerve",
+  "subclavian nerve": "Subclavian nerve",
+  "superficial branch of radial nerve": "Superficial branch of radial nerve",
+  "superficial branch of ulnar nerve": "Superficial branch of ulnar nerve",
+  "superficial fibular nerve": "Superficial fibular nerve",
+  "superior gluteal nerve": "Superior gluteal nerve",
+  "superior lateral brachial cutaneous nerve": "Superior lateral cutaneous nerve of arm",
+  "superior subscapular nerve": "Upper subscapular nerve",
+  "superior trunk of brachial plexus": "Upper trunk",
+  "suprascapular nerve": "Suprascapular nerve",
+  "sural communicating branch of common fibular nerve": "Sural communicating branch of common peroneal nerve",
+  "sural nerve": "Sural nerve",
+  "thoracodorsal nerve": "Thoracodorsal nerve",
+  "tibial nerve": "Tibial nerve",
+  "trigeminal nerve (v)": "Trigeminal nerve",
+  "trochlear nerve (iv)": "Trochlear nerve",
+  "ulnar nerve": "Ulnar nerve",
+  "vestibular nerve": "Vestibular nerve",
+  "vestibulocochlear nerve (viii)": "Vestibulocochlear nerve"
+ },
+ "bone": {
+  "body of sternum": "Sternum",
+  "calcaneus": "Calcaneus",
+  "capitate": "Capitate bone",
+  "clavicle": "Clavicle",
+  "cuboid bone": "Cuboid bone",
+  "distal phalanx of big toe": "Phalanx bone",
+  "distal phalanx of fourth toe": "Phalanx bone",
+  "distal phalanx of index finger": "Phalanx bone",
+  "distal phalanx of little finger": "Phalanx bone",
+  "distal phalanx of little toe": "Phalanx bone",
+  "distal phalanx of middle finger": "Phalanx bone",
+  "distal phalanx of ring finger": "Phalanx bone",
+  "distal phalanx of second toe": "Phalanx bone",
+  "distal phalanx of third toe": "Phalanx bone",
+  "distal phalanx of thumb": "Phalanx bone",
+  "eighth rib": "Rib",
+  "eighth thoracic vertebra": "Thoracic vertebrae",
+  "eleventh rib": "Rib",
+  "eleventh thoracic vertebra": "Thoracic vertebrae",
+  "ethmoid": "Ethmoid bone",
+  "femur": "Femur",
+  "fibula": "Fibula",
+  "fifth cervical vertebra": "Cervical vertebrae",
+  "fifth lumbar vertebra": "Lumbar vertebrae",
+  "fifth metacarpal bone": "Fifth metacarpal bone",
+  "fifth metatarsal bone": "Fifth metatarsal bone",
+  "fifth rib": "Rib",
+  "fifth thoracic vertebra": "Thoracic vertebrae",
+  "first lumbar vertebra": "Lumbar vertebrae",
+  "first metacarpal bone": "First metacarpal bone",
+  "first metatarsal bone": "First metatarsal bone",
+  "first rib": "Rib",
+  "first thoracic vertebra": "Thoracic vertebrae",
+  "fourth cervical vertebra": "Cervical vertebrae",
+  "fourth lumbar vertebra": "Lumbar vertebrae",
+  "fourth metacarpal bone": "Fourth metacarpal bone",
+  "fourth metatarsal bone": "Fourth metatarsal bone",
+  "fourth rib": "Rib",
+  "fourth thoracic vertebra": "Thoracic vertebrae",
+  "frontal bone": "Frontal bone",
+  "hamate": "Hamate bone",
+  "hip bone": "Hip bone",
+  "humerus": "Humerus",
+  "inferior nasal concha": "Inferior nasal concha",
+  "intermediate cuneiform bone": "Cuneiform bones",
+  "lacrimal bone": "Lacrimal bone",
+  "lateral cuneiform bone": "Cuneiform bones",
+  "lunate": "Lunate bone",
+  "mandible": "Mandible",
+  "manubrium": "Sternum",
+  "maxilla": "Maxilla",
+  "medial cuneiform bone": "Cuneiform bones",
+  "middle phalanx of fourth toe": "Phalanx bone",
+  "middle phalanx of index finger": "Phalanx bone",
+  "middle phalanx of little finger": "Phalanx bone",
+  "middle phalanx of little toe": "Phalanx bone",
+  "middle phalanx of middle finger": "Phalanx bone",
+  "middle phalanx of ring finger": "Phalanx bone",
+  "middle phalanx of second toe": "Phalanx bone",
+  "middle phalanx of third toe": "Phalanx bone",
+  "nasal bone": "Nasal bone",
+  "navicular bone of foot": "Navicular bone",
+  "ninth rib": "Rib",
+  "ninth thoracic vertebra": "Thoracic vertebrae",
+  "occipital bone": "Occipital bone",
+  "palatine bone": "Palatine bone",
+  "parietal bone": "Parietal bone",
+  "patella": "Patella",
+  "pisiform": "Pisiform bone",
+  "proximal phalanx of big toe": "Phalanx bone",
+  "proximal phalanx of fourth toe": "Phalanx bone",
+  "proximal phalanx of index finger": "Phalanx bone",
+  "proximal phalanx of little finger": "Phalanx bone",
+  "proximal phalanx of little toe": "Phalanx bone",
+  "proximal phalanx of middle finger": "Phalanx bone",
+  "proximal phalanx of ring finger": "Phalanx bone",
+  "proximal phalanx of second toe": "Phalanx bone",
+  "proximal phalanx of third toe": "Phalanx bone",
+  "proximal phalanx of thumb": "Phalanx bone",
+  "radius": "Radius (bone)",
+  "sacrum": "Sacrum",
+  "scaphoid": "Scaphoid bone",
+  "scapula": "Scapula",
+  "second lumbar vertebra": "Lumbar vertebrae",
+  "second metacarpal bone": "Second metacarpal bone",
+  "second metatarsal bone": "Second metatarsal bone",
+  "second rib": "Rib",
+  "second thoracic vertebra": "Thoracic vertebrae",
+  "seventh cervical vertebra": "Cervical vertebrae",
+  "seventh rib": "Rib",
+  "seventh thoracic vertebra": "Thoracic vertebrae",
+  "sixth cervical vertebra": "Cervical vertebrae",
+  "sixth rib": "Rib",
+  "sixth thoracic vertebra": "Thoracic vertebrae",
+  "sphenoid bone": "Sphenoid bone",
+  "talus": "Talus bone",
+  "temporal bone": "Temporal bone",
+  "tenth rib": "Rib",
+  "tenth thoracic vertebra": "Thoracic vertebrae",
+  "third cervical vertebra": "Cervical vertebrae",
+  "third lumbar vertebra": "Lumbar vertebrae",
+  "third metacarpal bone": "Third metacarpal bone",
+  "third metatarsal bone": "Third metatarsal bone",
+  "third rib": "Rib",
+  "third thoracic vertebra": "Thoracic vertebrae",
+  "tibia": "Tibia",
+  "trapezium": "Trapezium (bone)",
+  "trapezoid": "Trapezoid bone",
+  "triquetral": "Triquetral bone",
+  "twelfth rib": "Rib",
+  "twelfth thoracic vertebra": "Thoracic vertebrae",
+  "ulna": "Ulna",
+  "vomer": "Vomer",
+  "xiphoid process": "Xiphoid process",
+  "zygomatic bone": "Zygomatic bone"
+ }
+}

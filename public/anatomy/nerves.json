@@ -1,0 +1,6520 @@
+{
+  "attribution": "Browne, Kristen; Schlehlein, Heidi (2022). 3D Reference Organ for Spinal Cord, Male, v1.0. HuBMAP. DOI:10.48539/HBM366.MTJD.685. CC BY 4.0. Adapted to the BodyParts3D vertebral canal and quantized for Anatomy Mirror. BodyParts3D, © The Database Center for Life Science, CC Attribution-Share Alike 2.1 Japan. Optic surfaces registered to the original Anatomy Mirror head and quantized.",
+  "binaryBytes": 253728,
+  "binarySha256": "c427babe8314c35c373cc050abd4740beb429be9b0b20f32a71e04c6b32bc936",
+  "companionBodyBinarySha256": "8f8a0b6877e2a5ec8a2109212fae24d7e7c03fdf1b73a97573a7de30db18f950",
+  "coverage": {
+    "cordSegments": 30,
+    "excluded": [
+      "Peripheral limb nerves",
+      "Spinal nerve roots and cauda equina",
+      "Coccygeal cord segment",
+      "Auditory and vestibular organs",
+      "Retinal layers"
+    ],
+    "opticComponents": 5,
+    "regionCount": 9,
+    "regions": [
+      "cervical_cord",
+      "thoracic_cord",
+      "lumbar_cord",
+      "sacral_cord",
+      "optic_nerves",
+      "optic_chiasm",
+      "optic_tracts"
+    ],
+    "sourceComponents": 35
+  },
+  "demoAspect": 1.3333333333333333,
+  "demoPose": [
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5,
+      "y": 0.14,
+      "z": 0
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.56232041,
+      "y": 0.24010217,
+      "z": 0.00764917
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.43723433,
+      "y": 0.23997205,
+      "z": 0.00771972
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.58004372,
+      "y": 0.38032139,
+      "z": 0.01062896
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.41942861,
+      "y": 0.38033419,
+      "z": 0.01061224
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.49917902,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.49916366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.59806818,
+      "y": 0.5241790199999999,
+      "z": -0.00673007
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.40125648,
+      "y": 0.52416366,
+      "z": -0.00693189
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.53939146,
+      "y": 0.50085393,
+      "z": 0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.46041493,
+      "y": 0.50025341,
+      "z": -0.00017472
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5276471,
+      "y": 0.70753678,
+      "z": 0.00829172
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47153933,
+      "y": 0.70742745,
+      "z": 0.0081063
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52812686,
+      "y": 0.88444174,
+      "z": 0.01260175
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47136547,
+      "y": 0.88449861,
+      "z": 0.01258065
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.52788574,
+      "y": 0.90864114,
+      "z": 0.03002452
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.47130176,
+      "y": 0.90852277,
+      "z": 0.03013301
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.5403024,
+      "y": 0.91953781,
+      "z": -0.05293796
+    },
+    {
+      "presence": 1,
+      "visibility": 1,
+      "x": 0.45932815,
+      "y": 0.91948994,
+      "z": -0.05294199
+    }
+  ],
+  "format": "quantized-uint16-le",
+  "labels": [
+    {
+      "layer": "nerves",
+      "mesh": "cord_cervical",
+      "pts": [
+        [
+          -0.0005372188770831261,
+          1.2183753997835112,
+          0.024868032071305914
+        ]
+      ],
+      "t": "Cervical cord"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "cord_thoracic",
+      "pts": [
+        [
+          -0.004465728252458206,
+          0.9010201342704932,
+          -0.09943577010461059
+        ]
+      ],
+      "t": "Thoracic cord"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "cord_lumbar",
+      "pts": [
+        [
+          -0.0005381561191382654,
+          0.6143026164560337,
+          -0.07371646242273243
+        ]
+      ],
+      "t": "Lumbar cord"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "cord_sacral",
+      "pts": [
+        [
+          0.0006402254634543937,
+          0.5200461885084483,
+          -0.04670257184053084
+        ]
+      ],
+      "t": "Sacral cord"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "optic_nerve_L",
+      "pts": [
+        [
+          1.7452765638719618,
+          3.3338523051376967,
+          -0.9835264330272455
+        ]
+      ],
+      "t": "Optic nerve L"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "optic_nerve_R",
+      "pts": [
+        [
+          -1.861342504591711,
+          3.305240097821212,
+          -0.9185074922160918
+        ]
+      ],
+      "t": "Optic nerve R"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "optic_chiasm",
+      "pts": [
+        [
+          0.022847152636255752,
+          4.58418519709582,
+          -3.1208443942826003
+        ]
+      ],
+      "t": "Optic chiasm"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "optic_tract_L",
+      "pts": [
+        [
+          2.2074318890645572,
+          4.474544060852736,
+          -5.10203047709408
+        ]
+      ],
+      "t": "Optic tract L"
+    },
+    {
+      "layer": "nerves",
+      "mesh": "optic_tract_R",
+      "pts": [
+        [
+          -2.1725944141268085,
+          4.390428950002331,
+          -5.198053131426543
+        ]
+      ],
+      "t": "Optic tract R"
+    }
+  ],
+  "layer": "nerves",
+  "license": "CC-BY-4.0 AND CC-BY-SA-2.1-JP",
+  "limitations": [
+    "Reference surfaces for education; not patient-specific anatomy or a clinically validated registration.",
+    "The HRA cord and BodyParts3D skeleton are different adult specimens. Axial scaling and centerline recentering explicitly adapt the cord to measured vertebral canal sections.",
+    "Cord segment names denote spinal cord segments, not the vertebrae at the same ordinal level. Segment positions after cross-atlas registration are approximate.",
+    "The cord follows one rigid torso frame during tracking; it does not bend with individual vertebrae.",
+    "Optic structures use one approximate global head registration and follow the tracked head, not eye rotation or gaze.",
+    "No peripheral limb nerves, nerve roots, cauda equina, separately named coccygeal cord segment, auditory/vestibular organs or retinal layers are present in this bundle.",
+    "Existing brain and eyeballs remain separate original head layers; the BodyParts3D spinal-cord alias resolves only a short canal surface and is deliberately not used as the full cord."
+  ],
+  "measuredSourceHeightCm": 164.04426000000004,
+  "meshes": [
+    {
+      "cervical": true,
+      "frame": "torso",
+      "layer": "nerves",
+      "license": "CC-BY-4.0",
+      "min": [
+        -0.023728608106453723,
+        1.1149406913169793,
+        -0.023051294781951663
+      ],
+      "name": "cord_cervical",
+      "ni": 11880,
+      "nv": 2200,
+      "offI": 13200,
+      "offV": 0,
+      "region": "cervical",
+      "registration": "cord",
+      "side": "M",
+      "size": [
+        0.04306760322886379,
+        0.18260587766424274,
+        0.07418762752252073
+      ],
+      "sourceConcepts": [
+        {
+          "id": "hra:VH_M_C1_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C1_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C2_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C2_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C3_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C3_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C4_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C4_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C5_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C5_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C6_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C6_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C7_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C7_segment_of_cervical_spinal_cord"
+        },
+        {
+          "id": "hra:VH_M_C8_segment_of_cervical_spinal_cord",
+          "name": "VH_M_C8_segment_of_cervical_spinal_cord"
+        }
+      ],
+      "sourceElements": [
+        "hra:VH_M_C1_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C2_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C3_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C4_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C5_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C6_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C7_segment_of_cervical_spinal_cord",
+        "hra:VH_M_C8_segment_of_cervical_spinal_cord"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 3960,
+      "triangleBudget": 3960
+    },
+    {
+      "cervical": false,
+      "frame": "torso",
+      "layer": "nerves",
+      "license": "CC-BY-4.0",
+      "min": [
+        -0.027664362079830883,
+        0.6660696807444109,
+        -0.12170498070474309
+      ],
+      "name": "cord_thoracic",
+      "ni": 26208,
+      "nv": 4700,
+      "offI": 65160,
+      "offV": 36960,
+      "region": "thoracic",
+      "registration": "cord",
+      "side": "M",
+      "size": [
+        0.03944984219168707,
+        0.4553788795799467,
+        0.11571088218262823
+      ],
+      "sourceConcepts": [
+        {
+          "id": "hra:VH_M_eighth_thoracic_spinal_cord_segment",
+          "name": "VH_M_eighth_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_eleventh_thoracic_spinal_cord_segment",
+          "name": "VH_M_eleventh_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_fifth_thoracic_spinal_cord_segment",
+          "name": "VH_M_fifth_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_first_thoracic_spinal_cord_segment",
+          "name": "VH_M_first_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_fourth_thoracic_spinal_cord_segment",
+          "name": "VH_M_fourth_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_ninth_thoracic_spinal_cord_segment",
+          "name": "VH_M_ninth_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_second_thoracic_spinal_cord_segment",
+          "name": "VH_M_second_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_seventh_thoracic_spinal_cord_segment",
+          "name": "VH_M_seventh_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_sixth_thoracic_spinal_cord_segment",
+          "name": "VH_M_sixth_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_tenth_thoracic_spinal_cord_segment",
+          "name": "VH_M_tenth_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_third_thoracic_spinal_cord_segment",
+          "name": "VH_M_third_thoracic_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_twelfth_thoracic_spinal_cord_segment",
+          "name": "VH_M_twelfth_thoracic_spinal_cord_segment"
+        }
+      ],
+      "sourceElements": [
+        "hra:VH_M_eighth_thoracic_spinal_cord_segment",
+        "hra:VH_M_eleventh_thoracic_spinal_cord_segment",
+        "hra:VH_M_fifth_thoracic_spinal_cord_segment",
+        "hra:VH_M_first_thoracic_spinal_cord_segment",
+        "hra:VH_M_fourth_thoracic_spinal_cord_segment",
+        "hra:VH_M_ninth_thoracic_spinal_cord_segment",
+        "hra:VH_M_second_thoracic_spinal_cord_segment",
+        "hra:VH_M_seventh_thoracic_spinal_cord_segment",
+        "hra:VH_M_sixth_thoracic_spinal_cord_segment",
+        "hra:VH_M_tenth_thoracic_spinal_cord_segment",
+        "hra:VH_M_third_thoracic_spinal_cord_segment",
+        "hra:VH_M_twelfth_thoracic_spinal_cord_segment"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 8736,
+      "triangleBudget": 8736
+    },
+    {
+      "cervical": false,
+      "frame": "torso",
+      "layer": "nerves",
+      "license": "CC-BY-4.0",
+      "min": [
+        -0.01387512962995547,
+        0.5565629123058301,
+        -0.10110721859130369
+      ],
+      "name": "cord_lumbar",
+      "ni": 5940,
+      "nv": 1131,
+      "offI": 124362,
+      "offV": 117576,
+      "region": "lumbar",
+      "registration": "cord",
+      "side": "M",
+      "size": [
+        0.026946725523552477,
+        0.11101038311105194,
+        0.045750372708282555
+      ],
+      "sourceConcepts": [
+        {
+          "id": "hra:VH_M_fifth_lumbar_spinal_cord_segment",
+          "name": "VH_M_fifth_lumbar_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_first_lumbar_spinal_cord_segment",
+          "name": "VH_M_first_lumbar_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_fourth_lumbar_spinal_cord_segment",
+          "name": "VH_M_fourth_lumbar_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_second_lumbar_spinal_cord_segment",
+          "name": "VH_M_second_lumbar_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_third_lumbar_spinal_cord_segment",
+          "name": "VH_M_third_lumbar_spinal_cord_segment"
+        }
+      ],
+      "sourceElements": [
+        "hra:VH_M_fifth_lumbar_spinal_cord_segment",
+        "hra:VH_M_first_lumbar_spinal_cord_segment",
+        "hra:VH_M_fourth_lumbar_spinal_cord_segment",
+        "hra:VH_M_second_lumbar_spinal_cord_segment",
+        "hra:VH_M_third_lumbar_spinal_cord_segment"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 1980,
+      "triangleBudget": 1980
+    },
+    {
+      "cervical": false,
+      "frame": "torso",
+      "layer": "nerves",
+      "license": "CC-BY-4.0",
+      "min": [
+        -0.01185425811511841,
+        0.47963370668328864,
+        -0.07183990329491101
+      ],
+      "name": "cord_sacral",
+      "ni": 5046,
+      "nv": 962,
+      "offI": 142014,
+      "offV": 136242,
+      "region": "sacral",
+      "registration": "cord",
+      "side": "M",
+      "size": [
+        0.02464743075204265,
+        0.08270862630824483,
+        0.03442320377771451
+      ],
+      "sourceConcepts": [
+        {
+          "id": "hra:VH_M_fifth_sacral_spinal_cord_segment",
+          "name": "VH_M_fifth_sacral_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_first_sacral_spinal_cord_segment",
+          "name": "VH_M_first_sacral_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_fourth_sacral_spinal_cord_segment",
+          "name": "VH_M_fourth_sacral_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_second_sacral_spinal_cord_segment",
+          "name": "VH_M_second_sacral_spinal_cord_segment"
+        },
+        {
+          "id": "hra:VH_M_third_sacral_spinal_cord_segment",
+          "name": "VH_M_third_sacral_spinal_cord_segment"
+        }
+      ],
+      "sourceElements": [
+        "hra:VH_M_fifth_sacral_spinal_cord_segment",
+        "hra:VH_M_first_sacral_spinal_cord_segment",
+        "hra:VH_M_fourth_sacral_spinal_cord_segment",
+        "hra:VH_M_second_sacral_spinal_cord_segment",
+        "hra:VH_M_third_sacral_spinal_cord_segment"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            32.57087810149383,
+            -0.025410897521993547,
+            0.018368487100188347
+          ],
+          [
+            -0.0327633075831244,
+            50.876483805273836,
+            -2.0009349264434952
+          ],
+          [
+            -0.02169968852071867,
+            1.600359826490462,
+            40.6916740132786
+          ]
+        ],
+        "originCm": [
+          -0.02520698930947951,
+          81.6907432269449,
+          9.17195688190122
+        ]
+      },
+      "sourceTriangles": 1682,
+      "triangleBudget": 1682
+    },
+    {
+      "frame": "head",
+      "layer": "nerves",
+      "license": "CC-BY-SA-2.1-JP",
+      "min": [
+        0.08886146697797279,
+        2.504868631929611,
+        -3.495750944586195
+      ],
+      "name": "optic_nerve_L",
+      "ni": 7128,
+      "nv": 1222,
+      "offI": 159438,
+      "offV": 152106,
+      "region": "optic",
+      "registration": "head",
+      "side": "L",
+      "size": [
+        3.4286608843446653,
+        2.237641746485451,
+        5.406016304062035
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA50878",
+          "name": "left optic nerve"
+        }
+      ],
+      "sourceElements": [
+        "FMA50878"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "originCm": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sourceTriangles": 2376,
+      "triangleBudget": 2376
+    },
+    {
+      "frame": "head",
+      "layer": "nerves",
+      "license": "CC-BY-SA-2.1-JP",
+      "min": [
+        -3.5144320408755254,
+        2.499866481552317,
+        -3.497180518682941
+      ],
+      "name": "optic_nerve_R",
+      "ni": 7134,
+      "nv": 1225,
+      "offI": 181044,
+      "offV": 173694,
+      "region": "optic",
+      "registration": "head",
+      "side": "R",
+      "size": [
+        3.4673431060166844,
+        2.242410064547613,
+        5.378354198256122
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA50875",
+          "name": "right optic nerve"
+        }
+      ],
+      "sourceElements": [
+        "FMA50875"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "originCm": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sourceTriangles": 2378,
+      "triangleBudget": 2378
+    },
+    {
+      "frame": "head",
+      "layer": "nerves",
+      "license": "CC-BY-SA-2.1-JP",
+      "min": [
+        -0.7673314072469848,
+        4.064242365355881,
+        -3.727872438375261
+      ],
+      "name": "optic_chiasm",
+      "ni": 5364,
+      "nv": 906,
+      "offI": 200748,
+      "offV": 195312,
+      "region": "optic",
+      "registration": "head",
+      "side": "M",
+      "size": [
+        1.5758918160526143,
+        0.8545545503027938,
+        1.130002102000498
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA62045",
+          "name": "optic chiasm"
+        }
+      ],
+      "sourceElements": [
+        "FMA62045"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "originCm": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sourceTriangles": 1788,
+      "triangleBudget": 1788
+    },
+    {
+      "frame": "head",
+      "layer": "nerves",
+      "license": "CC-BY-SA-2.1-JP",
+      "min": [
+        0.08924521326682772,
+        3.9778378359680744,
+        -6.993667108585971
+      ],
+      "name": "optic_tract_L",
+      "ni": 7002,
+      "nv": 1181,
+      "offI": 218562,
+      "offV": 211476,
+      "region": "optic",
+      "registration": "head",
+      "side": "L",
+      "size": [
+        2.6797365458067675,
+        0.9409102962724774,
+        4.06643038011207
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA67936",
+          "name": "left optic tract"
+        }
+      ],
+      "sourceElements": [
+        "FMA67936"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "originCm": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sourceTriangles": 2334,
+      "triangleBudget": 2334
+    },
+    {
+      "frame": "head",
+      "layer": "nerves",
+      "license": "CC-BY-SA-2.1-JP",
+      "min": [
+        -2.7065112292971465,
+        3.9730302383888443,
+        -7.009816265071964
+      ],
+      "name": "optic_tract_R",
+      "ni": 6996,
+      "nv": 1195,
+      "offI": 239736,
+      "offV": 232566,
+      "region": "optic",
+      "registration": "head",
+      "side": "R",
+      "size": [
+        2.6623055456488003,
+        0.9446787530218614,
+        4.081267835704277
+      ],
+      "sourceConcepts": [
+        {
+          "id": "FMA62382",
+          "name": "right optic tract"
+        }
+      ],
+      "sourceElements": [
+        "FMA62382"
+      ],
+      "sourceFrame": {
+        "basisColumnsCm": [
+          [
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "originCm": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "sourceTriangles": 2332,
+      "triangleBudget": 2332
+    }
+  ],
+  "referenceMethods": {
+    "11": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.18442
+    },
+    "12": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.15827
+    },
+    "23": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.43862
+    },
+    "24": {
+      "method": "least-squares sphere fit to proximal medial articular region",
+      "radiusCm": 2.37394
+    }
+  },
+  "referencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      8.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -8.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  },
+  "registration": {
+    "cord": {
+      "anchorMethod": "81 horizontal sections over the middle 80% of each real vertebral source mesh; largest nested central lumen of area 0.5–12 cm² with center |x|<0.8 cm. Missing levels interpolate neighboring measured anchors.",
+      "anchors": [
+        {
+          "areaCm2": 7.915302149090072,
+          "centerCm": [
+            -0.19898326535090094,
+            147.75490000000002,
+            7.838595719176333
+          ],
+          "name": "atlas",
+          "sectionPolygonXZCm": [
+            [
+              -2.189487697368407,
+              7.451445565789469
+            ],
+            [
+              -2.189107249999984,
+              7.460107500000003
+            ],
+            [
+              -2.0751564999999728,
+              7.627347499999993
+            ],
+            [
+              -2.0617815217390847,
+              7.644872130434796
+            ],
+            [
+              -1.9773151989528515,
+              7.700632486910994
+            ],
+            [
+              -1.882213680851063,
+              7.700729014184398
+            ],
+            [
+              -1.8408481277533029,
+              7.717251211453746
+            ],
+            [
+              -1.818503235668788,
+              7.726372503184715
+            ],
+            [
+              -1.7449894636363574,
+              7.736430281818188
+            ],
+            [
+              -1.7326799057376805,
+              7.744919536885265
+            ],
+            [
+              -1.667810343137163,
+              7.794435088235365
+            ],
+            [
+              -1.625089630769047,
+              7.828896800000143
+            ],
+            [
+              -1.4292545760367972,
+              8.00450470046087
+            ],
+            [
+              -1.1458897528090284,
+              8.390338325842617
+            ],
+            [
+              -0.9788323019607867,
+              8.659675892156864
+            ],
+            [
+              -0.9075741688679276,
+              9.019260773584861
+            ],
+            [
+              -0.8826823284210504,
+              9.244496768421033
+            ],
+            [
+              -0.8827625956521724,
+              9.285882999999998
+            ],
+            [
+              -0.8621456153846045,
+              9.323275415384627
+            ],
+            [
+              -0.7935076473684124,
+              9.407585105263168
+            ],
+            [
+              -0.779446381578944,
+              9.430996368421054
+            ],
+            [
+              -0.7587690232558015,
+              9.445284976744194
+            ],
+            [
+              -0.7253478777777828,
+              9.471620333333327
+            ],
+            [
+              -0.6555406783783644,
+              9.501879283783781
+            ],
+            [
+              -0.6272360378787887,
+              9.513541272727267
+            ],
+            [
+              -0.5424028607143352,
+              9.515437392857132
+            ],
+            [
+              -0.46127619981550644,
+              9.5307462804428
+            ],
+            [
+              -0.1082114890384636,
+              9.534027615384614
+            ],
+            [
+              -0.09805727262295008,
+              9.534624991803279
+            ],
+            [
+              0.2083246378082183,
+              9.527647017808219
+            ],
+            [
+              0.23976828461538555,
+              9.521540846153847
+            ],
+            [
+              0.503325376623397,
+              9.475888727272723
+            ],
+            [
+              0.5650318507462678,
+              9.475023880597009
+            ],
+            [
+              0.579315147368414,
+              9.469120210526313
+            ],
+            [
+              0.5933913940298365,
+              9.45773448507463
+            ],
+            [
+              0.6915977244525502,
+              9.421361058394158
+            ],
+            [
+              0.7441722406862807,
+              9.380242387254892
+            ],
+            [
+              0.7994580822694956,
+              9.314572992907806
+            ],
+            [
+              0.8207220153061291,
+              9.272171051020383
+            ],
+            [
+              0.8383891695652159,
+              9.233407144927536
+            ],
+            [
+              0.8448268333333369,
+              9.167884124999953
+            ],
+            [
+              0.8511781071428537,
+              9.131150071428568
+            ],
+            [
+              0.843937711538461,
+              9.05994773076923
+            ],
+            [
+              0.8307672833333299,
+              8.865574333333342
+            ],
+            [
+              0.8346760884892074,
+              8.846238733812948
+            ],
+            [
+              0.8481425900000057,
+              8.805464955555534
+            ],
+            [
+              0.8749560693877574,
+              8.72021827551019
+            ],
+            [
+              0.8799058781395412,
+              8.69842746976741
+            ],
+            [
+              1.1010578521072663,
+              7.973855551724173
+            ],
+            [
+              1.1887305099476162,
+              7.793862010471272
+            ],
+            [
+              1.1941372805755341,
+              7.7837219136690905
+            ],
+            [
+              1.1995567272727448,
+              7.779445545454553
+            ],
+            [
+              1.2079807500000463,
+              7.775676474999993
+            ],
+            [
+              1.3228567706421999,
+              7.736530233944957
+            ],
+            [
+              1.3394138162544147,
+              7.735887989399296
+            ],
+            [
+              1.4908242951127761,
+              7.655276246240606
+            ],
+            [
+              1.615776221774192,
+              7.574844330645164
+            ],
+            [
+              1.615827615384601,
+              7.57484834798535
+            ],
+            [
+              1.6160624285713552,
+              7.57475496938778
+            ],
+            [
+              1.7106688558558194,
+              7.477892198198197
+            ],
+            [
+              1.7362378048779752,
+              7.445324939024436
+            ],
+            [
+              1.7387917211537725,
+              7.408136423077019
+            ],
+            [
+              1.7915211666666053,
+              7.093962111111143
+            ],
+            [
+              1.3580892857141285,
+              6.913691081632651
+            ],
+            [
+              1.3183557861271165,
+              6.901903213872862
+            ],
+            [
+              1.2916783200000215,
+              6.9023069880000305
+            ],
+            [
+              1.2885654917127383,
+              6.900859110497272
+            ],
+            [
+              1.144329717703353,
+              6.8006942918660345
+            ],
+            [
+              0.9805943414635303,
+              6.617261585365991
+            ],
+            [
+              0.9570642872340748,
+              6.589282159574506
+            ],
+            [
+              0.9496054578512417,
+              6.578701785123962
+            ],
+            [
+              0.9257493133332413,
+              6.562296577777708
+            ],
+            [
+              0.7648672101538474,
+              6.439517230769232
+            ],
+            [
+              0.6961441100000217,
+              6.418600000000008
+            ],
+            [
+              0.13932300405858483,
+              6.173385523012552
+            ],
+            [
+              -0.02877196314284919,
+              6.184088634285714
+            ],
+            [
+              -0.20276194446548973,
+              6.142566446549388
+            ],
+            [
+              -0.5117867274119507,
+              6.25264116232772
+            ],
+            [
+              -0.610283629006414,
+              6.282863168269232
+            ],
+            [
+              -0.7392928717149367,
+              6.346117930957689
+            ],
+            [
+              -0.8549289250481754,
+              6.420583710982662
+            ],
+            [
+              -1.1263285510948902,
+              6.602269375912408
+            ],
+            [
+              -1.2625396363636474,
+              6.746226636363647
+            ],
+            [
+              -1.2834466808510696,
+              6.761665553191497
+            ],
+            [
+              -1.3190484983922748,
+              6.773462710610935
+            ],
+            [
+              -1.3430890506328907,
+              6.783195902953585
+            ],
+            [
+              -1.4647674499999157,
+              6.85965374999996
+            ],
+            [
+              -1.9067875833330998,
+              7.233509166666493
+            ]
+          ],
+          "sourceElements": [
+            "FMA12519"
+          ]
+        },
+        {
+          "areaCm2": 3.846889848629539,
+          "centerCm": [
+            -0.014812530972652338,
+            146.34694000000002,
+            7.30626304155895
+          ],
+          "name": "axis",
+          "sectionPolygonXZCm": [
+            [
+              -1.260731268656715,
+              7.800840204477605
+            ],
+            [
+              -1.1836345999999864,
+              7.361077439999923
+            ],
+            [
+              -1.1770467752808902,
+              7.30380027415727
+            ],
+            [
+              -1.1587577082949367,
+              7.256316870046088
+            ],
+            [
+              -0.9619711258285697,
+              6.892172955809519
+            ],
+            [
+              -0.8996790427463699,
+              6.822907067528272
+            ],
+            [
+              -0.40419231546971257,
+              6.532919351381269
+            ],
+            [
+              -0.06634464824998007,
+              6.290309316666633
+            ],
+            [
+              -0.03038709651226554,
+              6.289278526829239
+            ],
+            [
+              0.15918179287354955,
+              6.296761880459738
+            ],
+            [
+              0.2788632596610314,
+              6.3821287647457625
+            ],
+            [
+              0.40341343965815957,
+              6.466517100854717
+            ],
+            [
+              0.7964226140086865,
+              6.650453151085384
+            ],
+            [
+              0.8835346678455278,
+              6.71708392113821
+            ],
+            [
+              0.944161289295348,
+              6.8051061922038905
+            ],
+            [
+              1.1601148181277852,
+              7.076083306092122
+            ],
+            [
+              1.213293024082232,
+              7.260762020264318
+            ],
+            [
+              1.2311062067114102,
+              7.394384250111861
+            ],
+            [
+              1.2210123530377681,
+              7.591156256814443
+            ],
+            [
+              1.1938746888454022,
+              7.760793302935414
+            ],
+            [
+              1.124225553999997,
+              7.926707826000004
+            ],
+            [
+              1.100478094382018,
+              8.076319746067412
+            ],
+            [
+              1.0289611339130373,
+              8.190901255652179
+            ],
+            [
+              1.0207695730769177,
+              8.230884192307688
+            ],
+            [
+              0.9934678115000025,
+              8.24630115249999
+            ],
+            [
+              0.9599443519553028,
+              8.280623421229041
+            ],
+            [
+              0.9055292723853016,
+              8.310174761926604
+            ],
+            [
+              0.8319200458969099,
+              8.32324755628866
+            ],
+            [
+              0.6981924067507881,
+              8.30447410851735
+            ],
+            [
+              0.6573254881012653,
+              8.288955162025317
+            ],
+            [
+              0.47658128379446607,
+              8.215417125691701
+            ],
+            [
+              0.3281671694409981,
+              8.268385811490681
+            ],
+            [
+              -0.12746123835141324,
+              8.249838297180043
+            ],
+            [
+              -0.2251799226200879,
+              8.259012979039303
+            ],
+            [
+              -0.32176162726562463,
+              8.217936671875002
+            ],
+            [
+              -0.3850760578750003,
+              8.207899292500002
+            ],
+            [
+              -0.7075809489719695,
+              8.218563983177573
+            ],
+            [
+              -0.9258290206722706,
+              8.27876168403361
+            ],
+            [
+              -0.9889330621052604,
+              8.289669515789472
+            ],
+            [
+              -1.046231767282606,
+              8.276770263043478
+            ],
+            [
+              -1.0669593794285723,
+              8.26900187657143
+            ],
+            [
+              -1.0992843311688312,
+              8.231981677922075
+            ],
+            [
+              -1.1266663832061004,
+              8.204407972519066
+            ],
+            [
+              -1.1724059410256342,
+              8.02286500769232
+            ]
+          ],
+          "sourceElements": [
+            "FMA12520"
+          ]
+        },
+        {
+          "areaCm2": 3.120211074512423,
+          "centerCm": [
+            -0.03774348212186185,
+            144.672,
+            7.524030117042236
+          ],
+          "name": "third cervical vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.2937524770642312,
+              8.188113211009183
+            ],
+            [
+              -1.2563651851851951,
+              8.010831111111097
+            ],
+            [
+              -1.2630427450980461,
+              7.974545816993477
+            ],
+            [
+              -1.2156604626334524,
+              7.790350391459071
+            ],
+            [
+              -1.190709080459772,
+              7.625273333333338
+            ],
+            [
+              -1.1575740366972314,
+              7.576076880733924
+            ],
+            [
+              -1.0892676689976628,
+              7.457912843822845
+            ],
+            [
+              -1.0641650257731972,
+              7.420931958762899
+            ],
+            [
+              -1.0152603675213867,
+              7.3756822222222524
+            ],
+            [
+              -0.8706144059140273,
+              7.279470645161335
+            ],
+            [
+              -0.26257259999999705,
+              6.697419599999998
+            ],
+            [
+              -0.1818109453836151,
+              6.64425254876463
+            ],
+            [
+              -0.0337498639053293,
+              6.6449011982248525
+            ],
+            [
+              0.12597059647779596,
+              6.641058805513017
+            ],
+            [
+              0.3726614388379184,
+              6.803875107033639
+            ],
+            [
+              0.41715361168384835,
+              6.816390309278351
+            ],
+            [
+              0.4651387709923666,
+              6.840590992366413
+            ],
+            [
+              0.5212396309148345,
+              6.880384227129342
+            ],
+            [
+              0.5355767486631144,
+              6.912750989304823
+            ],
+            [
+              1.0562666613162117,
+              7.408138298555375
+            ],
+            [
+              1.0950696418732773,
+              7.521269724517907
+            ],
+            [
+              1.1004931790123462,
+              7.634713364197533
+            ],
+            [
+              1.0858244376899693,
+              7.717590364741639
+            ],
+            [
+              1.085770912698412,
+              7.75661662698412
+            ],
+            [
+              1.1098964864864862,
+              7.869622432432432
+            ],
+            [
+              1.1668966141732302,
+              7.934151732283465
+            ],
+            [
+              1.188993458646629,
+              7.9837483458646705
+            ],
+            [
+              1.2104986075949313,
+              8.10120746835442
+            ],
+            [
+              1.2182655128205075,
+              8.146711666666665
+            ],
+            [
+              1.2077131466666589,
+              8.162330933333335
+            ],
+            [
+              1.1554753846153945,
+              8.240247692307683
+            ],
+            [
+              1.156003750000016,
+              8.345040000000003
+            ],
+            [
+              1.1078488888889082,
+              8.36482333333335
+            ],
+            [
+              1.0748625974026016,
+              8.359560779220795
+            ],
+            [
+              1.0566227118644012,
+              8.349380677966112
+            ],
+            [
+              1.0060081081081171,
+              8.358627635135143
+            ],
+            [
+              0.8484574863013714,
+              8.299013493150685
+            ],
+            [
+              0.790173121951214,
+              8.298955040650407
+            ],
+            [
+              0.7565133836477962,
+              8.29738320754717
+            ],
+            [
+              0.6104165780885865,
+              8.270690979020978
+            ],
+            [
+              0.5486489963235307,
+              8.275981838235294
+            ],
+            [
+              0.1461437617283649,
+              8.325287901234573
+            ],
+            [
+              0.0007195615384664386,
+              8.346884615384614
+            ],
+            [
+              -0.19055411333334132,
+              8.367081555555554
+            ],
+            [
+              -0.4523786593001835,
+              8.326465193370167
+            ],
+            [
+              -0.5178755060240907,
+              8.318804216867472
+            ],
+            [
+              -0.5690417429305907,
+              8.303963701799487
+            ],
+            [
+              -0.593575513677809,
+              8.299420425531915
+            ],
+            [
+              -0.6750783579952275,
+              8.29809861575179
+            ],
+            [
+              -0.6955998876404536,
+              8.301383370786517
+            ],
+            [
+              -0.8673412035398335,
+              8.340312035398231
+            ],
+            [
+              -0.8866348240740767,
+              8.342436604938273
+            ],
+            [
+              -0.9019578749999959,
+              8.343904903846154
+            ],
+            [
+              -1.0299137755102075,
+              8.391658469387759
+            ],
+            [
+              -1.037767804878045,
+              8.391541707317076
+            ],
+            [
+              -1.1282371428571818,
+              8.407001428571455
+            ],
+            [
+              -1.212967272727334,
+              8.352947272727265
+            ],
+            [
+              -1.2309841000000314,
+              8.346568500000005
+            ],
+            [
+              -1.238413793103462,
+              8.336648275862096
+            ],
+            [
+              -1.2402583333333423,
+              8.328541666666709
+            ]
+          ],
+          "sourceElements": [
+            "FMA12521"
+          ]
+        },
+        {
+          "areaCm2": 3.167098554532604,
+          "centerCm": [
+            -0.08658639703703175,
+            143.28724,
+            7.370062252197067
+          ],
+          "name": "fourth cervical vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.3583635940740866,
+              7.962290145185193
+            ],
+            [
+              -1.3551756607595113,
+              7.975827098734162
+            ],
+            [
+              -1.335366246153912,
+              8.060852799999795
+            ],
+            [
+              -1.334530320000055,
+              8.082819639999974
+            ],
+            [
+              -1.322083114285671,
+              8.095565714285792
+            ],
+            [
+              -1.2397855828877051,
+              8.202954412834236
+            ],
+            [
+              -1.2096088703517778,
+              8.223750653266332
+            ],
+            [
+              -1.192926894136837,
+              8.23287092964169
+            ],
+            [
+              -1.0404410755102225,
+              8.307834286880466
+            ],
+            [
+              -0.7422015811003253,
+              8.311531097734628
+            ],
+            [
+              -0.6208526762112958,
+              8.267950035336975
+            ],
+            [
+              -0.2824940510921179,
+              8.287784324406458
+            ],
+            [
+              -0.18119724393025607,
+              8.289151085128205
+            ],
+            [
+              0.02792886877626663,
+              8.29731245488257
+            ],
+            [
+              0.11785995172923149,
+              8.308259180307692
+            ],
+            [
+              0.2774336859939171,
+              8.273818992081216
+            ],
+            [
+              0.4793174223268086,
+              8.291866405228756
+            ],
+            [
+              0.600948829643414,
+              8.271123249612403
+            ],
+            [
+              0.8291759999237969,
+              8.271082896000001
+            ],
+            [
+              0.930924710849674,
+              8.235030245751634
+            ],
+            [
+              1.0033039359322105,
+              8.215330850847462
+            ],
+            [
+              1.0686092622221979,
+              8.164461893333373
+            ],
+            [
+              1.0742663151515308,
+              8.161813030303051
+            ],
+            [
+              1.0778075076923488,
+              8.159232215384618
+            ],
+            [
+              1.1613995803278663,
+              8.032302616393478
+            ],
+            [
+              1.185190800000023,
+              7.999902200000003
+            ],
+            [
+              1.1708759622641591,
+              7.970620626415062
+            ],
+            [
+              1.1695745823529504,
+              7.921770394117632
+            ],
+            [
+              1.1771248467532531,
+              7.868489859740266
+            ],
+            [
+              1.137419263157895,
+              7.734849852631575
+            ],
+            [
+              1.1358226379746843,
+              7.7166660658227855
+            ],
+            [
+              1.1187621035532995,
+              7.658691169543143
+            ],
+            [
+              1.0871149325730949,
+              7.597798928070161
+            ],
+            [
+              0.9744603294660017,
+              7.493441351456286
+            ],
+            [
+              0.6385504244229068,
+              6.9538590325991185
+            ],
+            [
+              0.4385201951387516,
+              6.708989154832531
+            ],
+            [
+              0.38758999147540796,
+              6.666433573384761
+            ],
+            [
+              0.23437498148957348,
+              6.4984940917576965
+            ],
+            [
+              0.15000739170117228,
+              6.465848198078975
+            ],
+            [
+              0.07038780610100892,
+              6.433250125252525
+            ],
+            [
+              -0.011230618161116734,
+              6.428593406659505
+            ],
+            [
+              -0.09043914602780724,
+              6.454779341604279
+            ],
+            [
+              -0.1708469355555562,
+              6.477397194444445
+            ],
+            [
+              -1.1807390797130233,
+              7.589875112768972
+            ],
+            [
+              -1.1880663728249437,
+              7.597237150779878
+            ],
+            [
+              -1.1960966771784318,
+              7.604517492116185
+            ],
+            [
+              -1.2023955924528564,
+              7.615042316981163
+            ],
+            [
+              -1.2725245684212447,
+              7.771195536842509
+            ],
+            [
+              -1.3488787652174183,
+              7.938573843478306
+            ]
+          ],
+          "sourceElements": [
+            "FMA12522"
+          ]
+        },
+        {
+          "areaCm2": 2.7450496117908374,
+          "centerCm": [
+            -0.07357123456313397,
+            141.92970000000003,
+            7.45591327978061
+          ],
+          "name": "fifth cervical vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.3623836463414576,
+              7.705835609756095
+            ],
+            [
+              -1.361921596774188,
+              7.72252921774194
+            ],
+            [
+              -1.3597833307692004,
+              7.802286892307691
+            ],
+            [
+              -1.2574102439024375,
+              7.926692029268274
+            ],
+            [
+              -1.1647937456647177,
+              8.042902861271678
+            ],
+            [
+              -1.0018579704080612,
+              8.10919969387758
+            ],
+            [
+              -0.9968197865079155,
+              8.111172817460314
+            ],
+            [
+              -0.9827292758622749,
+              8.113541999999958
+            ],
+            [
+              -0.8234529369791531,
+              8.151986291666677
+            ],
+            [
+              -0.7912978214169519,
+              8.156147957489894
+            ],
+            [
+              -0.6241641758841341,
+              8.181541763719517
+            ],
+            [
+              -0.4557996883469261,
+              8.210113559183679
+            ],
+            [
+              0.13712108533880382,
+              8.236855464065712
+            ],
+            [
+              0.3690746090062129,
+              8.202857335403731
+            ],
+            [
+              0.6684788235701702,
+              8.216307266897754
+            ],
+            [
+              0.7690207803163399,
+              8.211485745166963
+            ],
+            [
+              0.8829786141689413,
+              8.198830291553136
+            ],
+            [
+              0.9265222220379177,
+              8.158774867298577
+            ],
+            [
+              1.0713591630769275,
+              8.062717535384616
+            ],
+            [
+              1.209737577142857,
+              7.747352877142858
+            ],
+            [
+              1.2152411772151896,
+              7.73171059493671
+            ],
+            [
+              1.2146645329457362,
+              7.712016525193798
+            ],
+            [
+              1.1596044166666664,
+              7.556539892857155
+            ],
+            [
+              1.1565370158924169,
+              7.551313470660153
+            ],
+            [
+              1.1538331931972723,
+              7.548635044897963
+            ],
+            [
+              1.1242469787698006,
+              7.524355232142833
+            ],
+            [
+              0.9722610790695427,
+              7.412827015503717
+            ],
+            [
+              0.3673307529009727,
+              6.930756085324215
+            ],
+            [
+              0.2856518351158422,
+              6.855438449197869
+            ],
+            [
+              0.25559106038542645,
+              6.831395687366183
+            ],
+            [
+              0.18990779370742508,
+              6.748581649298645
+            ],
+            [
+              0.1446250720768134,
+              6.748541521815053
+            ],
+            [
+              -0.076977321783781,
+              6.674971095495509
+            ],
+            [
+              -0.18087073100444695,
+              6.779346959821428
+            ],
+            [
+              -0.42952876872048545,
+              6.8585959242236045
+            ],
+            [
+              -0.5625592196601892,
+              6.908116935679615
+            ],
+            [
+              -0.7154812666666671,
+              6.998667000000013
+            ],
+            [
+              -0.8377899471134086,
+              7.089595111340221
+            ],
+            [
+              -0.9149172079947663,
+              7.1585228034076165
+            ],
+            [
+              -1.2840455461164983,
+              7.516312582524273
+            ],
+            [
+              -1.2859633369565184,
+              7.523016380434794
+            ],
+            [
+              -1.2890712151898749,
+              7.539809481012695
+            ]
+          ],
+          "sourceElements": [
+            "FMA12523"
+          ]
+        },
+        {
+          "areaCm2": 3.2234255265193354,
+          "centerCm": [
+            -0.24066113340787465,
+            140.49408,
+            7.193018611804062
+          ],
+          "name": "sixth cervical vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.618290821917796,
+              7.4107356383561624
+            ],
+            [
+              -1.585463204938275,
+              7.354100118518516
+            ],
+            [
+              -1.578533726086967,
+              7.332393391304354
+            ],
+            [
+              -1.5023081455555567,
+              7.22105349444443
+            ],
+            [
+              -1.3057518746590981,
+              6.995286422159091
+            ],
+            [
+              -0.8332709502618046,
+              6.718336515183255
+            ],
+            [
+              -0.6746139233566519,
+              6.597957602797199
+            ],
+            [
+              -0.5248124725203164,
+              6.436927117615153
+            ],
+            [
+              -0.22011674971129017,
+              6.3199449679789845
+            ],
+            [
+              -0.12518646799999278,
+              6.33505800799998
+            ],
+            [
+              0.01859168675409781,
+              6.331926301639333
+            ],
+            [
+              0.12564324999999227,
+              6.3722905999999755
+            ],
+            [
+              0.43784998387093277,
+              6.652172418064462
+            ],
+            [
+              0.45666780278385083,
+              6.66907460219775
+            ],
+            [
+              0.5282712045645575,
+              6.756118813213195
+            ],
+            [
+              0.5813155162363284,
+              6.803391440700209
+            ],
+            [
+              0.605430557096029,
+              6.82244711662763
+            ],
+            [
+              0.8969770854901865,
+              7.0956934117646995
+            ],
+            [
+              1.0169743876739445,
+              7.194009988071565
+            ],
+            [
+              1.0490291395310316,
+              7.221569186206899
+            ],
+            [
+              1.055420683838383,
+              7.2339527262626335
+            ],
+            [
+              1.0829656901408453,
+              7.292984230985916
+            ],
+            [
+              1.1342814280373916,
+              7.349904661682232
+            ],
+            [
+              1.1369685551020468,
+              7.391804742857145
+            ],
+            [
+              1.117685300000002,
+              7.4725134000000315
+            ],
+            [
+              1.117525023728816,
+              7.497025240677967
+            ],
+            [
+              1.1176142418604673,
+              7.506143190697664
+            ],
+            [
+              1.0172341534246523,
+              7.7243733424657535
+            ],
+            [
+              1.0041426535384623,
+              7.742681251282043
+            ],
+            [
+              0.9584183489729701,
+              7.792459331891891
+            ],
+            [
+              0.9346319520000056,
+              7.811610679999992
+            ],
+            [
+              0.8744818945132703,
+              7.856326527433626
+            ],
+            [
+              0.6624267723893367,
+              7.9187287787610705
+            ],
+            [
+              0.6009357756069289,
+              7.940179604624274
+            ],
+            [
+              0.5796104995483922,
+              7.9428444270967695
+            ],
+            [
+              0.5633355273394633,
+              7.943940413761462
+            ],
+            [
+              0.5342440466252918,
+              7.945357643892333
+            ],
+            [
+              -0.5686633811920572,
+              8.066092255629139
+            ],
+            [
+              -0.6090003295971976,
+              8.061166676707531
+            ],
+            [
+              -0.7391580313772488,
+              8.05439514730539
+            ],
+            [
+              -0.8416868107692335,
+              8.009809907692308
+            ],
+            [
+              -0.8731666150857021,
+              7.996766157714287
+            ],
+            [
+              -1.0795122094763048,
+              7.914310821945134
+            ],
+            [
+              -1.1313808719999991,
+              7.903622059999996
+            ],
+            [
+              -1.197730977454552,
+              7.879962420363628
+            ],
+            [
+              -1.2351581035294075,
+              7.868318437647053
+            ],
+            [
+              -1.3082796275861859,
+              7.78415429517243
+            ],
+            [
+              -1.3274249436464038,
+              7.773089763535916
+            ],
+            [
+              -1.3613936434108527,
+              7.756766431007753
+            ],
+            [
+              -1.3799187533980581,
+              7.738720745631069
+            ],
+            [
+              -1.4042853459854003,
+              7.698383556204382
+            ],
+            [
+              -1.4694780827585832,
+              7.617043089655225
+            ],
+            [
+              -1.4990555166666406,
+              7.5862390333333805
+            ],
+            [
+              -1.5081411686274324,
+              7.578826258823573
+            ],
+            [
+              -1.545577520000015,
+              7.557755428571442
+            ],
+            [
+              -1.5698244357142854,
+              7.512045085714284
+            ]
+          ],
+          "sourceElements": [
+            "FMA12524"
+          ]
+        },
+        {
+          "areaCm2": 3.126801216944208,
+          "centerCm": [
+            -0.11794296210051103,
+            139.29302,
+            6.685139520817986
+          ],
+          "name": "seventh cervical vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.470917483999996,
+              6.808564020000005
+            ],
+            [
+              -1.4394972039999645,
+              6.8661326080000595
+            ],
+            [
+              -1.3668058413792847,
+              7.021651889655198
+            ],
+            [
+              -1.3286114565217333,
+              7.070348095652174
+            ],
+            [
+              -1.309964935960594,
+              7.090465537931025
+            ],
+            [
+              -1.1348936715909002,
+              7.2685112545454595
+            ],
+            [
+              -1.1250276642857142,
+              7.274812435714285
+            ],
+            [
+              -0.8075849624390097,
+              7.396510973170737
+            ],
+            [
+              -0.7970188600000087,
+              7.398504915753426
+            ],
+            [
+              -0.28607681583903033,
+              7.482674513698635
+            ],
+            [
+              -0.015050781450934025,
+              7.480196369392527
+            ],
+            [
+              0.5211803668463155,
+              7.389578433532931
+            ],
+            [
+              0.8149355707385244,
+              7.308752306586825
+            ],
+            [
+              0.8802879254847644,
+              7.275653194459832
+            ],
+            [
+              0.9031219880434782,
+              7.26347246594203
+            ],
+            [
+              0.9678991467592586,
+              7.207367599074075
+            ],
+            [
+              1.0389125433165778,
+              7.126539369849254
+            ],
+            [
+              1.083768458160238,
+              7.08338197329377
+            ],
+            [
+              1.0861237086538476,
+              7.060011513461536
+            ],
+            [
+              1.1546681094339803,
+              6.962094316981104
+            ],
+            [
+              1.170984187317076,
+              6.943342255609745
+            ],
+            [
+              1.1789949899999952,
+              6.9354159899999965
+            ],
+            [
+              1.1922221853658377,
+              6.9167154878048915
+            ],
+            [
+              1.2104262857142247,
+              6.774848914285978
+            ],
+            [
+              1.2350315597989738,
+              6.639457350753788
+            ],
+            [
+              1.0524284315744692,
+              6.547678481985828
+            ],
+            [
+              0.3974066104917918,
+              6.0509121895082
+            ],
+            [
+              0.27809998090909177,
+              5.923051194258385
+            ],
+            [
+              0.14042661176588211,
+              5.903314889756131
+            ],
+            [
+              -0.058151087244906585,
+              5.8928548081632615
+            ],
+            [
+              -0.0716382402715414,
+              5.887604527937335
+            ],
+            [
+              -0.09003073457445657,
+              5.891024695744678
+            ],
+            [
+              -0.48678599249999893,
+              5.900350258333343
+            ],
+            [
+              -0.8095496871618181,
+              6.061544291246705
+            ],
+            [
+              -1.1357830512195133,
+              6.311555756585382
+            ],
+            [
+              -1.2385478644501382,
+              6.434611319181616
+            ],
+            [
+              -1.3002273865116307,
+              6.520617083255829
+            ],
+            [
+              -1.3298952176656162,
+              6.548173767192443
+            ],
+            [
+              -1.4242771296296228,
+              6.6497367351851935
+            ],
+            [
+              -1.427708641176466,
+              6.682669444705904
+            ]
+          ],
+          "sourceElements": [
+            "FMA12525"
+          ]
+        },
+        {
+          "areaCm2": 2.918998158974368,
+          "centerCm": [
+            -0.479396833491052,
+            138.01086999999998,
+            6.097628784169299
+          ],
+          "name": "first thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.928255165000143,
+              6.350894245000036
+            ],
+            [
+              -1.9173431151163618,
+              6.3017747418605055
+            ],
+            [
+              -1.8301433973335142,
+              6.22585431466674
+            ],
+            [
+              -1.39917450190838,
+              5.968212705725157
+            ],
+            [
+              -1.2805806348571387,
+              5.85885842057141
+            ],
+            [
+              -1.008392072461564,
+              5.586330586538467
+            ],
+            [
+              -0.7575203439278603,
+              5.356127142484963
+            ],
+            [
+              -0.402268949459502,
+              5.333321656756749
+            ],
+            [
+              -0.19355390819673257,
+              5.283419622354676
+            ],
+            [
+              -0.041958681263134956,
+              5.331136312982444
+            ],
+            [
+              0.4413071949864894,
+              5.528668834054042
+            ],
+            [
+              0.442798162950026,
+              5.529923978500008
+            ],
+            [
+              0.7841974371578906,
+              5.845564336842084
+            ],
+            [
+              0.8605729307943767,
+              5.910111656542019
+            ],
+            [
+              0.9090129810769788,
+              5.946749261538482
+            ],
+            [
+              0.9639469951724309,
+              6.0277697126436705
+            ],
+            [
+              0.9694614980180389,
+              6.085143809909921
+            ],
+            [
+              0.9513082725287646,
+              6.167168654022985
+            ],
+            [
+              0.9247563402380921,
+              6.188102919047649
+            ],
+            [
+              0.9081018014285744,
+              6.226989057142884
+            ],
+            [
+              0.8976295600000088,
+              6.305886549999988
+            ],
+            [
+              0.8951929269291252,
+              6.309730255118126
+            ],
+            [
+              0.8938535519999821,
+              6.311206600000026
+            ],
+            [
+              0.8291446090582959,
+              6.493177312107607
+            ],
+            [
+              0.7766174816393331,
+              6.547966770081965
+            ],
+            [
+              0.7078850343421024,
+              6.613121174999986
+            ],
+            [
+              0.6251129184169469,
+              6.664369692277997
+            ],
+            [
+              0.43114589344770976,
+              6.775360716666656
+            ],
+            [
+              0.309600387169535,
+              6.808999400171216
+            ],
+            [
+              -0.12431905498811222,
+              6.908339534693864
+            ],
+            [
+              -0.22559055642570222,
+              6.9118379459839225
+            ],
+            [
+              -0.3050405912544013,
+              6.907026300883378
+            ],
+            [
+              -0.3631801948675272,
+              6.887572725993368
+            ],
+            [
+              -0.4830189854642487,
+              6.845867525220877
+            ],
+            [
+              -0.5810578441608621,
+              6.843485868522809
+            ],
+            [
+              -0.7033858999044318,
+              6.810595297567326
+            ],
+            [
+              -0.8016162894389095,
+              6.784446393640885
+            ],
+            [
+              -0.9041901019332198,
+              6.723880894727588
+            ],
+            [
+              -1.1055892141294765,
+              6.593624702901773
+            ],
+            [
+              -1.1357334868421052,
+              6.579401279385959
+            ],
+            [
+              -1.1481920672025672,
+              6.568842136655947
+            ],
+            [
+              -1.1743200619047325,
+              6.541144846428589
+            ],
+            [
+              -1.264791561363648,
+              6.495871896969694
+            ],
+            [
+              -1.3178997426008927,
+              6.415237136322884
+            ],
+            [
+              -1.4394609481675509,
+              6.358740122513101
+            ],
+            [
+              -1.454013102400005,
+              6.329625343200025
+            ],
+            [
+              -1.4712038601941713,
+              6.31830298834955
+            ],
+            [
+              -1.5840590148147355,
+              6.330147377777814
+            ],
+            [
+              -1.648326998684181,
+              6.324474019736881
+            ],
+            [
+              -1.8156778863637215,
+              6.402594427272797
+            ]
+          ],
+          "sourceElements": [
+            "FMA9165"
+          ]
+        },
+        {
+          "areaCm2": 2.788766413960828,
+          "centerCm": [
+            -0.09051519827605048,
+            136.28872,
+            5.473706551171463
+          ],
+          "name": "second thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.4524062965517552,
+              5.284405293103458
+            ],
+            [
+              -1.4441977383177518,
+              5.42006754392523
+            ],
+            [
+              -1.4323123999999907,
+              5.437511999999998
+            ],
+            [
+              -1.2781609538462109,
+              5.4918708923076816
+            ],
+            [
+              -1.2735682828947363,
+              5.493028947368425
+            ],
+            [
+              -1.273327374311923,
+              5.493142444036702
+            ],
+            [
+              -1.0782532345047957,
+              5.679858419169318
+            ],
+            [
+              -0.8848679227199896,
+              5.927108819200009
+            ],
+            [
+              -0.8691361577304929,
+              5.937397460992912
+            ],
+            [
+              -0.8296109139622763,
+              5.963595926415088
+            ],
+            [
+              -0.7149679814406816,
+              6.091418974576274
+            ],
+            [
+              -0.5735400985398965,
+              6.183177862139222
+            ],
+            [
+              -0.5055376613084076,
+              6.201820617570098
+            ],
+            [
+              -0.4665454981333218,
+              6.205324509714296
+            ],
+            [
+              -0.27610076872726275,
+              6.266889686611584
+            ],
+            [
+              -0.22020720944531874,
+              6.286847283042801
+            ],
+            [
+              -0.18076720481510303,
+              6.3043105614476875
+            ],
+            [
+              -0.1432834052479971,
+              6.3115882771200145
+            ],
+            [
+              -0.054934267599345346,
+              6.31924581871922
+            ],
+            [
+              0.06995098057011606,
+              6.284311390193855
+            ],
+            [
+              0.2226690329770979,
+              6.260281465648859
+            ],
+            [
+              0.49540351278689015,
+              6.133229311475415
+            ],
+            [
+              0.6482612827145664,
+              5.99164328782437
+            ],
+            [
+              0.7009533405250622,
+              5.933853859665882
+            ],
+            [
+              0.7268402062254073,
+              5.814987994275488
+            ],
+            [
+              0.849479797500019,
+              5.548232691666633
+            ],
+            [
+              0.8717136143396089,
+              5.525919720754716
+            ],
+            [
+              0.9027450739622569,
+              5.460630845283005
+            ],
+            [
+              0.9523296682352266,
+              5.4322540941176705
+            ],
+            [
+              1.0010923599999773,
+              5.392602163636357
+            ],
+            [
+              1.1193310400000263,
+              5.2276918719999435
+            ],
+            [
+              1.2713758999996543,
+              5.330278549999646
+            ],
+            [
+              1.1731406758620242,
+              5.213023337931009
+            ],
+            [
+              1.1372855159420274,
+              5.186012388405805
+            ],
+            [
+              0.6739252081591469,
+              4.902036867661678
+            ],
+            [
+              0.44698438018791314,
+              4.800588000000012
+            ],
+            [
+              0.43668036061146154,
+              4.794582510063707
+            ],
+            [
+              0.42963511440953245,
+              4.789388759263286
+            ],
+            [
+              0.34907820919808674,
+              4.779540735845427
+            ],
+            [
+              0.32211556249663353,
+              4.78821651343285
+            ],
+            [
+              -0.13298437775248154,
+              4.655998676529166
+            ],
+            [
+              -0.48323497449476754,
+              4.628167283623706
+            ],
+            [
+              -0.776917379250853,
+              4.787350814074925
+            ],
+            [
+              -1.088742234659688,
+              5.069082726178015
+            ],
+            [
+              -1.3643704827067689,
+              5.22278285112782
+            ]
+          ],
+          "sourceElements": [
+            "FMA9187"
+          ]
+        },
+        {
+          "areaCm2": 2.5583388329387913,
+          "centerCm": [
+            -0.11429537331560946,
+            134.2933,
+            4.58338325390898
+          ],
+          "name": "third thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.0963581123457184,
+              4.327163469135801
+            ],
+            [
+              -1.0940228517241923,
+              4.318802131034534
+            ],
+            [
+              -1.0755924411766387,
+              4.24992588235342
+            ],
+            [
+              -1.0446169594595422,
+              4.039086297297326
+            ],
+            [
+              -0.9879462526785563,
+              4.001930767857103
+            ],
+            [
+              -0.8795964762500097,
+              3.9287354374999817
+            ],
+            [
+              -0.7714024686364078,
+              3.845311777272726
+            ],
+            [
+              -0.47735345604835855,
+              3.7445090483870676
+            ],
+            [
+              -0.3273363253164637,
+              3.6976511867088466
+            ],
+            [
+              -0.1146625859223194,
+              3.7535573398058224
+            ],
+            [
+              -0.00868624567500081,
+              3.7538542549999967
+            ],
+            [
+              0.08313510768192686,
+              3.7899068517520127
+            ],
+            [
+              0.12190400016720523,
+              3.805577561872899
+            ],
+            [
+              0.18429764934207465,
+              3.8133954736841975
+            ],
+            [
+              0.307128541602777,
+              3.8096115557491133
+            ],
+            [
+              0.3945645229323352,
+              3.7935357556390845
+            ],
+            [
+              0.44043995408561787,
+              3.8046612529182715
+            ],
+            [
+              0.5423465517374522,
+              3.8465668378378273
+            ],
+            [
+              0.5826014914572802,
+              3.8832421608039844
+            ],
+            [
+              0.705862952499985,
+              4.0477291687499655
+            ],
+            [
+              0.8571826697676064,
+              4.124152627907036
+            ],
+            [
+              0.8677673657144995,
+              4.15716657142869
+            ],
+            [
+              0.7622418101695532,
+              4.13329132203398
+            ],
+            [
+              0.8565199666666838,
+              4.390328666666669
+            ],
+            [
+              0.831885658823618,
+              4.547295999999903
+            ],
+            [
+              0.8245123447368435,
+              4.558355578947403
+            ],
+            [
+              0.7736724666666689,
+              4.728197333333332
+            ],
+            [
+              0.7648139388059696,
+              4.739537037313435
+            ],
+            [
+              0.7513789599999876,
+              4.762628700000024
+            ],
+            [
+              0.6926415496688759,
+              4.914061602648974
+            ],
+            [
+              0.18125048208953298,
+              5.402944957520088
+            ],
+            [
+              0.15156845512128148,
+              5.425012190026948
+            ],
+            [
+              0.11873414669810514,
+              5.441774349056595
+            ],
+            [
+              0.09561183895071099,
+              5.45290953418123
+            ],
+            [
+              0.05748043090000086,
+              5.458884794999989
+            ],
+            [
+              0.006728396446709972,
+              5.460555578680189
+            ],
+            [
+              -0.1570358048300552,
+              5.469115321109112
+            ],
+            [
+              -0.30492342258606026,
+              5.434439655751465
+            ],
+            [
+              -0.5640653177344425,
+              5.27211314763231
+            ],
+            [
+              -0.8324141486486523,
+              5.0624122635135
+            ],
+            [
+              -0.8908034268465893,
+              4.981528752840903
+            ],
+            [
+              -0.9381024738181821,
+              4.855194134545443
+            ],
+            [
+              -0.9642038077921994,
+              4.7427896753247
+            ],
+            [
+              -0.9727963282608706,
+              4.7239609130434825
+            ],
+            [
+              -0.9825378531915017,
+              4.709464351063818
+            ],
+            [
+              -1.0060845410256467,
+              4.5996006068376225
+            ],
+            [
+              -1.0117365433121075,
+              4.589494847133765
+            ],
+            [
+              -1.0363166466165443,
+              4.515525796992497
+            ],
+            [
+              -1.0580236888889178,
+              4.489459622222216
+            ],
+            [
+              -1.088252809523893,
+              4.3612629999998
+            ]
+          ],
+          "sourceElements": [
+            "FMA9209"
+          ]
+        },
+        {
+          "areaCm2": 2.545019480173922,
+          "centerCm": [
+            -0.23284879187673363,
+            132.17680000000001,
+            3.8385900286603043
+          ],
+          "name": "fourth thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.2715636190475943,
+              3.5418210476190457
+            ],
+            [
+              -1.1848426857142877,
+              3.6756952000000025
+            ],
+            [
+              -1.18787179710145,
+              3.6899820000000005
+            ],
+            [
+              -1.1818739999999976,
+              3.71285266666667
+            ],
+            [
+              -1.1362516904761835,
+              3.8051140952380895
+            ],
+            [
+              -1.1262448499999989,
+              3.8255050249999925
+            ],
+            [
+              -1.0762805454545425,
+              3.983711872727277
+            ],
+            [
+              -1.0106719788359793,
+              4.075543132275133
+            ],
+            [
+              -0.9605539335135198,
+              4.131674459459453
+            ],
+            [
+              -0.7341871323442128,
+              4.510635964391691
+            ],
+            [
+              -0.5227534147619027,
+              4.6348008285714295
+            ],
+            [
+              -0.4797003298245621,
+              4.658351087719301
+            ],
+            [
+              -0.39866406666667514,
+              4.674164999999997
+            ],
+            [
+              -0.37665236694915294,
+              4.681748491525423
+            ],
+            [
+              -0.3559866611111194,
+              4.69294483333333
+            ],
+            [
+              -0.338395938709679,
+              4.705631161290328
+            ],
+            [
+              -0.31844893333331487,
+              4.710854317460328
+            ],
+            [
+              -0.2920165003802251,
+              4.720486699619775
+            ],
+            [
+              -0.2516530344134023,
+              4.721207564245813
+            ],
+            [
+              -0.09560422741572903,
+              4.711092651685397
+            ],
+            [
+              0.0518179818525597,
+              4.653119935727794
+            ],
+            [
+              0.1387346029226863,
+              4.634960205607484
+            ],
+            [
+              0.286342909637886,
+              4.551063760445686
+            ],
+            [
+              0.3792783634001435,
+              4.393577187284038
+            ],
+            [
+              0.45499516193365414,
+              4.28331021042654
+            ],
+            [
+              0.57888222926829,
+              4.142652878048789
+            ],
+            [
+              0.6167751677419363,
+              3.9601563870967635
+            ],
+            [
+              0.6850847094736812,
+              3.8706434315789484
+            ],
+            [
+              0.7081812229508193,
+              3.747661213114752
+            ],
+            [
+              0.805866035294127,
+              3.6283362745097985
+            ],
+            [
+              0.801498214492767,
+              3.577498695652185
+            ],
+            [
+              0.7532763548386716,
+              3.3867463225806587
+            ],
+            [
+              0.5829265058823577,
+              3.30805670588237
+            ],
+            [
+              0.4838448608695606,
+              3.2115427826086957
+            ],
+            [
+              0.4765084838709665,
+              3.1401918709677408
+            ],
+            [
+              0.4609529333333326,
+              3.104983241379311
+            ],
+            [
+              0.44421022400000026,
+              3.0687636000000036
+            ],
+            [
+              0.4242844999999932,
+              3.0551968000000023
+            ],
+            [
+              0.3567484732673279,
+              3.0492817821782197
+            ],
+            [
+              0.31648447142856007,
+              3.051838785714281
+            ],
+            [
+              0.30591067307691966,
+              3.0563667692307592
+            ],
+            [
+              0.29914492876712595,
+              3.0527535342465697
+            ],
+            [
+              0.2419272723404287,
+              3.0639162553191595
+            ],
+            [
+              0.1697582328767058,
+              3.0512346301369804
+            ],
+            [
+              0.16065172814117767,
+              3.0463502823529387
+            ],
+            [
+              0.15863588228571768,
+              3.0452503116883105
+            ],
+            [
+              -0.14166968367567384,
+              2.964360789189192
+            ],
+            [
+              -0.19151606426592713,
+              2.955972493074795
+            ],
+            [
+              -0.3754173441441495,
+              2.9866903003003062
+            ],
+            [
+              -0.44300135294117843,
+              3.0061688983957264
+            ],
+            [
+              -0.5194045690607809,
+              3.041961281767961
+            ],
+            [
+              -0.6531921520000455,
+              3.059285920000016
+            ],
+            [
+              -0.6998203142857072,
+              3.0513357142857087
+            ],
+            [
+              -0.7678181885714229,
+              3.039773885714309
+            ],
+            [
+              -0.8507761116882647,
+              3.1043858441558396
+            ],
+            [
+              -0.9585697705882261,
+              3.1857213725490383
+            ],
+            [
+              -1.0235790642201903,
+              3.288105834862424
+            ]
+          ],
+          "sourceElements": [
+            "FMA9248"
+          ]
+        },
+        {
+          "areaCm2": 2.2763122384189107,
+          "centerCm": [
+            -0.1331140464673779,
+            129.6788,
+            3.326076050737369
+          ],
+          "name": "fifth thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.1212813124999959,
+              3.1988791250000026
+            ],
+            [
+              -1.0662407567567642,
+              3.312295016216224
+            ],
+            [
+              -1.0106788698412768,
+              3.4642021269841234
+            ],
+            [
+              -0.9929309754569196,
+              3.476487107049609
+            ],
+            [
+              -0.9807514089171958,
+              3.4878596305732508
+            ],
+            [
+              -0.8797446706896535,
+              3.708446672413793
+            ],
+            [
+              -0.8650291736997039,
+              3.762365077526985
+            ],
+            [
+              -0.7340659667183416,
+              3.911898282170543
+            ],
+            [
+              -0.627090577121765,
+              4.022927093305216
+            ],
+            [
+              -0.4500670739726007,
+              4.123813059360727
+            ],
+            [
+              -0.37703938631995493,
+              4.155026084793669
+            ],
+            [
+              -0.3323894432989696,
+              4.1629947113402075
+            ],
+            [
+              -0.1168439170606973,
+              4.1412190607028725
+            ],
+            [
+              -0.016422447999996814,
+              4.158257446808507
+            ],
+            [
+              0.11503580731376872,
+              4.111609200902933
+            ],
+            [
+              0.18419954870141703,
+              4.07513742748815
+            ],
+            [
+              0.3843161157840619,
+              3.9533456699228777
+            ],
+            [
+              0.5862103850632946,
+              3.6787946126582205
+            ],
+            [
+              0.6126280558425594,
+              3.642255311193108
+            ],
+            [
+              0.6244339079245284,
+              3.570897446540883
+            ],
+            [
+              0.66458595294117,
+              3.4767208770053677
+            ],
+            [
+              0.7161679493449861,
+              3.400485013100436
+            ],
+            [
+              0.7632421730061343,
+              3.246089067484656
+            ],
+            [
+              0.7654238970414146,
+              3.24372346745562
+            ],
+            [
+              0.7675450774193453,
+              3.239669612903233
+            ],
+            [
+              0.7831282842105036,
+              3.2035017894737288
+            ],
+            [
+              0.8549425283950854,
+              3.0332184444444232
+            ],
+            [
+              0.85505321956524,
+              3.003045978260874
+            ],
+            [
+              0.8117345999999883,
+              2.934551833333322
+            ],
+            [
+              0.8148848137930498,
+              2.890170275862078
+            ],
+            [
+              0.7806272692307615,
+              2.882268423076942
+            ],
+            [
+              0.7750649935483868,
+              2.880028225806472
+            ],
+            [
+              0.7536052415384628,
+              2.8579618153846114
+            ],
+            [
+              0.6968504897959361,
+              2.7880730816326493
+            ],
+            [
+              0.6750178108108214,
+              2.7536565675675564
+            ],
+            [
+              0.6510018686046597,
+              2.7431508720929987
+            ],
+            [
+              0.637273963057327,
+              2.7354009936305514
+            ],
+            [
+              0.6139641197604724,
+              2.7097884431137365
+            ],
+            [
+              0.5725132046511352,
+              2.715643224806161
+            ],
+            [
+              0.5018600433734397,
+              2.717447469879483
+            ],
+            [
+              0.40007537658862286,
+              2.6674613377926297
+            ],
+            [
+              0.25180353400436484,
+              2.651588477024061
+            ],
+            [
+              0.13586473792770715,
+              2.5598936337349367
+            ],
+            [
+              0.0787113284304934,
+              2.4891573901345305
+            ],
+            [
+              -0.10723263912727476,
+              2.502055258181819
+            ],
+            [
+              -0.130163087592191,
+              2.4997000737527117
+            ],
+            [
+              -0.14788121908893698,
+              2.5022939696312365
+            ],
+            [
+              -0.18987988058607608,
+              2.5266888315018305
+            ],
+            [
+              -0.5161553724136987,
+              2.6751644367815697
+            ],
+            [
+              -0.5695634943396404,
+              2.6937176603773576
+            ],
+            [
+              -0.772679199999995,
+              2.8433910588235225
+            ],
+            [
+              -0.8255517358778569,
+              2.8690778625954074
+            ],
+            [
+              -0.9737689340425698,
+              2.951331999999994
+            ],
+            [
+              -0.9795204199999931,
+              2.9644847499999414
+            ]
+          ],
+          "sourceElements": [
+            "FMA9922"
+          ]
+        },
+        {
+          "areaCm2": 2.2841632165521313,
+          "centerCm": [
+            -0.11889939648907055,
+            126.91850000000001,
+            2.992989281928536
+          ],
+          "name": "sixth thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.061322852760745,
+              2.8505692638036777
+            ],
+            [
+              -1.0075707168674755,
+              2.971713915662655
+            ],
+            [
+              -0.9305330714285562,
+              3.1174684285714487
+            ],
+            [
+              -0.9211640979381365,
+              3.1340144845360864
+            ],
+            [
+              -0.9157989879032259,
+              3.139187419354835
+            ],
+            [
+              -0.8715120492227998,
+              3.229584585492227
+            ],
+            [
+              -0.8564789854651174,
+              3.2404937499999997
+            ],
+            [
+              -0.827924143765901,
+              3.2631592111959313
+            ],
+            [
+              -0.8075898411433878,
+              3.2766544985941937
+            ],
+            [
+              -0.5848335835106382,
+              3.6160323324468084
+            ],
+            [
+              -0.48819747599106633,
+              3.7073592183137913
+            ],
+            [
+              -0.4358687515960531,
+              3.7485799709808476
+            ],
+            [
+              -0.3458605088183422,
+              3.799667439741329
+            ],
+            [
+              -0.12814762625979803,
+              3.822755299552072
+            ],
+            [
+              -0.0073485440927090195,
+              3.852069132278124
+            ],
+            [
+              0.23404635093696757,
+              3.814168722316866
+            ],
+            [
+              0.33927175330396314,
+              3.7333166960352444
+            ],
+            [
+              0.5882447253218884,
+              3.5298280042918457
+            ],
+            [
+              0.6886979569672129,
+              3.3158947131147563
+            ],
+            [
+              0.6909516395348858,
+              3.308535348837204
+            ],
+            [
+              0.6966547812500065,
+              3.295666874999985
+            ],
+            [
+              0.809604766666668,
+              3.102303333333333
+            ],
+            [
+              0.8127310094339601,
+              3.0771884591194967
+            ],
+            [
+              0.8235240597826039,
+              3.0051414673913106
+            ],
+            [
+              0.8103680999999866,
+              2.9409683333332954
+            ],
+            [
+              0.7923084999999955,
+              2.801683720930228
+            ],
+            [
+              0.7936271931034369,
+              2.733151172413799
+            ],
+            [
+              0.7705966210526296,
+              2.7119656052631615
+            ],
+            [
+              0.7061505000000081,
+              2.6579672727272934
+            ],
+            [
+              0.6280263883495141,
+              2.531467572815541
+            ],
+            [
+              0.5773718066666607,
+              2.4508250666666647
+            ],
+            [
+              0.4393575,
+              2.339270644599302
+            ],
+            [
+              0.36500864727272936,
+              2.3141251090909116
+            ],
+            [
+              0.30600874999999683,
+              2.3003947857142837
+            ],
+            [
+              0.25518684261838526,
+              2.2593137186629537
+            ],
+            [
+              0.0019500790488411607,
+              2.155491606683804
+            ],
+            [
+              -0.06323109947368315,
+              2.133909431578948
+            ],
+            [
+              -0.14428111084905668,
+              2.1641847405660393
+            ],
+            [
+              -0.18615133846153417,
+              2.1898332307692288
+            ],
+            [
+              -0.47088250204917903,
+              2.2698371106557387
+            ],
+            [
+              -0.5827855508849569,
+              2.3359149115044255
+            ],
+            [
+              -0.8343629041095865,
+              2.411027000000003
+            ],
+            [
+              -0.8875556066066037,
+              2.4892959759759865
+            ],
+            [
+              -0.9759424633333165,
+              2.6203102666666624
+            ],
+            [
+              -0.9897542781064995,
+              2.6832201479290196
+            ]
+          ],
+          "sourceElements": [
+            "FMA9945"
+          ]
+        },
+        {
+          "areaCm2": 2.3953951592627716,
+          "centerCm": [
+            -0.17963960848353777,
+            124.03450000000001,
+            2.832600251387421
+          ],
+          "name": "seventh thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.1606480254777027,
+              2.7380603184713386
+            ],
+            [
+              -1.1366289473684237,
+              2.822416947368424
+            ],
+            [
+              -1.1142540277777797,
+              2.8897749652777773
+            ],
+            [
+              -1.0796799397590364,
+              2.9228486746987956
+            ],
+            [
+              -1.0158421999999947,
+              3.0253445200000035
+            ],
+            [
+              -1.004284087694483,
+              3.0363726308345114
+            ],
+            [
+              -0.9975920536842123,
+              3.0434626315789437
+            ],
+            [
+              -0.786757206212574,
+              3.3923700411676663
+            ],
+            [
+              -0.6575733553054661,
+              3.538471945337621
+            ],
+            [
+              -0.5217991692940368,
+              3.5978871315969845
+            ],
+            [
+              -0.3398788433351036,
+              3.6852959240573555
+            ],
+            [
+              -0.02652713386628351,
+              3.7066546220930228
+            ],
+            [
+              0.11676013018787593,
+              3.6802006660973503
+            ],
+            [
+              0.3184056488578806,
+              3.5558041243654737
+            ],
+            [
+              0.4083965967118022,
+              3.4958111025145047
+            ],
+            [
+              0.5933366874999958,
+              3.2664870000000064
+            ],
+            [
+              0.7179497936046513,
+              3.0397414534883724
+            ],
+            [
+              0.7548968222222198,
+              2.9913394814814844
+            ],
+            [
+              0.7975541864111472,
+              2.826091463414632
+            ],
+            [
+              0.8013688085106272,
+              2.7038158244680863
+            ],
+            [
+              0.7712653219178046,
+              2.5709229452054854
+            ],
+            [
+              0.7429384359861555,
+              2.527706314878903
+            ],
+            [
+              0.6585663062827227,
+              2.427861910994768
+            ],
+            [
+              0.6561672611111098,
+              2.4223240833333333
+            ],
+            [
+              0.44214493154034235,
+              2.2827810635696846
+            ],
+            [
+              0.41054069999999426,
+              2.2599667499999994
+            ],
+            [
+              0.18753073815789922,
+              2.1761636842105303
+            ],
+            [
+              0.05131017397260133,
+              2.0500082876712313
+            ],
+            [
+              0.00870013374126602,
+              2.0394574825174834
+            ],
+            [
+              -0.22856411647727223,
+              1.9585458806818192
+            ],
+            [
+              -0.2928524550970882,
+              1.9613146723300967
+            ],
+            [
+              -0.3863596576433118,
+              2.020566815286623
+            ],
+            [
+              -0.5446937681159446,
+              2.1468584782608704
+            ],
+            [
+              -0.5960115348837209,
+              2.157321976744186
+            ],
+            [
+              -0.7096654292035317,
+              2.199308584070794
+            ],
+            [
+              -0.810013248362446,
+              2.2345458624454158
+            ],
+            [
+              -0.8212087184579456,
+              2.249448983644862
+            ],
+            [
+              -0.983386670849421,
+              2.352484594594594
+            ],
+            [
+              -1.0639911138888887,
+              2.5062880833333323
+            ],
+            [
+              -1.1109494827586182,
+              2.5443656896551734
+            ],
+            [
+              -1.1314287857142857,
+              2.6390193571428573
+            ]
+          ],
+          "sourceElements": [
+            "FMA9968"
+          ]
+        },
+        {
+          "areaCm2": 2.627572220406795,
+          "centerCm": [
+            -0.16663605821879118,
+            121.11913000000001,
+            3.1323012065297133
+          ],
+          "name": "eighth thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.2848004979166678,
+              3.0443207451388883
+            ],
+            [
+              -1.1855325861842054,
+              2.843852423684229
+            ],
+            [
+              -1.1907330892477856,
+              2.821020882411509
+            ],
+            [
+              -1.1862212885399113,
+              2.8057775341386506
+            ],
+            [
+              -0.9873140523541651,
+              2.630299627083332
+            ],
+            [
+              -0.833721036349998,
+              2.5084156049999975
+            ],
+            [
+              -0.7794681023724003,
+              2.464485525992438
+            ],
+            [
+              -0.7319770620090895,
+              2.438459029090906
+            ],
+            [
+              -0.6470982234212923,
+              2.3694431548680606
+            ],
+            [
+              -0.5660774506764976,
+              2.3266498103209012
+            ],
+            [
+              -0.40662304382351777,
+              2.2919647029411725
+            ],
+            [
+              -0.1620842013265673,
+              2.236511458163273
+            ],
+            [
+              -0.15222545225434708,
+              2.2295203699421866
+            ],
+            [
+              -0.14891377000000355,
+              2.2264357624999827
+            ],
+            [
+              -0.14602308339206693,
+              2.2257542317180428
+            ],
+            [
+              -0.1370363827003962,
+              2.230547697890288
+            ],
+            [
+              -0.12658759333328476,
+              2.231777326470584
+            ],
+            [
+              0.14325325588888893,
+              2.223099635777778
+            ],
+            [
+              0.17968928300859577,
+              2.240292840401146
+            ],
+            [
+              0.35452614699801327,
+              2.410151038170975
+            ],
+            [
+              0.37734960790199085,
+              2.4261113473200613
+            ],
+            [
+              0.45374229363636365,
+              2.4555043272727275
+            ],
+            [
+              0.7521616483333381,
+              2.6584126916666704
+            ],
+            [
+              0.7538003144047638,
+              2.6586973821428606
+            ],
+            [
+              0.7546494937500005,
+              2.6589962937500027
+            ],
+            [
+              0.7582510067455561,
+              2.6618358325443765
+            ],
+            [
+              0.7926623649998605,
+              2.7198002999997812
+            ],
+            [
+              0.9515283814790855,
+              2.9761229922829546
+            ],
+            [
+              0.9506399963117704,
+              2.986709127376451
+            ],
+            [
+              0.8733952714970084,
+              3.316031766167666
+            ],
+            [
+              0.7070418008256887,
+              3.4237180229357786
+            ],
+            [
+              0.32354369857713267,
+              3.9241608598102844
+            ],
+            [
+              0.009115334716171222,
+              4.012100150170981
+            ],
+            [
+              -0.15999732044946086,
+              4.041502777281648
+            ],
+            [
+              -0.5490729784323807,
+              3.688685006283275
+            ],
+            [
+              -0.9841386134361967,
+              3.4133214186822336
+            ],
+            [
+              -1.0661881430201365,
+              3.2370211223713588
+            ],
+            [
+              -1.1387077013333298,
+              3.1927351193333284
+            ]
+          ],
+          "sourceElements": [
+            "FMA9991"
+          ]
+        },
+        {
+          "areaCm2": 2.8344985683326334,
+          "centerCm": [
+            -0.09427706422412074,
+            118.30046,
+            3.4782295764235367
+          ],
+          "name": "ninth thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.4738290034482995,
+              3.4006261862069
+            ],
+            [
+              -1.4137212816326779,
+              3.328180326530588
+            ],
+            [
+              -1.4041941548387196,
+              3.322008351612895
+            ],
+            [
+              -1.400541023529408,
+              3.321372368627441
+            ],
+            [
+              -1.3458256683544303,
+              3.282200146835444
+            ],
+            [
+              -1.293752118840588,
+              3.23833944347826
+            ],
+            [
+              -1.243814289584899,
+              3.22130219849056
+            ],
+            [
+              -1.1038574998360628,
+              3.1505864606557337
+            ],
+            [
+              -1.0556588810550427,
+              3.128295368348621
+            ],
+            [
+              -1.0263888290080385,
+              3.125924941554956
+            ],
+            [
+              -0.9522775989323684,
+              3.109716795017784
+            ],
+            [
+              -0.9211417601146048,
+              3.0941230103151813
+            ],
+            [
+              -0.670105161017485,
+              2.9600161650238457
+            ],
+            [
+              -0.5032743438263658,
+              2.8131781303858525
+            ],
+            [
+              -0.4975202774122808,
+              2.810211280482456
+            ],
+            [
+              -0.4810777688551402,
+              2.792969157242991
+            ],
+            [
+              -0.4004007579752064,
+              2.759023317768595
+            ],
+            [
+              -0.22707049429296206,
+              2.6806621892957776
+            ],
+            [
+              -0.09124186825663677,
+              2.628548773008851
+            ],
+            [
+              -0.009623640954438066,
+              2.6122701266187076
+            ],
+            [
+              0.04550824304239815,
+              2.612062819451374
+            ],
+            [
+              0.18017929187648463,
+              2.631403734916864
+            ],
+            [
+              0.22921747346938692,
+              2.6610529968253975
+            ],
+            [
+              0.33482970705690895,
+              2.7511828923577233
+            ],
+            [
+              0.5129248668674699,
+              2.8671879216867473
+            ],
+            [
+              0.5310008917757004,
+              2.8893466149532707
+            ],
+            [
+              0.6535298319999817,
+              2.9839811368420905
+            ],
+            [
+              1.01084213691358,
+              3.227109455144026
+            ],
+            [
+              1.1563003333333404,
+              3.2619523999999998
+            ],
+            [
+              1.2123891240506335,
+              3.4874940278481
+            ],
+            [
+              1.285274875000058,
+              3.5455862125000173
+            ],
+            [
+              1.2055254195121963,
+              3.5413052829268334
+            ],
+            [
+              1.1796576605263154,
+              3.548471121052632
+            ],
+            [
+              1.0078214811274493,
+              3.70074348088235
+            ],
+            [
+              0.9786067398159466,
+              3.7496821509202456
+            ],
+            [
+              0.8455871231289109,
+              3.865207532665832
+            ],
+            [
+              0.5594586172047632,
+              4.138329367930662
+            ],
+            [
+              0.13131801345734215,
+              4.304337930909092
+            ],
+            [
+              0.06822506171056435,
+              4.3290553143270625
+            ],
+            [
+              -0.018483416108727453,
+              4.340147562480859
+            ],
+            [
+              -0.1981412522255578,
+              4.341774559398498
+            ],
+            [
+              -0.24999422462114126,
+              4.344396333395699
+            ],
+            [
+              -0.2898105328125052,
+              4.329066584375
+            ],
+            [
+              -0.38342485142858673,
+              4.265496047840525
+            ],
+            [
+              -0.817547166556742,
+              4.030277862657615
+            ],
+            [
+              -0.8480458412080537,
+              3.9994799626078628
+            ],
+            [
+              -1.027922484962401,
+              3.761530380451136
+            ],
+            [
+              -1.0949028925508961,
+              3.7023163003592865
+            ],
+            [
+              -1.2520929360000075,
+              3.661866772923085
+            ],
+            [
+              -1.3949627282051296,
+              3.6032616512820517
+            ],
+            [
+              -1.4063871632075522,
+              3.5316311396226467
+            ],
+            [
+              -1.4047628528302056,
+              3.468809401886822
+            ]
+          ],
+          "sourceElements": [
+            "FMA10014"
+          ]
+        },
+        {
+          "areaCm2": 2.9035957278470317,
+          "centerCm": [
+            -0.1236385761151908,
+            115.27723,
+            4.06752080131827
+          ],
+          "name": "tenth thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.4446648652173872,
+              4.059982294565216
+            ],
+            [
+              -1.4265613148936176,
+              4.000877769148936
+            ],
+            [
+              -1.4146535858974327,
+              3.945963416666666
+            ],
+            [
+              -1.3936933897435877,
+              3.913771092948719
+            ],
+            [
+              -1.1980273964285886,
+              3.7244909414285785
+            ],
+            [
+              -1.1647707842105317,
+              3.7059576536842105
+            ],
+            [
+              -1.1593536745283048,
+              3.7043400009433953
+            ],
+            [
+              -1.133489590397341,
+              3.6897933513244947
+            ],
+            [
+              -1.122956872056062,
+              3.6845069401869064
+            ],
+            [
+              -1.021692225094269,
+              3.6486556905660064
+            ],
+            [
+              -0.7746280536267507,
+              3.5437623066901347
+            ],
+            [
+              -0.6933826760577034,
+              3.4847301240384705
+            ],
+            [
+              -0.22050405974358872,
+              3.2308152179487184
+            ],
+            [
+              -0.1312661256701053,
+              3.20685020652921
+            ],
+            [
+              -0.11424540198924671,
+              3.1977650666666655
+            ],
+            [
+              -0.056313694531917424,
+              3.186466354255317
+            ],
+            [
+              -0.044312924652629274,
+              3.1853458663157856
+            ],
+            [
+              -0.03394324817142433,
+              3.18817981142857
+            ],
+            [
+              0.02418840282177877,
+              3.188991255445549
+            ],
+            [
+              0.03463740109089778,
+              3.193217075206612
+            ],
+            [
+              0.08992383199234066,
+              3.207632639080459
+            ],
+            [
+              0.22083102132352725,
+              3.2488902620588216
+            ],
+            [
+              0.2913058311904735,
+              3.298430807738093
+            ],
+            [
+              0.49112861699074306,
+              3.3847742001543253
+            ],
+            [
+              0.6581469459090892,
+              3.5981869136363622
+            ],
+            [
+              0.9687211170795655,
+              3.7320884057866186
+            ],
+            [
+              0.9940704744796977,
+              3.7458772571065992
+            ],
+            [
+              1.0218284665402875,
+              3.79572725699052
+            ],
+            [
+              1.152924712779458,
+              3.886727502416919
+            ],
+            [
+              1.1848360302723724,
+              3.9775428731517506
+            ],
+            [
+              1.1887814250000026,
+              4.022657662500054
+            ],
+            [
+              1.1973877129870056,
+              4.087465468831171
+            ],
+            [
+              1.1953280706766871,
+              4.09293496015037
+            ],
+            [
+              1.1130680436090141,
+              4.195268284962405
+            ],
+            [
+              1.1069125975609753,
+              4.198987485365849
+            ],
+            [
+              1.1031264010344874,
+              4.200642922758613
+            ],
+            [
+              1.0952176276691876,
+              4.206099950751866
+            ],
+            [
+              0.6921581631292455,
+              4.498314185714296
+            ],
+            [
+              0.5671745102334118,
+              4.660882410196567
+            ],
+            [
+              0.48690331774355256,
+              4.764026958810892
+            ],
+            [
+              0.2645196009221258,
+              4.865225497196262
+            ],
+            [
+              -0.07604864915717074,
+              4.94940969410609
+            ],
+            [
+              -0.1467042294646227,
+              4.949695736320755
+            ],
+            [
+              -0.33135478250746436,
+              4.935115674626867
+            ],
+            [
+              -0.3656556760229816,
+              4.912251186896558
+            ],
+            [
+              -0.5691512268594383,
+              4.7963890672289144
+            ],
+            [
+              -0.6891388268703431,
+              4.732194324739195
+            ],
+            [
+              -1.010582482668162,
+              4.4415594840807175
+            ],
+            [
+              -1.0908096020661144,
+              4.3393621995867795
+            ],
+            [
+              -1.3176784079207957,
+              4.205304623432349
+            ],
+            [
+              -1.3604593518750008,
+              4.116252802500009
+            ]
+          ],
+          "sourceElements": [
+            "FMA10037"
+          ]
+        },
+        {
+          "areaCm2": 3.0622283274477127,
+          "centerCm": [
+            -0.03267135561450174,
+            112.28224,
+            4.812851952889952
+          ],
+          "name": "eleventh thoracic vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.3617081471264392,
+              4.910507439080458
+            ],
+            [
+              -1.3614165681159442,
+              4.900562689855074
+            ],
+            [
+              -1.3269304000000295,
+              4.805436800000074
+            ],
+            [
+              -1.3094777484536175,
+              4.749722754639178
+            ],
+            [
+              -1.3065061957446849,
+              4.745541787234038
+            ],
+            [
+              -1.2311341415383465,
+              4.6971665230768425
+            ],
+            [
+              -0.8343622648931056,
+              4.420798060807596
+            ],
+            [
+              -0.8166610579638425,
+              4.4047745111322545
+            ],
+            [
+              -0.7877144438319381,
+              4.377739104537821
+            ],
+            [
+              -0.7365721847368577,
+              4.3362211684210665
+            ],
+            [
+              -0.5758425753488496,
+              4.216235753488382
+            ],
+            [
+              -0.2113544607449844,
+              3.9399339679083063
+            ],
+            [
+              -0.1913922033644869,
+              3.9347134504672887
+            ],
+            [
+              -0.13489392779221637,
+              3.9135054545454553
+            ],
+            [
+              -0.11935629652174086,
+              3.8983829999999986
+            ],
+            [
+              -0.10284252842105267,
+              3.873470021052633
+            ],
+            [
+              -0.08195411462069215,
+              3.874228675862073
+            ],
+            [
+              -0.052859339172413866,
+              3.8750784965517284
+            ],
+            [
+              -0.03580043008695461,
+              3.910902939130435
+            ],
+            [
+              -0.0035980610526356316,
+              3.93501663157895
+            ],
+            [
+              0.015984541913042716,
+              3.96413004057971
+            ],
+            [
+              0.16433577827358498,
+              4.043156840566038
+            ],
+            [
+              0.297392972888891,
+              4.132277835555558
+            ],
+            [
+              0.3701902658531083,
+              4.18051527322034
+            ],
+            [
+              0.4647239146115706,
+              4.234643944462811
+            ],
+            [
+              0.7278889462668617,
+              4.5037515256371785
+            ],
+            [
+              1.0810901884090967,
+              4.632984674999998
+            ],
+            [
+              1.0926334325581333,
+              4.645539162790682
+            ],
+            [
+              1.1238255627906757,
+              4.665567237209282
+            ],
+            [
+              1.2007899818181806,
+              4.699611204545457
+            ],
+            [
+              1.256463814285707,
+              4.756671257142854
+            ],
+            [
+              1.2963654358974357,
+              4.823047128205128
+            ],
+            [
+              1.272371140000009,
+              4.971773880000023
+            ],
+            [
+              1.2722750543689425,
+              4.991218425242723
+            ],
+            [
+              1.113195164556962,
+              5.159455888607603
+            ],
+            [
+              1.0981911574468106,
+              5.191546828936173
+            ],
+            [
+              0.8790857261696664,
+              5.337979373778918
+            ],
+            [
+              0.5670817113333283,
+              5.620744940000001
+            ],
+            [
+              0.43417813186558735,
+              5.668923959675549
+            ],
+            [
+              0.09936503148130621,
+              5.733445222716517
+            ],
+            [
+              -0.22355497483636277,
+              5.7522338847272705
+            ],
+            [
+              -0.7488381283427337,
+              5.54665542142052
+            ],
+            [
+              -0.9542626942364208,
+              5.391574397699687
+            ],
+            [
+              -1.05600467060109,
+              5.27695810491804
+            ],
+            [
+              -1.2569534562180584,
+              5.20273157887564
+            ],
+            [
+              -1.3091759140877588,
+              5.112444541339491
+            ]
+          ],
+          "sourceElements": [
+            "FMA10059"
+          ]
+        },
+        {
+          "areaCm2": 3.172654571285543,
+          "centerCm": [
+            -0.00925244997626018,
+            106.03116,
+            6.645140028333506
+          ],
+          "name": "first lumbar vertebra",
+          "sectionPolygonXZCm": [
+            [
+              -1.3429939520737337,
+              6.904693435944701
+            ],
+            [
+              -1.340688000000003,
+              6.967583900000003
+            ],
+            [
+              -1.2948350676258993,
+              7.042728968345329
+            ],
+            [
+              -1.2663034476190491,
+              7.119657935873019
+            ],
+            [
+              -1.2163036861612517,
+              7.158161895066186
+            ],
+            [
+              -1.0333970788489228,
+              7.360468699280575
+            ],
+            [
+              -0.9429422360585376,
+              7.403799746731707
+            ],
+            [
+              -0.8370589115822299,
+              7.433099423538581
+            ],
+            [
+              -0.5554729224324297,
+              7.549018072972975
+            ],
+            [
+              -0.48615261194294485,
+              7.55785091156894
+            ],
+            [
+              0.4053383575591061,
+              7.547567471352502
+            ],
+            [
+              0.4288657840427809,
+              7.544707224812834
+            ],
+            [
+              0.5375056897427095,
+              7.50536610703259
+            ],
+            [
+              0.9924186718383816,
+              7.1523958472727305
+            ],
+            [
+              1.1263421807106637,
+              7.104802150253808
+            ],
+            [
+              1.246288913454547,
+              6.969737118545459
+            ],
+            [
+              1.2814393449664434,
+              6.885842885906044
+            ],
+            [
+              1.2878743685393272,
+              6.881273024719105
+            ],
+            [
+              1.303734807017552,
+              6.8623253192982485
+            ],
+            [
+              1.3078114051282075,
+              6.796609548717945
+            ],
+            [
+              1.3244890521212134,
+              6.730385757575758
+            ],
+            [
+              1.294524703030328,
+              6.659540909090938
+            ],
+            [
+              1.2909253081081278,
+              6.634597989189193
+            ],
+            [
+              1.2780244711111233,
+              6.616563484444424
+            ],
+            [
+              1.2693881424657532,
+              6.612460750684907
+            ],
+            [
+              1.2051618591549491,
+              6.550504512676044
+            ],
+            [
+              1.1762624765957033,
+              6.542256689361674
+            ],
+            [
+              1.1090656145985374,
+              6.5129934394160545
+            ],
+            [
+              1.0886479326530616,
+              6.493195530612243
+            ],
+            [
+              1.0499393600000078,
+              6.471020400000002
+            ],
+            [
+              0.904563348546637,
+              6.4101904121475055
+            ],
+            [
+              0.8334812342756179,
+              6.399703101060071
+            ],
+            [
+              0.6514450554741772,
+              6.229092301971831
+            ],
+            [
+              0.23763314772414296,
+              5.9069072655172485
+            ],
+            [
+              -0.10454600317883606,
+              5.770095396026488
+            ],
+            [
+              -0.11485941515791417,
+              5.754064178947381
+            ],
+            [
+              -0.13819808156862512,
+              5.732429145098073
+            ],
+            [
+              -0.1654353901639105,
+              5.7474239213114915
+            ],
+            [
+              -0.27051180679245795,
+              5.792538120754739
+            ],
+            [
+              -0.27887020799999496,
+              5.801751440000011
+            ],
+            [
+              -0.28528711384614003,
+              5.814904399999994
+            ],
+            [
+              -0.4542399847339381,
+              5.939023544954129
+            ],
+            [
+              -0.5012539437179461,
+              5.96259411880342
+            ],
+            [
+              -0.7944498476394963,
+              6.214967835193147
+            ],
+            [
+              -1.1726935215469565,
+              6.663556303867399
+            ],
+            [
+              -1.2467212257510747,
+              6.713616084120172
+            ],
+            [
+              -1.30370122731708,
+              6.800962616585373
+            ]
+          ],
+          "sourceElements": [
+            "FMA13072"
+          ]
+        }
+      ],
+      "endpointConvention": "Most superior HRA cord vertex maps to the measured C1 canal plane; most inferior maps to the measured L1 canal plane. This is an explicit cross-specimen reference fit, not patient calibration.",
+      "method": "Uniform axial/transverse scale; each original axial cross section recentered onto a piecewise-linear centerline through measured vertebral canal lumens. Original triangle topology retained; no tube or substitute cord generated.",
+      "sectionChecks": [
+        {
+          "insideCount": 12,
+          "minimumClearanceCm": 1.08766240753438,
+          "pointCount": 12,
+          "vertebra": "atlas",
+          "yCm": 147.75490000000002
+        },
+        {
+          "insideCount": 108,
+          "minimumClearanceCm": 0.4302802444050588,
+          "pointCount": 108,
+          "vertebra": "axis",
+          "yCm": 146.34694000000002
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.335535299478719,
+          "pointCount": 106,
+          "vertebra": "third cervical vertebra",
+          "yCm": 144.672
+        },
+        {
+          "insideCount": 110,
+          "minimumClearanceCm": 0.21823638306813553,
+          "pointCount": 110,
+          "vertebra": "fourth cervical vertebra",
+          "yCm": 143.28724
+        },
+        {
+          "insideCount": 110,
+          "minimumClearanceCm": 0.13800481877175866,
+          "pointCount": 110,
+          "vertebra": "fifth cervical vertebra",
+          "yCm": 141.92970000000003
+        },
+        {
+          "insideCount": 112,
+          "minimumClearanceCm": 0.3139540632544708,
+          "pointCount": 112,
+          "vertebra": "sixth cervical vertebra",
+          "yCm": 140.49408
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.33755930057326633,
+          "pointCount": 106,
+          "vertebra": "seventh cervical vertebra",
+          "yCm": 139.29302
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.29783170966862776,
+          "pointCount": 106,
+          "vertebra": "first thoracic vertebra",
+          "yCm": 138.01086999999998
+        },
+        {
+          "insideCount": 104,
+          "minimumClearanceCm": 0.388684669210452,
+          "pointCount": 104,
+          "vertebra": "second thoracic vertebra",
+          "yCm": 136.28872
+        },
+        {
+          "insideCount": 128,
+          "minimumClearanceCm": 0.39139406480447153,
+          "pointCount": 128,
+          "vertebra": "third thoracic vertebra",
+          "yCm": 134.2933
+        },
+        {
+          "insideCount": 104,
+          "minimumClearanceCm": 0.39810955779827717,
+          "pointCount": 104,
+          "vertebra": "fourth thoracic vertebra",
+          "yCm": 132.17680000000001
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.43079674460751,
+          "pointCount": 106,
+          "vertebra": "fifth thoracic vertebra",
+          "yCm": 129.6788
+        },
+        {
+          "insideCount": 108,
+          "minimumClearanceCm": 0.3708547434971466,
+          "pointCount": 108,
+          "vertebra": "sixth thoracic vertebra",
+          "yCm": 126.91850000000001
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.4484294242536796,
+          "pointCount": 106,
+          "vertebra": "seventh thoracic vertebra",
+          "yCm": 124.03450000000001
+        },
+        {
+          "insideCount": 104,
+          "minimumClearanceCm": 0.3452233665558128,
+          "pointCount": 104,
+          "vertebra": "eighth thoracic vertebra",
+          "yCm": 121.11913000000001
+        },
+        {
+          "insideCount": 112,
+          "minimumClearanceCm": 0.4591849466621555,
+          "pointCount": 112,
+          "vertebra": "ninth thoracic vertebra",
+          "yCm": 118.30046
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.46301244010994946,
+          "pointCount": 106,
+          "vertebra": "tenth thoracic vertebra",
+          "yCm": 115.27723
+        },
+        {
+          "insideCount": 106,
+          "minimumClearanceCm": 0.38918584968180564,
+          "pointCount": 106,
+          "vertebra": "eleventh thoracic vertebra",
+          "yCm": 112.28224
+        },
+        {
+          "insideCount": 12,
+          "minimumClearanceCm": 0.7340683789050506,
+          "pointCount": 12,
+          "vertebra": "first lumbar vertebra",
+          "yCm": 106.03116
+        }
+      ],
+      "sourceBoundsCm": [
+        [
+          -1.3561515137553215,
+          28.449493646621704,
+          -8.15236046910286
+        ],
+        [
+          0.7147521711885929,
+          74.96781945228577,
+          -0.18885802710428834
+        ]
+      ],
+      "sourceCenterlineXZcm": [
+        [
+          0.5039232800702038,
+          -4.588735106226709
+        ],
+        [
+          0.4937927311205279,
+          -4.668704725447442
+        ],
+        [
+          0.49047563429904756,
+          -4.768971800968856
+        ],
+        [
+          0.48410875846686324,
+          -4.866776003488365
+        ],
+        [
+          0.46815995803624616,
+          -4.956953055132346
+        ],
+        [
+          0.457353601279752,
+          -5.051188376919573
+        ],
+        [
+          0.43180452394657476,
+          -5.141007335408586
+        ],
+        [
+          0.4032991384577714,
+          -5.212902559768807
+        ],
+        [
+          0.3898203254178618,
+          -5.278360890541922
+        ],
+        [
+          0.37771230361693003,
+          -5.34492114850181
+        ],
+        [
+          0.35879562840030615,
+          -5.410024344188912
+        ],
+        [
+          0.34131999915445554,
+          -5.481415927474629
+        ],
+        [
+          0.327429433440562,
+          -5.545465307836595
+        ],
+        [
+          0.30873770736797,
+          -5.612564312399041
+        ],
+        [
+          0.29704169827797944,
+          -5.678259123398067
+        ],
+        [
+          0.28784002258436137,
+          -5.733332850519261
+        ],
+        [
+          0.28210208887273314,
+          -5.788474769459144
+        ],
+        [
+          0.26348514582256255,
+          -5.854083435071432
+        ],
+        [
+          0.24357220036721117,
+          -5.910949725102077
+        ],
+        [
+          0.217137781952498,
+          -5.957659846485779
+        ],
+        [
+          0.19410899305462467,
+          -6.008337391861671
+        ],
+        [
+          0.17284063211640077,
+          -6.06764233614571
+        ],
+        [
+          0.16165115145075593,
+          -6.138047333021909
+        ],
+        [
+          0.13762532422622245,
+          -6.19902795833794
+        ],
+        [
+          0.12158919475650815,
+          -6.253666294915623
+        ],
+        [
+          0.12933176982353267,
+          -6.315578011544778
+        ],
+        [
+          0.13284483683842183,
+          -6.375121150141978
+        ],
+        [
+          0.12449673643262704,
+          -6.429606920555193
+        ],
+        [
+          0.10865376956487927,
+          -6.490743328147635
+        ],
+        [
+          0.10021418218472836,
+          -6.555451671982775
+        ],
+        [
+          0.08759157309645424,
+          -6.612806218996024
+        ],
+        [
+          0.062165970510936114,
+          -6.662645514521814
+        ],
+        [
+          0.038408431744775345,
+          -6.711084333800394
+        ],
+        [
+          0.022973177117892762,
+          -6.755961567314976
+        ],
+        [
+          0.011804665613099563,
+          -6.7932607344012315
+        ],
+        [
+          0.013674547186704467,
+          -6.831989553956549
+        ],
+        [
+          -0.0008869926438698494,
+          -6.86761511781407
+        ],
+        [
+          -0.012210764756019704,
+          -6.910651448794128
+        ],
+        [
+          -0.027012570964313865,
+          -6.964375638026893
+        ],
+        [
+          -0.04387183777747883,
+          -7.0109971409574126
+        ],
+        [
+          -0.0581506301925076,
+          -7.050540421876018
+        ],
+        [
+          -0.05984780157109529,
+          -7.082743260122487
+        ],
+        [
+          -0.0799386192302296,
+          -7.109482412731587
+        ],
+        [
+          -0.09912544954564098,
+          -7.14441183801093
+        ],
+        [
+          -0.11509678523937925,
+          -7.181767584928507
+        ],
+        [
+          -0.13201309590080468,
+          -7.213059112000194
+        ],
+        [
+          -0.15318138185794938,
+          -7.2501067633666345
+        ],
+        [
+          -0.15383681375873398,
+          -7.288968278437993
+        ],
+        [
+          -0.1663727998347258,
+          -7.312129972703037
+        ],
+        [
+          -0.1845315015721095,
+          -7.329463900283324
+        ],
+        [
+          -0.20475804872273975,
+          -7.35250329735042
+        ],
+        [
+          -0.2244663392870113,
+          -7.38177204237312
+        ],
+        [
+          -0.24709515592790254,
+          -7.417828399260042
+        ],
+        [
+          -0.2693887297723209,
+          -7.453110920434929
+        ],
+        [
+          -0.27728103183657576,
+          -7.4911473185076725
+        ],
+        [
+          -0.2979007254533369,
+          -7.532599350302755
+        ],
+        [
+          -0.31782369145343886,
+          -7.56838645451759
+        ],
+        [
+          -0.33951278251034317,
+          -7.600323351437256
+        ],
+        [
+          -0.35773196893721615,
+          -7.629566917133211
+        ],
+        [
+          -0.3749360625211308,
+          -7.6540852925200245
+        ],
+        [
+          -0.39446370843239376,
+          -7.678705574186029
+        ],
+        [
+          -0.4159949070405532,
+          -7.716458258191257
+        ],
+        [
+          -0.4379223074058496,
+          -7.75559321155
+        ],
+        [
+          -0.4437668397822822,
+          -7.777413252512893
+        ],
+        [
+          -0.4705293919517198,
+          -7.786503750642086
+        ],
+        [
+          -0.4966082603720396,
+          -7.799911363011874
+        ],
+        [
+          -0.5231160028567736,
+          -7.811209008528229
+        ],
+        [
+          -0.553482447818921,
+          -7.814414858729219
+        ],
+        [
+          -0.5820776840697789,
+          -7.8143332017445815
+        ],
+        [
+          -0.6068144951687992,
+          -7.814000172240566
+        ],
+        [
+          -0.6338822046936712,
+          -7.817204993102019
+        ],
+        [
+          -0.6388339116683327,
+          -7.819019853620583
+        ],
+        [
+          -0.6618146890697992,
+          -7.812062139614112
+        ],
+        [
+          -0.6849613812602957,
+          -7.80474890165079
+        ],
+        [
+          -0.7036936159315319,
+          -7.792709660431114
+        ],
+        [
+          -0.7175541190457347,
+          -7.772455596256417
+        ],
+        [
+          -0.7340202523120222,
+          -7.758003336671846
+        ],
+        [
+          -0.7526759168525073,
+          -7.747377768441103
+        ],
+        [
+          -0.7689390491549007,
+          -7.732288929334654
+        ],
+        [
+          -0.7881495776788711,
+          -7.70771068250651
+        ],
+        [
+          -0.813489241839236,
+          -7.676695498895743
+        ],
+        [
+          -0.8109965110121331,
+          -7.645438382208923
+        ],
+        [
+          -0.8214845572229473,
+          -7.616741577621107
+        ],
+        [
+          -0.827494893947474,
+          -7.590877422818581
+        ],
+        [
+          -0.8416466613668898,
+          -7.560532005285085
+        ],
+        [
+          -0.8641748685703297,
+          -7.519315007277676
+        ],
+        [
+          -0.8817022626402949,
+          -7.468247829361243
+        ],
+        [
+          -0.8917505694755286,
+          -7.421008729165918
+        ],
+        [
+          -0.9038738972488152,
+          -7.369985264642775
+        ],
+        [
+          -0.9211024585316181,
+          -7.314969324628425
+        ],
+        [
+          -0.9224173182995503,
+          -7.265633407972439
+        ],
+        [
+          -0.9185515306585729,
+          -7.210086015647171
+        ],
+        [
+          -0.9213819465351188,
+          -7.1453877796392735
+        ],
+        [
+          -0.9192823755298929,
+          -7.079599740772922
+        ],
+        [
+          -0.9165213624698523,
+          -7.0100400329381
+        ],
+        [
+          -0.9182664970127887,
+          -6.93826962348369
+        ],
+        [
+          -0.9251431946385813,
+          -6.8734745010316445
+        ],
+        [
+          -0.9318084132450442,
+          -6.816069547955136
+        ],
+        [
+          -0.940676572511901,
+          -6.7522583655267745
+        ],
+        [
+          -0.9496061419031991,
+          -6.681752023272795
+        ],
+        [
+          -0.9517195391781746,
+          -6.6028791219465255
+        ],
+        [
+          -0.9311546231958365,
+          -6.517115982382213
+        ],
+        [
+          -0.9321018652666697,
+          -6.434261520882046
+        ],
+        [
+          -0.9291028457456607,
+          -6.351668579718906
+        ],
+        [
+          -0.9309713382327149,
+          -6.2667843145872855
+        ],
+        [
+          -0.9395264870921669,
+          -6.180209433833506
+        ],
+        [
+          -0.9429036831245945,
+          -6.092829349916597
+        ],
+        [
+          -0.9386834511643682,
+          -6.0059199189719035
+        ],
+        [
+          -0.9378819666019672,
+          -5.915109652850583
+        ],
+        [
+          -0.9256021566450059,
+          -5.817122385333198
+        ],
+        [
+          -0.920118394240538,
+          -5.7098016157945635
+        ],
+        [
+          -0.9257268255479562,
+          -5.599472927062571
+        ],
+        [
+          -0.9197814912646525,
+          -5.496425075737225
+        ],
+        [
+          -0.9094986849631661,
+          -5.3972944479552805
+        ],
+        [
+          -0.9030211654153313,
+          -5.281106978917917
+        ],
+        [
+          -0.896021918601863,
+          -5.152691305780037
+        ],
+        [
+          -0.8867152172329411,
+          -5.031144890460954
+        ],
+        [
+          -0.8781919082692169,
+          -4.915436953202783
+        ],
+        [
+          -0.8683527371328634,
+          -4.793926104266429
+        ],
+        [
+          -0.8639887972113163,
+          -4.669506811853973
+        ],
+        [
+          -0.8436072738912147,
+          -4.548186926832919
+        ],
+        [
+          -0.8359504323906533,
+          -4.418747118366209
+        ],
+        [
+          -0.8287399786891028,
+          -4.280026801696937
+        ],
+        [
+          -0.8215325889752375,
+          -4.141818610287871
+        ],
+        [
+          -0.8113613505045363,
+          -4.01093591904481
+        ],
+        [
+          -0.8018453819422928,
+          -3.8805836888107264
+        ],
+        [
+          -0.778756093966526,
+          -3.753618115674813
+        ],
+        [
+          -0.7701823359730238,
+          -3.6273694295618277
+        ],
+        [
+          -0.7554447077783584,
+          -3.4937381584886227
+        ],
+        [
+          -0.7361616201283154,
+          -3.3521905863097965
+        ],
+        [
+          -0.7149457582048254,
+          -3.209221793940448
+        ],
+        [
+          -0.6942168795813011,
+          -3.0781383821137713
+        ],
+        [
+          -0.6680644255417117,
+          -2.946031631767623
+        ],
+        [
+          -0.6374077610751241,
+          -2.817574392264465
+        ],
+        [
+          -0.6080979584324221,
+          -2.7002848972266538
+        ],
+        [
+          -0.5928950240010071,
+          -2.5747011108590683
+        ],
+        [
+          -0.5959841509109732,
+          -2.4537250913371573
+        ],
+        [
+          -0.5878369876367999,
+          -2.3460542722023856
+        ],
+        [
+          -0.5780671901545951,
+          -2.228434927195541
+        ],
+        [
+          -0.5787925925382682,
+          -2.1101691017503224
+        ],
+        [
+          -0.5780602368342469,
+          -1.997155292351187
+        ],
+        [
+          -0.558634714478543,
+          -1.8914833614781714
+        ],
+        [
+          -0.5400912559468691,
+          -1.791636702484378
+        ],
+        [
+          -0.5171534706049479,
+          -1.7037817140186307
+        ],
+        [
+          -0.5020852971907844,
+          -1.623025992828002
+        ],
+        [
+          -0.4874728656433427,
+          -1.5501468948736914
+        ],
+        [
+          -0.46582623943149193,
+          -1.4836972800310875
+        ],
+        [
+          -0.4401290633871856,
+          -1.4184267791009495
+        ],
+        [
+          -0.4349407151837542,
+          -1.35453723933177
+        ],
+        [
+          -0.42090059161373217,
+          -1.290922027083453
+        ],
+        [
+          -0.39320198180879984,
+          -1.2322332380733456
+        ],
+        [
+          -0.36797722969952923,
+          -1.1824993096785694
+        ],
+        [
+          -0.3627652316528774,
+          -1.1388632675254489
+        ],
+        [
+          -0.37836645648649914,
+          -1.1079051008001435
+        ],
+        [
+          -0.3996809807746262,
+          -1.086181952110994
+        ],
+        [
+          -0.41141164164585553,
+          -1.0633141436030529
+        ],
+        [
+          -0.4137975080988464,
+          -1.0399353143309176
+        ],
+        [
+          -0.41600463484305833,
+          -1.0277417678060865
+        ],
+        [
+          -0.4057930090603604,
+          -1.0397756870853347
+        ],
+        [
+          -0.4186636799455278,
+          -1.0596827383098586
+        ],
+        [
+          -0.43303425869077744,
+          -1.065577806065707
+        ],
+        [
+          -0.43359955519938864,
+          -1.055990655623289
+        ],
+        [
+          -0.4316215131821022,
+          -1.0333441114227992
+        ],
+        [
+          -0.43937030605043725,
+          -1.0040945628399602
+        ],
+        [
+          -0.4650789690990893,
+          -0.9722275539265571
+        ],
+        [
+          -0.47087137501917403,
+          -0.9389045983985935
+        ],
+        [
+          -0.4772965525117453,
+          -0.9069564677515378
+        ],
+        [
+          -0.4805315714671051,
+          -0.8771201075477111
+        ],
+        [
+          -0.48475717237874305,
+          -0.8454855489995906
+        ],
+        [
+          -0.48814668259459454,
+          -0.8085430581749725
+        ],
+        [
+          -0.47031841835940413,
+          -0.7681077624389521
+        ],
+        [
+          -0.45419485715074254,
+          -0.7268285709553833
+        ],
+        [
+          -0.4280919449110147,
+          -0.6828231581027219
+        ],
+        [
+          -0.4074733150559321,
+          -0.653818845344267
+        ],
+        [
+          -0.3902036654057633,
+          -0.6725536716009926
+        ],
+        [
+          -0.3742031077831732,
+          -0.7188937545776323
+        ],
+        [
+          -0.3489570503636776,
+          -0.7579850228477528
+        ],
+        [
+          -0.33081374331128965,
+          -0.7881088129541376
+        ],
+        [
+          -0.3140270570518008,
+          -0.8086530531818047
+        ],
+        [
+          -0.29863675685165697,
+          -0.8091575839906446
+        ],
+        [
+          -0.5052267117457372,
+          -1.2118303107836204
+        ]
+      ],
+      "sourceCenterlineYcm": [
+        28.449493646621704,
+        28.707928789986504,
+        28.966363933351303,
+        29.224799076716106,
+        29.483234220080906,
+        29.741669363445705,
+        30.000104506810505,
+        30.258539650175308,
+        30.516974793540108,
+        30.775409936904907,
+        31.033845080269707,
+        31.292280223634506,
+        31.55071536699931,
+        31.80915051036411,
+        32.06758565372891,
+        32.32602079709371,
+        32.58445594045851,
+        32.84289108382331,
+        33.10132622718811,
+        33.35976137055291,
+        33.61819651391771,
+        33.87663165728251,
+        34.13506680064731,
+        34.393501944012115,
+        34.651937087376915,
+        34.910372230741714,
+        35.168807374106514,
+        35.42724251747131,
+        35.68567766083611,
+        35.94411280420091,
+        36.20254794756571,
+        36.46098309093051,
+        36.71941823429532,
+        36.97785337766011,
+        37.23628852102492,
+        37.49472366438972,
+        37.75315880775452,
+        38.011593951119316,
+        38.270029094484116,
+        38.528464237848915,
+        38.786899381213715,
+        39.04533452457852,
+        39.303769667943314,
+        39.56220481130812,
+        39.82063995467292,
+        40.07907509803772,
+        40.33751024140252,
+        40.59594538476732,
+        40.85438052813212,
+        41.11281567149692,
+        41.371250814861725,
+        41.62968595822652,
+        41.888121101591324,
+        42.14655624495612,
+        42.40499138832092,
+        42.66342653168572,
+        42.92186167505052,
+        43.18029681841532,
+        43.43873196178012,
+        43.69716710514493,
+        43.95560224850972,
+        44.21403739187453,
+        44.472472535239326,
+        44.730907678604126,
+        44.989342821968926,
+        45.247777965333725,
+        45.506213108698525,
+        45.764648252063324,
+        46.02308339542813,
+        46.28151853879292,
+        46.53995368215773,
+        46.79838882552253,
+        47.05682396888733,
+        47.31525911225213,
+        47.57369425561693,
+        47.83212939898173,
+        48.09056454234653,
+        48.348999685711334,
+        48.60743482907613,
+        48.86586997244093,
+        49.12430511580573,
+        49.38274025917053,
+        49.64117540253533,
+        49.89961054590013,
+        50.15804568926493,
+        50.41648083262973,
+        50.67491597599454,
+        50.93335111935933,
+        51.191786262724136,
+        51.45022140608893,
+        51.708656549453735,
+        51.967091692818535,
+        52.225526836183334,
+        52.483961979548134,
+        52.742397122912934,
+        53.00083226627774,
+        53.25926740964253,
+        53.51770255300734,
+        53.77613769637213,
+        54.03457283973694,
+        54.29300798310174,
+        54.55144312646654,
+        54.80987826983134,
+        55.06831341319614,
+        55.32674855656094,
+        55.585183699925736,
+        55.84361884329054,
+        56.102053986655335,
+        56.36048913002014,
+        56.61892427338494,
+        56.87735941674974,
+        57.13579456011454,
+        57.39422970347934,
+        57.65266484684415,
+        57.91109999020894,
+        58.169535133573746,
+        58.42797027693854,
+        58.686405420303345,
+        58.944840563668144,
+        59.203275707032944,
+        59.46171085039774,
+        59.72014599376254,
+        59.97858113712735,
+        60.23701628049214,
+        60.49545142385695,
+        60.75388656722175,
+        61.01232171058655,
+        61.27075685395135,
+        61.52919199731615,
+        61.78762714068095,
+        62.046062284045746,
+        62.304497427410546,
+        62.562932570775345,
+        62.82136771414015,
+        63.07980285750495,
+        63.33823800086975,
+        63.59667314423455,
+        63.85510828759935,
+        64.11354343096414,
+        64.37197857432895,
+        64.63041371769376,
+        64.88884886105855,
+        65.14728400442335,
+        65.40571914778815,
+        65.66415429115295,
+        65.92258943451776,
+        66.18102457788255,
+        66.43945972124735,
+        66.69789486461215,
+        66.95633000797696,
+        67.21476515134175,
+        67.47320029470656,
+        67.73163543807135,
+        67.99007058143616,
+        68.24850572480096,
+        68.50694086816576,
+        68.76537601153055,
+        69.02381115489536,
+        69.28224629826016,
+        69.54068144162495,
+        69.79911658498976,
+        70.05755172835455,
+        70.31598687171936,
+        70.57442201508417,
+        70.83285715844896,
+        71.09129230181375,
+        71.34972744517856,
+        71.60816258854337,
+        71.86659773190816,
+        72.12503287527295,
+        72.38346801863776,
+        72.64190316200256,
+        72.90033830536737,
+        73.15877344873216,
+        73.41720859209696,
+        73.67564373546176,
+        73.93407887882657,
+        74.19251402219136,
+        74.45094916555615,
+        74.70938430892096,
+        74.96781945228577
+      ],
+      "sourceLengthCm": 46.51832580566406,
+      "targetBoundsCm": [
+        [
+          -0.9621244764485455,
+          106.03116,
+          2.545738485287221
+        ],
+        [
+          0.5613715312910503,
+          147.75490000000002,
+          8.65850681284423
+        ]
+      ],
+      "targetLengthCm": 41.72374000000002,
+      "uniformScale": 0.8969312475755468,
+      "unmeasuredVertebrae": [
+        "twelfth thoracic vertebra"
+      ]
+    },
+    "head": {
+      "fitMetricsCm": {
+        "cerebrum": {
+          "p95": 0.15532076769014289,
+          "rms": 0.07690494832353262,
+          "sampleCount": 2228
+        },
+        "eyes": {
+          "p95": 0.1106699009526536,
+          "rms": 0.06063048502845674,
+          "sampleCount": 1639
+        },
+        "hindbrain": {
+          "p95": 0.13982102407472544,
+          "rms": 0.07582469754369792,
+          "sampleCount": 2229
+        }
+      },
+      "method": "Independent fixed BodyParts3D-to-MediaPipe canonical face similarity from head_frame.py; 80 iterations of 98% trimmed ICP; untrimmed frontal gate verified at build time.",
+      "rotationRows": [
+        [
+          0.9999901461521536,
+          0.0009756788017103457,
+          0.004330779314461781
+        ],
+        [
+          -0.0008513954179849093,
+          0.9995903635568115,
+          -0.028607345388992227
+        ],
+        [
+          -0.004356916849896415,
+          0.028603376290898725,
+          0.9995813444339209
+        ]
+      ],
+      "scale": 1.1412436275406224,
+      "targetHeadBinarySha256": "95ebe2777cc19e3b43e1332b797f78bf85bd0b79993d79d833771c615b9e2111",
+      "targetHeadMetadataSha256": "584f12f85a5c45bc744b6741079173c7efe5909da154e5443c135602e94096dd",
+      "transformConvention": "head = sourceCm @ rotationRows * scale + translationCm",
+      "translationCm": [
+        0.30255977233003845,
+        -172.41939509494148,
+        -11.09066792360456
+      ]
+    }
+  },
+  "schemaVersion": 1,
+  "source": {
+    "dataset": "Human Reference Atlas + BodyParts3D",
+    "datasets": [
+      {
+        "componentCount": 30,
+        "doi": "10.48539/HBM366.MTJD.685",
+        "license": "CC-BY-4.0",
+        "metadataUrl": "https://cdn.humanatlas.io/hra-releases/v2.0/markdown/ref-organs/3d-vh-m-spinal-cord.md",
+        "name": "Human Reference Atlas",
+        "sha256": "a7858d88c2237aa7d559c4c1d638923d213d2a9f46c575dea03d6ba67a9975c0",
+        "sourceUnit": "m",
+        "url": "https://cdn.humanatlas.io/hra-releases/v1.2/models/VH_M_Spinal_Cord.glb",
+        "version": "Male spinal cord v1.0"
+      },
+      {
+        "componentCount": 5,
+        "license": "CC-BY-SA-2.1-JP",
+        "name": "BodyParts3D",
+        "sourceUnit": "mm",
+        "version": "3.0"
+      }
+    ],
+    "downloads": [
+      {
+        "sha256": "a7858d88c2237aa7d559c4c1d638923d213d2a9f46c575dea03d6ba67a9975c0",
+        "url": "https://cdn.humanatlas.io/hra-releases/v1.2/models/VH_M_Spinal_Cord.glb"
+      },
+      {
+        "sha256": "2125f6d761b14ead4ee64f71713f56f3f0f29982693ff20aac63474470cb92f4",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip"
+      },
+      {
+        "sha256": "824a34ed939a53375037d0d68b88ad2b63b1f0ae15a585632af2a63c2ab2e4af",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/parts_list_e.txt"
+      },
+      {
+        "sha256": "17cd3611eb6b46558f983f890273fdb19f93806150ed95f6611acf4b81e90bc2",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/composite_parts.txt"
+      }
+    ],
+    "elementCount": 35,
+    "elementIds": [
+      "FMA50875",
+      "FMA50878",
+      "FMA62045",
+      "FMA62382",
+      "FMA67936",
+      "hra:VH_M_C1_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C2_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C3_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C4_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C5_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C6_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C7_segment_of_cervical_spinal_cord",
+      "hra:VH_M_C8_segment_of_cervical_spinal_cord",
+      "hra:VH_M_eighth_thoracic_spinal_cord_segment",
+      "hra:VH_M_eleventh_thoracic_spinal_cord_segment",
+      "hra:VH_M_fifth_lumbar_spinal_cord_segment",
+      "hra:VH_M_fifth_sacral_spinal_cord_segment",
+      "hra:VH_M_fifth_thoracic_spinal_cord_segment",
+      "hra:VH_M_first_lumbar_spinal_cord_segment",
+      "hra:VH_M_first_sacral_spinal_cord_segment",
+      "hra:VH_M_first_thoracic_spinal_cord_segment",
+      "hra:VH_M_fourth_lumbar_spinal_cord_segment",
+      "hra:VH_M_fourth_sacral_spinal_cord_segment",
+      "hra:VH_M_fourth_thoracic_spinal_cord_segment",
+      "hra:VH_M_ninth_thoracic_spinal_cord_segment",
+      "hra:VH_M_second_lumbar_spinal_cord_segment",
+      "hra:VH_M_second_sacral_spinal_cord_segment",
+      "hra:VH_M_second_thoracic_spinal_cord_segment",
+      "hra:VH_M_seventh_thoracic_spinal_cord_segment",
+      "hra:VH_M_sixth_thoracic_spinal_cord_segment",
+      "hra:VH_M_tenth_thoracic_spinal_cord_segment",
+      "hra:VH_M_third_lumbar_spinal_cord_segment",
+      "hra:VH_M_third_sacral_spinal_cord_segment",
+      "hra:VH_M_third_thoracic_spinal_cord_segment",
+      "hra:VH_M_twelfth_thoracic_spinal_cord_segment"
+    ]
+  },
+  "torsoReferencePoseCm": {
+    "11": [
+      16.22746875385431,
+      132.55452158345776,
+      7.180206199007819
+    ],
+    "12": [
+      -16.34340934763952,
+      132.57993248097975,
+      7.161837711907631
+    ],
+    "13": [
+      20.8424,
+      105.17100000000002,
+      6.404305000000001
+    ],
+    "14": [
+      -20.9798,
+      105.16850000000001,
+      6.40866
+    ],
+    "15": [
+      25.53575,
+      81.95920000000001,
+      10.924385000000001
+    ],
+    "16": [
+      -25.711600000000004,
+      81.9622,
+      10.976935000000001
+    ],
+    "23": [
+      10.2570511322069,
+      81.63210449977119,
+      9.126461030103432
+    ],
+    "24": [
+      -10.30746511082586,
+      81.74938195411863,
+      9.217452733699007
+    ],
+    "25": [
+      7.198964999999999,
+      41.26885,
+      7.012895
+    ],
+    "26": [
+      -7.410810000000001,
+      41.2902,
+      7.061175
+    ],
+    "27": [
+      7.3238900000000005,
+      6.720940000000001,
+      5.890615
+    ],
+    "28": [
+      -7.45608,
+      6.709835,
+      5.89611
+    ],
+    "29": [
+      7.261105000000001,
+      1.9950204999999999,
+      1.3539420000000002
+    ],
+    "30": [
+      -7.47267,
+      2.0181375,
+      1.3256925000000002
+    ],
+    "31": [
+      10.494250000000001,
+      -0.13299865,
+      22.95635
+    ],
+    "32": [
+      -10.59045,
+      -0.12364945000000002,
+      22.9574
+    ]
+  }
+}

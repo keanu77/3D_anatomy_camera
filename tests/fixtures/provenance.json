@@ -1,0 +1,13 @@
+{
+  "purpose": "Official MediaPipe regression inputs downloaded to the OS temp directory for positive inference tests. Images are not bundled, committed or deployed.",
+  "upstreamTests": [
+    "https://github.com/google-ai-edge/mediapipe/blob/master/mediapipe/tasks/python/test/vision/pose_landmarker_test.py",
+    "https://github.com/google-ai-edge/mediapipe/blob/master/mediapipe/tasks/python/test/vision/hand_landmarker_test.py",
+    "https://github.com/google-ai-edge/mediapipe/blob/master/mediapipe/python/solutions/face_detection_test.py"
+  ],
+  "fixtures": {
+    "pose.jpg": { "url": "https://storage.googleapis.com/mediapipe-assets/pose.jpg", "sha256": "c8a830ed683c0276d713dd5aeda28f415f10cd6291972084a40d0d8b934ed62b" },
+    "portrait.jpg": { "url": "https://storage.googleapis.com/mediapipe-assets/portrait.jpg", "sha256": "a6f11efaa834706db23f275b6115058fa87fc7f14362681e6abe14e82749de3e" },
+    "right_hands.jpg": { "url": "https://storage.googleapis.com/mediapipe-assets/right_hands.jpg", "sha256": "4b5134daa4cb60465535239535f9f74c2842aba3aa5fd30bf04ef5678f93d87f" }
+  }
+}

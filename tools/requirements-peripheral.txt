@@ -1,0 +1,4 @@
+attrs==26.1.0
+blender-asset-tracer==2.2.0
+cattrs==25.1.1
+typing_extensions==4.16.0

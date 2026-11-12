@@ -1,0 +1,12 @@
+{
+  "name": "Anatomy Mirror 互動解剖鏡",
+  "short_name": "Anatomy Mirror",
+  "description": "在裝置上探索即時互動解剖模型，影像不會上傳。",
+  "lang": "zh-Hant",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#090c13",
+  "theme_color": "#090c13",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

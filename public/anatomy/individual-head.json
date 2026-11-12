@@ -1,0 +1,3091 @@
+{
+  "attribution": "BodyParts3D, © The Database Center for Life Science, licensed under CC Attribution-Share Alike 2.1 Japan. Simplified, quantized, and aligned for Anatomy Mirror.",
+  "binaryBytes": 920028,
+  "binarySha256": "260df558794972c6fcc3d6d566302c45e62647c8dafd8485e472012970875e0d",
+  "coverage": {
+    "aponeuroses": 1,
+    "excluded": [
+      "Third molars",
+      "Deciduous teeth",
+      "Ear ossicles",
+      "Hyoid",
+      "Intrinsic hand muscles"
+    ],
+    "existingIndividualHandBones": 15,
+    "gingivae": 2,
+    "headMuscleComponents": 49,
+    "identityCoverage": "Every replacement triangle belongs to exactly one actual source element.",
+    "palmBones": 12,
+    "skullBones": 22,
+    "sourceComponents": 114,
+    "teeth": 28
+  },
+  "existingParts": [
+    {
+      "parent": "hand_b_1_2",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 1674,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24464",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right first metacarpal bone",
+          "pairedId": "FMA24465",
+          "pairedName": "left first metacarpal bone",
+          "parent": "hand_b_1_2",
+          "registrationMetrics": {
+            "maximum": 8.763043285214621e-06,
+            "p95": 8.226066303603552e-06,
+            "rms": 5.488111459914086e-06,
+            "sampleCount": 312
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_2_3",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 816,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24450",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "proximal phalanx of right thumb",
+          "pairedId": "FMA65470",
+          "pairedName": "proximal phalanx of left thumb",
+          "parent": "hand_b_2_3",
+          "registrationMetrics": {
+            "maximum": 8.646963781474133e-06,
+            "p95": 8.249055297495902e-06,
+            "rms": 5.465599769139252e-06,
+            "sampleCount": 181
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_3_4",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 636,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24459",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "distal phalanx of right thumb",
+          "pairedId": "FMA23951",
+          "pairedName": "distal phalanx of left thumb",
+          "parent": "hand_b_3_4",
+          "registrationMetrics": {
+            "maximum": 9.091138257922082e-06,
+            "p95": 7.966788938717317e-06,
+            "rms": 5.491691033868854e-06,
+            "sampleCount": 244
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_5_6",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 1122,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24451",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "proximal phalanx of right index finger",
+          "pairedId": "FMA71915",
+          "pairedName": "proximal phalanx of left index finger",
+          "parent": "hand_b_5_6",
+          "registrationMetrics": {
+            "maximum": 8.430561298759536e-06,
+            "p95": 8.06559414008302e-06,
+            "rms": 5.272600666877138e-06,
+            "sampleCount": 224
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_6_7",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 684,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24455",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "middle phalanx of right index finger",
+          "pairedId": "FMA23938",
+          "pairedName": "middle phalanx of left index finger",
+          "parent": "hand_b_6_7",
+          "registrationMetrics": {
+            "maximum": 9.229597058003075e-06,
+            "p95": 8.51915290100032e-06,
+            "rms": 5.655631593634242e-06,
+            "sampleCount": 167
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_7_8",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 630,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24460",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "distal phalanx of right index finger",
+          "pairedId": "FMA23953",
+          "pairedName": "distal phalanx of left index finger",
+          "parent": "hand_b_7_8",
+          "registrationMetrics": {
+            "maximum": 8.107272282255011e-06,
+            "p95": 7.572791200203976e-06,
+            "rms": 4.81829639371886e-06,
+            "sampleCount": 195
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_9_10",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 1176,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24452",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "proximal phalanx of right middle finger",
+          "pairedId": "FMA71908",
+          "pairedName": "proximal phalanx of left middle finger",
+          "parent": "hand_b_9_10",
+          "registrationMetrics": {
+            "maximum": 8.488751252900728e-06,
+            "p95": 8.137799640416662e-06,
+            "rms": 5.200308121080649e-06,
+            "sampleCount": 225
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_10_11",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 882,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24456",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "middle phalanx of right middle finger",
+          "pairedId": "FMA23940",
+          "pairedName": "middle phalanx of left middle finger",
+          "parent": "hand_b_10_11",
+          "registrationMetrics": {
+            "maximum": 8.536462046523583e-06,
+            "p95": 8.089595433524301e-06,
+            "rms": 5.212895523819392e-06,
+            "sampleCount": 195
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_11_12",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 522,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24461",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "distal phalanx of right middle finger",
+          "pairedId": "FMA23955",
+          "pairedName": "distal phalanx of left middle finger",
+          "parent": "hand_b_11_12",
+          "registrationMetrics": {
+            "maximum": 8.647561527755794e-06,
+            "p95": 7.980173315925042e-06,
+            "rms": 5.242392906136524e-06,
+            "sampleCount": 148
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_13_14",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 972,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24453",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "proximal phalanx of right ring finger",
+          "pairedId": "FMA71916",
+          "pairedName": "proximal phalanx of left ring finger",
+          "parent": "hand_b_13_14",
+          "registrationMetrics": {
+            "maximum": 7.907434774741998e-06,
+            "p95": 7.52143975326908e-06,
+            "rms": 4.920955340019368e-06,
+            "sampleCount": 204
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_14_15",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 1074,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24457",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "middle phalanx of right ring finger",
+          "pairedId": "FMA23942",
+          "pairedName": "middle phalanx of left ring finger",
+          "parent": "hand_b_14_15",
+          "registrationMetrics": {
+            "maximum": 8.937526014021202e-06,
+            "p95": 8.173746632902644e-06,
+            "rms": 5.387680017761072e-06,
+            "sampleCount": 213
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_15_16",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 336,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24462",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "distal phalanx of right ring finger",
+          "pairedId": "FMA23957",
+          "pairedName": "distal phalanx of left ring finger",
+          "parent": "hand_b_15_16",
+          "registrationMetrics": {
+            "maximum": 8.964154359325109e-06,
+            "p95": 8.268204581782197e-06,
+            "rms": 5.339333999065102e-06,
+            "sampleCount": 120
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_17_18",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 942,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24454",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "proximal phalanx of right little finger",
+          "pairedId": "FMA66791",
+          "pairedName": "proximal phalanx of left little finger",
+          "parent": "hand_b_17_18",
+          "registrationMetrics": {
+            "maximum": 8.290147221109434e-06,
+            "p95": 7.686367075017698e-06,
+            "rms": 4.871209034929415e-06,
+            "sampleCount": 191
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_18_19",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 600,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24458",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "middle phalanx of right little finger",
+          "pairedId": "FMA23944",
+          "pairedName": "middle phalanx of left little finger",
+          "parent": "hand_b_18_19",
+          "registrationMetrics": {
+            "maximum": 8.383799501639095e-06,
+            "p95": 7.822005262295783e-06,
+            "rms": 4.996245588548983e-06,
+            "sampleCount": 169
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    },
+    {
+      "parent": "hand_b_19_20",
+      "parts": [
+        {
+          "bundle": "head",
+          "count": 534,
+          "geometry": "independently rebuilt individual source mesh in shared hand frame",
+          "id": "FMA24463",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "distal phalanx of right little finger",
+          "pairedId": "FMA23959",
+          "pairedName": "distal phalanx of left little finger",
+          "parent": "hand_b_19_20",
+          "registrationMetrics": {
+            "maximum": 8.39995489397257e-06,
+            "p95": 7.71760569856744e-06,
+            "rms": 5.029928628138927e-06,
+            "sampleCount": 194
+          },
+          "side": "R",
+          "sourceSide": "R",
+          "start": 0
+        }
+      ]
+    }
+  ],
+  "format": "quantized-uint16-le",
+  "license": "CC-BY-SA-2.1-JP",
+  "limitations": [
+    "Source identities describe actual atlas surfaces, not a diagnosis or patient-specific anatomy.",
+    "The head uses the fixed approximate global registration already used by the optic bundle. Residuals are nearest-vertex reference-fit measurements, not clinical accuracy.",
+    "Muscle heads and subdivisions retain their exact source names. No regional label or nearest-region heuristic determines a clicked triangle identity.",
+    "The hand geometry is the source right hand. The existing runtime reuses it with reflection for the left hand; a displayed left hand is not independent left-specimen geometry.",
+    "Hand coordinate residuals use normalized rig units. Head residuals use centimetres. These units must not be compared directly.",
+    "Teeth are explicitly kind tooth, not bone. The source provides 28 permanent teeth; third molars, deciduous teeth, ear ossicles and hyoid are not added.",
+    "The original muscle layer also contains the epicranial aponeurosis; it is retained and explicitly identified as aponeurosis, not muscle.",
+    "Both upper and lower gingiva are retained as kind gingiva in the original cranium parent. This inherited static grouping does not articulate the lower gingiva with the jaw.",
+    "No intrinsic hand muscles, facial expression deformation, independent muscle contraction or articulating carpal joints are added.",
+    "The original finger rigs scale terminal bones to 80 percent at runtime; source-identity verification uses their stored normalized geometry before that runtime scaling."
+  ],
+  "meshes": [
+    {
+      "bundle": "head",
+      "coordinateUnit": "cm",
+      "maxQuantizationError": 0.0002768509764330978,
+      "min": [
+        -8.837683478357576,
+        -7.917683812856978,
+        -16.65241978736133
+      ],
+      "name": "muscles",
+      "ni": 107892,
+      "nv": 18274,
+      "offI": 109644,
+      "offV": 0,
+      "parent": "muscles",
+      "parts": [
+        {
+          "count": 4170,
+          "id": "FMA46759",
+          "kind": "muscle",
+          "name": "right frontalis",
+          "registrationMetrics": {
+            "maximum": 0.34197354532201035,
+            "p95": 0.26409964793033097,
+            "rms": 0.1349898213307554,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.11801664119544915,
+          "side": "R",
+          "sourceTriangles": 11778,
+          "sourceVertices": 7367,
+          "start": 0,
+          "vertexCount": 695,
+          "vertexStart": 0
+        },
+        {
+          "count": 4158,
+          "id": "FMA46760",
+          "kind": "muscle",
+          "name": "left frontalis",
+          "registrationMetrics": {
+            "maximum": 0.4037401413475071,
+            "p95": 0.25908477398708507,
+            "rms": 0.13917974476210965,
+            "sampleCount": 160
+          },
+          "retainedTriangleFraction": 0.11827956989247312,
+          "side": "L",
+          "sourceTriangles": 11718,
+          "sourceVertices": 6712,
+          "start": 4170,
+          "vertexCount": 705,
+          "vertexStart": 695
+        },
+        {
+          "count": 2826,
+          "id": "FMA46761",
+          "kind": "muscle",
+          "name": "right occipitalis",
+          "registrationMetrics": {
+            "maximum": 0.38649712746675435,
+            "p95": 0.16249819496577889,
+            "rms": 0.08011460110732033,
+            "sampleCount": 156
+          },
+          "retainedTriangleFraction": 0.17431532198371577,
+          "side": "R",
+          "sourceTriangles": 5404,
+          "sourceVertices": 5124,
+          "start": 8328,
+          "vertexCount": 472,
+          "vertexStart": 1400
+        },
+        {
+          "count": 2808,
+          "id": "FMA46762",
+          "kind": "muscle",
+          "name": "left occipitalis",
+          "registrationMetrics": {
+            "maximum": 0.38643246326763553,
+            "p95": 0.16413393084532862,
+            "rms": 0.08171189378486583,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.17495327102803737,
+          "side": "L",
+          "sourceTriangles": 5350,
+          "sourceVertices": 4841,
+          "start": 11154,
+          "vertexCount": 470,
+          "vertexStart": 1872
+        },
+        {
+          "count": 6000,
+          "id": "FMA46763",
+          "kind": "muscle",
+          "name": "right temporoparietalis",
+          "registrationMetrics": {
+            "maximum": 0.43968390657112494,
+            "p95": 0.3138028808596959,
+            "rms": 0.15839747630572115,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.08202099737532809,
+          "side": "R",
+          "sourceTriangles": 24384,
+          "sourceVertices": 17646,
+          "start": 13962,
+          "vertexCount": 1113,
+          "vertexStart": 2342
+        },
+        {
+          "count": 5994,
+          "id": "FMA46764",
+          "kind": "muscle",
+          "name": "left temporoparietalis",
+          "registrationMetrics": {
+            "maximum": 0.352128299429506,
+            "p95": 0.3006294073898797,
+            "rms": 0.14281303312841195,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.08214109521460286,
+          "side": "L",
+          "sourceTriangles": 24324,
+          "sourceVertices": 16508,
+          "start": 19962,
+          "vertexCount": 998,
+          "vertexStart": 3455
+        },
+        {
+          "count": 1566,
+          "id": "FMA46782",
+          "kind": "muscle",
+          "name": "orbital part of right orbicularis oculi",
+          "registrationMetrics": {
+            "maximum": 0.16955604532126523,
+            "p95": 0.13030649849386897,
+            "rms": 0.06731012208763489,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.3137019230769231,
+          "side": "R",
+          "sourceTriangles": 1664,
+          "sourceVertices": 1252,
+          "start": 25956,
+          "vertexCount": 261,
+          "vertexStart": 4453
+        },
+        {
+          "count": 1560,
+          "id": "FMA46783",
+          "kind": "muscle",
+          "name": "orbital part of left orbicularis oculi",
+          "registrationMetrics": {
+            "maximum": 0.16765085754749565,
+            "p95": 0.12395901625787899,
+            "rms": 0.059748461243151425,
+            "sampleCount": 145
+          },
+          "retainedTriangleFraction": 0.3140096618357488,
+          "side": "L",
+          "sourceTriangles": 1656,
+          "sourceVertices": 1159,
+          "start": 27522,
+          "vertexCount": 260,
+          "vertexStart": 4714
+        },
+        {
+          "count": 2658,
+          "id": "FMA46785",
+          "kind": "muscle",
+          "name": "palpebral part of right orbicularis oculi",
+          "registrationMetrics": {
+            "maximum": 0.27669304645282605,
+            "p95": 0.19041094814684667,
+            "rms": 0.10405046373869892,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.18535564853556485,
+          "side": "R",
+          "sourceTriangles": 4780,
+          "sourceVertices": 2758,
+          "start": 29082,
+          "vertexCount": 443,
+          "vertexStart": 4974
+        },
+        {
+          "count": 2610,
+          "id": "FMA46786",
+          "kind": "muscle",
+          "name": "palpebral part of left orbicularis oculi",
+          "registrationMetrics": {
+            "maximum": 0.22559930544195028,
+            "p95": 0.17686606378284106,
+            "rms": 0.10257310300565589,
+            "sampleCount": 160
+          },
+          "retainedTriangleFraction": 0.18880208333333334,
+          "side": "L",
+          "sourceTriangles": 4608,
+          "sourceVertices": 2552,
+          "start": 31740,
+          "vertexCount": 435,
+          "vertexStart": 5417
+        },
+        {
+          "count": 1008,
+          "id": "FMA46796",
+          "kind": "muscle",
+          "name": "right corrugator supercilii",
+          "registrationMetrics": {
+            "maximum": 0.10407675678354307,
+            "p95": 0.05401630958938701,
+            "rms": 0.02316654588254775,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.4883720930232558,
+          "side": "R",
+          "sourceTriangles": 688,
+          "sourceVertices": 1099,
+          "start": 34350,
+          "vertexCount": 152,
+          "vertexStart": 5852
+        },
+        {
+          "count": 1026,
+          "id": "FMA46797",
+          "kind": "muscle",
+          "name": "left corrugator supercilii",
+          "registrationMetrics": {
+            "maximum": 0.11899947078819222,
+            "p95": 0.04868334014269343,
+            "rms": 0.022689521954841106,
+            "sampleCount": 158
+          },
+          "retainedTriangleFraction": 0.4723756906077348,
+          "side": "L",
+          "sourceTriangles": 724,
+          "sourceVertices": 1103,
+          "start": 35358,
+          "vertexCount": 158,
+          "vertexStart": 6004
+        },
+        {
+          "count": 714,
+          "id": "FMA46803",
+          "kind": "muscle",
+          "name": "right levator labii superioris alaeque nasi",
+          "registrationMetrics": {
+            "maximum": 0.08635210796386862,
+            "p95": 0.05734582515354044,
+            "rms": 0.022042305486213137,
+            "sampleCount": 119
+          },
+          "retainedTriangleFraction": 0.6878612716763006,
+          "side": "R",
+          "sourceTriangles": 346,
+          "sourceVertices": 355,
+          "start": 36384,
+          "vertexCount": 123,
+          "vertexStart": 6162
+        },
+        {
+          "count": 696,
+          "id": "FMA46804",
+          "kind": "muscle",
+          "name": "left levator labii superioris alaeque nasi",
+          "registrationMetrics": {
+            "maximum": 0.07711991441372831,
+            "p95": 0.04033016178481494,
+            "rms": 0.01886032136575719,
+            "sampleCount": 155
+          },
+          "retainedTriangleFraction": 0.7073170731707317,
+          "side": "L",
+          "sourceTriangles": 328,
+          "sourceVertices": 310,
+          "start": 37098,
+          "vertexCount": 118,
+          "vertexStart": 6285
+        },
+        {
+          "count": 1266,
+          "id": "FMA46806",
+          "kind": "muscle",
+          "name": "right levator labii superioris",
+          "registrationMetrics": {
+            "maximum": 0.15820427033548756,
+            "p95": 0.10832334613008202,
+            "rms": 0.052138212887133495,
+            "sampleCount": 147
+          },
+          "retainedTriangleFraction": 0.3885819521178637,
+          "side": "R",
+          "sourceTriangles": 1086,
+          "sourceVertices": 878,
+          "start": 37794,
+          "vertexCount": 212,
+          "vertexStart": 6403
+        },
+        {
+          "count": 1260,
+          "id": "FMA46807",
+          "kind": "muscle",
+          "name": "left levator labii superioris",
+          "registrationMetrics": {
+            "maximum": 0.14177135063832844,
+            "p95": 0.11619850165300448,
+            "rms": 0.049163444726908576,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.39106145251396646,
+          "side": "L",
+          "sourceTriangles": 1074,
+          "sourceVertices": 783,
+          "start": 39060,
+          "vertexCount": 212,
+          "vertexStart": 6615
+        },
+        {
+          "count": 1818,
+          "id": "FMA46812",
+          "kind": "muscle",
+          "name": "right zygomaticus major",
+          "registrationMetrics": {
+            "maximum": 0.27148274284041435,
+            "p95": 0.1123931649529925,
+            "rms": 0.051629291194256306,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.27029438001784123,
+          "side": "R",
+          "sourceTriangles": 2242,
+          "sourceVertices": 3125,
+          "start": 40320,
+          "vertexCount": 320,
+          "vertexStart": 6827
+        },
+        {
+          "count": 1728,
+          "id": "FMA46813",
+          "kind": "muscle",
+          "name": "left zygomaticus major",
+          "registrationMetrics": {
+            "maximum": 0.17323364202489855,
+            "p95": 0.08590286776995973,
+            "rms": 0.04306871914375984,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.2845849802371542,
+          "side": "L",
+          "sourceTriangles": 2024,
+          "sourceVertices": 2456,
+          "start": 42138,
+          "vertexCount": 280,
+          "vertexStart": 7147
+        },
+        {
+          "count": 1158,
+          "id": "FMA46814",
+          "kind": "muscle",
+          "name": "right zygomaticus minor",
+          "registrationMetrics": {
+            "maximum": 0.15462493035630007,
+            "p95": 0.09366381445907053,
+            "rms": 0.04516807468568415,
+            "sampleCount": 145
+          },
+          "retainedTriangleFraction": 0.4232456140350877,
+          "side": "R",
+          "sourceTriangles": 912,
+          "sourceVertices": 721,
+          "start": 43866,
+          "vertexCount": 201,
+          "vertexStart": 7427
+        },
+        {
+          "count": 1158,
+          "id": "FMA46815",
+          "kind": "muscle",
+          "name": "left zygomaticus minor",
+          "registrationMetrics": {
+            "maximum": 0.15738406668098712,
+            "p95": 0.1004109522737134,
+            "rms": 0.047220452319157544,
+            "sampleCount": 144
+          },
+          "retainedTriangleFraction": 0.42417582417582417,
+          "side": "L",
+          "sourceTriangles": 910,
+          "sourceVertices": 717,
+          "start": 45024,
+          "vertexCount": 195,
+          "vertexStart": 7628
+        },
+        {
+          "count": 1716,
+          "id": "FMA46817",
+          "kind": "muscle",
+          "name": "right depressor labii inferioris",
+          "registrationMetrics": {
+            "maximum": 0.1892900858796444,
+            "p95": 0.11042467634995809,
+            "rms": 0.047079862939564364,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.28714859437751006,
+          "side": "R",
+          "sourceTriangles": 1992,
+          "sourceVertices": 2462,
+          "start": 46182,
+          "vertexCount": 352,
+          "vertexStart": 7823
+        },
+        {
+          "count": 1704,
+          "id": "FMA46818",
+          "kind": "muscle",
+          "name": "left depressor labii inferioris",
+          "registrationMetrics": {
+            "maximum": 0.22261601038907466,
+            "p95": 0.11319759673067671,
+            "rms": 0.053840350253897856,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.28891149542217703,
+          "side": "L",
+          "sourceTriangles": 1966,
+          "sourceVertices": 1720,
+          "start": 47898,
+          "vertexCount": 283,
+          "vertexStart": 8175
+        },
+        {
+          "count": 1404,
+          "id": "FMA46823",
+          "kind": "muscle",
+          "name": "right levator anguli oris",
+          "registrationMetrics": {
+            "maximum": 0.09498035881894872,
+            "p95": 0.04271060142698352,
+            "rms": 0.02211712285764094,
+            "sampleCount": 151
+          },
+          "retainedTriangleFraction": 0.3492537313432836,
+          "side": "R",
+          "sourceTriangles": 1340,
+          "sourceVertices": 2414,
+          "start": 49602,
+          "vertexCount": 242,
+          "vertexStart": 8458
+        },
+        {
+          "count": 1350,
+          "id": "FMA46824",
+          "kind": "muscle",
+          "name": "left levator anguli oris",
+          "registrationMetrics": {
+            "maximum": 0.17229794116669656,
+            "p95": 0.0384746930757918,
+            "rms": 0.023756429950657867,
+            "sampleCount": 158
+          },
+          "retainedTriangleFraction": 0.3646677471636953,
+          "side": "L",
+          "sourceTriangles": 1234,
+          "sourceVertices": 1894,
+          "start": 51006,
+          "vertexCount": 209,
+          "vertexStart": 8700
+        },
+        {
+          "count": 744,
+          "id": "FMA46826",
+          "kind": "muscle",
+          "name": "right mentalis",
+          "registrationMetrics": {
+            "maximum": 0.12881970990762825,
+            "p95": 0.04832495024548139,
+            "rms": 0.02314860436426469,
+            "sampleCount": 125
+          },
+          "retainedTriangleFraction": 0.656084656084656,
+          "side": "R",
+          "sourceTriangles": 378,
+          "sourceVertices": 499,
+          "start": 52356,
+          "vertexCount": 128,
+          "vertexStart": 8909
+        },
+        {
+          "count": 828,
+          "id": "FMA46827",
+          "kind": "muscle",
+          "name": "left mentalis",
+          "registrationMetrics": {
+            "maximum": 0.12384014920879613,
+            "p95": 0.07855004096881707,
+            "rms": 0.031774802551382576,
+            "sampleCount": 124
+          },
+          "retainedTriangleFraction": 0.592274678111588,
+          "side": "L",
+          "sourceTriangles": 466,
+          "sourceVertices": 495,
+          "start": 53100,
+          "vertexCount": 140,
+          "vertexStart": 9037
+        },
+        {
+          "count": 1536,
+          "id": "FMA46829",
+          "kind": "muscle",
+          "name": "right depressor anguli oris",
+          "registrationMetrics": {
+            "maximum": 0.16198174663745615,
+            "p95": 0.09610466115663074,
+            "rms": 0.04143994425344055,
+            "sampleCount": 153
+          },
+          "retainedTriangleFraction": 0.32040050062578224,
+          "side": "R",
+          "sourceTriangles": 1598,
+          "sourceVertices": 2443,
+          "start": 53928,
+          "vertexCount": 241,
+          "vertexStart": 9177
+        },
+        {
+          "count": 1434,
+          "id": "FMA46830",
+          "kind": "muscle",
+          "name": "left depressor anguli oris",
+          "registrationMetrics": {
+            "maximum": 0.1276400945873849,
+            "p95": 0.08249264163197584,
+            "rms": 0.03815931950956308,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.34339080459770116,
+          "side": "L",
+          "sourceTriangles": 1392,
+          "sourceVertices": 1873,
+          "start": 55464,
+          "vertexCount": 219,
+          "vertexStart": 9418
+        },
+        {
+          "count": 1614,
+          "id": "FMA46835",
+          "kind": "muscle",
+          "name": "right buccinator",
+          "registrationMetrics": {
+            "maximum": 0.2469064296600491,
+            "p95": 0.1385381156007579,
+            "rms": 0.07665551215088248,
+            "sampleCount": 156
+          },
+          "retainedTriangleFraction": 0.303954802259887,
+          "side": "R",
+          "sourceTriangles": 1770,
+          "sourceVertices": 1092,
+          "start": 56898,
+          "vertexCount": 271,
+          "vertexStart": 9637
+        },
+        {
+          "count": 1614,
+          "id": "FMA46836",
+          "kind": "muscle",
+          "name": "left buccinator",
+          "registrationMetrics": {
+            "maximum": 0.2410747076843045,
+            "p95": 0.16047956639026192,
+            "rms": 0.08577085799529895,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.304643261608154,
+          "side": "L",
+          "sourceTriangles": 1766,
+          "sourceVertices": 1077,
+          "start": 58512,
+          "vertexCount": 271,
+          "vertexStart": 9908
+        },
+        {
+          "count": 1410,
+          "id": "FMA46839",
+          "kind": "muscle",
+          "name": "right risorius",
+          "registrationMetrics": {
+            "maximum": 0.1535989164699481,
+            "p95": 0.06556942985989918,
+            "rms": 0.03371321459093858,
+            "sampleCount": 149
+          },
+          "retainedTriangleFraction": 0.3491827637444279,
+          "side": "R",
+          "sourceTriangles": 1346,
+          "sourceVertices": 1937,
+          "start": 60126,
+          "vertexCount": 252,
+          "vertexStart": 10179
+        },
+        {
+          "count": 1404,
+          "id": "FMA46840",
+          "kind": "muscle",
+          "name": "left risorius",
+          "registrationMetrics": {
+            "maximum": 0.16464505907006244,
+            "p95": 0.0745827743475297,
+            "rms": 0.03801389684032826,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.3502994011976048,
+          "side": "L",
+          "sourceTriangles": 1336,
+          "sourceVertices": 1720,
+          "start": 61536,
+          "vertexCount": 233,
+          "vertexStart": 10431
+        },
+        {
+          "count": 3330,
+          "id": "FMA46841",
+          "kind": "muscle",
+          "name": "orbicularis oris",
+          "registrationMetrics": {
+            "maximum": 0.32811074404096996,
+            "p95": 0.2215266390216582,
+            "rms": 0.10690209005101145,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.14760638297872342,
+          "side": null,
+          "sourceTriangles": 7520,
+          "sourceVertices": 5232,
+          "start": 62940,
+          "vertexCount": 559,
+          "vertexStart": 10664
+        },
+        {
+          "count": 1722,
+          "id": "FMA49001",
+          "kind": "muscle",
+          "name": "superficial part of right masseter",
+          "registrationMetrics": {
+            "maximum": 0.371265522891597,
+            "p95": 0.2036673321053105,
+            "rms": 0.09257769985135889,
+            "sampleCount": 153
+          },
+          "retainedTriangleFraction": 0.2847222222222222,
+          "side": "R",
+          "sourceTriangles": 2016,
+          "sourceVertices": 1524,
+          "start": 66270,
+          "vertexCount": 289,
+          "vertexStart": 11223
+        },
+        {
+          "count": 1722,
+          "id": "FMA49002",
+          "kind": "muscle",
+          "name": "superficial part of left masseter",
+          "registrationMetrics": {
+            "maximum": 0.312304955150406,
+            "p95": 0.1985288917158884,
+            "rms": 0.09537040186226776,
+            "sampleCount": 153
+          },
+          "retainedTriangleFraction": 0.28614157527417744,
+          "side": "L",
+          "sourceTriangles": 2006,
+          "sourceVertices": 1373,
+          "start": 67992,
+          "vertexCount": 289,
+          "vertexStart": 11512
+        },
+        {
+          "count": 2040,
+          "id": "FMA49004",
+          "kind": "muscle",
+          "name": "deep part of right masseter",
+          "registrationMetrics": {
+            "maximum": 0.28557128210961596,
+            "p95": 0.21081799153227362,
+            "rms": 0.09478120570863122,
+            "sampleCount": 156
+          },
+          "retainedTriangleFraction": 0.24028268551236748,
+          "side": "R",
+          "sourceTriangles": 2830,
+          "sourceVertices": 2173,
+          "start": 69714,
+          "vertexCount": 340,
+          "vertexStart": 11801
+        },
+        {
+          "count": 2040,
+          "id": "FMA49005",
+          "kind": "muscle",
+          "name": "deep part of left masseter",
+          "registrationMetrics": {
+            "maximum": 0.42215326827693034,
+            "p95": 0.23349599433577964,
+            "rms": 0.10852500423782221,
+            "sampleCount": 150
+          },
+          "retainedTriangleFraction": 0.24096385542168675,
+          "side": "L",
+          "sourceTriangles": 2822,
+          "sourceVertices": 2093,
+          "start": 71754,
+          "vertexCount": 340,
+          "vertexStart": 12141
+        },
+        {
+          "count": 5604,
+          "id": "FMA49007",
+          "kind": "muscle",
+          "name": "right temporalis",
+          "registrationMetrics": {
+            "maximum": 0.3480585323595564,
+            "p95": 0.27627643399069757,
+            "rms": 0.14655987265152015,
+            "sampleCount": 160
+          },
+          "retainedTriangleFraction": 0.08790588235294118,
+          "side": "R",
+          "sourceTriangles": 21250,
+          "sourceVertices": 14634,
+          "start": 73794,
+          "vertexCount": 991,
+          "vertexStart": 12481
+        },
+        {
+          "count": 5604,
+          "id": "FMA49008",
+          "kind": "muscle",
+          "name": "left temporalis",
+          "registrationMetrics": {
+            "maximum": 0.4798943277941143,
+            "p95": 0.3195817745587595,
+            "rms": 0.16203974407063046,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.08782322519981194,
+          "side": "L",
+          "sourceTriangles": 21270,
+          "sourceVertices": 13785,
+          "start": 79398,
+          "vertexCount": 942,
+          "vertexStart": 13472
+        },
+        {
+          "count": 1482,
+          "id": "FMA49012",
+          "kind": "muscle",
+          "name": "right medial pterygoid",
+          "registrationMetrics": {
+            "maximum": 0.31050366173781396,
+            "p95": 0.15188204659360824,
+            "rms": 0.06696584416325106,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.33198924731182794,
+          "side": "R",
+          "sourceTriangles": 1488,
+          "sourceVertices": 1562,
+          "start": 85002,
+          "vertexCount": 248,
+          "vertexStart": 14414
+        },
+        {
+          "count": 1470,
+          "id": "FMA49013",
+          "kind": "muscle",
+          "name": "left medial pterygoid",
+          "registrationMetrics": {
+            "maximum": 0.389953277410921,
+            "p95": 0.15606101025469485,
+            "rms": 0.07261395845683016,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.3328804347826087,
+          "side": "L",
+          "sourceTriangles": 1472,
+          "sourceVertices": 1231,
+          "start": 86484,
+          "vertexCount": 246,
+          "vertexStart": 14662
+        },
+        {
+          "count": 1008,
+          "id": "FMA49022",
+          "kind": "muscle",
+          "name": "lower head of right lateral pterygoid",
+          "registrationMetrics": {
+            "maximum": 0.21200119877317242,
+            "p95": 0.06474360545584955,
+            "rms": 0.03398150938547067,
+            "sampleCount": 142
+          },
+          "retainedTriangleFraction": 0.48695652173913045,
+          "side": "R",
+          "sourceTriangles": 690,
+          "sourceVertices": 848,
+          "start": 87954,
+          "vertexCount": 163,
+          "vertexStart": 14908
+        },
+        {
+          "count": 840,
+          "id": "FMA49023",
+          "kind": "muscle",
+          "name": "lower head of left lateral pterygoid",
+          "registrationMetrics": {
+            "maximum": 0.21728543203108971,
+            "p95": 0.102671124231823,
+            "rms": 0.04575124369953537,
+            "sampleCount": 134
+          },
+          "retainedTriangleFraction": 0.5857740585774058,
+          "side": "L",
+          "sourceTriangles": 478,
+          "sourceVertices": 533,
+          "start": 88962,
+          "vertexCount": 142,
+          "vertexStart": 15071
+        },
+        {
+          "count": 828,
+          "id": "FMA49024",
+          "kind": "muscle",
+          "name": "upper head of right lateral pterygoid",
+          "registrationMetrics": {
+            "maximum": 0.12895261142365005,
+            "p95": 0.09387201112483892,
+            "rms": 0.03968759755582478,
+            "sampleCount": 123
+          },
+          "retainedTriangleFraction": 0.5948275862068966,
+          "side": "R",
+          "sourceTriangles": 464,
+          "sourceVertices": 369,
+          "start": 89802,
+          "vertexCount": 139,
+          "vertexStart": 15213
+        },
+        {
+          "count": 822,
+          "id": "FMA49025",
+          "kind": "muscle",
+          "name": "upper head of left lateral pterygoid",
+          "registrationMetrics": {
+            "maximum": 0.15019529898601844,
+            "p95": 0.08974939649932884,
+            "rms": 0.03641764564940403,
+            "sampleCount": 117
+          },
+          "retainedTriangleFraction": 0.5956521739130435,
+          "side": "L",
+          "sourceTriangles": 460,
+          "sourceVertices": 351,
+          "start": 90630,
+          "vertexCount": 137,
+          "vertexStart": 15352
+        },
+        {
+          "count": 1476,
+          "id": "FMA55606",
+          "kind": "muscle",
+          "name": "right nasalis",
+          "registrationMetrics": {
+            "maximum": 0.21355939253169515,
+            "p95": 0.1108004505093799,
+            "rms": 0.050529881226454514,
+            "sampleCount": 151
+          },
+          "retainedTriangleFraction": 0.3333333333333333,
+          "side": "R",
+          "sourceTriangles": 1476,
+          "sourceVertices": 1503,
+          "start": 91452,
+          "vertexCount": 241,
+          "vertexStart": 15489
+        },
+        {
+          "count": 1470,
+          "id": "FMA55607",
+          "kind": "muscle",
+          "name": "left nasalis",
+          "registrationMetrics": {
+            "maximum": 0.16217627144787072,
+            "p95": 0.11066816571432783,
+            "rms": 0.049828086762365296,
+            "sampleCount": 143
+          },
+          "retainedTriangleFraction": 0.33469945355191255,
+          "side": "L",
+          "sourceTriangles": 1464,
+          "sourceVertices": 1283,
+          "start": 92928,
+          "vertexCount": 248,
+          "vertexStart": 15730
+        },
+        {
+          "count": 1272,
+          "id": "FMA55610",
+          "kind": "muscle",
+          "name": "right procerus",
+          "registrationMetrics": {
+            "maximum": 0.15355882800372148,
+            "p95": 0.07926228067460298,
+            "rms": 0.04039475393751556,
+            "sampleCount": 147
+          },
+          "retainedTriangleFraction": 0.3861566484517304,
+          "side": "R",
+          "sourceTriangles": 1098,
+          "sourceVertices": 1028,
+          "start": 94398,
+          "vertexCount": 214,
+          "vertexStart": 15978
+        },
+        {
+          "count": 1272,
+          "id": "FMA55611",
+          "kind": "muscle",
+          "name": "left procerus",
+          "registrationMetrics": {
+            "maximum": 0.14227221069323887,
+            "p95": 0.08720063003713617,
+            "rms": 0.03988432112663414,
+            "sampleCount": 149
+          },
+          "retainedTriangleFraction": 0.38686131386861317,
+          "side": "L",
+          "sourceTriangles": 1096,
+          "sourceVertices": 1041,
+          "start": 95670,
+          "vertexCount": 216,
+          "vertexStart": 16192
+        },
+        {
+          "count": 10950,
+          "id": "FMA46768",
+          "kind": "aponeurosis",
+          "name": "aponeurosis of epicranius",
+          "registrationMetrics": {
+            "maximum": 0.810170470484379,
+            "p95": 0.4080512945019872,
+            "rms": 0.2181659242650606,
+            "sampleCount": 160
+          },
+          "retainedTriangleFraction": 0.04498730495230113,
+          "side": null,
+          "sourceTriangles": 81134,
+          "sourceVertices": 56180,
+          "start": 96942,
+          "vertexCount": 1866,
+          "vertexStart": 16408
+        }
+      ],
+      "size": [
+        17.74902869336772,
+        22.918070918059897,
+        22.83017496900632
+      ]
+    },
+    {
+      "bundle": "head",
+      "coordinateUnit": "cm",
+      "maxQuantizationError": 0.00026371941807008543,
+      "min": [
+        -8.178978499360978,
+        -6.736780582732223,
+        -16.436154392946058
+      ],
+      "name": "cranium",
+      "ni": 147120,
+      "nv": 24563,
+      "offI": 472806,
+      "offV": 325428,
+      "parent": "cranium",
+      "parts": [
+        {
+          "count": 7620,
+          "id": "FMA52734",
+          "kind": "bone",
+          "name": "frontal bone",
+          "registrationMetrics": {
+            "maximum": 0.5565965123379307,
+            "p95": 0.2421560785323168,
+            "rms": 0.10891405049817907,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.34268753372908795,
+          "side": null,
+          "sourceTriangles": 7412,
+          "sourceVertices": 6485,
+          "start": 0,
+          "vertexCount": 1270,
+          "vertexStart": 0
+        },
+        {
+          "count": 7278,
+          "id": "FMA52735",
+          "kind": "bone",
+          "name": "occipital bone",
+          "registrationMetrics": {
+            "maximum": 0.6033557938681537,
+            "p95": 0.2031670821211616,
+            "rms": 0.11728500697203285,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.35887573964497044,
+          "side": null,
+          "sourceTriangles": 6760,
+          "sourceVertices": 5637,
+          "start": 7620,
+          "vertexCount": 1213,
+          "vertexStart": 1270
+        },
+        {
+          "count": 7230,
+          "id": "FMA52736",
+          "kind": "bone",
+          "name": "sphenoid bone",
+          "registrationMetrics": {
+            "maximum": 0.43483956780867755,
+            "p95": 0.1551379163090502,
+            "rms": 0.09111076900601944,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.3612110311750599,
+          "side": null,
+          "sourceTriangles": 6672,
+          "sourceVertices": 4912,
+          "start": 14898,
+          "vertexCount": 1193,
+          "vertexStart": 2483
+        },
+        {
+          "count": 5106,
+          "id": "FMA52738",
+          "kind": "bone",
+          "name": "right temporal bone",
+          "registrationMetrics": {
+            "maximum": 0.3816933569791645,
+            "p95": 0.1472383601400855,
+            "rms": 0.06847326645523448,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.5111111111111111,
+          "side": "R",
+          "sourceTriangles": 3330,
+          "sourceVertices": 2617,
+          "start": 22128,
+          "vertexCount": 850,
+          "vertexStart": 3676
+        },
+        {
+          "count": 5178,
+          "id": "FMA52739",
+          "kind": "bone",
+          "name": "left temporal bone",
+          "registrationMetrics": {
+            "maximum": 0.36883090709093347,
+            "p95": 0.12057204649106205,
+            "rms": 0.07019908021461242,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.5040887850467289,
+          "side": "L",
+          "sourceTriangles": 3424,
+          "sourceVertices": 2533,
+          "start": 27234,
+          "vertexCount": 863,
+          "vertexStart": 4526
+        },
+        {
+          "count": 5886,
+          "id": "FMA52740",
+          "kind": "bone",
+          "name": "ethmoid",
+          "registrationMetrics": {
+            "maximum": 0.19525262711923,
+            "p95": 0.11473080896721857,
+            "rms": 0.055312223055331906,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.4434900542495479,
+          "side": null,
+          "sourceTriangles": 4424,
+          "sourceVertices": 3638,
+          "start": 32412,
+          "vertexCount": 982,
+          "vertexStart": 5389
+        },
+        {
+          "count": 7230,
+          "id": "FMA52788",
+          "kind": "bone",
+          "name": "right parietal bone",
+          "registrationMetrics": {
+            "maximum": 0.499104703055808,
+            "p95": 0.1431978018916401,
+            "rms": 0.08688508205016873,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.3615361536153615,
+          "side": "R",
+          "sourceTriangles": 6666,
+          "sourceVertices": 6987,
+          "start": 38298,
+          "vertexCount": 1205,
+          "vertexStart": 6371
+        },
+        {
+          "count": 7290,
+          "id": "FMA52789",
+          "kind": "bone",
+          "name": "left parietal bone",
+          "registrationMetrics": {
+            "maximum": 0.6416367188432055,
+            "p95": 0.1297334480550013,
+            "rms": 0.08686538657340623,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.3584070796460177,
+          "side": "L",
+          "sourceTriangles": 6780,
+          "sourceVertices": 7215,
+          "start": 45528,
+          "vertexCount": 1216,
+          "vertexStart": 7576
+        },
+        {
+          "count": 3216,
+          "id": "FMA52892",
+          "kind": "bone",
+          "name": "right zygomatic bone",
+          "registrationMetrics": {
+            "maximum": 0.10362579069932112,
+            "p95": 0.058540590960134066,
+            "rms": 0.02403166861141233,
+            "sampleCount": 147
+          },
+          "retainedTriangleFraction": 0.81089258698941,
+          "side": "R",
+          "sourceTriangles": 1322,
+          "sourceVertices": 882,
+          "start": 52818,
+          "vertexCount": 538,
+          "vertexStart": 8792
+        },
+        {
+          "count": 3324,
+          "id": "FMA52893",
+          "kind": "bone",
+          "name": "left zygomatic bone",
+          "registrationMetrics": {
+            "maximum": 0.09519012106278074,
+            "p95": 0.05695886108003793,
+            "rms": 0.022815175552075035,
+            "sampleCount": 146
+          },
+          "retainedTriangleFraction": 0.7858156028368795,
+          "side": "L",
+          "sourceTriangles": 1410,
+          "sourceVertices": 1019,
+          "start": 56034,
+          "vertexCount": 556,
+          "vertexStart": 9330
+        },
+        {
+          "count": 1764,
+          "id": "FMA53645",
+          "kind": "bone",
+          "name": "right lacrimal bone",
+          "registrationMetrics": {
+            "maximum": 0.0002444388353837367,
+            "p95": 0.00021935041033212062,
+            "rms": 0.00015299080146833,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceTriangles": 588,
+          "sourceVertices": 460,
+          "start": 59358,
+          "vertexCount": 296,
+          "vertexStart": 9886
+        },
+        {
+          "count": 2154,
+          "id": "FMA53646",
+          "kind": "bone",
+          "name": "left lacrimal bone",
+          "registrationMetrics": {
+            "maximum": 0.0002476578066620215,
+            "p95": 0.00020996560165679502,
+            "rms": 0.0001564049360024637,
+            "sampleCount": 158
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "L",
+          "sourceTriangles": 718,
+          "sourceVertices": 472,
+          "start": 61122,
+          "vertexCount": 361,
+          "vertexStart": 10182
+        },
+        {
+          "count": 876,
+          "id": "FMA53647",
+          "kind": "bone",
+          "name": "right nasal bone",
+          "registrationMetrics": {
+            "maximum": 0.00023819540765141544,
+            "p95": 0.0002237383143214627,
+            "rms": 0.00015606030861507655,
+            "sampleCount": 112
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceTriangles": 292,
+          "sourceVertices": 223,
+          "start": 63276,
+          "vertexCount": 148,
+          "vertexStart": 10543
+        },
+        {
+          "count": 1320,
+          "id": "FMA53648",
+          "kind": "bone",
+          "name": "left nasal bone",
+          "registrationMetrics": {
+            "maximum": 0.00023357292963811855,
+            "p95": 0.00021133495065617095,
+            "rms": 0.00014939839457030947,
+            "sampleCount": 156
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "L",
+          "sourceTriangles": 440,
+          "sourceVertices": 311,
+          "start": 64152,
+          "vertexCount": 222,
+          "vertexStart": 10691
+        },
+        {
+          "count": 6114,
+          "id": "FMA53649",
+          "kind": "bone",
+          "name": "right maxilla",
+          "registrationMetrics": {
+            "maximum": 0.17911525843162585,
+            "p95": 0.11226410620757402,
+            "rms": 0.05281099884162047,
+            "sampleCount": 155
+          },
+          "retainedTriangleFraction": 0.4274328859060403,
+          "side": "R",
+          "sourceTriangles": 4768,
+          "sourceVertices": 3697,
+          "start": 65472,
+          "vertexCount": 1013,
+          "vertexStart": 10913
+        },
+        {
+          "count": 5916,
+          "id": "FMA53650",
+          "kind": "bone",
+          "name": "left maxilla",
+          "registrationMetrics": {
+            "maximum": 0.25449159087570117,
+            "p95": 0.09817561070089427,
+            "rms": 0.055120987903728026,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.44175627240143367,
+          "side": "L",
+          "sourceTriangles": 4464,
+          "sourceVertices": 3521,
+          "start": 71586,
+          "vertexCount": 986,
+          "vertexStart": 11926
+        },
+        {
+          "count": 3384,
+          "id": "FMA53655",
+          "kind": "bone",
+          "name": "right palatine bone",
+          "registrationMetrics": {
+            "maximum": 0.07894737970238558,
+            "p95": 0.050474910754388536,
+            "rms": 0.019859689210125837,
+            "sampleCount": 156
+          },
+          "retainedTriangleFraction": 0.7726027397260274,
+          "side": "R",
+          "sourceTriangles": 1460,
+          "sourceVertices": 1245,
+          "start": 77502,
+          "vertexCount": 566,
+          "vertexStart": 12912
+        },
+        {
+          "count": 3768,
+          "id": "FMA53656",
+          "kind": "bone",
+          "name": "left palatine bone",
+          "registrationMetrics": {
+            "maximum": 0.1487574324839237,
+            "p95": 0.04919923219226289,
+            "rms": 0.02667180328173186,
+            "sampleCount": 153
+          },
+          "retainedTriangleFraction": 0.6931567328918322,
+          "side": "L",
+          "sourceTriangles": 1812,
+          "sourceVertices": 1523,
+          "start": 80886,
+          "vertexCount": 630,
+          "vertexStart": 13478
+        },
+        {
+          "count": 1470,
+          "id": "FMA54737",
+          "kind": "bone",
+          "name": "right inferior nasal concha",
+          "registrationMetrics": {
+            "maximum": 0.00023411463593286878,
+            "p95": 0.00021779043272263888,
+            "rms": 0.00015825320409493352,
+            "sampleCount": 129
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceTriangles": 490,
+          "sourceVertices": 513,
+          "start": 84654,
+          "vertexCount": 243,
+          "vertexStart": 14108
+        },
+        {
+          "count": 1704,
+          "id": "FMA54738",
+          "kind": "bone",
+          "name": "left inferior nasal concha",
+          "registrationMetrics": {
+            "maximum": 0.00023808039989041036,
+            "p95": 0.00022155060781865933,
+            "rms": 0.00015401665034844297,
+            "sampleCount": 122
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "L",
+          "sourceTriangles": 568,
+          "sourceVertices": 485,
+          "start": 86124,
+          "vertexCount": 286,
+          "vertexStart": 14351
+        },
+        {
+          "count": 2400,
+          "id": "FMA9710",
+          "kind": "bone",
+          "name": "vomer",
+          "registrationMetrics": {
+            "maximum": 0.00024564180810375834,
+            "p95": 0.00021842124597428047,
+            "rms": 0.000155969711601146,
+            "sampleCount": 158
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": null,
+          "sourceTriangles": 800,
+          "sourceVertices": 632,
+          "start": 87828,
+          "vertexCount": 402,
+          "vertexStart": 14637
+        },
+        {
+          "count": 3270,
+          "id": "FMA55680",
+          "kind": "tooth",
+          "name": "right upper lateral secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.073936860029618,
+            "p95": 0.043271281908510685,
+            "rms": 0.019060738508180585,
+            "sampleCount": 138
+          },
+          "retainedTriangleFraction": 0.7967836257309941,
+          "side": "R",
+          "sourceTriangles": 1368,
+          "sourceVertices": 686,
+          "start": 90228,
+          "vertexCount": 547,
+          "vertexStart": 15039
+        },
+        {
+          "count": 3174,
+          "id": "FMA55681",
+          "kind": "tooth",
+          "name": "right upper central secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.09133683537007449,
+            "p95": 0.05037579556943806,
+            "rms": 0.019776335475122368,
+            "sampleCount": 130
+          },
+          "retainedTriangleFraction": 0.8214285714285714,
+          "side": "R",
+          "sourceTriangles": 1288,
+          "sourceVertices": 647,
+          "start": 93498,
+          "vertexCount": 531,
+          "vertexStart": 15586
+        },
+        {
+          "count": 3174,
+          "id": "FMA55682",
+          "kind": "tooth",
+          "name": "left upper central secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.0706896972472218,
+            "p95": 0.03858886497189502,
+            "rms": 0.016231257042059476,
+            "sampleCount": 130
+          },
+          "retainedTriangleFraction": 0.8214285714285714,
+          "side": "L",
+          "sourceTriangles": 1288,
+          "sourceVertices": 647,
+          "start": 96672,
+          "vertexCount": 531,
+          "vertexStart": 16117
+        },
+        {
+          "count": 3282,
+          "id": "FMA55683",
+          "kind": "tooth",
+          "name": "left upper lateral secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.0603847552965744,
+            "p95": 0.03123293643123292,
+            "rms": 0.015539636764056588,
+            "sampleCount": 139
+          },
+          "retainedTriangleFraction": 0.7939042089985486,
+          "side": "L",
+          "sourceTriangles": 1378,
+          "sourceVertices": 691,
+          "start": 99846,
+          "vertexCount": 549,
+          "vertexStart": 16648
+        },
+        {
+          "count": 3390,
+          "id": "FMA55688",
+          "kind": "tooth",
+          "name": "right upper second secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.09741121561259197,
+            "p95": 0.04692940775526063,
+            "rms": 0.021152279310101007,
+            "sampleCount": 150
+          },
+          "retainedTriangleFraction": 0.7708049113233287,
+          "side": "R",
+          "sourceTriangles": 1466,
+          "sourceVertices": 747,
+          "start": 103128,
+          "vertexCount": 567,
+          "vertexStart": 17197
+        },
+        {
+          "count": 3552,
+          "id": "FMA55689",
+          "kind": "tooth",
+          "name": "right upper first secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.08080016042529213,
+            "p95": 0.04513600655453201,
+            "rms": 0.022276670781805816,
+            "sampleCount": 136
+          },
+          "retainedTriangleFraction": 0.7354037267080745,
+          "side": "R",
+          "sourceTriangles": 1610,
+          "sourceVertices": 813,
+          "start": 106518,
+          "vertexCount": 594,
+          "vertexStart": 17764
+        },
+        {
+          "count": 3552,
+          "id": "FMA55690",
+          "kind": "tooth",
+          "name": "left upper first secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.0475824726051446,
+            "p95": 0.03187224822898923,
+            "rms": 0.013832547609041406,
+            "sampleCount": 138
+          },
+          "retainedTriangleFraction": 0.7354037267080745,
+          "side": "L",
+          "sourceTriangles": 1610,
+          "sourceVertices": 826,
+          "start": 110070,
+          "vertexCount": 594,
+          "vertexStart": 18358
+        },
+        {
+          "count": 3390,
+          "id": "FMA55691",
+          "kind": "tooth",
+          "name": "left upper second secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.12969513428899399,
+            "p95": 0.04237709394009624,
+            "rms": 0.021288755977055998,
+            "sampleCount": 150
+          },
+          "retainedTriangleFraction": 0.7708049113233287,
+          "side": "L",
+          "sourceTriangles": 1466,
+          "sourceVertices": 748,
+          "start": 113622,
+          "vertexCount": 567,
+          "vertexStart": 18952
+        },
+        {
+          "count": 3804,
+          "id": "FMA55697",
+          "kind": "tooth",
+          "name": "right upper second secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.12322438348430982,
+            "p95": 0.04861998277780173,
+            "rms": 0.026187656717506665,
+            "sampleCount": 160
+          },
+          "retainedTriangleFraction": 0.6854054054054054,
+          "side": "R",
+          "sourceTriangles": 1850,
+          "sourceVertices": 956,
+          "start": 117012,
+          "vertexCount": 638,
+          "vertexStart": 19519
+        },
+        {
+          "count": 4110,
+          "id": "FMA55698",
+          "kind": "tooth",
+          "name": "right upper first secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.1099031696801271,
+            "p95": 0.051552172272898926,
+            "rms": 0.028197585631037397,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.6354359925788498,
+          "side": "R",
+          "sourceTriangles": 2156,
+          "sourceVertices": 1094,
+          "start": 120816,
+          "vertexCount": 687,
+          "vertexStart": 20157
+        },
+        {
+          "count": 4110,
+          "id": "FMA55699",
+          "kind": "tooth",
+          "name": "left upper first secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.08964847424167577,
+            "p95": 0.06072108699675191,
+            "rms": 0.02803314377756781,
+            "sampleCount": 157
+          },
+          "retainedTriangleFraction": 0.6354359925788498,
+          "side": "L",
+          "sourceTriangles": 2156,
+          "sourceVertices": 1097,
+          "start": 124926,
+          "vertexCount": 687,
+          "vertexStart": 20844
+        },
+        {
+          "count": 3804,
+          "id": "FMA55700",
+          "kind": "tooth",
+          "name": "left upper second secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.09074623621057105,
+            "p95": 0.05046022900906378,
+            "rms": 0.024134955564241438,
+            "sampleCount": 159
+          },
+          "retainedTriangleFraction": 0.6861471861471862,
+          "side": "L",
+          "sourceTriangles": 1848,
+          "sourceVertices": 954,
+          "start": 129036,
+          "vertexCount": 638,
+          "vertexStart": 21531
+        },
+        {
+          "count": 3300,
+          "id": "FMA55798",
+          "kind": "tooth",
+          "name": "right upper secondary canine tooth",
+          "registrationMetrics": {
+            "maximum": 0.08787752303816418,
+            "p95": 0.04466810788653272,
+            "rms": 0.020608434293035906,
+            "sampleCount": 140
+          },
+          "retainedTriangleFraction": 0.7902298850574713,
+          "side": "R",
+          "sourceTriangles": 1392,
+          "sourceVertices": 698,
+          "start": 132840,
+          "vertexCount": 552,
+          "vertexStart": 22169
+        },
+        {
+          "count": 3300,
+          "id": "FMA55799",
+          "kind": "tooth",
+          "name": "left upper secondary canine tooth",
+          "registrationMetrics": {
+            "maximum": 0.08075644455454131,
+            "p95": 0.04843939182788899,
+            "rms": 0.020082154168179295,
+            "sampleCount": 140
+          },
+          "retainedTriangleFraction": 0.7902298850574713,
+          "side": "L",
+          "sourceTriangles": 1392,
+          "sourceVertices": 700,
+          "start": 136140,
+          "vertexCount": 552,
+          "vertexStart": 22721
+        },
+        {
+          "count": 3804,
+          "id": "FMA59763",
+          "kind": "gingiva",
+          "name": "gingiva of upper jaw",
+          "registrationMetrics": {
+            "maximum": 0.23161456212763887,
+            "p95": 0.11090186097052937,
+            "rms": 0.05350525021120274,
+            "sampleCount": 144
+          },
+          "retainedTriangleFraction": 0.6861471861471862,
+          "side": null,
+          "sourceTriangles": 1848,
+          "sourceVertices": 1152,
+          "start": 139440,
+          "vertexCount": 642,
+          "vertexStart": 23273
+        },
+        {
+          "count": 3876,
+          "id": "FMA59764",
+          "kind": "gingiva",
+          "name": "gingiva of lower jaw",
+          "registrationMetrics": {
+            "maximum": 0.38680354111553616,
+            "p95": 0.14260545688261606,
+            "rms": 0.06880518128925828,
+            "sampleCount": 145
+          },
+          "retainedTriangleFraction": 0.6736183524504692,
+          "side": null,
+          "sourceTriangles": 1918,
+          "sourceVertices": 1014,
+          "start": 143244,
+          "vertexCount": 648,
+          "vertexStart": 23915
+        }
+      ],
+      "size": [
+        16.429687478399998,
+        21.48697601882526,
+        22.624458946615736
+      ]
+    },
+    {
+      "bundle": "head",
+      "coordinateUnit": "cm",
+      "maxQuantizationError": 0.00013076400155446463,
+      "min": [
+        -5.701321962064444,
+        -8.085848293310647,
+        -4.68291278427441
+      ],
+      "name": "jaw",
+      "ni": 35964,
+      "nv": 6024,
+      "offI": 803190,
+      "offV": 767046,
+      "parent": "jaw",
+      "parts": [
+        {
+          "count": 3102,
+          "id": "FMA52748",
+          "kind": "bone",
+          "name": "mandible",
+          "registrationMetrics": {
+            "maximum": 0.3356654613970672,
+            "p95": 0.2086055944197115,
+            "rms": 0.1002063016671682,
+            "sampleCount": 158
+          },
+          "retainedTriangleFraction": 0.4813780260707635,
+          "side": null,
+          "sourceTriangles": 2148,
+          "sourceVertices": 1264,
+          "start": 0,
+          "vertexCount": 519,
+          "vertexStart": 0
+        },
+        {
+          "count": 2298,
+          "id": "FMA55686",
+          "kind": "tooth",
+          "name": "right lower secondary canine tooth",
+          "registrationMetrics": {
+            "maximum": 0.09331760603926761,
+            "p95": 0.05982626234713622,
+            "rms": 0.030144249008405618,
+            "sampleCount": 148
+          },
+          "retainedTriangleFraction": 0.6502546689303905,
+          "side": "R",
+          "sourceTriangles": 1178,
+          "sourceVertices": 591,
+          "start": 3102,
+          "vertexCount": 385,
+          "vertexStart": 519
+        },
+        {
+          "count": 2298,
+          "id": "FMA55687",
+          "kind": "tooth",
+          "name": "left lower secondary canine tooth",
+          "registrationMetrics": {
+            "maximum": 0.12012180274790832,
+            "p95": 0.05895558261139101,
+            "rms": 0.03144731204958388,
+            "sampleCount": 148
+          },
+          "retainedTriangleFraction": 0.6491525423728813,
+          "side": "L",
+          "sourceTriangles": 1180,
+          "sourceVertices": 592,
+          "start": 5400,
+          "vertexCount": 385,
+          "vertexStart": 904
+        },
+        {
+          "count": 2238,
+          "id": "FMA55692",
+          "kind": "tooth",
+          "name": "left lower second secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.07371998965313946,
+            "p95": 0.05442070831613125,
+            "rms": 0.025204703212963694,
+            "sampleCount": 142
+          },
+          "retainedTriangleFraction": 0.6648841354723708,
+          "side": "L",
+          "sourceTriangles": 1122,
+          "sourceVertices": 566,
+          "start": 7698,
+          "vertexCount": 375,
+          "vertexStart": 1289
+        },
+        {
+          "count": 2292,
+          "id": "FMA55693",
+          "kind": "tooth",
+          "name": "left lower first secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.07964689149042038,
+            "p95": 0.05572303305896719,
+            "rms": 0.026211273574731974,
+            "sampleCount": 149
+          },
+          "retainedTriangleFraction": 0.6496598639455783,
+          "side": "L",
+          "sourceTriangles": 1176,
+          "sourceVertices": 593,
+          "start": 9936,
+          "vertexCount": 384,
+          "vertexStart": 1664
+        },
+        {
+          "count": 2298,
+          "id": "FMA55694",
+          "kind": "tooth",
+          "name": "right lower first secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.11280136451576359,
+            "p95": 0.05580716737198629,
+            "rms": 0.027520557180151707,
+            "sampleCount": 149
+          },
+          "retainedTriangleFraction": 0.6491525423728813,
+          "side": "R",
+          "sourceTriangles": 1180,
+          "sourceVertices": 593,
+          "start": 12228,
+          "vertexCount": 385,
+          "vertexStart": 2048
+        },
+        {
+          "count": 2244,
+          "id": "FMA55695",
+          "kind": "tooth",
+          "name": "right lower second secondary premolar tooth",
+          "registrationMetrics": {
+            "maximum": 0.09123946451039401,
+            "p95": 0.047458017105233924,
+            "rms": 0.025938210415717512,
+            "sampleCount": 142
+          },
+          "retainedTriangleFraction": 0.6654804270462633,
+          "side": "R",
+          "sourceTriangles": 1124,
+          "sourceVertices": 568,
+          "start": 14526,
+          "vertexCount": 376,
+          "vertexStart": 2433
+        },
+        {
+          "count": 2688,
+          "id": "FMA55703",
+          "kind": "tooth",
+          "name": "left lower second secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.07599753732472118,
+            "p95": 0.05992648000447463,
+            "rms": 0.03107057681736707,
+            "sampleCount": 137
+          },
+          "retainedTriangleFraction": 0.5544554455445545,
+          "side": "L",
+          "sourceTriangles": 1616,
+          "sourceVertices": 820,
+          "start": 16770,
+          "vertexCount": 450,
+          "vertexStart": 2809
+        },
+        {
+          "count": 2808,
+          "id": "FMA55704",
+          "kind": "tooth",
+          "name": "left lower first secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.11901755547061707,
+            "p95": 0.0673068311748282,
+            "rms": 0.03374973423137343,
+            "sampleCount": 148
+          },
+          "retainedTriangleFraction": 0.5312145289443814,
+          "side": "L",
+          "sourceTriangles": 1762,
+          "sourceVertices": 884,
+          "start": 19458,
+          "vertexCount": 470,
+          "vertexStart": 3259
+        },
+        {
+          "count": 2808,
+          "id": "FMA55705",
+          "kind": "tooth",
+          "name": "right lower first secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.1355642352658696,
+            "p95": 0.0734559936470002,
+            "rms": 0.03705110360909324,
+            "sampleCount": 148
+          },
+          "retainedTriangleFraction": 0.5312145289443814,
+          "side": "R",
+          "sourceTriangles": 1762,
+          "sourceVertices": 888,
+          "start": 22266,
+          "vertexCount": 470,
+          "vertexStart": 3729
+        },
+        {
+          "count": 2694,
+          "id": "FMA55706",
+          "kind": "tooth",
+          "name": "right lower second secondary molar tooth",
+          "registrationMetrics": {
+            "maximum": 0.1038580145878625,
+            "p95": 0.07174861707052912,
+            "rms": 0.035337560741633904,
+            "sampleCount": 138
+          },
+          "retainedTriangleFraction": 0.554320987654321,
+          "side": "R",
+          "sourceTriangles": 1620,
+          "sourceVertices": 823,
+          "start": 25074,
+          "vertexCount": 451,
+          "vertexStart": 4199
+        },
+        {
+          "count": 2070,
+          "id": "FMA57140",
+          "kind": "tooth",
+          "name": "right lower lateral secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.10166271119659412,
+            "p95": 0.0652804080674444,
+            "rms": 0.028763113268744447,
+            "sampleCount": 122
+          },
+          "retainedTriangleFraction": 0.7202505219206681,
+          "side": "R",
+          "sourceTriangles": 958,
+          "sourceVertices": 485,
+          "start": 27768,
+          "vertexCount": 347,
+          "vertexStart": 4650
+        },
+        {
+          "count": 2070,
+          "id": "FMA57141",
+          "kind": "tooth",
+          "name": "left lower lateral secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.08858488130108019,
+            "p95": 0.04640397844025132,
+            "rms": 0.021889522629876194,
+            "sampleCount": 121
+          },
+          "retainedTriangleFraction": 0.71875,
+          "side": "L",
+          "sourceTriangles": 960,
+          "sourceVertices": 482,
+          "start": 29838,
+          "vertexCount": 347,
+          "vertexStart": 4997
+        },
+        {
+          "count": 2028,
+          "id": "FMA57142",
+          "kind": "tooth",
+          "name": "right lower central secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.12822950370847655,
+            "p95": 0.05874005907921087,
+            "rms": 0.027654940750953535,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.7347826086956522,
+          "side": "R",
+          "sourceTriangles": 920,
+          "sourceVertices": 462,
+          "start": 31908,
+          "vertexCount": 340,
+          "vertexStart": 5344
+        },
+        {
+          "count": 2028,
+          "id": "FMA57143",
+          "kind": "tooth",
+          "name": "left lower central secondary incisor tooth",
+          "registrationMetrics": {
+            "maximum": 0.15414357922659436,
+            "p95": 0.05932959671540855,
+            "rms": 0.029196363927248597,
+            "sampleCount": 154
+          },
+          "retainedTriangleFraction": 0.7363834422657952,
+          "side": "L",
+          "sourceTriangles": 918,
+          "sourceVertices": 461,
+          "start": 33936,
+          "vertexCount": 340,
+          "vertexStart": 5684
+        }
+      ],
+      "size": [
+        11.451002823156028,
+        8.889104485383228,
+        9.748084590345162
+      ]
+    },
+    {
+      "bundle": "head",
+      "coordinateUnit": "normalized hand rig units",
+      "maxQuantizationError": 1.5308417667667307e-05,
+      "min": [
+        -0.31570318570473693,
+        -0.3879509754816001,
+        -0.122952117832705
+      ],
+      "name": "hand_palm",
+      "ni": 14922,
+      "nv": 2511,
+      "offI": 890184,
+      "offV": 875118,
+      "parent": "hand_palm",
+      "parts": [
+        {
+          "count": 966,
+          "id": "FMA24435",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right scaphoid",
+          "pairedId": "FMA24436",
+          "pairedName": "left scaphoid",
+          "registrationMetrics": {
+            "maximum": 1.4907235573404618e-05,
+            "p95": 1.2880263629442434e-05,
+            "rms": 9.174851394074222e-06,
+            "sampleCount": 97
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 322,
+          "sourceVertices": 193,
+          "start": 0,
+          "vertexCount": 163,
+          "vertexStart": 0
+        },
+        {
+          "count": 996,
+          "id": "FMA24437",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right lunate",
+          "pairedId": "FMA24438",
+          "pairedName": "left lunate",
+          "registrationMetrics": {
+            "maximum": 1.3957160682311935e-05,
+            "p95": 1.2388640648926515e-05,
+            "rms": 9.282364709008769e-06,
+            "sampleCount": 106
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 332,
+          "sourceVertices": 212,
+          "start": 966,
+          "vertexCount": 168,
+          "vertexStart": 163
+        },
+        {
+          "count": 510,
+          "id": "FMA24439",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right triquetral",
+          "pairedId": "FMA24440",
+          "pairedName": "left triquetral",
+          "registrationMetrics": {
+            "maximum": 1.4358199525980238e-05,
+            "p95": 1.3524051088533155e-05,
+            "rms": 9.628568941779553e-06,
+            "sampleCount": 140
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 170,
+          "sourceVertices": 140,
+          "start": 1962,
+          "vertexCount": 87,
+          "vertexStart": 331
+        },
+        {
+          "count": 570,
+          "id": "FMA24441",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right pisiform",
+          "pairedId": "FMA24442",
+          "pairedName": "left pisiform",
+          "registrationMetrics": {
+            "maximum": 1.4460081097460614e-05,
+            "p95": 1.316145782025716e-05,
+            "rms": 8.860648303753478e-06,
+            "sampleCount": 107
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 190,
+          "sourceVertices": 107,
+          "start": 2472,
+          "vertexCount": 97,
+          "vertexStart": 418
+        },
+        {
+          "count": 1302,
+          "id": "FMA24443",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right trapezium",
+          "pairedId": "FMA24444",
+          "pairedName": "left trapezium",
+          "registrationMetrics": {
+            "maximum": 1.396893548181286e-05,
+            "p95": 1.3225307096866064e-05,
+            "rms": 9.215448107413449e-06,
+            "sampleCount": 136
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 434,
+          "sourceVertices": 271,
+          "start": 3042,
+          "vertexCount": 219,
+          "vertexStart": 515
+        },
+        {
+          "count": 1080,
+          "id": "FMA23725",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right trapezoid",
+          "pairedId": "FMA24445",
+          "pairedName": "left trapezoid",
+          "registrationMetrics": {
+            "maximum": 1.4458508586831657e-05,
+            "p95": 1.3640283336355322e-05,
+            "rms": 9.004322432172068e-06,
+            "sampleCount": 138
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 360,
+          "sourceVertices": 276,
+          "start": 4344,
+          "vertexCount": 182,
+          "vertexStart": 734
+        },
+        {
+          "count": 1284,
+          "id": "FMA24446",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right capitate",
+          "pairedId": "FMA24447",
+          "pairedName": "left capitate",
+          "registrationMetrics": {
+            "maximum": 1.5017507604272194e-05,
+            "p95": 1.4004859841237719e-05,
+            "rms": 9.32657642843589e-06,
+            "sampleCount": 130
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 428,
+          "sourceVertices": 260,
+          "start": 5424,
+          "vertexCount": 216,
+          "vertexStart": 916
+        },
+        {
+          "count": 1566,
+          "id": "FMA24448",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right hamate",
+          "pairedId": "FMA24449",
+          "pairedName": "left hamate",
+          "registrationMetrics": {
+            "maximum": 1.4406299059834384e-05,
+            "p95": 1.2838226521412494e-05,
+            "rms": 9.062887016624702e-06,
+            "sampleCount": 118
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 522,
+          "sourceVertices": 352,
+          "start": 6708,
+          "vertexCount": 263,
+          "vertexStart": 1132
+        },
+        {
+          "count": 1932,
+          "id": "FMA24466",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right second metacarpal bone",
+          "pairedId": "FMA24467",
+          "pairedName": "left second metacarpal bone",
+          "registrationMetrics": {
+            "maximum": 1.467813116962088e-05,
+            "p95": 1.3399771660911014e-05,
+            "rms": 9.361226130615456e-06,
+            "sampleCount": 123
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 644,
+          "sourceVertices": 369,
+          "start": 8274,
+          "vertexCount": 324,
+          "vertexStart": 1395
+        },
+        {
+          "count": 1806,
+          "id": "FMA24468",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right third metacarpal bone",
+          "pairedId": "FMA24469",
+          "pairedName": "left third metacarpal bone",
+          "registrationMetrics": {
+            "maximum": 1.4940525980054368e-05,
+            "p95": 1.2764391496106509e-05,
+            "rms": 8.791590489261638e-06,
+            "sampleCount": 125
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 602,
+          "sourceVertices": 374,
+          "start": 10206,
+          "vertexCount": 303,
+          "vertexStart": 1719
+        },
+        {
+          "count": 1602,
+          "id": "FMA24470",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right fourth metacarpal bone",
+          "pairedId": "FMA24471",
+          "pairedName": "left fourth metacarpal bone",
+          "registrationMetrics": {
+            "maximum": 1.4267420779870119e-05,
+            "p95": 1.2879146972177479e-05,
+            "rms": 8.84160572866217e-06,
+            "sampleCount": 119
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 534,
+          "sourceVertices": 356,
+          "start": 12012,
+          "vertexCount": 269,
+          "vertexStart": 2022
+        },
+        {
+          "count": 1308,
+          "id": "FMA24472",
+          "kind": "bone",
+          "mirroredForLeft": true,
+          "name": "right fifth metacarpal bone",
+          "pairedId": "FMA24473",
+          "pairedName": "left fifth metacarpal bone",
+          "registrationMetrics": {
+            "maximum": 1.430760340942536e-05,
+            "p95": 1.271616526399578e-05,
+            "rms": 9.158572922605827e-06,
+            "sampleCount": 131
+          },
+          "retainedTriangleFraction": 1.0,
+          "side": "R",
+          "sourceSide": "R",
+          "sourceTriangles": 436,
+          "sourceVertices": 262,
+          "start": 13614,
+          "vertexCount": 220,
+          "vertexStart": 2291
+        }
+      ],
+      "size": [
+        1.3848628528088591,
+        1.4687431994188953,
+        0.323615006021552
+      ]
+    }
+  ],
+  "registration": {
+    "hand": {
+      "axes": "e1=index MCP minus wrist; e2=little MCP minus wrist; e3=unit cross(e1,e2) times geometric mean of their lengths",
+      "basisColumnsRawMm": [
+        [
+          -32.362043137254915,
+          -23.820999999999998,
+          -88.22421372549013
+        ],
+        [
+          24.070497448165924,
+          -27.56998939393941,
+          -75.04741602870808
+        ],
+        [
+          -12.018603411317141,
+          -84.87291645266922,
+          27.324746836129936
+        ]
+      ],
+      "method": "Independent reference derived from right-hand bone joint caps by hand_frame.py; no prototype landmarks or inferred part assignment.",
+      "mirroredForLeft": true,
+      "originRawMm": [
+        -255.14078333333336,
+        -110.79253333333335,
+        819.2863
+      ],
+      "sourceSide": "R",
+      "transformConvention": "palm = inverse(basisColumnsRawMm) @ (sourceRawMm - originRawMm)",
+      "units": "normalized hand rig units"
+    },
+    "head": {
+      "method": "Independent shared proper similarity transform from head_frame.py; fit only to BodyParts3D skin and the pinned MediaPipe canonical face. No per-component fitting or identity inference.",
+      "rotationRows": [
+        [
+          0.9999901461521536,
+          0.0009756788017103457,
+          0.004330779314461781
+        ],
+        [
+          -0.0008513954179849093,
+          0.9995903635568115,
+          -0.028607345388992227
+        ],
+        [
+          -0.004356916849896415,
+          0.028603376290898725,
+          0.9995813444339209
+        ]
+      ],
+      "scale": 1.1412436275406224,
+      "transformConvention": "head = sourceCm @ rotationRows * scale + translationCm",
+      "translationCm": [
+        0.30255977233003845,
+        -172.41939509494148,
+        -11.09066792360456
+      ],
+      "units": "cm"
+    },
+    "metrics": {
+      "cranium": {
+        "originalBounds": [
+          [
+            -8.178978499360978,
+            -6.736780582732223,
+            -16.436154392946058
+          ],
+          [
+            8.25070897903902,
+            14.750195436093037,
+            6.188304553669678
+          ]
+        ],
+        "originalToSource": {
+          "maximum": 0.4687159173939093,
+          "p95": 0.07291979003864259,
+          "rms": 0.04272265370767423,
+          "sampleCount": 1170
+        },
+        "sourceBounds": [
+          [
+            -8.176364801212957,
+            -6.738431289686105,
+            -16.436154392946058
+          ],
+          [
+            8.250708979039018,
+            14.750960626343868,
+            6.188304553669678
+          ]
+        ],
+        "sourceToOriginal": {
+          "maximum": 0.8307535415126719,
+          "p95": 0.13736356436905703,
+          "rms": 0.07932867850681564,
+          "sampleCount": 1181
+        }
+      },
+      "hand_palm": {
+        "originalBounds": [
+          [
+            -0.31570318570473693,
+            -0.3879509754816001,
+            -0.122952117832705
+          ],
+          [
+            1.0691596671041221,
+            1.0807922239372951,
+            0.20066288818884703
+          ]
+        ],
+        "originalToSource": {
+          "maximum": 1.5308417667667307e-05,
+          "p95": 1.3141950149896355e-05,
+          "rms": 9.148859807314875e-06,
+          "sampleCount": 837
+        },
+        "sourceBounds": [
+          [
+            -0.31570318570473693,
+            -0.3879509754816001,
+            -0.122952117832705
+          ],
+          [
+            1.0691596671041221,
+            1.0807922239372951,
+            0.20066288818884703
+          ]
+        ],
+        "sourceToOriginal": {
+          "maximum": 1.5308417667667307e-05,
+          "p95": 1.2958162267238778e-05,
+          "rms": 8.92061523855899e-06,
+          "sampleCount": 1058
+        }
+      },
+      "jaw": {
+        "originalBounds": [
+          [
+            -5.701321962064444,
+            -8.085848293310647,
+            -4.68291278427441
+          ],
+          [
+            5.7496808610915835,
+            0.8032561920725811,
+            5.065171806070752
+          ]
+        ],
+        "originalToSource": {
+          "maximum": 0.14157483820934177,
+          "p95": 0.04417055433602517,
+          "rms": 0.020713873561120363,
+          "sampleCount": 1004
+        },
+        "sourceBounds": [
+          [
+            -5.701321962064444,
+            -8.083103407146893,
+            -4.673703309320945
+          ],
+          [
+            5.755295907668951,
+            0.8032561920725811,
+            5.064254626432053
+          ]
+        ],
+        "sourceToOriginal": {
+          "maximum": 0.4011864875219186,
+          "p95": 0.08878808800693754,
+          "rms": 0.04555264033672495,
+          "sampleCount": 1120
+        }
+      },
+      "muscles": {
+        "originalBounds": [
+          [
+            -8.837683478357576,
+            -7.917683812856978,
+            -16.65241978736133
+          ],
+          [
+            8.911345215010144,
+            15.000387105202918,
+            6.1777551816449865
+          ]
+        ],
+        "originalToSource": {
+          "maximum": 0.19713817273768505,
+          "p95": 0.10481260735523146,
+          "rms": 0.0467278693172006,
+          "sampleCount": 1143
+        },
+        "sourceBounds": [
+          [
+            -8.847508727832773,
+            -7.925988108741478,
+            -16.64714675609272
+          ],
+          [
+            8.918866698742551,
+            14.993141184237203,
+            6.178064778667061
+          ]
+        ],
+        "sourceToOriginal": {
+          "maximum": 0.5893775163582483,
+          "p95": 0.3101096239308437,
+          "rms": 0.1492278094896145,
+          "sampleCount": 1200
+        }
+      }
+    },
+    "targetHashes": {
+      "head.bin": "95ebe2777cc19e3b43e1332b797f78bf85bd0b79993d79d833771c615b9e2111",
+      "head.json": "584f12f85a5c45bc744b6741079173c7efe5909da154e5443c135602e94096dd"
+    }
+  },
+  "schemaVersion": 1,
+  "source": {
+    "archiveDate": "2011-09-15",
+    "dataset": "BodyParts3D",
+    "downloads": [
+      {
+        "sha256": "2125f6d761b14ead4ee64f71713f56f3f0f29982693ff20aac63474470cb92f4",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip"
+      },
+      {
+        "sha256": "824a34ed939a53375037d0d68b88ad2b63b1f0ae15a585632af2a63c2ab2e4af",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/parts_list_e.txt"
+      },
+      {
+        "sha256": "17cd3611eb6b46558f983f890273fdb19f93806150ed95f6611acf4b81e90bc2",
+        "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/composite_parts.txt"
+      }
+    ],
+    "elementIds": [
+      "FMA23725",
+      "FMA24435",
+      "FMA24437",
+      "FMA24439",
+      "FMA24441",
+      "FMA24443",
+      "FMA24446",
+      "FMA24448",
+      "FMA24466",
+      "FMA24468",
+      "FMA24470",
+      "FMA24472",
+      "FMA46759",
+      "FMA46760",
+      "FMA46761",
+      "FMA46762",
+      "FMA46763",
+      "FMA46764",
+      "FMA46768",
+      "FMA46782",
+      "FMA46783",
+      "FMA46785",
+      "FMA46786",
+      "FMA46796",
+      "FMA46797",
+      "FMA46803",
+      "FMA46804",
+      "FMA46806",
+      "FMA46807",
+      "FMA46812",
+      "FMA46813",
+      "FMA46814",
+      "FMA46815",
+      "FMA46817",
+      "FMA46818",
+      "FMA46823",
+      "FMA46824",
+      "FMA46826",
+      "FMA46827",
+      "FMA46829",
+      "FMA46830",
+      "FMA46835",
+      "FMA46836",
+      "FMA46839",
+      "FMA46840",
+      "FMA46841",
+      "FMA49001",
+      "FMA49002",
+      "FMA49004",
+      "FMA49005",
+      "FMA49007",
+      "FMA49008",
+      "FMA49012",
+      "FMA49013",
+      "FMA49022",
+      "FMA49023",
+      "FMA49024",
+      "FMA49025",
+      "FMA52734",
+      "FMA52735",
+      "FMA52736",
+      "FMA52738",
+      "FMA52739",
+      "FMA52740",
+      "FMA52748",
+      "FMA52788",
+      "FMA52789",
+      "FMA52892",
+      "FMA52893",
+      "FMA53645",
+      "FMA53646",
+      "FMA53647",
+      "FMA53648",
+      "FMA53649",
+      "FMA53650",
+      "FMA53655",
+      "FMA53656",
+      "FMA54737",
+      "FMA54738",
+      "FMA55606",
+      "FMA55607",
+      "FMA55610",
+      "FMA55611",
+      "FMA55680",
+      "FMA55681",
+      "FMA55682",
+      "FMA55683",
+      "FMA55686",
+      "FMA55687",
+      "FMA55688",
+      "FMA55689",
+      "FMA55690",
+      "FMA55691",
+      "FMA55692",
+      "FMA55693",
+      "FMA55694",
+      "FMA55695",
+      "FMA55697",
+      "FMA55698",
+      "FMA55699",
+      "FMA55700",
+      "FMA55703",
+      "FMA55704",
+      "FMA55705",
+      "FMA55706",
+      "FMA55798",
+      "FMA55799",
+      "FMA57140",
+      "FMA57141",
+      "FMA57142",
+      "FMA57143",
+      "FMA59763",
+      "FMA59764",
+      "FMA9710"
+    ],
+    "version": "3.0"
+  }
+}
