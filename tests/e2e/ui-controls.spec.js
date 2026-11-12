@@ -49,7 +49,7 @@ test('mobile settings behave as a modal and reconcile focus across responsive la
   const drawer = page.locator('#drawer'), toggle = page.locator('#settings-toggle'), close = page.locator('#settings-close');
   await toggle.click();
   await expect(close).toBeFocused();
-  await expect(page.getByRole('dialog', { name: '解剖鏡設定' })).toHaveAttribute('aria-modal', 'true');
+  await expect(page.getByRole('dialog', { name: '3D anatomy camera 設定' })).toHaveAttribute('aria-modal', 'true');
   await expect(page.locator('.stagecol')).toHaveJSProperty('inert', true);
   await expect(page.locator('.mobile-controls')).toHaveJSProperty('inert', true);
   await page.locator('#start').evaluate(button => button.focus());

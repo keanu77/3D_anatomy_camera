@@ -1,4 +1,4 @@
-name: Verify Anatomy Mirror
+name: Verify 3D anatomy camera
 on:
   push:
     branches: [main]

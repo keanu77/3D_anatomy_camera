@@ -1,8 +1,8 @@
-# Anatomy Mirror 3.0
+# 3D anatomy camera 3.0
 
-Explore reference anatomy over a camera view, or start with the camera-free demo.
+3D anatomy camera brings reference anatomy into your camera view. You can also explore with the camera-free demo.
 
-[**Open the independent preview**](https://rebuild-preview.anatomy-mirror-cj3.pages.dev/) · [繁體中文](README.zh-TW.md)
+[**Open 3D anatomy camera**](https://3danatomycamara.sportsmedicine.tw/) · [Source code](https://github.com/keanu77/3D_anatomy_camera) · [繁體中文](README.zh-TW.md)
 
 ![Animated camera-free anatomy demo](docs/demo.gif)
 
@@ -75,4 +75,4 @@ The concept was inspired by Hashem Al-Ghaili's X-Ray Mirror; this project's code
 
 This is an educational view of reference anatomy, not the user's scan or a diagnostic tool. Tracking does not establish patient-specific anatomical alignment. Tissue follows rigid regional frames rather than biomechanical deformation. The left hand mirrors right-hand source geometry, with provenance retained in the inspection card. Coverage is incomplete and source subdivisions or aggregates remain explicit. Reference article text is not clinically reviewed.
 
-A physical phone/browser check is still needed to judge camera alignment, sustained performance and interaction comfort on that device. The independent release is initially hosted in a **private repository**; making it public and switching the existing production site remain maintainer decisions.
+A physical phone/browser check is still needed to judge camera alignment, sustained performance and interaction comfort on that device. Source code is available in the public [3D_anatomy_camera repository](https://github.com/keanu77/3D_anatomy_camera).

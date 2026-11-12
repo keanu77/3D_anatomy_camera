@@ -3,8 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Anatomy Mirror｜互動解剖鏡</title>
-  <meta name="description" content="在裝置上即時追蹤頭部、手部與身體，探索三維解剖模型。影像不會上傳。">
+  <title>3D anatomy camera｜互動 3D 解剖相機</title>
+  <meta name="description" content="3D anatomy camera：透過鏡頭即時追蹤頭部、手部與身體，探索互動 3D 解剖模型。影像只在裝置上處理。">
+  <link rel="canonical" href="https://3danatomycamara.sportsmedicine.tw/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="3D anatomy camera">
+  <meta property="og:title" content="3D anatomy camera">
+  <meta property="og:description" content="透過鏡頭探索互動 3D 解剖模型，影像只在裝置上處理。">
+  <meta property="og:url" content="https://3danatomycamara.sportsmedicine.tw/">
+  <meta name="twitter:card" content="summary">
   <meta name="author" content="吳易澄">
   <meta name="theme-color" content="#080f12">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -17,12 +24,12 @@
     <header class="workspace-brand">
       <span class="brand-mark" aria-hidden="true"></span>
       <div>
-        <h1>Anatomy Mirror</h1>
-        <p class="brand-caption">INTERACTIVE ANATOMY · ON YOUR DEVICE</p>
+        <h1>3D anatomy camera</h1>
+        <p class="brand-caption">EXPLORE ANATOMY · ON YOUR DEVICE</p>
       </div>
     </header>
 
-    <section class="stagecol" aria-label="解剖鏡畫面">
+    <section class="stagecol" aria-label="3D anatomy camera 畫面">
       <div id="stage" class="stage mirrored">
         <video id="video" playsinline muted></video>
         <canvas id="shade"></canvas>
@@ -31,8 +38,8 @@
         <p id="live-status" aria-live="polite" hidden></p>
         <div id="intro">
           <div class="intro-content">
-            <h2>X-RAY MIRROR</h2>
-            <p class="intro-description">讓解剖模型跟隨你的動作，探索骨骼關節、肌肉、腦與神經。</p>
+            <h2>3D anatomy camera</h2>
+            <p class="intro-description">透過鏡頭，讓 3D 解剖模型跟隨你的動作，探索骨骼關節、肌肉、腦與神經。</p>
             <div class="intro-actions">
               <button id="start" class="big" type="button">啟動鏡頭</button>
               <button id="demo-start" class="big secondary" type="button">先看示範</button>
@@ -44,7 +51,7 @@
       </div>
     </section>
 
-    <aside id="drawer" aria-label="解剖鏡設定">
+    <aside id="drawer" aria-label="3D anatomy camera 設定">
       <button id="settings-close" type="button" aria-label="關閉設定">關閉 ✕</button>
       <div class="panel session-panel">
         <div id="status" role="status" aria-live="polite">點選啟動鏡頭，或先看不需相機的示範。</div>
