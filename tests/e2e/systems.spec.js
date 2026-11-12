@@ -50,8 +50,12 @@ test('three-system overview combines all requested layers and draws shared label
   for (const style of ['xray', 'solid']) {
     await page.locator(`[data-style="${style}"]`).click();
     await page.locator('#labels').uncheck();
+    // A settings change redraws after asynchronous bundle reconciliation.
+    // Checkbox state alone does not mean the label canvas has been repainted.
+    await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBe(0);
     const bare = PNG.sync.read(await page.locator('#stage').screenshot());
     await page.locator('#labels').check();
+    await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBeGreaterThan(0);
     const labeled = PNG.sync.read(await page.locator('#stage').screenshot());
     const changed = pixelmatch(bare.data, labeled.data, null, bare.width, bare.height, { threshold: 0.1, includeAA: false });
     expect(changed, `${style} labels are visibly drawn`).toBeGreaterThan(100);

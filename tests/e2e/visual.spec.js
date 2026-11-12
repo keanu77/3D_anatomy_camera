@@ -20,12 +20,15 @@ for (const [name, settings] of cases) test(`independent visual snapshot: ${name}
   await fixedStage(page); await storeSettings(page, settings);
   await page.goto('/?still#demo'); await rendered(page);
   const actual = PNG.sync.read(await page.locator('#stage').screenshot({ animations: 'disabled' }));
-  const expected = PNG.sync.read(await readFile(new URL(`./snapshots/${name}.png`, import.meta.url)));
+  // Canvas text uses installed system fonts. Keep a reviewed Linux rendering
+  // for the text-bearing case; all five geometry-only cases share one baseline.
+  const reference = name === '03-brain-labels' && process.platform === 'linux' ? `${name}-linux` : name;
+  const expected = PNG.sync.read(await readFile(new URL(`./snapshots/${reference}.png`, import.meta.url)));
   expect([actual.width, actual.height]).toEqual([expected.width, expected.height]);
   const diff = new PNG({ width: actual.width, height: actual.height });
   const changed = pixelmatch(expected.data, actual.data, diff.data, actual.width, actual.height, { threshold: .1, includeAA: false });
   const ratio = changed / (actual.width * actual.height);
-  await testInfo.attach('snapshot-result', { body: JSON.stringify({ changed, ratio, reference: name }), contentType: 'application/json' });
+  await testInfo.attach('snapshot-result', { body: JSON.stringify({ changed, ratio, reference }), contentType: 'application/json' });
   if (ratio >= .01) await testInfo.attach('snapshot-difference', { body: PNG.sync.write(diff), contentType: 'image/png' });
   expect(ratio).toBeLessThan(.01);
   expect(errors).toEqual([]);
