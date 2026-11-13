@@ -1,5 +1,20 @@
 /** Synthetic poses are authored here; only the neutral hand proportions come
  * from the independently reconstructed atlas. Coordinates are video-normalized. */
+/** The demo has no camera to take its shape from: an upright phone gets an upright picture. */
+export function demoStageAspect({ portrait = false, body = false } = {}) {
+  return portrait ? (body ? 9 / 16 : 3 / 4) : 4 / 3;
+}
+
+/**
+ * Where the head-only demo puts its head and hands. The head is sized by the vertical field of view, so in an
+ * upright frame it would fill the width and cover the hands: there it stands further back and the hands move out.
+ */
+export function demoHeadLayout(width, height) {
+  return width < height
+    ? { depth: 60, wristX: [.13, .87], handLength: width * .3 }
+    : { depth: 48, wristX: [.22, .78], handLength: height * .34 };
+}
+
 export function demoBodyPose(width, height, now, still = false) {
   const t = still ? 0 : now / 1000, sway = Math.sin(t * .45) * .008;
   const values = [

@@ -25,10 +25,10 @@
 <body>
   <main class="wrap">
     <header class="workspace-brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <div>
+      <svg class="brand-mark" viewBox="0 0 30 34" aria-hidden="true" focusable="false"><path d="M1 33V15a14 14 0 0 1 28 0v18zM15 1v32M1 17h28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <div class="brand-name">
         <h1>3D anatomy camera</h1>
-        <p class="brand-caption">EXPLORE ANATOMY · ON YOUR DEVICE</p>
+        <p class="brand-caption">互動 3D 解剖相機</p>
       </div>
       <button id="language-toggle" type="button" lang="en" aria-label="Switch the interface to English">English</button>
     </header>
@@ -40,16 +40,27 @@
         <canvas id="gl"></canvas>
         <canvas id="hud"></canvas>
         <p id="live-status" aria-live="polite" hidden></p>
-        <div id="intro">
-          <div class="intro-content">
-            <h2>3D anatomy camera</h2>
-            <p class="intro-description">透過鏡頭，讓 3D 解剖模型跟隨你的動作，探索骨骼關節、肌肉、腦與神經。</p>
-            <div class="intro-actions">
-              <button id="start" class="big" type="button">啟動鏡頭</button>
-              <button id="demo-start" class="big secondary" type="button">先看示範</button>
-            </div>
-            <p id="intro-note">影像只在這部裝置處理，不會上傳。</p>
-            <p class="credit">製作：運動醫學科 吳易澄醫師</p>
+      </div>
+      <!-- The start screen covers the whole stage column: the picture of the model beside the words, never under them. -->
+      <div id="intro" class="enter">
+        <div class="intro-content">
+          <h2>跟著你動的 3D 解剖模型</h2>
+          <p class="intro-description">開啟鏡頭後，參考模型會跟著你的頭、手與身體移動。可切換骨骼關節、肌肉、腦與神經。</p>
+          <div class="intro-actions">
+            <button id="start" class="big" type="button">啟動鏡頭</button>
+            <button id="demo-start" class="big secondary" type="button">先看示範</button>
+          </div>
+          <p id="intro-note">影像只在這部裝置處理，不會上傳。</p>
+          <p class="credit">製作：運動醫學科 吳易澄醫師</p>
+        </div>
+        <div class="intro-pictures">
+          <img class="intro-picture current" src="./intro-poster-bones.webp" width="900" height="600" alt="X 光外觀的頭骨與雙手骨骼 3D 模型" decoding="async">
+          <img class="intro-picture" src="./intro-poster-muscles.webp" width="900" height="600" alt="X 光外觀的全身肌肉 3D 模型" decoding="async" fetchpriority="low" aria-hidden="true">
+          <img class="intro-picture" src="./intro-poster-nerves.webp" width="900" height="600" alt="X 光外觀的腦、脊髓與周邊神經 3D 模型" decoding="async" fetchpriority="low" aria-hidden="true">
+          <div class="intro-picture-choice seg" role="group" aria-label="模型圖片">
+            <button type="button" aria-pressed="true">骨骼</button>
+            <button type="button" aria-pressed="false">肌肉</button>
+            <button type="button" aria-pressed="false">神經</button>
           </div>
         </div>
       </div>

@@ -3,6 +3,8 @@ import { regionById } from './regions.js';
 import { createCamera } from './camera.js';
 import { createTrackers } from './trackers.js';
 import { bindUI } from './ui.js';
+import { demoStageAspect } from './demo-pose.js';
+import { bindIntroPictures } from './intro-pictures.js';
 import { resolveLanguage, setLanguage, getLanguage, translateDocument, t } from './i18n.js';
 
 const settings = loadSettings();
@@ -28,11 +30,17 @@ const camera = createCamera({ video, onChange: value => {
   lastVideoTime = -1; trackers.reset(); scene?.resize();
 }, onEnded: () => { stop(); ui.status(t('攝影機連線已中斷，請重新啟動鏡頭，或先看示範。'), 'bad'); } });
 
+const introPictures = bindIntroPictures({ pictures: [...document.querySelectorAll('.intro-picture')],
+  buttons: [...document.querySelectorAll('.intro-picture-choice button')], still: matchMedia('(prefers-reduced-motion: reduce)').matches });
+// The pictures turn over only while the start screen is the thing being looked at.
+function syncIntroPictures() { if (state.mode === 'intro' && !document.hidden) introPictures.start(); else introPictures.stop(); }
+// The entrance plays for the first visit to the start screen only, never again after a session.
+function showIntro(visible) { $('intro').hidden = !visible; if (!visible) $('intro').classList.remove('enter'); syncIntroPictures(); }
 function bodyOn() { return BODY_LAYERS.some(key => settings[key]); }
 function syncDemoAspect() {
   if (state.mode !== 'demo') return;
-  const portraitBody = bodyOn() && matchMedia('(max-width:600px) and (orientation:portrait)').matches;
-  $('stage').style.setProperty('--ar', String(portraitBody ? 9 / 16 : 4 / 3));
+  const portrait = matchMedia('(max-width:600px) and (orientation:portrait)').matches;
+  $('stage').style.setProperty('--ar', String(demoStageAspect({ portrait, body: bodyOn() })));
   scene?.resize();
 }
 function needs(performance = state.performance) {
@@ -172,10 +180,10 @@ async function start() {
     if (!running || current !== operation) return;
     await getScene();
     if (current !== operation) return;
-    state.mode = 'live'; $('intro').hidden = true;
+    state.mode = 'live'; showIntro(false);
     await changed({ throwOnError: true, force: true });
     if (current === operation) schedule();
-  } catch (error) { if (current === operation) { camera.stop(); state.mode = 'intro'; $('intro').hidden = false; showError(error); } }
+  } catch (error) { if (current === operation) { camera.stop(); state.mode = 'intro'; showIntro(true); showError(error); } }
   finally { if (current === operation) { $('start').disabled = false; $('demo-start').disabled = false; } }
 }
 async function demo() {
@@ -190,10 +198,10 @@ async function demo() {
     if (current !== operation) return;
     if (bodyOn()) await scene.ensureBody();
     if (current !== operation) return;
-    $('intro').hidden = true;
+    showIntro(false);
     ui.status(t('示範模式，沒有使用攝影機。'), 'ok');
     scene.resize(); schedule();
-  } catch (error) { if (current === operation) { state.mode = 'intro'; $('intro').hidden = false; showError(error); } }
+  } catch (error) { if (current === operation) { state.mode = 'intro'; showIntro(true); showError(error); } }
   finally { if (current === operation) $('demo-start').disabled = false; }
 }
 async function switchCamera() {
@@ -219,13 +227,14 @@ function stop() {
   operation++; state.mode = 'intro'; camera.stop(); cancelAnimationFrame(raf); raf = 0;
   scene?.clear();
   $('start').disabled = false; $('demo-start').disabled = false;
-  $('intro').hidden = false; ui.status(t('鏡頭已停止。你可以重新啟動或觀看示範。'));
+  showIntro(true); ui.status(t('鏡頭已停止。你可以重新啟動或觀看示範。'));
 }
 function showError(error) {
   const text = error?.name === 'NotAllowedError' ? t('攝影機權限未開啟。請在瀏覽器允許相機，再按啟動鏡頭。') : error?.name === 'NotFoundError' ? t('找不到可用的攝影機，仍可使用示範模式。') : `${t('無法完成操作：')}${t(error?.message || String(error))}${t('。可重新嘗試。')}`;
   ui.status(text, 'bad', true);
 }
 document.addEventListener('visibilitychange', () => {
+  syncIntroPictures();
   if (document.hidden) { cancelAnimationFrame(raf); raf = 0; trackers.reset(); }
   else {
     lastVideoTime = -1; autoAt = performance.now(); lowChecks = 0;
@@ -250,4 +259,4 @@ if (has('nervous')) { applyPreset(settings, 'nervous'); ui.sync(); }
 if (has('systems')) { applyPreset(settings, 'systems'); ui.sync(); }
 if (has('focus')) { applyFocus(settings, hash.get('focus') || query.get('focus')); ui.sync(); }
 if (has('peripheral')) { settings.peripheralNerves = true; ui.sync(); }
-if (has('demo')) demo();
+if (has('demo')) demo(); else syncIntroPictures();
