@@ -7,7 +7,13 @@ const EN = Object.freeze({
   '3D anatomy camera：透過鏡頭即時追蹤頭部、手部與身體，探索互動 3D 解剖模型。影像只在裝置上處理。': '3D anatomy camera: track your head, hands and body through the camera and explore an interactive 3D anatomy model. Video is processed on this device only.',
   '透過鏡頭探索互動 3D 解剖模型，影像只在裝置上處理。': 'Explore an interactive 3D anatomy model through your camera. Video is processed on this device only.',
   '3D anatomy camera 畫面': '3D anatomy camera view',
-  '透過鏡頭，讓 3D 解剖模型跟隨你的動作，探索骨骼關節、肌肉、腦與神經。': 'Let a 3D anatomy model follow your movement through the camera, and explore bones and joints, muscles, the brain and nerves.',
+  '互動 3D 解剖相機': 'Interactive 3D anatomy',
+  '跟著你動的 3D 解剖模型': 'A 3D anatomy model that moves with you',
+  '開啟鏡頭後，參考模型會跟著你的頭、手與身體移動。可切換骨骼關節、肌肉、腦與神經。': 'After you start the camera, a reference model moves with your head, hands and body. Switch between bones and joints, muscles, the brain and nerves.',
+  'X 光外觀的頭骨與雙手骨骼 3D 模型': '3D model of a skull and the bones of both hands, drawn as an X-ray',
+  'X 光外觀的全身肌肉 3D 模型': '3D model of the muscles of the whole body, drawn as an X-ray',
+  'X 光外觀的腦、脊髓與周邊神經 3D 模型': '3D model of the brain, spinal cord and peripheral nerves, drawn as an X-ray',
+  '模型圖片': 'Pictures of the model',
   '啟動鏡頭': 'Start camera',
   '先看示範': 'Watch the demo',
   '影像只在這部裝置處理，不會上傳。': 'Video is processed on this device only and is never uploaded.',
@@ -240,7 +246,7 @@ export function setLanguage(language) {
 /** The interface text for a Chinese source string, in the current language. */
 export const t = text => translate(text);
 
-const ATTRIBUTES = ['aria-label', 'title', 'content'];
+const ATTRIBUTES = ['aria-label', 'title', 'content', 'alt'];
 /** Put the static page into the current language. Dynamic text is written through t() by its owner. */
 export function translateDocument(root) {
   root.lang = current === 'en' ? 'en' : 'zh-Hant';

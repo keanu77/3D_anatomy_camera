@@ -45,6 +45,8 @@ export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }
     // While a region is focused the mobile bar offers its side; presets come back when focus is left.
     $('focus-side-mobile').value = settings.focusSide; $('focus-side-mobile').hidden = !region; $('preset-cycle').hidden = !!region;
     $('focusZoom').disabled = !region;
+    // A side and the enlargement only mean something for a region, so they are not shown as dead controls without one.
+    $('focusSide').hidden = $('focus-zoom-row').hidden = !region;
     $('focus-note').textContent = region ? [region.note, region.frame, '選左側或右側可以放得更大；勾選「周邊神經」可加上此處的神經。'].map(t).join(getLanguage() === 'en' ? ' ' : '')
       : t('選一個部位，只顯示該處的肌肉與骨骼並標出名稱。');
     for (const key of ['fs', 'fw', 'fh', 'fd']) $(`${key}v`).textContent = `${Math.round(settings[key] * 100)}%`;

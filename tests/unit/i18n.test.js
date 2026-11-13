@@ -45,7 +45,7 @@ describe('interface language', () => {
   test('every Chinese text and label in the page has English', () => {
     const html = readFileSync(new URL('../../src/index.html', import.meta.url), 'utf8').replace(/<script[\s\S]*?<\/script>/g, '');
     const texts = [...html.matchAll(/>([^<>]+)</g)].map((match) => match[1].replace(/\s+/g, ' ').trim());
-    const labels = [...html.matchAll(/(?:aria-label|title|content)="([^"]*)"/g)].map((match) => match[1]);
+    const labels = [...html.matchAll(/(?:aria-label|title|content|alt)="([^"]*)"/g)].map((match) => match[1]);
     const untranslated = [...new Set([...texts, ...labels])].filter((text) => hasChinese(withoutName(text)) && hasChinese(withoutName(english(text))));
     expect(untranslated).toEqual([]);
   });
