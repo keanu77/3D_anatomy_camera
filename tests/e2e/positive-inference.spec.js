@@ -94,3 +94,46 @@ test.describe('positive detections from official image-derived streams', () => {
     });
   }
 });
+
+test('with a region enlarged and no hand in view, the lens stays under the cursor', async ({ page }) => {
+  test.setTimeout(150000);
+  const source = await fixture('pose.jpg');
+  await storeSettings(page, { skull: false, eyes: false, outline: false, hands: false, spine: true, arms: true, bodyMuscles: true,
+    focus: 'shoulder', focusZoom: true, reveal: 'lens', cut: 0.3, showdata: true, performance: 'balanced' });
+  await page.route('**/__qa-fixture/pose.jpg', (route) => route.fulfill({ body: source, contentType: 'image/jpeg' }));
+  // No hand tracker: the lens then follows the pointer, as it does whenever no fingertip is found.
+  await page.route('**/models/hand_landmarker.task', (route) => route.abort());
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { value: async () => {
+      const image = new Image(); image.src = '/__qa-fixture/pose.jpg'; await image.decode();
+      const canvas = document.createElement('canvas');
+      const scale = Math.min(1, 720 / Math.max(image.naturalWidth, image.naturalHeight));
+      canvas.width = Math.round(image.naturalWidth * scale); canvas.height = Math.round(image.naturalHeight * scale);
+      const context = canvas.getContext('2d');
+      const draw = () => context.drawImage(image, 0, 0, canvas.width, canvas.height);
+      draw(); const stream = canvas.captureStream(8); const timer = setInterval(draw, 125);
+      for (const track of stream.getTracks()) { const stop = track.stop.bind(track); track.stop = () => { clearInterval(timer); stop(); }; }
+      return stream;
+    } });
+  });
+  await page.goto('https://127.0.0.1:4173/');
+  await page.locator('#start').click();
+  await expect(page.locator('#data')).toContainText(/body parts\s+[1-9]/, { timeout: 120000 });
+  await expect.poll(() => page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().renderer.zoom.z), { timeout: 30000 }).toBeGreaterThan(1.5);
+  const rect = await page.locator('#stage').boundingBox();
+  for (const [fx, fy] of [[0.3, 0.4], [0.62, 0.55]]) {
+    const target = { x: rect.x + rect.width * fx, y: rect.y + rect.height * fy };
+    await page.mouse.move(target.x - 4, target.y - 4); await page.mouse.move(target.x, target.y);
+    // Where the lens is shown: its centre in the layer, through that layer's own mirror and zoom.
+    const shown = () => page.evaluate(() => {
+      const { renderer, state } = window.__ANATOMY_DIAGNOSTICS__(), { z, bx, by } = renderer.zoom;
+      const centre = document.getElementById('gl').style.maskImage.match(/circle at ([\d.]+)% ([\d.]+)%/);
+      if (!centre) return null;
+      const x = centre[1] / 100 * renderer.width, y = centre[2] / 100 * renderer.height;
+      return { x: z * (state.mirror ? renderer.width - x : x) + bx, y: z * y + by, width: renderer.width, height: renderer.height };
+    });
+    await expect.poll(async () => { const lens = await shown(); return lens ? Math.hypot(lens.x - fx * lens.width, lens.y - fy * lens.height) : Infinity; },
+      { message: `lens centre under the pointer at ${fx}, ${fy}` }).toBeLessThan(2);
+  }
+  await page.locator('#camera-stop').click();
+});

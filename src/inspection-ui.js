@@ -1,5 +1,6 @@
 import { formatAnatomyName } from './anatomy-names.js';
 import { FIELDS, sourceUrl } from './structure-info.js';
+import { t, getLanguage } from './i18n.js';
 import './inspection.css';
 
 /**
@@ -22,19 +23,19 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     const node = element('button', className, text); node.type = 'button'; return node;
   }
   const wrapper = element('section', 'inspection-ui');
-  wrapper.setAttribute('aria-label', '構造點選');
+  wrapper.setAttribute('aria-label', t('構造點選'));
   const tools = element('div', 'inspection-tools');
   // Freezing the picture belongs beside picking: a moving body is hard to tap. The app owns the behaviour.
-  const pause = button('stage-pause', '暫停');
-  pause.id = 'pause-toggle'; pause.setAttribute('aria-pressed', 'false'); pause.setAttribute('aria-label', '暫停畫面');
-  const toggle = button('inspection-toggle', '點選構造');
+  const pause = button('stage-pause', t('暫停'));
+  pause.id = 'pause-toggle'; pause.setAttribute('aria-pressed', 'false'); pause.setAttribute('aria-label', t('暫停畫面'));
+  const toggle = button('inspection-toggle', t('點選構造'));
   toggle.id = 'inspection-toggle';
   toggle.setAttribute('aria-pressed', 'false');
   toggle.setAttribute('aria-controls', 'inspection-help inspection-card');
   const help = element('div', 'inspection-help'); help.id = 'inspection-help';
   const status = element('p', 'inspection-status'); status.setAttribute('role', 'status');
   status.setAttribute('aria-live', 'polite');
-  const retry = button('inspection-retry', '重新載入');
+  const retry = button('inspection-retry', t('重新載入'));
   help.append(status, retry); tools.append(pause, toggle, help);
   // Put application status and inspector controls in the same layout flow. Their
   // previous independent stage/host coordinates overlap when the stage is centered.
@@ -43,10 +44,10 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   if (liveStatus) tools.prepend(liveStatus);
 
   const card = element('section', 'inspection-card'); card.id = 'inspection-card';
-  card.setAttribute('aria-label', '已選構造');
+  card.setAttribute('aria-label', t('已選構造'));
   const top = element('div', 'inspection-card-top');
   const classification = element('p', 'inspection-classification');
-  const clear = button('inspection-clear', '清除'); clear.setAttribute('aria-label', '清除選取');
+  const clear = button('inspection-clear', t('清除')); clear.setAttribute('aria-label', t('清除選取'));
   top.append(classification, clear);
   const identity = element('div', 'inspection-identity');
   identity.setAttribute('aria-live', 'polite'); identity.setAttribute('aria-atomic', 'true');
@@ -61,10 +62,22 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   const select = element('select', 'inspection-select'); select.id = 'inspection-candidates';
   candidates.append(candidateLabel, select);
   // Reference text is quoted in English from its source; the surrounding interface stays Chinese.
-  const info = element('section', 'inspection-info'); info.setAttribute('aria-label', '構造說明');
+  const info = element('section', 'inspection-info'); info.setAttribute('aria-label', t('構造說明'));
   card.append(top, identity, candidates, info); wrapper.append(tools, card); host.append(wrapper);
 
   let active = false, loading = false, error = '', selection = null, disposed = false;
+  // In English the source's own name is the title; the Chinese display name is not shown beside it.
+  function displayName(part) {
+    const name = formatAnatomyName(part);
+    if (getLanguage() !== 'en') return name;
+    const details = [], side = { L: 'left', R: 'right', left: 'left', right: 'right' };
+    if (typeof part.wholeMuscleName === 'string' && part.wholeMuscleName && part.wholeMuscleName !== part.name) details.push(`Part of: ${part.wholeMuscleName}`);
+    if (part.mirrored) {
+      const from = side[part.sourceSide || (typeof part.sourceName === 'string' ? part.sourceName.match(/\b(left|right)\b/i)?.[1].toLowerCase() : '')], shown = side[part.side];
+      details.push(from && shown ? `The ${shown} hand is drawn as a mirror image of the ${from}-hand reference model` : 'Drawn as a mirror image of the source reference model');
+    }
+    return { title: name.english || t(name.title), english: '', kindLabel: t(name.kindLabel), sideLabel: t(name.sideLabel), detail: name.detail ? details.join('. ') : '' };
+  }
   const cleanup = [];
   function listen(node, type, callback) {
     node.addEventListener(type, callback); cleanup.push(() => node.removeEventListener(type, callback));
@@ -76,7 +89,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     retry.hidden = !error || loading;
     help.setAttribute('aria-busy', String(loading));
     help.classList.toggle('inspection-error', !!error);
-    status.textContent = loading ? '正在載入可點選的肌肉與骨骼…' : error || '點一下肌肉或骨頭查看名稱；點空白處清除。';
+    status.textContent = loading ? t('正在載入可點選的肌肉與骨骼…') : t(error) || t('點一下肌肉或骨頭查看名稱；點空白處清除。');
     card.hidden = !active || !selection || loading || !!error;
   }
   function renderInfo(part) {
@@ -85,7 +98,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     if (!fields) return;
     const { state, entry } = getInfo(part);
     if (!entry) {
-      const note = { loading: '正在載入構造說明…', error: '構造說明載入失敗，請再點選一次重試。' }[state] || '這個構造目前沒有說明資料。';
+      const note = t({ loading: '正在載入構造說明…', error: '構造說明載入失敗，請再點選一次重試。' }[state] || '這個構造目前沒有說明資料。');
       info.append(element('p', 'inspection-info-note', note)); return;
     }
     const list = element('dl', 'inspection-info-list'); list.lang = 'en';
@@ -94,7 +107,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     }
     const credit = element('p', 'inspection-info-source'), link = element('a', '', `Wikipedia: ${entry.title}`);
     link.href = sourceUrl(entry); link.target = '_blank'; link.rel = 'noopener noreferrer'; link.lang = 'en';
-    credit.append('來源：', link, '（CC BY-SA 4.0）');
+    credit.append(t('來源：'), link, t('（CC BY-SA 4.0）'));
     info.append(list, credit);
   }
   function showSelection(value) {
@@ -103,14 +116,14 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     if (!active || !parts.length) { selection = null; select.replaceChildren(); render(); return; }
     const selectedIndex = Number.isInteger(value.selectedIndex) && value.selectedIndex >= 0 && value.selectedIndex < parts.length ? value.selectedIndex : 0;
     selection = { parts: [...parts], selectedIndex };
-    const part = parts[selectedIndex], name = formatAnatomyName(part);
+    const part = parts[selectedIndex], name = displayName(part);
     classification.textContent = `${name.kindLabel} · ${name.sideLabel}`;
     title.textContent = name.title;
     english.textContent = name.english; english.hidden = !name.english || name.title === name.english;
     detail.textContent = name.detail || ''; detail.hidden = !name.detail;
-    source.textContent = `解剖 ID：${typeof part.id === 'string' && part.id ? part.id : '未提供'}`;
+    source.textContent = `${t('解剖 ID：')}${typeof part.id === 'string' && part.id ? part.id : t('未提供')}`;
     if (part.mirrored && typeof part.sourceId === 'string' && part.sourceId) {
-      source.textContent += ` · 參考模型 ID：${part.sourceId}`;
+      source.textContent += `${t(' · 參考模型 ID：')}${part.sourceId}`;
     }
     if (part.mirrored && typeof part.sourceName === 'string' && part.sourceName) {
       source.textContent += `（${part.sourceName}）`;
@@ -118,13 +131,13 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     renderInfo(part);
     select.replaceChildren();
     parts.forEach((candidate, index) => {
-      const label = formatAnatomyName(candidate);
+      const label = displayName(candidate);
       const option = element('option', '', `${label.title} · ${label.sideLabel}`);
       option.value = String(index); select.append(option);
     });
     select.value = String(selectedIndex);
     candidates.hidden = parts.length < 2;
-    candidateLabel.textContent = `此處重疊 ${parts.length} 個構造，切換查看`;
+    candidateLabel.textContent = getLanguage() === 'en' ? `${parts.length} structures overlap here; choose one to view` : `此處重疊 ${parts.length} 個構造，切換查看`;
     render();
   }
   function setActive(value) {

@@ -19,11 +19,13 @@ export function projectAnchor({ point, matrix, camera, width, height, mirror = f
 
 export function createLabels({ settings, state, metadata, getSize, headGroup, jawMesh, headCamera,
   handCamera, rigs, getBodyLabels, getLens, getZoom, getClip }) {
-  let lastLayout = [];
+  let lastLayout = [], painted = false;
   function draw(context) {
+    // Nothing was drawn and nothing will be: leave the hidden canvas alone.
+    if (!settings.labels && !painted) return;
     const { width, height } = getSize();
     context.clearRect(0, 0, width, height);
-    lastLayout = [];
+    lastLayout = []; painted = false;
     if (!settings.labels) return;
     const lens = getLens(), items = getBodyLabels(lens), clip = getClip();
     const color = layer => `#${new Color(PALETTE[layer]).getHexString()}`;
@@ -66,6 +68,7 @@ export function createLabels({ settings, state, metadata, getSize, headGroup, ja
     context.font = '12px "PingFang TC", "Noto Sans TC", sans-serif';
     context.textBaseline = 'middle';
     lastLayout = layoutOverview(visible, width, height, text => context.measureText(text).width);
+    painted = lastLayout.length > 0;
     for (const item of lastLayout) {
       context.strokeStyle = item.color;
       context.globalAlpha = .6;

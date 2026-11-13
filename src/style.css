@@ -69,6 +69,7 @@ h1, h2, h3, p { margin: 0; }
   letter-spacing: -.7px;
 }
 .brand-caption { margin-top: 5px; color: var(--muted); font-size: 9px; letter-spacing: 1.7px; }
+#language-toggle { margin-left: auto; flex: 0 0 auto; min-height: 44px; padding: 8px 14px; font-size: 12px; }
 .brand-mark {
   width: 29px;
   height: 34px;

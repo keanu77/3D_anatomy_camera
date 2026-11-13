@@ -10,7 +10,7 @@ import { makeMaterial, setMaterialMode } from './anatomy-material.js';
 import { PALETTE, SOLID, GAINS, BASE_LIGHT, SURFACE, solidGain } from './render-style.js';
 import { demoBodyPose, demoHandLandmarks } from './demo-pose.js';
 import { regionById, regionIncludesMesh, regionPartSelector, focusLabels } from './regions.js';
-import { IDENTITY, zoomTarget, gestureZoom, layerTransform } from './focus-zoom.js';
+import { IDENTITY, zoomTarget, gestureZoom, layerTransform, unzoomPoint } from './focus-zoom.js';
 import { LEVEL, isLevel, dragOrbit, orbitElements } from './orbit.js';
 
 /** Rendering owns display transforms, while tracking owns measurement transforms.
@@ -66,7 +66,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     return { group, palm: create('hand_palm'), bones: HAND_SEGMENTS.map(([a, b]) => create(`hand_b_${a}_${b}`)),
       pts: null, anatomicalSide: hand ? 'L' : 'R' };
   });
-  let width = 640, height = 480, pixelRatio = 1;
+  let width = 640, height = 480, pixelRatio = 1, labelRatio = 1;
   let disposed = false, frozen = false, queued = 0, drawing = false, frameCount = 0, fps = 0, frameTime = null;
   let previousFrame = null, previousDemo = null, focus = null, orbit = { ...LEVEL }, zoom = { ...IDENTITY }, manualZoom = false;
   let lens = null, cursor = null;
@@ -158,7 +158,10 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     lens = null;
     if (settings.reveal === 'lens') {
       const tracked = rigs.find(rig => rig.pts)?.pts?.[8];
-      const center = tracked ? { x: state.mirror ? width - tracked.x : tracked.x, y: height - tracked.y } : cursor || { x: width * .78, y: height * .55 };
+      // The cursor is a display position; the lens, like the fingertip, belongs to the unzoomed picture.
+      const pointed = cursor && unzoomPoint(zoom, cursor.x, cursor.y);
+      const center = tracked ? { x: state.mirror ? width - tracked.x : tracked.x, y: height - tracked.y }
+        : pointed ? { x: pointed[0], y: pointed[1] } : { x: width * .78, y: height * .55 };
       lens = { ...center, r: Math.min(width, height) * (.055 + .38 * settings.cut) };
     }
     for (const canvas of [gl, shade]) {
@@ -193,7 +196,8 @@ export async function createScene({ settings, state, onStats = () => {} }) {
       layer.style.transformOrigin = transform ? '0 0' : '';
     }
   }
-  function draw(frame, { hold = false, instant = false } = {}) {
+  // settle: the picture has just frozen. Show its own measurements instead of filters still catching up.
+  function draw(frame, { hold = false, instant = false, settle = false } = {}) {
     if (disposed || drawing || state.mode === 'intro') return;
     drawing = true;
     try {
@@ -201,6 +205,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
       stage.classList.toggle('mirrored', state.mirror);
       const face = frame.face;
       const blend = face?.faceBlendshapes?.[0]?.categories?.find(value => value.categoryName === 'jawOpen')?.score || 0;
+      if (settle) headTracker.update(null);
       headTracker.update(face?.facialTransformationMatrixes?.[0]?.data, face?.faceLandmarks?.[0], blend);
       const handNames = [];
       rigs.forEach((rig, index) => {
@@ -211,7 +216,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
         rig.group.visible &&= settings.hands;
       });
       headReveal();
-      body.update({ ...frame, instant, hold });
+      body.update({ ...frame, instant, hold, settle });
       body.syncHead();
       applyOrbit();
       inspection.sync();
@@ -245,7 +250,8 @@ export async function createScene({ settings, state, onStats = () => {} }) {
   function update(frame) {
     previousDemo = null;
     previousFrame = { ...frame, mask: null };
-    draw(frame, { hold: frozen });
+    // While frozen the only result accepted is the one inferred from the frozen picture itself.
+    draw(frame, { settle: frozen });
   }
   function demo(now, options = {}) {
     previousDemo = { now, options: { ...options } };
@@ -278,18 +284,23 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     if (still) headTracker.update(null);
     draw(frame, { instant: true, hold: frozen });
   }
-  function refresh() {
+  function refresh({ settle = false } = {}) {
     if (!previousFrame || disposed || state.mode === 'intro') return;
-    draw({ ...previousFrame, mask: null }, { hold: true, instant: state.mode === 'demo' });
+    draw({ ...previousFrame, mask: null }, { hold: true, settle, instant: state.mode === 'demo' });
   }
   function resize() {
     if (disposed) return;
     const rect = stage.getBoundingClientRect(), nextWidth = Math.max(1, Math.round(rect.width)), nextHeight = Math.max(1, Math.round(rect.height));
     const ratio = Math.min(devicePixelRatio || 1, state.performance === 'high' ? 2 : 1);
-    if (width === nextWidth && height === nextHeight && pixelRatio === ratio && gl.width === Math.round(width * ratio)) return;
-    width = nextWidth; height = nextHeight; pixelRatio = ratio;
+    // Names are small text: draw them at the display's own resolution, within about four megapixels.
+    const textRatio = Math.min(devicePixelRatio || 1, 3, Math.max(1, Math.sqrt(4e6 / (nextWidth * nextHeight))));
+    if (width === nextWidth && height === nextHeight && pixelRatio === ratio && labelRatio === textRatio && gl.width === Math.round(width * ratio)) return;
+    width = nextWidth; height = nextHeight; pixelRatio = ratio; labelRatio = textRatio;
     renderer.setPixelRatio(ratio); renderer.setSize(width, height, false);
-    shade.width = hud.width = width; shade.height = hud.height = height;
+    shade.width = width; shade.height = height;
+    hud.width = Math.round(width * labelRatio); hud.height = Math.round(height * labelRatio);
+    // Scale by the rounded backing size, so clearing the stage rectangle clears every pixel.
+    labelContext.setTransform(hud.width / width, 0, 0, hud.height / height, 0, 0);
     perspective.aspect = width / height; perspective.updateProjectionMatrix(); baseProjection.copy(perspective.projectionMatrix);
     Object.assign(orthographic, { left: 0, right: width, top: height, bottom: 0 }); orthographic.updateProjectionMatrix();
     body.reset(); headTracker.update(null);
@@ -309,7 +320,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
   function setFrozen(value) {
     frozen = !!value;
     if (!frozen) resetView();
-    refresh();
+    refresh({ settle: frozen });
   }
   const pointers = new Map();
   let drag = null, pinch = null, gestureEnded = false;
@@ -384,7 +395,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     renderer.dispose();
   }
   function getDiagnostics() {
-    return { width, height, pixelRatio, frameCount, fps, headFound: headTracker.state.found, frozen,
+    return { width, height, pixelRatio, labelRatio, frameCount, fps, headFound: headTracker.state.found, frozen,
       focus: focus?.id || null, orbit: { ...orbit }, zoom: { ...zoom },
       labelLayout: labels.getLayout(), inspection: inspection.getDiagnostics(), ...body.getDiagnostics() };
   }

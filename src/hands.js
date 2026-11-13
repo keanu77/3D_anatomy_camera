@@ -10,7 +10,6 @@ export const HAND_SEGMENTS = Object.freeze([
   [13, 14], [14, 15], [15, 16],
   [17, 18], [18, 19], [19, 20],
 ]);
-export { HAND_SEGMENTS as HAND_BONES };
 const contours = [[0, 1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16], [17, 18, 19, 20]];
 const usable = input => Array.isArray(input) && input.length === 21 && input.every(point => point && [point.x, point.y, point.z].every(Number.isFinite));
 
