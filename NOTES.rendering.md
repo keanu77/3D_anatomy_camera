@@ -59,6 +59,9 @@ and redraws leave it there; before, each redraw moved it a little closer. The
 scene starts loading as soon as Start is pressed, while the camera permission
 prompt is still open; tracking models still wait for the answer.
 
+- **Carpal bones and metatarsals are named one by one.** The palm mesh already carries its twelve source bones as parts in the head's individual bundle. In the forearm and wrist region, with the hand layer and the labels on, the region asks the inspector for that bundle (`also` on the part filter) and `carpalLabels` in `src/regions.js` turns the centroids of the eight carpal parts into labels, each projected through the palm mesh's own matrix; they replace the single wrist label of that hand. A left hand is the mirrored right-hand geometry and is named as a left hand through `displayedPart`, which moved to `src/displayed-part.js` so that `regions.js`, part of the start bundle, does not import the renderer. With one side chosen, only that hand is named bone by bone. Outside the region the hand keeps its five overview labels. In the foot region the five metatarsals left the collapsed families and are named individually; the fourteen toe bones stay one label per side. The names are those of the existing table; none was added.
+- **A way back to the start screen.** `#home-button` stands at the top left of the stage column, built with the inspector's other two controls and wired through a `gohome` event on the stage, as pausing is. It calls the same `stop()` as the settings' button; leaving the demo reports that, not a stopped camera. In English on a screen of 360 px or less the two other controls leave no room for its word, so the arrow stands alone and the name is read out.
+
 ## Verification
 
 R4 passed 290 unit tests and 65 active browser cases, including source picking,
