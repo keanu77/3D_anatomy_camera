@@ -168,22 +168,31 @@ const zoomRange = (page, milliseconds) => page.evaluate(async (milliseconds) => 
   return { least: Math.min(...seen), most: Math.max(...seen), frames: seen.length };
 }, milliseconds);
 
-test('a close-up of hands draws hand bones only: no arm on a figure the pose model imagines inside them', async ({ page }) => {
-  test.setTimeout(180000);
+test('a close-up of hands draws hand bones only: no arm on a figure the pose model imagines inside them', async ({ page }, testInfo) => {
+  test.setTimeout(300000);
   await shakenPhoto(page, 'right_hands.jpg');
   await storeSettings(page, { focus: 'forearm', skull: false, eyes: false, outline: false, hands: true, arms: true, bodyMuscles: true, joints: true,
     labels: true, focusZoom: true, showdata: true, performance: 'balanced' });
   await page.goto('https://127.0.0.1:4173/');
   await page.locator('#start').click();
   await expect(page.locator('#data')).toContainText(/hands\s+right \+ right/, { timeout: 120000 });
-  // The pose model does answer for this picture, and its answer is refused.
-  await expect.poll(async () => (await renderer(page)).poseRejected, { timeout: 60000 }).toBe(true);
-  for (let look = 0; look < 6; look++) {
-    const state = await renderer(page);
-    expect(state.visibleParts, 'no forearm bone or muscle is drawn').toBe(0);
-    expect(state.zoom, 'nothing to enlarge').toEqual({ z: 1, bx: 0, by: 0 });
-    await page.waitForTimeout(400);
+  const look = () => page.evaluate(() => {
+    const { trackers, renderer } = window.__ANATOMY_DIAGNOSTICS__();
+    return { poseResults: trackers.calls.pose || 0, refused: renderer.poseRejected, visibleParts: renderer.visibleParts, zoom: renderer.zoom };
+  });
+  await expect.poll(async () => (await look()).poseResults, { timeout: 120000, message: 'the pose model is answering' }).toBeGreaterThan(0);
+  // Whether the pose model imagines a figure in this picture depends on the machine: in nearly every
+  // frame on one, in none for a minute on another. So the refusal is counted and reported, not demanded
+  // (tests/unit/pose-plausibility.test.js pins it); whatever the model answers, no arm may be drawn.
+  // Counting its answers, not seconds, watches the same number of them on a slow machine.
+  const first = await look(); let state = first, looks = 0, refused = 0;
+  while (state.poseResults - first.poseResults < 60) {
+    state = await look(); looks++; if (state.refused) refused++;
+    expect(state.visibleParts, `look ${looks}: no forearm bone or muscle is drawn`).toBe(0);
+    expect(state.zoom, `look ${looks}: nothing to enlarge`).toEqual({ z: 1, bx: 0, by: 0 });
+    await page.waitForTimeout(200);
   }
+  await testInfo.attach('pose-refusals', { body: JSON.stringify({ looks, refused, poseResults: state.poseResults - first.poseResults }), contentType: 'application/json' });
   await expect(page.locator('#status')).toContainText('請讓手肘、手腕與手掌入鏡');
   await expect(page.locator('#data')).toContainText(/hands\s+right \+ right/);
   await page.locator('#camera-stop').click();
