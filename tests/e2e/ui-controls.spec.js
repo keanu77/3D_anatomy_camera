@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { watchErrors } from './helpers.js';
+import { watchErrors, openAdvanced } from './helpers.js';
 
 test('mobile preset cycling follows direct links, selected presets and custom layers', async ({ page }) => {
   const errors = watchErrors(page);
@@ -17,7 +17,7 @@ test('mobile preset cycling follows direct links, selected presets and custom la
   await page.locator('#preset-cycle').click();
   await expect(page.locator('[data-preset="nervous"]')).toHaveAttribute('aria-pressed', 'true');
   await page.locator('#settings-toggle').click();
-  await page.locator('#L_eyes').uncheck();
+  await openAdvanced(page); await page.locator('#L_eyes').uncheck();
   await expect(page.locator('[data-preset][aria-pressed="true"]')).toHaveCount(0);
   await page.locator('#settings-close').click();
   await page.locator('#preset-cycle').click();

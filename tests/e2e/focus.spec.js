@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
-import { rendered, storeSettings, watchErrors } from './helpers.js';
+import { rendered, storeSettings, watchErrors, openAdvanced } from './helpers.js';
 
 const body = JSON.parse(readFileSync(new URL('../../public/anatomy/individual-body.json', import.meta.url)));
 const exact = (name) => {
@@ -129,7 +129,7 @@ test('choosing a region keeps every layer the viewer set and adds its own, befor
   const layers = () => page.evaluate(() => Object.fromEntries([...document.querySelectorAll('input[id^=L_]')].map((input) => [input.id.slice(2), input.checked])));
   const stored = () => page.evaluate(() => JSON.parse(localStorage.getItem('xr_settings')));
   // The viewer's own choice on the start screen: the brain in place of the eyes.
-  await page.locator('#L_brain').check(); await page.locator('#L_eyes').uncheck();
+  await openAdvanced(page); await page.locator('#L_brain').check(); await page.locator('#L_eyes').uncheck();
   const own = { skull: true, brain: true, muscles: false, eyes: false, outline: true, hands: true, spine: false, organs: false,
     arms: false, legs: false, bodyMuscles: false, joints: false, nerves: false, peripheralNerves: false };
   expect(await layers()).toEqual(own);
@@ -147,7 +147,7 @@ test('choosing a region keeps every layer the viewer set and adds its own, befor
   await page.locator('#focus [data-focus=knee]').click();
   await focused(page, 'knee:both');
   expect(await layers()).toEqual({ ...inForearm, legs: true });
-  await page.locator('#L_joints').uncheck();
+  await openAdvanced(page); await page.locator('#L_joints').uncheck();
   await page.locator('#focus [data-focus=none]').click();
   await expect.poll(async () => (await renderer(page)).focus).toBeNull();
   expect(await layers()).toEqual({ ...inForearm, legs: true, joints: false });

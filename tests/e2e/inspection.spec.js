@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
-import { rendered, storeSettings, watchErrors } from './helpers.js';
+import { rendered, storeSettings, watchErrors, openAdvanced } from './helpers.js';
 
 const body = JSON.parse(readFileSync(new URL('../../public/anatomy/individual-body.json', import.meta.url)));
 const head = JSON.parse(readFileSync(new URL('../../public/anatomy/individual-head.json', import.meta.url)));
@@ -223,12 +223,12 @@ test('clear, hidden layers, disable and Stop remove the selected surface and hig
   expect((await inspection(page)).selected).toBeNull();
   expect((await inspection(page)).highlightedIndices).toBe(0);
   await clickSource(page, expected);
-  await page.locator('#L_arms').uncheck();
+  await openAdvanced(page); await page.locator('#L_arms').uncheck();
   await expect.poll(async () => (await diagnostic(page)).renderer.visibleLayers.arms).toBe(0);
   await expect(page.locator('#inspection-card')).not.toBeVisible();
   await clickPoint(page, point);
   expect((await inspection(page)).selected).toBeNull();
-  await page.locator('#L_arms').check();
+  await openAdvanced(page); await page.locator('#L_arms').check();
   await expect.poll(async () => (await diagnostic(page)).renderer.visibleLayers.arms).toBeGreaterThan(0);
   await clickSource(page, expected);
   await page.locator('#inspection-toggle').click();

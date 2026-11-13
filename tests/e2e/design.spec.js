@@ -216,7 +216,7 @@ test('the side choice and the enlarge option appear only with a region in focus'
   await expect(page.locator('#focusSide')).toBeHidden();
 });
 
-test('the settings give one list of presets, keep "全身" for the region alone, and fold the calibration away', async ({ page }) => {
+test('the settings give one list of presets, keep "全身" for the region alone, and fold the single layers and the calibration away', async ({ page }) => {
   const errors = watchErrors(page);
   await page.setViewportSize({ width: 1280, height: 900 }); await page.goto('/');
   const drawer = page.locator('#drawer');
@@ -224,13 +224,14 @@ test('the settings give one list of presets, keep "全身" for the region alone,
   const presets = drawer.getByRole('group', { name: '快速組合' });
   await expect(presets.locator('[data-preset]')).toHaveCount(11);
   await expect(drawer.locator('[data-preset]')).toHaveCount(11);
-  await expect(drawer.getByRole('group', { name: '個別圖層' }).getByRole('checkbox')).toHaveCount(14);
+  await expect(drawer.getByRole('group', { name: '個別圖層', includeHidden: true }).getByRole('checkbox', { includeHidden: true })).toHaveCount(14);
   // "全身" names the whole body in the region choice only; the preset that switches every layer on says so.
   await expect(drawer.getByRole('button', { name: '全身', exact: true })).toHaveCount(1);
   await expect(page.locator('#focus [data-focus=none]')).toHaveText('全身');
   await expect(page.locator('[data-preset=full]')).toHaveText('全部圖層');
-  // The calibration is one closed section: fitting the head, then the tracking read-out.
-  const advanced = page.locator('#advanced'), folded = ['fs', 'fz', 'fitreset', 'showdata'];
+  // The single layers and the calibration are one closed section: the layers, the head fit, then the tracking read-out.
+  const advanced = page.locator('#advanced'), folded = ['L_skull', 'L_legs', 'fs', 'fz', 'fitreset', 'showdata'];
+  await expect(advanced.getByRole('group', { name: '個別圖層', includeHidden: true })).toHaveCount(1);
   await expect(advanced.locator('summary')).toHaveText('進階調整');
   expect(await advanced.evaluate((node) => node.tagName === 'DETAILS' && !node.open)).toBe(true);
   for (const id of folded) await expect(page.locator(`#${id}`), id).toBeHidden();
@@ -241,11 +242,15 @@ test('the settings give one list of presets, keep "全身" for the region alone,
   const closed = await drawer.evaluate((node) => node.scrollHeight);
   await advanced.locator('summary').click();
   for (const id of folded) await expect(page.locator(`#${id}`), id).toBeVisible();
+  expect((await box(page, '#L_legs')).bottom, 'the layers come before the fit').toBeLessThan((await box(page, '#fs')).y);
   expect((await box(page, '#fitreset')).bottom, 'the read-out comes after the fit').toBeLessThan((await box(page, '#showdata')).y);
-  // Folding the calibration away takes the seven fit sliders and the read-out off the panel.
-  expect(await drawer.evaluate((node) => node.scrollHeight) - closed).toBeGreaterThan(450);
-  // A viewer who uses the calibration finds the section open on return; the everyday controls do not open it.
-  for (const [stored, open] of [[{ fs: 1.1 }, true], [{ fx: 1 }, true], [{ showdata: true }, true], [{ reveal: 'lens' }, false], [{ real: 0.5 }, false]]) {
+  // Folding them away takes the fourteen layers, the seven fit sliders and the read-out off the panel.
+  expect(await drawer.evaluate((node) => node.scrollHeight) - closed).toBeGreaterThan(650);
+  // A viewer who uses the section finds it open on return: a fitted head, the read-out, or layers that no preset gives.
+  // A preset's layers and the everyday controls do not open it.
+  const nervous = { skull: false, hands: false, brain: true, nerves: true, peripheralNerves: true };
+  for (const [stored, open] of [[{ fs: 1.1 }, true], [{ fx: 1 }, true], [{ showdata: true }, true], [{ brain: true }, true],
+    [nervous, false], [{ reveal: 'lens' }, false], [{ real: 0.5 }, false]]) {
     const other = await page.context().newPage();
     await storeSettings(other, stored); await other.goto('/');
     expect(await other.locator('#advanced').evaluate((node) => node.open), JSON.stringify(stored)).toBe(open);
@@ -257,6 +262,15 @@ test('the settings give one list of presets, keep "全身" for the region alone,
   await phone.locator('#settings-toggle').click();
   await expect(phone.locator('#settings-close')).toBeFocused();
   expect((await box(phone, '#advanced > summary')).height).toBeGreaterThanOrEqual(44);
+  // Mixed reality is reached after the region, the presets, the labels and the appearance: no more than 30 controls,
+  // and within 1200px of the top of the panel (it was 44 controls and 1478px down with the layers in view).
+  const depth = await phone.evaluate(() => {
+    const drawer = document.getElementById('drawer'), heading = document.getElementById('reality-heading');
+    const before = [...drawer.querySelectorAll('button, input, select, summary')].filter((node) => node.checkVisibility({ checkVisibilityCSS: true }) && (node.compareDocumentPosition(heading) & Node.DOCUMENT_POSITION_FOLLOWING));
+    return { controls: before.length, top: heading.getBoundingClientRect().top - drawer.getBoundingClientRect().top + drawer.scrollTop };
+  });
+  expect(depth.controls, 'controls before mixed reality').toBeLessThanOrEqual(30);
+  expect(depth.top, 'mixed reality from the top of the panel').toBeLessThan(1200);
   await phone.close();
   await page.goto('/?lang=en');
   await expect(page.locator('#advanced summary')).toHaveText('Advanced');

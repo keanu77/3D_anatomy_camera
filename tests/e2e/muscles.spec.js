@@ -1,7 +1,7 @@
 import { test, expect, devices } from '@playwright/test';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-import { LIVE_START, fixedStage, rendered, storeSettings, watchErrors } from './helpers.js';
+import { LIVE_START, fixedStage, rendered, storeSettings, watchErrors, openAdvanced } from './helpers.js';
 
 const muscleOnly = { skull: false, brain: false, muscles: false, eyes: false, outline: false, hands: false,
   spine: false, organs: false, arms: false, legs: false, bodyMuscles: true, joints: false, nerves: false, showdata: false, performance: 'balanced' };
@@ -59,9 +59,9 @@ test('body-muscle preset loads its own bundle and toggles without redownloading 
   expect(muscleRequests(requests)).toHaveLength(2);
   expect(requests.every((url) => new URL(url).origin === new URL(page.url()).origin)).toBe(true);
   await testInfo.attach('muscle-only-demo', { body: await page.locator('#stage').screenshot(), contentType: 'image/png' });
-  await page.locator('#L_bodyMuscles').uncheck();
+  await openAdvanced(page); await page.locator('#L_bodyMuscles').uncheck();
   await expect.poll(async () => (await diagnostics(page)).renderer.visibleLayers.bodyMuscles).toBe(0);
-  await page.locator('#L_bodyMuscles').check();
+  await openAdvanced(page); await page.locator('#L_bodyMuscles').check();
   await expect.poll(async () => (await diagnostics(page)).renderer.visibleLayers.bodyMuscles).toBeGreaterThan(0);
   expect(muscleRequests(requests)).toHaveLength(2);
   expect(oldBodyRequests(requests)).toEqual([]);
@@ -98,14 +98,14 @@ test('body muscles alone enable Pose and stop inference when switched off', asyn
   expect(oldBodyRequests(requests)).toEqual([]);
   expect(requests.some((url) => /\/(face_landmarker|hand_landmarker)\.task$/.test(url))).toBe(false);
   expect(requests.some((url) => url.endsWith('/models/pose_landmarker_lite.task'))).toBe(true);
-  await page.locator('#L_bodyMuscles').uncheck();
+  await openAdvanced(page); await page.locator('#L_bodyMuscles').uncheck();
   // One already-submitted worker frame may finish; no subsequent frame may run.
   await expect.poll(async () => (await diagnostics(page)).trackers.inFlight, { timeout: 60000 }).toBe(false);
   const calls = (await diagnostics(page)).trackers.calls.pose;
   const time = await page.locator('#video').evaluate((video) => video.currentTime);
   await expect.poll(() => page.locator('#video').evaluate((video) => video.currentTime)).toBeGreaterThan(time + 0.5);
   expect((await diagnostics(page)).trackers.calls.pose).toBe(calls);
-  await page.locator('#L_bodyMuscles').check();
+  await openAdvanced(page); await page.locator('#L_bodyMuscles').check();
   await expect.poll(async () => (await diagnostics(page)).trackers.calls.pose).toBeGreaterThan(calls);
   expect(muscleRequests(requests)).toHaveLength(2);
   await page.locator('#camera-stop').click();
@@ -155,12 +155,12 @@ test('cancelled muscle fetch cannot install or clear a newer muscle load', async
   });
   try {
     await page.goto('/?still#demo'); await rendered(page);
-    await page.locator('#L_bodyMuscles').check();
+    await openAdvanced(page); await page.locator('#L_bodyMuscles').check();
     await expect.poll(() => Object.values(requestCounts).reduce((sum, count) => sum + count, 0)).toBe(2);
-    await page.locator('#L_bodyMuscles').uncheck();
+    await openAdvanced(page); await page.locator('#L_bodyMuscles').uncheck();
     await expect.poll(() => aborted.length).toBeGreaterThan(0);
     expect((await diagnostics(page)).renderer.musclesLoaded).toBe(false);
-    await page.locator('#L_bodyMuscles').check();
+    await openAdvanced(page); await page.locator('#L_bodyMuscles').check();
     await expect.poll(async () => (await diagnostics(page)).renderer.musclesLoaded).toBe(true);
     release();
     await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
