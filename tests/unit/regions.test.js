@@ -1,11 +1,11 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, test } from 'vitest';
-import { REGIONS, FOCUS_IDS, OPTIONAL_FOCUS_LAYERS, regionById, regionIncludesMesh, regionPartSelector, focusLabels, sourceKey } from '../../src/regions.js';
+import { REGIONS, FOCUS_IDS, OPTIONAL_FOCUS_LAYERS, regionById, regionIncludesMesh, regionPartSelector, focusLabels, carpalLabels, sourceKey } from '../../src/regions.js';
 import { DEFAULTS, LAYERS, applyFocus, sanitizeSettings } from '../../src/settings.js';
 import { filterPartRanges, partCentroids, validatePartRanges } from '../../src/picking.js';
 
 const read = name => JSON.parse(readFileSync(new URL(`../../public/anatomy/${name}.json`, import.meta.url)));
-const individual = read('individual-body');
+const individual = read('individual-body'), individualHead = read('individual-head');
 const rigs = ['body', 'muscles', 'joints', 'nerves', 'peripheral'].flatMap(name => read(name).meshes);
 // Bones and muscles take their parts from the individual bundle; nerves publish theirs with the mesh.
 const partsOf = mesh => individual.meshes.find(entry => entry.parent === mesh)?.parts || rigs.find(rig => rig.name === mesh)?.parts;
@@ -170,7 +170,28 @@ describe('focused labels', () => {
     expect(chest.filter(text => text.includes('肋骨')).sort()).toEqual(['右肋骨', '左肋骨']);
     expect(chest).toContain('胸椎');
     expect(chest).toContain('胸骨柄');
-    expect(texts('foot', 'foot_L')).toEqual(expect.arrayContaining(['左蹠骨', '左趾骨', '左距骨', '左跟骨']));
+    expect(texts('foot', 'foot_L')).toEqual(expect.arrayContaining(['左趾骨', '左距骨', '左跟骨']));
+  });
+  test('every bone of the foot but the toe bones is named by itself: seven tarsals and five metatarsals', () => {
+    const foot = texts('foot', 'foot_L');
+    expect(foot.filter(text => text.includes('蹠骨')).sort()).toEqual(['左第 1 蹠骨', '左第 2 蹠骨', '左第 3 蹠骨', '左第 4 蹠骨', '左第 5 蹠骨']);
+    expect(foot.filter(text => text.includes('趾骨'))).toEqual(['左趾骨']);
+    expect(foot).toEqual(expect.arrayContaining(['左距骨', '左跟骨', '左足舟狀骨', '左內側楔狀骨', '左中間楔狀骨', '左外側楔狀骨', '左骰骨']));
+    expect(foot).toHaveLength(13);
+    expect(texts('foot', 'foot_R', 'en')).toEqual(expect.arrayContaining(['right first metatarsal bone', 'right fifth metatarsal bone', 'right phalanges of foot']));
+  });
+  test('the eight carpal bones of a tracked hand are named one by one, on the hand that is shown', () => {
+    const palm = individualHead.meshes.find(mesh => mesh.parent === 'hand_palm');
+    const anchors = palm.parts.map((part, i) => ({ part, point: [i, 0, 0], weight: part.count }));
+    const carpals = ['手舟狀骨', '月狀骨', '三角骨', '豌豆骨', '大多角骨', '小多角骨', '頭狀骨', '鉤狀骨'];
+    expect(carpalLabels(anchors, palm.parts, 'R').map(label => label.text).sort()).toEqual(carpals.map(name => `右${name}`).sort());
+    // The left hand is drawn from the mirrored right-hand bones and is named as a left hand.
+    const left = carpalLabels(anchors, palm.parts, 'L');
+    expect(left.map(label => label.text).sort()).toEqual(carpals.map(name => `左${name}`).sort());
+    expect(left.find(label => label.text === '左月狀骨').point).toEqual(anchors.find(anchor => anchor.part.name === 'right lunate').point);
+    expect(carpalLabels(anchors, palm.parts, 'L', 'en').map(label => label.text)).toEqual(expect.arrayContaining(['left scaphoid', 'left hamate']));
+    // The metacarpals in the same mesh are not carpal bones.
+    expect(carpalLabels(anchors, palm.parts, 'R').some(label => label.text.includes('掌骨'))).toBe(false);
   });
   test('language choice and untranslated source names', () => {
     expect(texts('shoulder', 'muscle_deltoid_L', 'en')).toEqual(['left deltoid']);

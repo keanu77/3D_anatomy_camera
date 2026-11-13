@@ -18,7 +18,7 @@ export function projectAnchor({ point, matrix, camera, width, height, mirror = f
 }
 
 export function createLabels({ settings, state, metadata, getSize, headGroup, jawMesh, headCamera,
-  handCamera, rigs, getBodyLabels, getLens, getZoom, getClip }) {
+  handCamera, rigs, getBodyLabels, getHandLabels = () => null, getLens, getZoom, getClip }) {
   let lastLayout = [], painted = false;
   function draw(context) {
     // Nothing was drawn and nothing will be: leave the hidden canvas alone.
@@ -47,8 +47,14 @@ export function createLabels({ settings, state, metadata, getSize, headGroup, ja
     if (settings.hands) for (const rig of rigs) {
       if (!rig.group.visible || !rig.pts) continue;
       rig.group.updateWorldMatrix(true, true);
+      // A hand looked at closely names its carpal bones one by one, each at its own bone in the palm mesh.
+      const carpals = getHandLabels(rig);
+      for (const { text, point } of carpals || []) {
+        const anchor = projectAnchor({ point, matrix: rig.palm.matrixWorld, camera: handCamera, width, height, mirror: state.mirror, lens });
+        if (anchor) items.push({ ...anchor, text, color: color('hands'), localized: true });
+      }
       const anchors = [
-        ['Carpal bones (wrist)', rig.pts[0]], ['Metacarpal', rig.pts[9].clone().lerp(rig.pts[0], .45)],
+        ...(carpals ? [] : [['Carpal bones (wrist)', rig.pts[0]]]), ['Metacarpal', rig.pts[9].clone().lerp(rig.pts[0], .45)],
         ['Proximal phalanx', rig.pts[9].clone().lerp(rig.pts[10], .5)],
         ['Middle phalanx', rig.pts[10].clone().lerp(rig.pts[11], .5)],
         ['Distal phalanx', rig.pts[11].clone().lerp(rig.pts[12], .5)],
