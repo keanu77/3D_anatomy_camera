@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { rendered, watchErrors } from './helpers.js';
+import { rendered, storeSettings, watchErrors } from './helpers.js';
 
 const diagnostics = (page) => page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__());
 const box = (page, selector) => page.locator(selector).first().evaluate((el) => {
@@ -214,4 +214,42 @@ test('the side choice and the enlarge option appear only with a region in focus'
   await expect(page.locator('#focus-zoom-row')).toBeVisible();
   await page.locator('#focus [data-focus=none]').click();
   await expect(page.locator('#focusSide')).toBeHidden();
+});
+
+test('the settings give one list of presets, keep "全身" for the region alone, and fold the fine adjustments away', async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.setViewportSize({ width: 1280, height: 900 }); await page.goto('/');
+  const drawer = page.locator('#drawer');
+  // One group of presets: the four systems and the seven single views.
+  const presets = drawer.getByRole('group', { name: '快速組合' });
+  await expect(presets.locator('[data-preset]')).toHaveCount(11);
+  await expect(drawer.locator('[data-preset]')).toHaveCount(11);
+  await expect(drawer.getByRole('group', { name: '個別圖層' }).getByRole('checkbox')).toHaveCount(14);
+  // "全身" names the whole body in the region choice only; the preset that switches every layer on says so.
+  await expect(drawer.getByRole('button', { name: '全身', exact: true })).toHaveCount(1);
+  await expect(page.locator('#focus [data-focus=none]')).toHaveText('全身');
+  await expect(page.locator('[data-preset=full]')).toHaveText('全部圖層');
+  // The fine adjustments are one closed section; everyday controls stay in view.
+  const advanced = page.locator('#advanced');
+  await expect(advanced.locator('summary')).toHaveText('進階調整');
+  expect(await advanced.evaluate((node) => node.tagName === 'DETAILS' && !node.open)).toBe(true);
+  for (const id of ['real', 'feather', 'reveal', 'fs', 'fz', 'fitreset', 'showdata']) await expect(page.locator(`#${id}`), id).toBeHidden();
+  for (const id of ['bright', 'labels', 'performance', 'camera-stop']) await expect(page.locator(`#${id}`), id).toBeVisible();
+  const closed = await drawer.evaluate((node) => node.scrollHeight);
+  await advanced.locator('summary').click();
+  for (const id of ['real', 'feather', 'reveal', 'fs', 'fz', 'fitreset', 'showdata']) await expect(page.locator(`#${id}`), id).toBeVisible();
+  // Folding them away takes at least 600px off a panel that was over 3000px long.
+  expect(await drawer.evaluate((node) => node.scrollHeight) - closed).toBeGreaterThan(600);
+  // A viewer who uses one of them finds the section open on return.
+  for (const stored of [{ reveal: 'lens' }, { fs: 1.1 }, { showdata: true }, { real: 0.5 }]) {
+    const other = await page.context().newPage();
+    await storeSettings(other, stored); await other.goto('/');
+    expect(await other.locator('#advanced').evaluate((node) => node.open), JSON.stringify(stored)).toBe(true);
+    await other.close();
+  }
+  await page.goto('/?lang=en');
+  await expect(page.locator('#advanced summary')).toHaveText('Advanced');
+  await expect(page.locator('[data-preset=full]')).toHaveText('All layers');
+  await expect(page.locator('#drawer').getByRole('group', { name: 'Presets' }).locator('[data-preset]')).toHaveCount(11);
+  expect(errors).toEqual([]);
 });

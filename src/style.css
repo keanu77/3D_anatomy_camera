@@ -239,8 +239,10 @@ h1, h2, h3, p { margin: 0; }
 .seg button { flex: 1; min-width: 0; }
 .system-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .system-presets button { min-height: 48px; }
-.panel .layer-heading { margin-top: 24px; margin-bottom: 8px; color: var(--muted); font-size: var(--t-small); font-weight: 500; }
-.layer-presets { margin-bottom: 16px; }
+.panel .group-label { margin: 16px 0 8px; color: var(--muted); font-size: var(--t-small); font-weight: 500; }
+.panel h3 + .group-label { margin-top: 0; }
+.system-presets { margin-bottom: 8px; }
+.layer-presets { margin-bottom: 0; }
 .checks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 8px; }
 .ck { display: flex; align-items: center; gap: 8px; min-height: 36px; cursor: pointer; }
 .ck input { width: 16px; height: 16px; margin: 0; flex-shrink: 0; accent-color: var(--accent); }
@@ -253,6 +255,10 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
 .label-options > .ck { font-weight: 600; }
 .small { font-size: var(--t-small); line-height: 1.75; color: var(--muted); }
 #focus-note { margin-top: 8px; }
+/* The fine adjustments: a heading that opens, with the three groups it holds set apart inside. */
+.advanced > summary { min-height: 30px; font-size: var(--t-ui); font-weight: 600; }
+.advanced > section { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+.advanced > summary + section { margin-top: 12px; }
 .coverage { margin-top: 12px; border-left: 2px solid var(--line-strong); padding-left: 12px; }
 .coverage summary { min-height: 30px; color: var(--text-soft); }
 .coverage p { margin-top: 12px; }

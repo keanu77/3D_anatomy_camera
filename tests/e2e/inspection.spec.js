@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
-import { rendered, storeSettings, watchErrors } from './helpers.js';
+import { openAdvanced, rendered, storeSettings, watchErrors } from './helpers.js';
 
 const body = JSON.parse(readFileSync(new URL('../../public/anatomy/individual-body.json', import.meta.url)));
 const head = JSON.parse(readFileSync(new URL('../../public/anatomy/individual-head.json', import.meta.url)));
@@ -69,6 +69,7 @@ async function clickPoint(page, point, touch = false) {
 
 async function setReveal(page, reveal, cut) {
   let frames = (await diagnostic(page)).renderer.frameCount;
+  await openAdvanced(page);
   await page.locator('#reveal').selectOption(reveal);
   await expect.poll(async () => (await diagnostic(page)).renderer.frameCount).toBeGreaterThan(frames);
   if (cut !== undefined) {

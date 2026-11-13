@@ -1,7 +1,7 @@
 import { test, expect, devices } from '@playwright/test';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-import { LIVE_START, fixedStage, rendered, storeSettings, watchErrors } from './helpers.js';
+import { LIVE_START, fixedStage, openAdvanced, rendered, storeSettings, watchErrors } from './helpers.js';
 
 const muscleOnly = { skull: false, brain: false, muscles: false, eyes: false, outline: false, hands: false,
   spine: false, organs: false, arms: false, legs: false, bodyMuscles: true, joints: false, nerves: false, showdata: false, performance: 'balanced' };
@@ -121,6 +121,7 @@ test('combined muscle and skeleton layers support both styles, labels and every 
   await page.goto('/?still#demo'); await rendered(page);
   await expect.poll(async () => (await diagnostics(page)).renderer.musclesLoaded).toBe(true);
   await expect.poll(async () => (await diagnostics(page)).renderer.bodyLoaded).toBe(true);
+  await openAdvanced(page);
   for (const style of ['xray', 'solid']) {
     await page.locator(`[data-style="${style}"]`).click();
     await page.locator('#reveal').selectOption('whole');
