@@ -22,6 +22,7 @@ Versions follow the number in `package.json` and in `/version.json` on the site.
 
 ### Changed
 
+- Choosing a region no longer rewrites the layer selection. It switches on the layers the region needs and the name labels, and leaves every layer the viewer chose as it was: before, picking a region on the start screen switched off the skull, brain or any other layer set a moment earlier, and returning to the whole body did not bring them back. A head layer left on is therefore still drawn beside the region.
 - The scene starts loading while the camera permission prompt is open. With a 1.5 s prompt on a 5 Mbit/s link, the live view appeared after 4.3 s instead of 5.8 s.
 
 ## 3.0.0 (2026-11-13)

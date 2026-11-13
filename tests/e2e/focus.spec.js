@@ -122,3 +122,35 @@ test('mobile bar chooses a region and a side without overflowing', async ({ page
   await expect.poll(async () => (await renderer(page)).focus).toBeNull();
   await expect(page.locator('#preset-cycle')).toBeVisible();
 });
+
+test('choosing a region keeps every layer the viewer set and adds its own, before and after starting', async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.goto('/');
+  const layers = () => page.evaluate(() => Object.fromEntries([...document.querySelectorAll('input[id^=L_]')].map((input) => [input.id.slice(2), input.checked])));
+  const stored = () => page.evaluate(() => JSON.parse(localStorage.getItem('xr_settings')));
+  // The viewer's own choice on the start screen: the brain in place of the eyes.
+  await page.locator('#L_brain').check(); await page.locator('#L_eyes').uncheck();
+  const own = { skull: true, brain: true, muscles: false, eyes: false, outline: true, hands: true, spine: false, organs: false,
+    arms: false, legs: false, bodyMuscles: false, joints: false, nerves: false, peripheralNerves: false };
+  expect(await layers()).toEqual(own);
+  await page.locator('#focus [data-focus=forearm]').click();
+  const inForearm = { ...own, arms: true, bodyMuscles: true, joints: true };
+  expect(await layers()).toEqual(inForearm);
+  await expect(page.locator('#labels')).toBeChecked();
+
+  await page.locator('#demo-start').click(); await rendered(page);
+  await focused(page, 'forearm:both');
+  expect(await layers()).toEqual(inForearm);
+  expect(await stored()).toMatchObject({ ...inForearm, focus: 'forearm' });
+
+  // Another region adds what it needs; a layer the viewer then switches off stays off on leaving.
+  await page.locator('#focus [data-focus=knee]').click();
+  await focused(page, 'knee:both');
+  expect(await layers()).toEqual({ ...inForearm, legs: true });
+  await page.locator('#L_joints').uncheck();
+  await page.locator('#focus [data-focus=none]').click();
+  await expect.poll(async () => (await renderer(page)).focus).toBeNull();
+  expect(await layers()).toEqual({ ...inForearm, legs: true, joints: false });
+  expect(await stored()).toMatchObject({ ...inForearm, legs: true, joints: false, focus: 'none' });
+  expect(errors).toEqual([]);
+});
