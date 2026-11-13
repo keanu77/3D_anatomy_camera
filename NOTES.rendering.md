@@ -46,6 +46,19 @@ Head/hand labels and body labels share the bounded two-column layout. Label
 projection respects reflection, clipping, jaw motion and display zoom. The
 independent demo is in `demo-pose.js`; it uses no camera and loads no tracker.
 
+The label canvas is backed at the display's pixel density (at most 3, and about
+four megapixels); layout stays in stage pixels. At density 1 the output is
+unchanged. A disabled label layer is not cleared again on every frame.
+
+Without a tracked fingertip the lens follows the pointer. The pointer is a
+display position and is mapped back through the current zoom, so the lens stays
+under it while a focused region is enlarged.
+
+When a picture freezes, the head takes the frozen frame's measured pose at once
+and redraws leave it there; before, each redraw moved it a little closer. The
+scene starts loading as soon as Start is pressed, while the camera permission
+prompt is still open; tracking models still wait for the answer.
+
 ## Verification
 
 R4 passed 290 unit tests and 65 active browser cases, including source picking,

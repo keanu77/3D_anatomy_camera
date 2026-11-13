@@ -1,8 +1,10 @@
-# 3D anatomy camera 3.0
+# 3D anatomy camera
 
-3D anatomy camera brings reference anatomy into your camera view. You can also explore with the camera-free demo.
+[![Verify 3D anatomy camera](https://github.com/keanu77/3D_anatomy_camera/actions/workflows/ci.yml/badge.svg)](https://github.com/keanu77/3D_anatomy_camera/actions/workflows/ci.yml)
 
-[**Open 3D anatomy camera**](https://3danatomycamera.sportsmedicine.tw/) · [Source code](https://github.com/keanu77/3D_anatomy_camera) · [繁體中文](README.zh-TW.md)
+Point a camera at yourself and a 3D skeleton, muscles and nerves follow your head, hands and body, in the browser. It is for learning anatomy; nothing is uploaded.
+
+[**Open the app**](https://3danatomycamera.sportsmedicine.tw/) · [**Try the demo, no camera needed**](https://3danatomycamera.sportsmedicine.tw/#demo) · [繁體中文說明](README.zh-TW.md) · [Changes](CHANGELOG.md)
 
 ![Animated camera-free anatomy demo](docs/demo.gif)
 
@@ -14,6 +16,7 @@ An independently built, browser-based anatomy viewer by **吳易澄** ([sportsme
 - Track head, hands and body with MediaPipe; preview synthetic poses without a camera.
 - Pick exact source surfaces, inspect overlapping structures, and read source-linked names and reference text.
 - Focus a body region and anatomical side, with readable Traditional Chinese or English labels.
+- Use the interface in Traditional Chinese or English. It follows the browser language, the button in the header changes it, and a link can ask for one with `?lang=en` or `?lang=zh`.
 - Pause, rotate, pinch or wheel to zoom; adjust brightness, feathering, reveal planes and the fingertip lens.
 - Use responsive desktop/mobile controls, local background inference and lazy-loaded anatomy bundles.
 
@@ -70,6 +73,22 @@ Head and hand geometry, reference landmarks and coordinate frames are independen
 構想受 Hashem Al-Ghaili 的 X-Ray Mirror 啟發，本專案的程式與資料為獨立製作（[原貼文](https://x.com/HashemGhaili/status/2120202746121085321)）。
 
 The concept was inspired by Hashem Al-Ghaili's X-Ray Mirror; this project's code and data preparation were independently produced. No endorsement is implied.
+
+## Project documents
+
+| Document | What it records |
+| --- | --- |
+| [NOTES.rendering.md](NOTES.rendering.md) | Coordinate and rendering contracts, interaction and resource ownership |
+| [NOTES.tracking.md](NOTES.tracking.md) | Background tracking, pause behaviour, smoothing and their validation limits |
+| [NOTES.picking.md](NOTES.picking.md), [NOTES.structure-info.md](NOTES.structure-info.md) | Picking a source surface and the reference text shown for it |
+| [NOTES.rebuild.md](NOTES.rebuild.md) | How head and hand geometry were rebuilt independently, with measured residuals |
+| `NOTES.*-assets.md`, `NOTES.individual-*.md`, [NOTES.peripheral-nerves.md](NOTES.peripheral-nerves.md) | Source, processing and coverage of each anatomy bundle |
+| [NOTES.md](NOTES.md), [NOTES.model-options.md](NOTES.model-options.md) | Decision log and the alternatives that were considered |
+| [CHANGELOG.md](CHANGELOG.md), [SECURITY.md](SECURITY.md) | Changes by version; how to report a security problem |
+
+## Feedback
+
+Bug reports and corrections are welcome as [issues](https://github.com/keanu77/3D_anatomy_camera/issues). For an anatomical name or description, please name the structure and a source: reference text is quoted from its source and is not edited here without one. Report security problems privately, as described in [SECURITY.md](SECURITY.md).
 
 ## Limits
 

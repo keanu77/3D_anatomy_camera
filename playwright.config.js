@@ -11,6 +11,8 @@ export default defineConfig({
     baseURL: 'https://127.0.0.1:4173',
     ignoreHTTPSErrors: true,
     viewport: { width: 1280, height: 900 },
+    // The interface follows the browser language; the suite reads the Chinese source text unless a test asks for English.
+    locale: 'zh-TW',
     deviceScaleFactor: 1,
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',

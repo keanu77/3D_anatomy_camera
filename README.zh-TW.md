@@ -1,6 +1,8 @@
-# 3D anatomy camera 3.0
+# 3D anatomy camera
 
-[English](README.md) · [線上使用](https://3danatomycamera.sportsmedicine.tw/)
+[English](README.md) · [**線上使用**](https://3danatomycamera.sportsmedicine.tw/) · [**不開相機先看示範**](https://3danatomycamera.sportsmedicine.tw/#demo) · [版本變更](CHANGELOG.md)
+
+把鏡頭對著自己，3D 骨骼、肌肉與神經會跟著你的頭、手和身體動。這是解剖學習工具，影像只在你的裝置上處理，不會上傳。
 
 ![3D anatomy camera 示範](docs/demo.gif)
 
@@ -33,6 +35,7 @@ Vite 提供 HTTPS；使用終端顯示的網址。區網手機必須信任測試
 ## 使用
 
 - **先看示範**：不使用相機，也不載入追蹤模型。
+- **介面語言**：中文或 English。預設跟隨瀏覽器語言，頁首按鈕可切換（切換會重新載入頁面），連結可用 `?lang=en` 或 `?lang=zh` 指定。英文介面下，構造名稱直接顯示資料來源的英文原名。
 - **骨骼與關節／肌肉＋骨骼／神經與感覺器官／三系統一起看**：主要學習預設，三系統合併預設不開啟內臟。
 - **Head + hands / Upper body / Full body**：切換圖層預設。身體 JSON、BIN 僅在身體圖層開啟時載入。
 - **Body muscles 身體肌肉**：顯示軀幹與四肢肌群，與 **Head muscles** 頭臉肌肉分開控制；Full body 包含兩者。肌肉使用獨立的 JSON、BIN，未開啟時不下載，單獨顯示肌肉也不下載骨骼／器官資料。
@@ -97,6 +100,8 @@ BUILD_SHA=$(git rev-parse HEAD) npm run build
 wrangler pages deploy dist --project-name 3d-anatomy-camera --branch main
 npm run verify:deploy
 ```
+
+`version.json` 的 `builtAt` 在帶 `BUILD_SHA` 的建置中取該 commit 的提交時間（或 `SOURCE_DATE_EPOCH`），同一個 commit 不論何時重建都得到相同位元組，`verify:deploy` 才能從乾淨 checkout 重現；沒有 `BUILD_SHA` 的本機建置仍記錄當下時間。
 
 部署後核對 `/version.json` 的 commit、HTTP security headers、各 binary／模型 SHA-256 與畫面。`public/_headers` 包含 CSP、Permissions-Policy、Referrer-Policy、nosniff 及禁止 frame embedding。其他靜態主機須自行提供對應 response headers；meta CSP 無法取代 `frame-ancestors` header。
 

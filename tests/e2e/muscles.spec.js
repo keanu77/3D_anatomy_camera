@@ -13,7 +13,7 @@ const oldBodyRequests = (requests) => requests.filter((url) => /\/anatomy\/body\
 test('direct muscle demo works in mobile portrait and landscape without skeleton downloads', async ({ browser }, testInfo) => {
   // Chromium touch/layout emulation, not physical iOS or Safari evidence.
   const { defaultBrowserType: _browser, ...device } = devices['iPhone 13'];
-  const context = await browser.newContext({ ...device, ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
+  const context = await browser.newContext({ ...device, locale: 'zh-TW', ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
   try {
     const page = await context.newPage(), requests = watchRequests(page), errors = watchErrors(page);
     await page.goto('/?still#demo&bodyMuscles'); await rendered(page);

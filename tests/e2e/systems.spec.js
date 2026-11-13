@@ -73,7 +73,7 @@ test('three-system overview combines all requested layers and draws shared label
 
 test('three-system direct link fits mobile portrait and short landscape with shared labels', async ({ browser }, testInfo) => {
   const { defaultBrowserType: _browser, ...device } = devices['iPhone 13'];
-  const context = await browser.newContext({ ...device, ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
+  const context = await browser.newContext({ ...device, locale: 'zh-TW', ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
   try {
     const page = await context.newPage(), errors = watchErrors(page);
     await storeSettings(page, { labels: true });
@@ -90,6 +90,32 @@ test('three-system direct link fits mobile portrait and short landscape with sha
       await page.locator('#settings-close').click();
       await testInfo.attach(`systems-mobile-${orientation}`, { body: await page.screenshot(), contentType: 'image/png' });
     }
+    expect(errors).toEqual([]);
+  } finally { await context.close(); }
+});
+
+test('name labels are drawn at the display resolution of a phone, in the same place', async ({ browser }) => {
+  const { defaultBrowserType: _browser, ...device } = devices['iPhone 13'];
+  const context = await browser.newContext({ ...device, locale: 'zh-TW', ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
+  try {
+    const page = await context.newPage(), errors = watchErrors(page);
+    await storeSettings(page, { ...off, skull: true, brain: true, outline: true, labels: true });
+    await page.goto('/?still#demo'); await rendered(page);
+    await expect.poll(async () => (await diagnostics(page)).renderer.labelLayout.length).toBeGreaterThan(3);
+    const density = await page.evaluate(() => devicePixelRatio);
+    expect(density).toBe(3);
+    const measured = await page.locator('#hud').evaluate((canvas) => {
+      const box = canvas.getBoundingClientRect(), layout = window.__ANATOMY_DIAGNOSTICS__().renderer.labelLayout;
+      const scale = canvas.width / box.width, context = canvas.getContext('2d');
+      // Opaque pixels inside the first label's panel, and in a strip of the same size just above every label.
+      const count = ({ x, y, width, height }) => { const data = context.getImageData(Math.round(x * scale), Math.round(y * scale), Math.round(width * scale), Math.round(height * scale)).data; let n = 0; for (let i = 3; i < data.length; i += 4) if (data[i] > 200) n++; return n / (data.length / 4); };
+      const first = layout[0].bounds, top = Math.min(...layout.map((item) => item.bounds.y));
+      return { scale, heightScale: canvas.height / box.height, inside: count(first), above: top > 20 ? count({ ...first, y: top - 18 }) : 0 };
+    });
+    expect(measured.scale).toBeCloseTo(density, 1);
+    expect(measured.heightScale).toBeCloseTo(density, 1);
+    expect(measured.inside, 'the panel is painted where the layout says it is').toBeGreaterThan(0.9);
+    expect(measured.above).toBe(0);
     expect(errors).toEqual([]);
   } finally { await context.close(); }
 });

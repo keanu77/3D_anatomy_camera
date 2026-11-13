@@ -488,3 +488,16 @@ both visibility assertions and the unchanged > 100 pixel assertion. Whole-source
 overlap remains **0 / 2641**. Paired image receipts
 remain attached to the browser test. No upstream Chromium defect is claimed from
 this evidence. Full export and CI acceptance are rerun after the runtime change.
+
+## Status after R6
+
+The R6 record above is history: it describes the private repository and the
+preview deployment as they were when R6 was accepted. Since then the project
+was renamed **3D anatomy camera** and released publicly as version 3.0.0 from
+`https://github.com/keanu77/3D_anatomy_camera` (same history-free root
+`6e99cec`), served at `https://3danatomycamera.sportsmedicine.tw/` from the
+Pages project `3d-anatomy-camera`. The earlier repository, its Pages project
+and its domain were not changed by that release. Statements above that the
+repository is private, or that only a preview exists, no longer describe the
+current state. The rebuild boundaries themselves are unchanged.
+

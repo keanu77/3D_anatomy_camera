@@ -247,3 +247,63 @@ test('a paused view is enlarged with the wheel or two fingers, stays pickable, a
   await expect.poll(zoom).toEqual(whole);
   expect(errors).toEqual([]);
 });
+
+test('every pause tracks the frozen frame with each tracker in use, whatever the throttle', async ({ page }) => {
+  test.setTimeout(240000);
+  const errors = watchErrors(page);
+  // Lite mode runs the hand tracker at most every 125 ms: a frozen frame that waits its turn keeps a stale hand.
+  await storeSettings(page, { ...off, skull: true, hands: true, performance: 'lite' });
+  await page.goto('/'); await page.locator('#start').click(); await rendered(page, LIVE_START);
+  const calls = async () => (await diagnostics(page)).trackers.calls;
+  await expect.poll(async () => (await calls()).hands || 0, { timeout: 90000 }).toBeGreaterThanOrEqual(2);
+  const pause = page.locator('#pause-toggle');
+  for (let round = 0; round < 6; round++) {
+    // Press pause at an instant when no frame is in flight, so the only inference that follows is the frozen frame's.
+    // The gap is the moment between one result arriving and the next animation frame offering another.
+    const before = await page.evaluate(() => new Promise((resolve) => (function wait() {
+      const tracking = window.__ANATOMY_DIAGNOSTICS__().trackers;
+      if (tracking.inFlight) { setTimeout(wait, 0); return; }
+      document.getElementById('pause-toggle').click(); resolve({ ...tracking.calls });
+    })()));
+    await expect(pause).toHaveAttribute('aria-pressed', 'true');
+    // Software-rendered inference can take longer than the half second that counts as settled: wait for the result itself.
+    await expect.poll(async () => (await calls()).hands - before.hands, { timeout: 30000, message: `round ${round}: hands inferred from the frozen frame` }).toBe(1);
+    await expect.poll(async () => { const earlier = await calls(); await page.waitForTimeout(700); const later = await calls(); return later.face - earlier.face + later.hands - earlier.hands; }).toBe(0);
+    await settled(page);
+    const after = await calls();
+    expect(after.face - before.face, `round ${round}: face inferred once from the frozen frame`).toBe(1);
+    expect(after.hands - before.hands, `round ${round}: hands inferred once from the frozen frame`).toBe(1);
+    await pause.click();
+    await expect(pause).toHaveAttribute('aria-pressed', 'false');
+    await expect.poll(async () => (await calls()).face, { timeout: 30000 }).toBeGreaterThan(after.face);
+  }
+  await page.locator('#camera-stop').click();
+  expect(errors).toEqual([]);
+});
+
+test('redrawing a paused picture reaches no verdict about performance', async ({ page }) => {
+  test.setTimeout(240000);
+  const errors = watchErrors(page);
+  // Software-rendered Pose is far below the 18 results a second the automatic mode asks for.
+  await storeSettings(page, { ...off, spine: true, arms: true, legs: true, performance: 'auto' });
+  await page.goto('/'); await page.locator('#start').click();
+  // Pause on the first tracked frame, before two seconds of slow results can step the mode down.
+  await page.evaluate(() => new Promise((resolve) => (function wait() {
+    if (!window.__ANATOMY_DIAGNOSTICS__().renderer?.frameCount) { setTimeout(wait, 20); return; }
+    document.getElementById('pause-toggle').click(); resolve();
+  })()));
+  await expect(page.locator('#pause-toggle')).toHaveAttribute('aria-pressed', 'true');
+  expect((await diagnostics(page)).state.performance).toBe('high');
+  // Turning the frozen view redraws it for five seconds: two verdict intervals and more.
+  const rect = await page.locator('#stage').boundingBox(), drawn = await frames(page);
+  await page.mouse.move(rect.x + 200, rect.y + 200); await page.mouse.down();
+  for (let step = 0; step < 50; step++) { await page.mouse.move(rect.x + 200 + (step % 2 ? 8 : -8), rect.y + 200); await page.waitForTimeout(100); }
+  await page.mouse.up();
+  expect(await frames(page)).toBeGreaterThan(drawn + 20);
+  expect((await diagnostics(page)).state, 'no step down while paused').toMatchObject({ paused: true, performance: 'high' });
+  // Running again, the slow tracker is measured afresh and the automatic mode still steps down.
+  await page.locator('#pause-toggle').click();
+  await expect.poll(async () => (await diagnostics(page)).state.performance, { timeout: 60000 }).not.toBe('high');
+  await page.locator('#camera-stop').click();
+  expect(errors).toEqual([]);
+});

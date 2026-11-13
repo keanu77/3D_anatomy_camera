@@ -1,14 +1,15 @@
 import { LAYERS, RANGES, applyFocus, applyPreset, saveSettings } from './settings.js';
 import { REGIONS, regionById } from './regions.js';
+import { t, getLanguage } from './i18n.js';
 export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }) {
   const $ = document.getElementById.bind(document);
   const changed = () => { saveSettings(settings); sync(); onChange(); };
   const presetChoices = ['skull', 'skeletal', 'bodyMuscles', 'nervous', 'systems'];
   const focusChoices = [{ id: 'none', label: '全身' }, ...REGIONS];
   for (const { id, label } of focusChoices) {
-    const chip = document.createElement('button'); chip.type = 'button'; chip.dataset.focus = id; chip.textContent = label;
+    const chip = document.createElement('button'); chip.type = 'button'; chip.dataset.focus = id; chip.textContent = t(label);
     chip.addEventListener('click', () => { applyFocus(settings, id); changed(); });
-    const option = document.createElement('option'); option.value = id; option.textContent = id === 'none' ? '部位：全身' : label;
+    const option = document.createElement('option'); option.value = id; option.textContent = t(id === 'none' ? '部位：全身' : label);
     $('focus').append(chip); $('focus-mobile').append(option);
   }
   $('focus-mobile').addEventListener('change', e => { applyFocus(settings, e.target.value); changed(); });
@@ -44,15 +45,16 @@ export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }
     // While a region is focused the mobile bar offers its side; presets come back when focus is left.
     $('focus-side-mobile').value = settings.focusSide; $('focus-side-mobile').hidden = !region; $('preset-cycle').hidden = !!region;
     $('focusZoom').disabled = !region;
-    $('focus-note').textContent = region ? `${region.note}${region.frame}選左側或右側可以放得更大；勾選「周邊神經」可加上此處的神經。` : '選一個部位，只顯示該處的肌肉與骨骼並標出名稱。';
+    $('focus-note').textContent = region ? [region.note, region.frame, '選左側或右側可以放得更大；勾選「周邊神經」可加上此處的神經。'].map(t).join(getLanguage() === 'en' ? ' ' : '')
+      : t('選一個部位，只顯示該處的肌肉與骨骼並標出名稱。');
     for (const key of ['fs', 'fw', 'fh', 'fd']) $(`${key}v`).textContent = `${Math.round(settings[key] * 100)}%`;
     for (const key of ['fx', 'fy', 'fz']) $(`${key}v`).textContent = `${settings[key] > 0 ? '+' : ''}${settings[key].toFixed(1)} cm`;
     $('featherv').textContent = `${Math.round(settings.feather * 100)}%`;
     $('cutrow').hidden = settings.reveal === 'whole';
-    $('cutlabel').textContent = settings.reveal === 'lens' ? '透視鏡大小' : '切面位置';
+    $('cutlabel').textContent = t(settings.reveal === 'lens' ? '透視鏡大小' : '切面位置');
     $('data').hidden = !settings.showdata;
     $('labelLanguage').disabled = !settings.labels;
-    $('style-toggle').textContent = settings.style === 'xray' ? 'X 光 → 實體' : '實體 → X 光';
+    $('style-toggle').textContent = t(settings.style === 'xray' ? 'X 光 → 實體' : '實體 → X 光');
   }
   for (const key of [...LAYERS, 'labels', 'showdata', 'focusZoom']) {
     const input = $(LAYERS.includes(key) ? `L_${key}` : key);
@@ -68,6 +70,15 @@ export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }
   $('preset-cycle').addEventListener('click', () => {
     const current = presetChoices.findIndex(matchesPreset);
     settings.focus = 'none'; applyPreset(settings, presetChoices[(current + 1) % presetChoices.length]); changed();
+  });
+  // The button names the other language, in that language. Stage labels follow the interface unless changed afterwards.
+  const other = getLanguage() === 'en' ? 'zh' : 'en', languageToggle = $('language-toggle');
+  languageToggle.textContent = other === 'en' ? 'English' : '中文'; languageToggle.lang = other === 'en' ? 'en' : 'zh-Hant';
+  languageToggle.setAttribute('aria-label', other === 'en' ? 'Switch the interface to English' : '將介面切換為中文');
+  languageToggle.addEventListener('click', () => {
+    settings.language = other; settings.labelLanguage = other; saveSettings(settings);
+    const url = new URL(location.href); url.searchParams.delete('lang');
+    if (url.href === location.href) location.reload(); else location.replace(url.href);
   });
   $('start').addEventListener('click', onStart);
   $('demo-start').addEventListener('click', onDemo);

@@ -1,5 +1,5 @@
 export const PROFILES = Object.freeze({ high: { width: 1280, height: 720 }, balanced: { width: 640, height: 480 }, lite: { width: 480, height: 360 } });
-export function createCamera({ video, onChange = () => {}, mediaDevices = globalThis.navigator?.mediaDevices }) {
+export function createCamera({ video, onChange = () => {}, onEnded = () => {}, mediaDevices = globalThis.navigator?.mediaDevices }) {
   let stream = null, facing = 'user', generation = 0, profile = 'balanced', busy = false;
   function stop() {
     generation++;
@@ -21,6 +21,10 @@ export function createCamera({ video, onChange = () => {}, mediaDevices = global
       } });
       if (current !== generation) { acquired.getTracks().forEach(t => t.stop()); return false; }
       stream = acquired; video.srcObject = stream;
+      // An unplugged camera or a withdrawn permission ends the track without any call from here.
+      for (const track of acquired.getVideoTracks()) {
+        track.addEventListener('ended', () => { if (stream === acquired) { stop(); onEnded(); } }, { once: true });
+      }
       await video.play();
       if (current !== generation) { acquired.getTracks().forEach(t => t.stop()); return false; }
       const actual = stream.getVideoTracks()[0]?.getSettings?.().facingMode;

@@ -16,7 +16,7 @@
 - Handedness is anatomical and independent of CSS mirroring. Direct inference on the official `right_hands.jpg` fixture returned Right + Right (scores 0.9512 / 0.9639); the original mirror-dependent swap was incorrect and has been removed for live tracking. The original synthetic demo remains pixel-identical.
 - Adversarial review reproduced and fixed camera restart after Stop during a failed switch, an expired demo failure overwriting a newer live session, optional hand-tracker failure stopping all tracking, mobile errors hidden in the drawer, and switching mirror before the scene finished loading. Regression tests cover these failures.
 - Official model downloads and build-time dependencies are external; the running website only fetches same-origin static resources and never uploads video/landmarks.
-- Direct Upload publishes to a dedicated Cloudflare Pages project; the GitHub repository stays private. CI checks pushes but does not automatically deploy.
+- Direct Upload publishes to a dedicated Cloudflare Pages project (`3d-anatomy-camera`). The repository was private through R6 and is public as `keanu77/3D_anatomy_camera` since the 3.0.0 release. CI checks pushes but does not automatically deploy.
 
 ## Verification record
 

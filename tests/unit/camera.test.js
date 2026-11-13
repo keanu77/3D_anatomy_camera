@@ -3,13 +3,17 @@ import { createCamera } from '../../src/camera.js';
 
 const deferred = () => { let resolve, reject; const promise = new Promise((yes, no) => { resolve = yes; reject = no; }); return { promise, resolve, reject }; };
 function fakeStream(facing = 'user') {
-  const track = { readyState: 'live', stop: vi.fn(function () { this.readyState = 'ended'; }), getSettings: () => ({ facingMode: facing }), applyConstraints: vi.fn(async () => {}) };
+  const listeners = new Map();
+  const track = { readyState: 'live', stop: vi.fn(function () { this.readyState = 'ended'; }), getSettings: () => ({ facingMode: facing }), applyConstraints: vi.fn(async () => {}),
+    addEventListener: (type, listener) => listeners.set(type, [...(listeners.get(type) || []), listener]),
+    // What the browser does when the device goes away: the track ends without stop() being called.
+    endFromOutside() { this.readyState = 'ended'; for (const listener of listeners.get('ended') || []) listener(new Event('ended')); } };
   return { track, getTracks: () => [track], getVideoTracks: () => [track] };
 }
 function setup(getUserMedia) {
   const video = { pause: vi.fn(), play: vi.fn(async () => {}), srcObject: null, videoWidth: 640, videoHeight: 480 };
-  const onChange = vi.fn();
-  return { video, onChange, camera: createCamera({ video, mediaDevices: { getUserMedia }, onChange }) };
+  const onChange = vi.fn(), onEnded = vi.fn();
+  return { video, onChange, onEnded, camera: createCamera({ video, mediaDevices: { getUserMedia }, onChange, onEnded }) };
 }
 
 describe('camera stream ownership', () => {
@@ -76,6 +80,24 @@ describe('camera stream ownership', () => {
     const { camera, onChange } = setup(async () => fakeStream('user'));
     await camera.start('environment');
     expect(onChange).toHaveBeenLastCalledWith(expect.objectContaining({ facing: 'user', mirror: true }));
+  });
+  test('a camera that ends on its own is released and reported once', async () => {
+    const stream = fakeStream(); const { camera, video, onChange, onEnded } = setup(async () => stream);
+    await camera.start();
+    stream.track.endFromOutside();
+    expect(camera.getDiagnostics()).toMatchObject({ running: false, liveTracks: 0, busy: false });
+    expect(video.srcObject).toBeNull();
+    expect(onChange).toHaveBeenLastCalledWith(expect.objectContaining({ running: false }));
+    expect(onEnded).toHaveBeenCalledOnce();
+  });
+  test('a track left behind by a camera switch cannot end the newer stream', async () => {
+    const front = fakeStream(), rear = fakeStream('environment');
+    const { camera, video, onEnded } = setup(vi.fn().mockResolvedValueOnce(front).mockResolvedValueOnce(rear));
+    await camera.start(); await camera.switch();
+    front.track.endFromOutside();
+    expect(onEnded).not.toHaveBeenCalled();
+    expect(video.srcObject).toBe(rear);
+    expect(camera.getDiagnostics()).toMatchObject({ running: true, facing: 'environment', liveTracks: 1 });
   });
   test('does not reopen a camera when the user stops during a failed switch', async () => {
     const rear = deferred(), front = fakeStream(), unintended = fakeStream();

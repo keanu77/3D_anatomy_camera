@@ -46,7 +46,7 @@ for (const deviceName of ['iPhone 13', 'Pixel 7']) {
   test(`mobile layout and controls: ${deviceName}`, async ({ browser }, testInfo) => {
     // Chromium emulates layout/touch. This does not claim iOS Safari hardware validation.
     const { defaultBrowserType: _browser, ...device } = devices[deviceName];
-    const context = await browser.newContext({ ...device, ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
+    const context = await browser.newContext({ ...device, locale: 'zh-TW', ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
     const page = await context.newPage(); const errors = watchErrors(page);
     await page.goto('/?still#demo'); await rendered(page);
     await expect(page.locator('#settings-toggle')).toHaveAttribute('aria-expanded', 'false');
@@ -92,6 +92,46 @@ test('camera permission rejection leaves retry and demo usable', async ({ page }
   await expect(page.locator('#demo-start')).toBeEnabled();
   expect(await page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().camera.running)).toBe(false);
   await page.locator('#demo-start').click(); await rendered(page);
+});
+
+test('the scene loads while the camera permission prompt is open; tracking models wait for the answer', async ({ page }) => {
+  test.setTimeout(240000);
+  const requested = [];
+  page.on('request', (request) => requested.push(new URL(request.url()).pathname));
+  await storeSettings(page, { skull: false, brain: false, muscles: false, eyes: false, outline: false, hands: false });
+  await page.addInitScript(() => {
+    const granted = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+    Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { value: (constraints) => new Promise((resolve, reject) => {
+      window.__QA_ANSWER_PROMPT__ = () => granted(constraints).then(resolve, reject);
+    }) });
+  });
+  await page.goto('/'); await page.locator('#start').click();
+  await expect.poll(() => page.evaluate(() => typeof window.__QA_ANSWER_PROMPT__)).toBe('function');
+  await expect.poll(() => requested.some((path) => path.endsWith('/anatomy/head.bin'))).toBe(true);
+  expect(await page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().camera.running)).toBe(false);
+  expect(requested.some((path) => /\.(task|wasm)$/.test(path))).toBe(false);
+  await expect(page.locator('#intro')).toBeVisible();
+  await page.evaluate(() => window.__QA_ANSWER_PROMPT__()); await rendered(page, LIVE_START);
+  expect(requested.filter((path) => path.endsWith('/anatomy/head.bin'))).toHaveLength(1);
+  await page.locator('#camera-stop').click();
+});
+
+test('a camera that ends on its own returns to the start screen and says so', async ({ page }) => {
+  test.setTimeout(240000);
+  const errors = watchErrors(page);
+  await storeSettings(page, { skull: false, brain: false, muscles: false, eyes: false, outline: false, hands: false });
+  await page.goto('/'); await page.locator('#start').click(); await rendered(page, LIVE_START);
+  // Unplugging a camera or withdrawing its permission ends the track without the page stopping it.
+  await page.evaluate(() => document.querySelector('#video').srcObject.getVideoTracks()[0].dispatchEvent(new Event('ended')));
+  await expect(page.locator('#intro')).toBeVisible();
+  await expect(page.locator('#intro-note')).toContainText('中斷');
+  const state = await page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__());
+  expect(state.state.mode).toBe('intro');
+  expect(state.camera).toMatchObject({ running: false, liveTracks: 0 });
+  expect(await page.locator('#video').evaluate((video) => video.srcObject)).toBeNull();
+  await expect(page.locator('#start')).toBeEnabled();
+  await page.locator('#demo-start').click(); await rendered(page);
+  expect(errors).toEqual([]);
 });
 
 test('requested camera switching and stopping release synthetic media tracks', async ({ page }) => {

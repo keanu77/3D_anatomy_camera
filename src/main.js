@@ -1,24 +1,32 @@
-import { loadSettings, BODY_LAYERS, applyFocus, applyPreset } from './settings.js';
+import { loadSettings, LAYERS, BODY_LAYERS, applyFocus, applyPreset } from './settings.js';
 import { regionById } from './regions.js';
 import { createCamera } from './camera.js';
 import { createTrackers } from './trackers.js';
 import { bindUI } from './ui.js';
+import { resolveLanguage, setLanguage, getLanguage, translateDocument, t } from './i18n.js';
 
 const settings = loadSettings();
 const hash = new URLSearchParams(location.hash.slice(1)), query = new URLSearchParams(location.search);
+// The language is fixed for the life of the page; choosing the other one reloads it.
+setLanguage(resolveLanguage({ requested: query.get('lang') || hash.get('lang'), stored: settings.language, preferred: navigator.languages?.length ? navigator.languages : [navigator.language] }));
+translateDocument(document.documentElement);
+// Stage labels start in the interface language until the viewer has chosen a label language.
+try { if (getLanguage() === 'en' && !Object.hasOwn(JSON.parse(localStorage.getItem('xr_settings') || '{}') || {}, 'labelLanguage')) settings.labelLanguage = 'en'; } catch { /* Unreadable storage keeps the defaults. */ }
 const has = key => hash.has(key) || query.has(key);
 const state = { paused: false, mirror: !has('rear'), performance: settings.performance === 'auto' ? (matchMedia('(max-width:900px)').matches ? 'balanced' : 'high') : settings.performance, mode: 'intro' };
 const $ = id => document.getElementById(id), video = $('video');
 let scene, scenePromise, raf = 0, operation = 0, lastVideoTime = -1, preparing = false, pendingChange = false, changeTask = null, trackingWarning = '';
 let autoAt = 0, lowChecks = 0, lastFrameAt = 0;
+// What the tracking session was last prepared for, and when; see changed().
+let preparedFor = null, preparedAt = 0;
 const ui = bindUI({ settings, onChange: changed, onStart: start, onDemo: demo, onSwitch: switchCamera, onStop: stop });
-const trackers = createTrackers({ onStatus: text => ui.status(text, '', true) });
+const trackers = createTrackers({ onStatus: text => ui.status(t(text), '', true) });
 const camera = createCamera({ video, onChange: value => {
   state.mirror = value.mirror;
   $('stage').classList.toggle('mirrored', state.mirror);
   if (value.running && value.width && value.height) $('stage').style.setProperty('--ar', String(value.width / value.height));
   lastVideoTime = -1; trackers.reset(); scene?.resize();
-} });
+}, onEnded: () => { stop(); ui.status(t('攝影機連線已中斷，請重新啟動鏡頭，或先看示範。'), 'bad'); } });
 
 function bodyOn() { return BODY_LAYERS.some(key => settings[key]); }
 function syncDemoAspect() {
@@ -27,14 +35,19 @@ function syncDemoAspect() {
   $('stage').style.setProperty('--ar', String(portraitBody ? 9 / 16 : 4 / 3));
   scene?.resize();
 }
-function needs() {
+function needs(performance = state.performance) {
   let hand = settings.hands || settings.reveal === 'lens' || settings.showdata;
   let pose = bodyOn();
-  if (state.performance === 'lite' && hand && pose) {
+  if (performance === 'lite' && hand && pose) {
     if (settings.reveal === 'lens') pose = false; else hand = false;
   }
   return { face: ['skull', 'brain', 'muscles', 'eyes', 'outline', 'nerves'].some(key => settings[key]) || settings.showdata,
-    hands: hand, pose, mask: pose && state.performance !== 'lite', performance: state.performance };
+    hands: hand, pose, mask: pose && performance !== 'lite', performance };
+}
+// Everything the trackers, the camera profile and the anatomy bundles depend on. Brightness, fit,
+// cut position and the other appearance controls are deliberately absent.
+function sessionKey() {
+  return JSON.stringify([state.mode, needs(settings.performance === 'auto' ? state.performance : settings.performance), LAYERS.map(key => settings[key])]);
 }
 async function getScene() {
   if (!scenePromise) scenePromise = import('./scene.js').then(({ createScene }) => createScene({ settings, state, onStats: autoPerformance })).then(result => scene = result).catch(error => { scenePromise = null; throw error; });
@@ -42,7 +55,8 @@ async function getScene() {
 }
 function autoPerformance(stats) {
   const sampledAt = performance.now();
-  if (state.mode !== 'live' || settings.performance !== 'auto' || sampledAt - autoAt < 2000) return;
+  // A paused picture is only redrawn: its frame rate is the one measured before it froze.
+  if (state.mode !== 'live' || state.paused || settings.performance !== 'auto' || sampledAt - autoAt < 2000) return;
   autoAt = sampledAt;
   lowChecks = stats.fps < 18 ? lowChecks + 1 : 0;
   if (lowChecks >= 2 && state.performance !== 'lite') {
@@ -59,14 +73,14 @@ function setPaused(value) {
   if (paused === state.paused) return;
   state.paused = paused;
   const button = $('pause-toggle');
-  if (button) { button.setAttribute('aria-pressed', String(paused)); button.textContent = paused ? '繼續' : '暫停'; button.setAttribute('aria-label', paused ? '繼續畫面' : '暫停畫面'); }
+  if (button) { button.setAttribute('aria-pressed', String(paused)); button.textContent = t(paused ? '繼續' : '暫停'); button.setAttribute('aria-label', t(paused ? '繼續畫面' : '暫停畫面')); }
   $('stage').classList.toggle('paused', paused);
   scene?.setFrozen(paused);
   if (state.mode === 'live') {
     if (paused) { video.pause(); freezeFrame = true; lastVideoTime = -1; }
-    else { freezeFrame = false; lastVideoTime = -1; video.play().catch(() => {}); }
+    else { freezeFrame = false; lastVideoTime = -1; autoAt = performance.now(); lowChecks = 0; video.play().catch(() => {}); }
   }
-  if (paused) ui.status('畫面已暫停：拖曳可旋轉，雙指或滾輪可縮放，點一下可點選構造，雙擊還原；按「繼續」恢復。', 'ok', true);
+  if (paused) ui.status(t('畫面已暫停：拖曳可旋轉，雙指或滾輪可縮放，點一下可點選構造，雙擊還原；按「繼續」恢復。'), 'ok', true);
   schedule();
 }
 function schedule() { if (!raf && !document.hidden && state.mode !== 'intro' && (!state.paused || freezeFrame)) raf = requestAnimationFrame(tick); }
@@ -85,7 +99,8 @@ function tick(now) {
     const wanted = needs();
     const current = operation;
     const freezing = freezeFrame;
-    const accepted = trackers.detect(video, now, wanted, result => {
+    // The frozen picture gets every tracker it needs, whatever the throttle says is due.
+    const accepted = trackers.detect(video, now, freezing ? { ...wanted, performance: 'high' } : wanted, result => {
       if (current !== operation || state.mode !== 'live' || document.hidden || preparing || (state.paused && !freezing)) return;
       if (freezing) freezeFrame = false;
       scene.update({ now: performance.now(), ...result });
@@ -96,17 +111,23 @@ function tick(now) {
       lastFrameAt = now;
       const d = scene.getDiagnostics();
       const msg = wanted.pose && !d.poseFound ? regionById(settings.focus)?.frame || '往後退，讓肩膀、臀部與四肢入鏡。' : d.headFound || d.poseFound ? '追蹤中，影像只在這部裝置處理。' : wanted.face ? '請面向鏡頭，讓臉部保持在光線充足的位置。' : '追蹤中。';
-      ui.status(`${msg} ${state.performance === 'lite' ? '輕量模式。' : ''}${trackingWarning}`, d.headFound || d.poseFound ? 'ok' : '', true);
+      ui.status(`${t(msg)} ${state.performance === 'lite' ? t('輕量模式。') : ''}${trackingWarning}`, d.headFound || d.poseFound ? 'ok' : '', true);
     }
   } catch (error) { cancelAnimationFrame(raf); raf = 0; stop(); showError(error); }
 }
-async function changed({ throwOnError = false } = {}) {
+async function changed({ throwOnError = false, force = false } = {}) {
   scene?.reconcileLoads();
-  trackers.reset();
   if (freezeFrame) lastVideoTime = -1;
-  pendingChange = true;
+  // Only a change in what is tracked invalidates the frame being tracked. Resetting on every step
+  // of a slider discarded each result for as long as the control was dragged. A tracker that
+  // failed to load is offered again, no more often than its own retry delay.
+  const key = sessionKey(), retry = !!trackingWarning && performance.now() - preparedAt >= 10000;
+  if (force || retry || key !== preparedFor) {
+    preparedFor = key; preparedAt = performance.now();
+    trackers.reset(); pendingChange = true;
+  }
   const current = operation;
-  if (!changeTask) {
+  if (pendingChange && !changeTask) {
     preparing = true;
     changeTask = (async () => {
       while (pendingChange) {
@@ -120,7 +141,7 @@ async function changed({ throwOnError = false } = {}) {
         }
         if (state.mode === 'live') {
           const wanted = needs(), prepared = await trackers.prepare(wanted);
-          trackingWarning = prepared.failures.map(({ name }) => `${{ face: '臉部', hands: '手部', pose: '身體' }[name]}追蹤暫停。`).join('');
+          trackingWarning = prepared.failures.map(({ name }) => t({ face: '臉部追蹤暫停。', hands: '手部追蹤暫停。', pose: '身體追蹤暫停。' }[name])).join(getLanguage() === 'en' ? ' ' : '');
           if (prepared.failures.length && !prepared.loaded.some(name => wanted[name])) throw new Error('所需追蹤模型無法載入，請確認網路後重試');
         }
       }
@@ -134,23 +155,25 @@ async function changed({ throwOnError = false } = {}) {
     else if (state.mode === 'demo') scene?.demo(performance.now(), { still: has('still'), body: bodyOn() });
     schedule();
     return true;
-  } catch (error) { if (current === operation) showError(error); if (throwOnError) throw error; return false; }
+  } catch (error) { preparedFor = null; if (current === operation) showError(error); if (throwOnError) throw error; return false; }
   finally { if (changeTask === task) { preparing = false; changeTask = null; } }
 }
 async function start() {
   setPaused(false);
-  if (!isSecureContext) { ui.status('需要 HTTPS 才能使用攝影機，請使用安全連線開啟此網站。', 'bad'); return; }
+  if (!isSecureContext) { ui.status(t('需要 HTTPS 才能使用攝影機，請使用安全連線開啟此網站。'), 'bad'); return; }
   const current = ++operation;
   cancelAnimationFrame(raf); raf = 0;
   $('start').disabled = true; $('demo-start').disabled = true;
-  ui.status('正在啟動攝影機…');
+  ui.status(t('正在啟動攝影機…'));
   try {
+    // Answering the permission prompt is the slow step and needs nothing from the scene.
+    getScene().catch(() => {});
     const running = await camera.start('user', state.performance);
     if (!running || current !== operation) return;
     await getScene();
     if (current !== operation) return;
     state.mode = 'live'; $('intro').hidden = true;
-    await changed({ throwOnError: true });
+    await changed({ throwOnError: true, force: true });
     if (current === operation) schedule();
   } catch (error) { if (current === operation) { camera.stop(); state.mode = 'intro'; $('intro').hidden = false; showError(error); } }
   finally { if (current === operation) { $('start').disabled = false; $('demo-start').disabled = false; } }
@@ -168,7 +191,7 @@ async function demo() {
     if (bodyOn()) await scene.ensureBody();
     if (current !== operation) return;
     $('intro').hidden = true;
-    ui.status('示範模式，沒有使用攝影機。', 'ok');
+    ui.status(t('示範模式，沒有使用攝影機。'), 'ok');
     scene.resize(); schedule();
   } catch (error) { if (current === operation) { state.mode = 'intro'; $('intro').hidden = false; showError(error); } }
   finally { if (current === operation) $('demo-start').disabled = false; }
@@ -176,16 +199,16 @@ async function demo() {
 async function switchCamera() {
   setPaused(false);
   if (state.mode === 'demo') { state.mirror = !state.mirror; scene?.demo(performance.now(), { still: has('still'), body: bodyOn() }); return; }
-  if (state.mode !== 'live') { ui.status('請先啟動鏡頭，再切換前後鏡頭。'); return; }
+  if (state.mode !== 'live') { ui.status(t('請先啟動鏡頭，再切換前後鏡頭。')); return; }
   const current = operation;
   $('camera-switch').disabled = $('camera-switch-mobile').disabled = true;
   try {
     await camera.switch();
-    if (current === operation && state.mode === 'live' && camera.getDiagnostics().running) { scene?.resize(); await changed(); }
+    if (current === operation && state.mode === 'live' && camera.getDiagnostics().running) { scene?.resize(); await changed({ force: true }); }
   }
   catch (error) {
     if (current === operation) {
-      if (state.mode === 'live' && camera.getDiagnostics().running) await changed();
+      if (state.mode === 'live' && camera.getDiagnostics().running) await changed({ force: true });
       showError(error);
     }
   }
@@ -196,17 +219,17 @@ function stop() {
   operation++; state.mode = 'intro'; camera.stop(); cancelAnimationFrame(raf); raf = 0;
   scene?.clear();
   $('start').disabled = false; $('demo-start').disabled = false;
-  $('intro').hidden = false; ui.status('鏡頭已停止。你可以重新啟動或觀看示範。');
+  $('intro').hidden = false; ui.status(t('鏡頭已停止。你可以重新啟動或觀看示範。'));
 }
 function showError(error) {
-  const text = error?.name === 'NotAllowedError' ? '攝影機權限未開啟。請在瀏覽器允許相機，再按啟動鏡頭。' : error?.name === 'NotFoundError' ? '找不到可用的攝影機，仍可使用示範模式。' : `無法完成操作：${error?.message || error}。可重新嘗試。`;
+  const text = error?.name === 'NotAllowedError' ? t('攝影機權限未開啟。請在瀏覽器允許相機，再按啟動鏡頭。') : error?.name === 'NotFoundError' ? t('找不到可用的攝影機，仍可使用示範模式。') : `${t('無法完成操作：')}${t(error?.message || String(error))}${t('。可重新嘗試。')}`;
   ui.status(text, 'bad', true);
 }
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) { cancelAnimationFrame(raf); raf = 0; trackers.reset(); }
   else {
     lastVideoTime = -1; autoAt = performance.now(); lowChecks = 0;
-    if (state.mode === 'live') changed(); else { trackers.reset(); schedule(); }
+    if (state.mode === 'live') changed({ force: true }); else { trackers.reset(); schedule(); }
   }
 });
 window.addEventListener('pagehide', () => { stop(); trackers.dispose(); scene?.dispose(); });

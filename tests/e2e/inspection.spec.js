@@ -175,7 +175,7 @@ test('individual skull, carpal and finger surfaces use source labels with deskto
   await clickSource(page, exact('frontal bone'), 'head:');
   expect((await inspection(page)).candidateIds).toHaveLength(1);
   expect(errors).toEqual([]);
-  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true,
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, locale: 'zh-TW',
     deviceScaleFactor: 1, ignoreHTTPSErrors: true, baseURL: 'https://127.0.0.1:4173' });
   try {
     const mobile = await context.newPage(), mobileErrors = watchErrors(mobile);

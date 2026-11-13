@@ -150,8 +150,9 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
   }
 
   // hold: the picture is frozen. Keep the last smoothed pose and the last veil instead of filtering the same frame again.
-  function update({now,pose,hands,face,instant=false,hold=false}) {
-    holdVeil=hold;
+  // settle: this pose was inferred from the frozen picture itself. Take it as measured; smoothing would trail the still image.
+  function update({now,pose,hands,face,instant=false,hold=false,settle=false}) {
+    holdVeil=hold||settle;
     const enabled=bodyEnabled(S),focus=getFocus();
     for(const bundle of Object.values(bundles)) {
       if(!bundle.enabled()) cancelLoad(bundle);
@@ -162,7 +163,7 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
     if(lms?.length===33&&hold&&smoothed) lastSeen=now;
     else if(lms?.length===33) {
       const {width,height}=getSize();
-      const fresh=!smoothed||now-lastSeen>250;
+      const fresh=settle||!smoothed||now-lastSeen>250;
       if(fresh) poseFilter.reset();
       const raw=lms.map((p,i)=>{
         const next=landmarkToPoint(p,width,height);
@@ -322,28 +323,6 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
   }
   function setOrbit(matrix) {root.matrix.copy(matrix);root.matrixWorldNeedsUpdate=true;}
 
-  function demoPose(now,{still=false}={}) {
-    const meta=Object.values(bundles).find(bundle=>bundle.enabled()&&bundle.meta?.demoPose)?.meta;
-    if(!meta) return null;
-    const source=Array.isArray(meta.demoPose)?meta.demoPose:meta.demoPose.landmarks;
-    if(!source) return null;
-    const t=still?1.2:now/1000;
-    const points=source.map(p=>Array.isArray(p)?{x:p[0],y:p[1],z:p[2],visibility:1,presence:1}:{...p});
-    if(!still) {
-      const sway=Math.sin(t*0.6)*0.018;
-      for(const p of points) p.x+=sway;
-      points[13].y+=Math.sin(t)*0.015;points[15].y+=Math.sin(t)*0.035;
-      points[14].y+=Math.sin(t+1.5)*0.015;points[16].y+=Math.sin(t+1.5)*0.035;
-    }
-    // Fixture coordinates were authored at demoAspect. Preserve physical
-    // proportions when the full-body demo uses a portrait stage.
-    const {width,height}=getSize();
-    const sourceAspect=Number.isFinite(meta.demoAspect)&&meta.demoAspect>0?meta.demoAspect:4/3;
-    const horizontalScale=sourceAspect/(width/height);
-    for(const p of points) {p.x=0.5+(p.x-0.5)*horizontalScale;p.z*=horizontalScale;}
-    return {landmarks:[points]};
-  }
-
   function reset() {
     smoothed=null;lastSeen=0;lastMaskAt=-Infinity;visibleParts=0;poseFilter.reset();
     diagnostics.visibleParts=0;diagnostics.visibleLayers=Object.fromEntries(BODY_LAYERS.map(layer=>[layer,0]));
@@ -375,5 +354,5 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
     // Peripheral nerves publish their own part ranges; the other layers take theirs from the individual bundle.
     // A hand-frame mesh exists once per hand and takes its anatomical side from the hand it is on.
     instance:r.hand===undefined?`body:${r.entry.name}`:`hand:${r.hand}:${r.entry.name}`,side:r.hand===undefined?undefined:getHandContext()?.rigs[r.hand]?.anatomicalSide,ownParts:r.entry.parts,inspectable:['spine','arms','legs','bodyMuscles','peripheralNerves'].includes(r.entry.layer)}));
-  return {scene,ensureLoaded,reconcileLoads,update,syncHead,drawVeil,labels,focusBounds,orbitPivot,setOrbit,demoPose,reset,dispose,getDiagnostics,inspectionTargets};
+  return {scene,ensureLoaded,reconcileLoads,update,syncHead,drawVeil,labels,focusBounds,orbitPivot,setOrbit,reset,dispose,getDiagnostics,inspectionTargets};
 }

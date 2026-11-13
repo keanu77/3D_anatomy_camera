@@ -1,6 +1,7 @@
 import { cp, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { join } from 'node:path';
+import { buildTime } from './build-time.mjs';
 
 // A clean checkout must build independently. Existing pinned files are verified
 // from cache; missing/corrupt files are fetched and checksum-checked atomically.
@@ -19,5 +20,5 @@ for (const item of manifest.models) {
 await mkdir('public/licenses', { recursive: true });
 await cp('LICENSES', 'public/licenses', { recursive: true });
 const { version } = JSON.parse(await readFile('package.json', 'utf8'));
-await writeFile('public/version.json', JSON.stringify({ version, commit: process.env.BUILD_SHA || 'local', builtAt: new Date().toISOString() }) + '\n');
+await writeFile('public/version.json', JSON.stringify({ version, commit: process.env.BUILD_SHA || 'local', builtAt: buildTime().toISOString() }) + '\n');
 console.log('Self-hosted WASM copied; model checksums verified.');
