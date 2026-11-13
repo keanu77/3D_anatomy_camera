@@ -2,7 +2,7 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
-## 3.4.0 (unreleased)
+## 3.4.0 (2026-11-14)
 
 ### Changed
 
