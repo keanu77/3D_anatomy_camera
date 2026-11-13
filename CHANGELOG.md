@@ -2,6 +2,22 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.2.0 (2026-11-13)
+
+### Changed
+
+- **One visual system.** Colours, corners, text sizes and timings are named once in `src/style.css` and used by name in both stylesheets; the inspector over the picture no longer has a palette, a button shape and a focus ring of its own. One accent colour, one corner scale (6 and 10 px), one keyboard focus ring. Unit tests keep the stylesheets to the tokens.
+- **No text below 13 px.** Controls are 14 px, notes 13 px, a structure's description 16 px. Before, most of the interface was 12 px and some of it 8 to 11 px.
+- **The start screen shows the model.** It covers the whole stage column, with pictures of the model beside the words, and says what the site is instead of repeating its name. Three stills share the frame: the skull and hand bones, the muscles of the whole body, and the brain, spinal cord and peripheral nerves. They turn over every five seconds until one is chosen from the row under them, and stand still under reduced motion. The pictures are drawn from the app by `scripts/make-intro-poster.mjs`.
+- **An upright phone gets an upright demo.** The head demo stands 3:4 on a portrait phone (it was a 4:3 strip a third of the screen high), with the head further back and the hands further out so they do not cover the skull. The 4:3 demo is unchanged.
+- Buttons answer a press (they sink slightly) and change colour over 150 ms; the settings panel opens over 200 ms. The start screen's words rise once, on the first visit only. Reduced motion turns all of it off.
+- The side choice and "enlarge the focused region" are shown only while a region is in focus, instead of standing greyed out.
+- The header mark, the favicon and the web app manifest use the interface's accent and ground colours.
+
+### Fixed
+
+- On a 320 px wide screen the name in the header wrapped onto two lines and its top was cut off.
+
 ## 3.1.0 (2026-11-13)
 
 ### Added

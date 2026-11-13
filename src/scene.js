@@ -8,7 +8,7 @@ import { decodeGeometry } from './geometry.js';
 export { decodeGeometry } from './geometry.js';
 import { makeMaterial, setMaterialMode } from './anatomy-material.js';
 import { PALETTE, SOLID, GAINS, BASE_LIGHT, SURFACE, solidGain } from './render-style.js';
-import { demoBodyPose, demoHandLandmarks } from './demo-pose.js';
+import { demoBodyPose, demoHandLandmarks, demoHeadLayout } from './demo-pose.js';
 import { regionById, regionIncludesMesh, regionPartSelector, focusLabels } from './regions.js';
 import { IDENTITY, zoomTarget, steadyZoom, easeZoom, gestureZoom, layerTransform, unzoomPoint } from './focus-zoom.js';
 import { LEVEL, isLevel, dragOrbit, orbitElements } from './orbit.js';
@@ -271,7 +271,8 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     const still = !!options.still, full = !!options.body;
     const pose = full ? demoBodyPose(width, height, now, still) : null;
     const t = still ? 0 : now / 1000;
-    const depth = full ? 215 : 48;
+    const layout = demoHeadLayout(width, height);
+    const depth = full ? 215 : layout.depth;
     const center = full ? pose.landmarks[0][0] : { x: .5, y: .52 };
     const focal = baseProjection.elements[5];
     const position = new THREE.Vector3((center.x * 2 - 1) * depth / focal * perspective.aspect, (1 - center.y * 2) * depth / focal - (full ? 0 : 3), -depth);
@@ -284,9 +285,9 @@ export async function createScene({ settings, state, onStats = () => {} }) {
       landmarks[Number(id)] = { x: (p.x + 1) / 2, y: (1 - p.y) / 2, z: 0 };
     }
     const handLandmarks = rigs.map((_, index) => {
-      const wrist = full ? pose.landmarks[0][index ? 15 : 16] : { x: index ? .78 : .22, y: .72, z: 0 };
+      const wrist = full ? pose.landmarks[0][index ? 15 : 16] : { x: layout.wristX[index ? 1 : 0], y: .72, z: 0 };
       return demoHandLandmarks(metadata.handReference, { wrist: { x: wrist.x, y: wrist.y, z: wrist.z },
-        left: index === 1, width, height, length: height * (full ? .115 : .34),
+        left: index === 1, width, height, length: full ? height * .115 : layout.handLength,
         angle: full ? (index ? -.1 : .1) : Math.PI + (index ? -.18 : .18) + (still ? 0 : Math.sin(t * .65) * .12) });
     });
     const frame = { now, pose, hands: { landmarks: handLandmarks, handedness: [[{ categoryName: 'Right' }], [{ categoryName: 'Left' }]] },
