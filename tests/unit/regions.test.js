@@ -153,6 +153,17 @@ describe('focused part ranges', () => {
   });
 });
 
+describe('what to show the camera', () => {
+  test('every lower-limb region asks for the hips: the tracker finds no body in a picture of feet alone', () => {
+    // Measured on the official pose photo: hips to feet in view, 25 parts drawn; ankles and feet alone, none,
+    // also when the whole body was found first and the camera then closed in.
+    for (const id of ['hip', 'knee', 'lowerleg', 'foot']) expect(regionById(id).frame, id).toContain('髖部');
+    expect(regionById('foot').frame).toContain('只拍到腳時無法辨識');
+    expect(regionById('lowerleg').frame).toContain('只拍到小腿與腳時可能無法辨識');
+    for (const region of REGIONS) expect(region.frame, region.id).toMatch(/^請讓.+入鏡/);
+  });
+});
+
 describe('focused labels', () => {
   const anchorsFor = (region, mesh) => {
     const keep = regionPartSelector(regionById(region), mesh);

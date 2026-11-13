@@ -68,11 +68,11 @@ export const REGIONS = Object.freeze([
       muscle_shin: ['gastrocnemius', 'plantaris', 'popliteus'] } },
   { id: 'lowerleg', label: '小腿腳踝', layers: ['legs', 'bodyMuscles', 'joints'],
     note: '小腿前側、外側與後側肌群、跟腱（阿基里斯腱）、小腿骨間膜，以及脛骨、腓骨與足骨。本版不含踝關節韌帶。',
-    frame: '請讓膝蓋、腳踝與腳掌入鏡。',
+    frame: '請讓髖部到腳掌都入鏡；只拍到小腿與腳時可能無法辨識。',
     meshes: { pn_shin: ALL, pn_foot: ALL, leg_shin: ALL, foot: ALL, muscle_shin: ALL, joint_leg_membrane: ALL, joint_achilles_tendon: ALL } },
   { id: 'foot', label: '足部', layers: ['legs', 'bodyMuscles', 'joints'],
     note: '足底與足背的內在肌、足底長韌帶、跟腱（阿基里斯腱）與 26 塊足骨。',
-    frame: '請讓腳踝、腳跟與腳尖入鏡。',
+    frame: '請讓髖部到腳尖都入鏡；只拍到腳時無法辨識。',
     meshes: { pn_foot: ALL, foot: ALL, muscle_foot: ALL, joint_plantar_ligament: ALL, joint_achilles_tendon: ALL } },
 ]);
 export const FOCUS_IDS = Object.freeze(['none', ...REGIONS.map(region => region.id)]);

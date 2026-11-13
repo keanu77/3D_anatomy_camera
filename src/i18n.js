@@ -150,8 +150,8 @@ const EN = Object.freeze({
   '請讓雙肩到髖部入鏡。': 'Keep your shoulders down to your hips in view.',
   '請讓雙肩、髖部與膝蓋入鏡。': 'Keep your shoulders, hips and knees in view.',
   '請讓髖部、膝蓋與腳踝入鏡。': 'Keep your hips, knees and ankles in view.',
-  '請讓膝蓋、腳踝與腳掌入鏡。': 'Keep your knees, ankles and feet in view.',
-  '請讓腳踝、腳跟與腳尖入鏡。': 'Keep your ankles, heels and toes in view.',
+  '請讓髖部到腳掌都入鏡；只拍到小腿與腳時可能無法辨識。': 'Keep your hips down to your feet in view; the lower leg and foot alone may not be recognised.',
+  '請讓髖部到腳尖都入鏡；只拍到腳時無法辨識。': 'Keep your hips down to your toes in view; a foot alone is not recognised.',
 
   // Session status
   '暫停': 'Pause',
