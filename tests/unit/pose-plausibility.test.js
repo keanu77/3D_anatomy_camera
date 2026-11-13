@@ -74,19 +74,58 @@ function material() {
   uniforms.uToHead = { value: new THREE.Matrix4() }; uniforms.uClip = { value: new THREE.Vector4() };
   return new THREE.ShaderMaterial({ uniforms });
 }
-test('the body is not drawn on a pose that the tracked hands contradict, and is drawn again when they agree', async () => {
+async function bodyRenderer() {
   vi.stubGlobal('fetch', vi.fn(async (url) => new Response(url.endsWith('.json') ? JSON.stringify(meta) : new ArrayBuffer(0))));
   const renderer = createBodyRenderer({ settings: { ...DEFAULTS, arms: true }, state: { mirror: true }, getSize: () => ({ width, height }),
     makeMaterial: material, asset: (path) => path, decodeGeometry: (data) => Object.fromEntries(data.meshes.map((entry) => {
       const geometry = new THREE.BufferGeometry(); geometry.name = entry.name; return [entry.name, geometry];
     })) });
+  expect(await renderer.ensureLoaded()).toBe(true);
+  return renderer;
+}
+const closeUp = { landmarks: [hand([200, 440], 425), hand([680, 440], 425)] }, noHands = { landmarks: [] };
+const ownHand = { landmarks: [hand([560, 660], 154)] };
+const imagined = { landmarks: [phantom] }, real = { landmarks: [person] };
+
+test('a pose the tracked hands contradict is not drawn, and stays refused when the hand tracker misses a frame', async () => {
+  const renderer = await bodyRenderer();
   try {
-    expect(await renderer.ensureLoaded()).toBe(true);
-    const closeUp = { landmarks: [hand([200, 440], 425), hand([680, 440], 425)] };
-    renderer.update({ now: 100, pose: { landmarks: [phantom] }, hands: closeUp, instant: true });
+    renderer.update({ now: 100, pose: imagined, hands: closeUp, instant: true });
     expect(renderer.getDiagnostics()).toMatchObject({ visibleParts: 0, poseFound: false, poseRejected: true });
-    renderer.update({ now: 166, pose: { landmarks: [phantom] }, hands: { landmarks: [] }, instant: true });
-    expect(renderer.getDiagnostics().visibleParts).toBeGreaterThan(0);
+    // A hand held close is the hardest for its own tracker: one missed result must not draw the figure.
+    renderer.update({ now: 166, pose: imagined, hands: noHands, instant: true });
+    expect(renderer.getDiagnostics()).toMatchObject({ visibleParts: 0, poseRejected: true });
+    renderer.update({ now: 232, pose: imagined, hands: closeUp, instant: true });
+    // The doubt lasts a second from the last contradiction, not from the first.
+    renderer.update({ now: 1150, pose: imagined, hands: noHands, instant: true });
+    expect(renderer.getDiagnostics()).toMatchObject({ visibleParts: 0, poseRejected: true });
+    // With nothing contradicting it for a second, a pose is drawn again.
+    renderer.update({ now: 1300, pose: real, hands: ownHand, instant: true });
     expect(renderer.getDiagnostics().poseRejected).toBe(false);
+    expect(renderer.getDiagnostics().visibleParts).toBeGreaterThan(0);
+  } finally { renderer.dispose(); }
+});
+test('a person who was never doubted is drawn at once, with or without hands', async () => {
+  const renderer = await bodyRenderer();
+  try {
+    renderer.update({ now: 100, pose: real, hands: noHands, instant: true });
+    expect(renderer.getDiagnostics().visibleParts).toBeGreaterThan(0);
+    renderer.update({ now: 166, pose: real, hands: ownHand, instant: true });
+    expect(renderer.getDiagnostics()).toMatchObject({ poseRejected: false, poseFound: true });
+  } finally { renderer.dispose(); }
+});
+test('a frozen picture keeps the verdict of its own frame however long it is shown', async () => {
+  const renderer = await bodyRenderer();
+  try {
+    renderer.update({ now: 100, pose: imagined, hands: closeUp, instant: true });
+    renderer.update({ now: 166, pose: imagined, hands: noHands, settle: true, instant: true });
+    for (const later of [400, 2000, 60000]) {
+      renderer.update({ now: later, pose: imagined, hands: noHands, hold: true, instant: true });
+      expect(renderer.getDiagnostics(), `redrawn at ${later}`).toMatchObject({ visibleParts: 0, poseRejected: true });
+    }
+    // Starting again clears the doubt with everything else.
+    renderer.reset();
+    renderer.update({ now: 60100, pose: real, hands: noHands, instant: true });
+    expect(renderer.getDiagnostics().visibleParts).toBeGreaterThan(0);
   } finally { renderer.dispose(); }
 });

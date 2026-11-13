@@ -12,6 +12,8 @@ export const bodyEnabled=settings=>BODY_LAYERS.some(k=>settings[k]);
 // getFocus returns null, or {includes(rig),labels(rig)} while one body region is isolated.
 // Frames whose meshes hang under something else than the stage root and so take no part in its bounds.
 const OWN_FRAMES=['head','hand'];
+// How long a pose stays refused after the tracked hands last contradicted it.
+const POSE_DOUBT_MS=1000;
 // getHandContext() -> { rigs: [{ group, palm, bones, anatomicalSide }], bones: [[from, to], ...] }: the separately tracked hand rigs.
 export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>null,getHandContext=()=>null,getFocus=()=>null,makeMaterial,decodeGeometry,asset}) {
   const scene=new THREE.Scene();
@@ -26,7 +28,7 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
     peripheral:{name:'peripheral',layers:['peripheralNerves'],enabled:()=>!!S.peripheralNerves},
   };
   for(const bundle of Object.values(bundles)) Object.assign(bundle,{meta:null,rigs:[],pending:null,controller:null,failure:null,retryAt:0,generation:0});
-  let smoothed=null,lastNow=0,lastSeen=0,visibleParts=0,holdVeil=false;
+  let smoothed=null,lastNow=0,lastSeen=0,visibleParts=0,holdVeil=false,doubtedUntil=-Infinity;
   const poseFilter=createPointFilter(33);
   let veilCanvas=null,veilContext=null,maskPixels=null,lastMaskAt=-Infinity;
   const diagnostics={poseRejected:false,bodyLoaded:false,bodyError:null,bodySegments:[],muscleSegments:[],jointSegments:[],nerveSegments:[],peripheralSegments:[],visibleParts:0,visibleLayers:{}};
@@ -159,9 +161,15 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
       else if(!bundle.meta) void ensureBundle(bundle);
     }
     const elapsed=lastNow?Math.min(100,Math.max(0,now-lastNow)):16.67;lastNow=now;
-    // A pose that the tracked hands contradict is not a pose of this person: draw nothing on it.
+    // A pose that the tracked hands contradict is not a pose of this person: draw nothing on it. The
+    // doubt outlasts the contradiction by a second, because the hand that fills the picture is the one its
+    // own tracker loses most easily, and the figure would be drawn in every result it missed. A frozen
+    // picture is redrawn with the verdict of its own frame.
     const candidate=pose?.landmarks?.[0],size=getSize();
-    diagnostics.poseRejected=!!candidate&&poseContradictsHands(candidate,hands?.landmarks,size.width,size.height);
+    if(!hold) {
+      if(candidate&&poseContradictsHands(candidate,hands?.landmarks,size.width,size.height)) doubtedUntil=now+POSE_DOUBT_MS;
+      diagnostics.poseRejected=!!candidate&&now<doubtedUntil;
+    }
     const lms=diagnostics.poseRejected?null:candidate;
     if(lms?.length===33&&hold&&smoothed) lastSeen=now;
     else if(lms?.length===33) {
@@ -327,7 +335,7 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
   function setOrbit(matrix) {root.matrix.copy(matrix);root.matrixWorldNeedsUpdate=true;}
 
   function reset() {
-    smoothed=null;lastSeen=0;lastMaskAt=-Infinity;visibleParts=0;poseFilter.reset();
+    smoothed=null;lastSeen=0;lastMaskAt=-Infinity;visibleParts=0;doubtedUntil=-Infinity;diagnostics.poseRejected=false;poseFilter.reset();
     diagnostics.visibleParts=0;diagnostics.visibleLayers=Object.fromEntries(BODY_LAYERS.map(layer=>[layer,0]));
     diagnostics.bodySegments=[];diagnostics.muscleSegments=[];diagnostics.jointSegments=[];diagnostics.nerveSegments=[];diagnostics.peripheralSegments=[];
     for(const r of rigs) {r.alpha=0;r.valid=false;r.mesh.visible=false;}
