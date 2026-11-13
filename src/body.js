@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {landmarkToPoint,torsoBasis,boneBasis,footBasis,segmentVisible,transformPoint,palmNormal} from './basis.js';
+import {landmarkToPoint,torsoBasis,boneBasis,footBasis,segmentVisible,transformPoint,palmNormal,poseContradictsHands} from './basis.js';
 import {createPointFilter} from './one-euro.js';
 import { PALETTE as COLORS, ORGAN_COLORS, SOLID, GAINS, BASE_LIGHT, SURFACE, solidGain } from './render-style.js';
 
@@ -29,7 +29,7 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
   let smoothed=null,lastNow=0,lastSeen=0,visibleParts=0,holdVeil=false;
   const poseFilter=createPointFilter(33);
   let veilCanvas=null,veilContext=null,maskPixels=null,lastMaskAt=-Infinity;
-  const diagnostics={bodyLoaded:false,bodyError:null,bodySegments:[],muscleSegments:[],jointSegments:[],nerveSegments:[],peripheralSegments:[],visibleParts:0,visibleLayers:{}};
+  const diagnostics={poseRejected:false,bodyLoaded:false,bodyError:null,bodySegments:[],muscleSegments:[],jointSegments:[],nerveSegments:[],peripheralSegments:[],visibleParts:0,visibleLayers:{}};
 
   function cancelLoad(bundle) {
     if(!bundle.pending) return;
@@ -159,7 +159,10 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
       else if(!bundle.meta) void ensureBundle(bundle);
     }
     const elapsed=lastNow?Math.min(100,Math.max(0,now-lastNow)):16.67;lastNow=now;
-    const lms=pose?.landmarks?.[0];
+    // A pose that the tracked hands contradict is not a pose of this person: draw nothing on it.
+    const candidate=pose?.landmarks?.[0],size=getSize();
+    diagnostics.poseRejected=!!candidate&&poseContradictsHands(candidate,hands?.landmarks,size.width,size.height);
+    const lms=diagnostics.poseRejected?null:candidate;
     if(lms?.length===33&&hold&&smoothed) lastSeen=now;
     else if(lms?.length===33) {
       const {width,height}=getSize();

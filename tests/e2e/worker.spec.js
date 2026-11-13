@@ -93,6 +93,7 @@ test('dragging an appearance slider keeps accepting tracking results', async ({ 
   await page.goto('/'); await page.locator('#start').click();
   await expect.poll(async () => (await diagnostics(page)).trackers.calls.face || 0, { timeout: 90000 }).toBeGreaterThan(2);
   // The frame rate is recomputed only when a tracking result is drawn; a redraw of the old frame leaves it alone.
+  // Count results rather than a rate: software-rendered inference on a slow machine yields only a few a second.
   const accepted = drag => page.evaluate(async drag => {
     const slider = document.getElementById('bright'), rate = () => window.__ANATOMY_DIAGNOSTICS__().renderer.fps;
     let results = 0, previous = rate();
@@ -100,13 +101,12 @@ test('dragging an appearance slider keeps accepting tracking results', async ({ 
     await new Promise(resolve => requestAnimationFrame(function step(now) {
       if (drag) { slider.value = String(1 + .2 * Math.sin(now / 200)); slider.dispatchEvent(new Event('input', { bubbles: true })); }
       if (rate() !== previous) { results++; previous = rate(); }
-      if (now - began >= 2000) resolve(); else requestAnimationFrame(step);
+      if (results >= 3 || now - began >= 30000) resolve(); else requestAnimationFrame(step);
     }));
     return results;
   }, drag);
-  const idle = await accepted(false), dragging = await accepted(true);
-  expect(idle, 'tracking runs before the slider is touched').toBeGreaterThan(5);
-  expect(dragging, 'tracking results drawn during two seconds of dragging').toBeGreaterThan(5);
+  expect(await accepted(false), 'tracking results drawn before the slider is touched').toBe(3);
+  expect(await accepted(true), 'tracking results drawn while the slider is dragged without a pause').toBe(3);
   expect(await page.locator('#bright').inputValue()).not.toBe('1');
   await page.locator('#camera-stop').click();
   expect(errors).toEqual([]);

@@ -10,7 +10,7 @@ import { makeMaterial, setMaterialMode } from './anatomy-material.js';
 import { PALETTE, SOLID, GAINS, BASE_LIGHT, SURFACE, solidGain } from './render-style.js';
 import { demoBodyPose, demoHandLandmarks } from './demo-pose.js';
 import { regionById, regionIncludesMesh, regionPartSelector, focusLabels } from './regions.js';
-import { IDENTITY, zoomTarget, gestureZoom, layerTransform, unzoomPoint } from './focus-zoom.js';
+import { IDENTITY, zoomTarget, steadyZoom, easeZoom, gestureZoom, layerTransform, unzoomPoint } from './focus-zoom.js';
 import { LEVEL, isLevel, dragOrbit, orbitElements } from './orbit.js';
 
 /** Rendering owns display transforms, while tracking owns measurement transforms.
@@ -70,6 +70,9 @@ export async function createScene({ settings, state, onStats = () => {} }) {
   let disposed = false, frozen = false, queued = 0, drawing = false, frameCount = 0, fps = 0, frameTime = null;
   let previousFrame = null, previousDemo = null, focus = null, orbit = { ...LEVEL }, zoom = { ...IDENTITY }, manualZoom = false;
   let lens = null, cursor = null;
+  // Focus zoom: the enlargement aimed for, when its region was last seen, and when the picture last moved towards it.
+  let zoomAim = IDENTITY, zoomSeenAt = 0, zoomMovedAt = null;
+  const ZOOM_HOLD_MS = 1200;
   const getSize = () => ({ width, height });
   const clipState = { on: 0, x: 0, y: 0, w: 0 };
   const headTracker = createHeadTracker({ settings, meta: metadata, camera: perspective, group: headGroup, jawPivot,
@@ -188,7 +191,17 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     headGroup.matrixWorldNeedsUpdate = true;
   }
   function syncZoom() {
-    if (!manualZoom) zoom = focus && settings.focusZoom ? zoomTarget(body.focusBounds(), width, height) : { ...IDENTITY };
+    if (!manualZoom) {
+      const clock = performance.now(), bounds = focus && settings.focusZoom ? body.focusBounds() : null;
+      if (!(focus && settings.focusZoom)) zoomAim = IDENTITY;
+      else if (bounds) { zoomAim = steadyZoom(zoomAim, zoomTarget(bounds, width, height), width, height); zoomSeenAt = clock; }
+      // Tracking that drops out for a moment keeps the enlargement; only a region that stays away gives it up.
+      else if (clock - zoomSeenAt > ZOOM_HOLD_MS) zoomAim = IDENTITY;
+      // A picture that is not animating (frozen, or the still demo) cannot ease: it shows the aim at once.
+      const still = frozen || !!previousDemo?.options.still || zoomMovedAt === null;
+      zoom = still ? zoomAim : easeZoom(zoom, zoomAim, clock - zoomMovedAt);
+      zoomMovedAt = clock;
+    }
     const rect = stage.getBoundingClientRect();
     const transform = layerTransform(zoom, state.mirror, width, height, rect.width, rect.height);
     for (const layer of [video, gl, shade]) {
@@ -304,6 +317,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     perspective.aspect = width / height; perspective.updateProjectionMatrix(); baseProjection.copy(perspective.projectionMatrix);
     Object.assign(orthographic, { left: 0, right: width, top: height, bottom: 0 }); orthographic.updateProjectionMatrix();
     body.reset(); headTracker.update(null);
+    zoomAim = IDENTITY; zoomMovedAt = null;
     if (previousDemo) demo(previousDemo.now, previousDemo.options); else refresh();
   }
   function reconcileLoads() {
@@ -315,7 +329,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     return loaded;
   }
   function resetView() {
-    orbit = { ...LEVEL }; manualZoom = false; zoom = { ...IDENTITY };
+    orbit = { ...LEVEL }; manualZoom = false; zoom = { ...IDENTITY }; zoomMovedAt = null;
   }
   function setFrozen(value) {
     frozen = !!value;
@@ -380,7 +394,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     headTracker.update(null);
     for (const rig of rigs) hands.update(rig, null, true);
     void inspection.clear();
-    frozen = false; resetView();
+    frozen = false; resetView(); zoomAim = IDENTITY;
     renderer.clear(true, true, true);
     veilContext.clearRect(0, 0, width, height); labelContext.clearRect(0, 0, width, height);
     for (const layer of [video, gl, shade]) { layer.style.transform = ''; layer.style.transformOrigin = ''; layer.style.maskImage = ''; }
