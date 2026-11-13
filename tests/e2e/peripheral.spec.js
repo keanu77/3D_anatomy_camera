@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
-import { rendered, storeSettings, watchErrors } from './helpers.js';
+import { rendered, storeSettings, watchErrors, openAdvanced } from './helpers.js';
 
 const nerves = JSON.parse(readFileSync(new URL('../../public/anatomy/peripheral.json', import.meta.url)));
 const part = (mesh, name) => {
@@ -34,7 +34,7 @@ test('peripheral nerves alone load only their own bundle and follow the limb seg
       expect(Math.hypot(actual[0] - expected[0], actual[1] - expected[1]), segment.name).toBeLessThanOrEqual(3);
     }
   }
-  await page.locator('#L_peripheralNerves').uncheck();
+  await openAdvanced(page); await page.locator('#L_peripheralNerves').uncheck();
   await expect.poll(async () => (await renderer(page)).visibleLayers.peripheralNerves).toBe(0);
   await page.locator('[data-preset=nervous]').click();
   await expect(page.locator('#L_peripheralNerves')).toBeChecked();
@@ -76,7 +76,7 @@ test('a focused elbow adds its nerves only when the viewer asks, and only those 
   await expect.poll(async () => (await renderer(page)).visibleLayers).toMatchObject({ arms: 4, peripheralNerves: 0 });
   await expect(page.locator('#L_peripheralNerves')).not.toBeChecked();
   await expect(page.locator('#focus-note')).toContainText('周邊神經');
-  await page.locator('#L_peripheralNerves').check();
+  await openAdvanced(page); await page.locator('#L_peripheralNerves').check();
   await expect.poll(async () => (await renderer(page)).visibleLayers.peripheralNerves).toBe(4);
   await page.goto('/?still#demo&focus=forearm&peripheral'); await page.reload(); await rendered(page);
   await expect(page.locator('#L_peripheralNerves')).toBeChecked();
@@ -145,7 +145,7 @@ test('cranial, intercostal and hand nerves follow the head, torso and both hands
 
   // Without the hand layer the hand nerves go with the hand bones.
   await page.locator('#inspection-toggle').click();
-  await page.locator('#L_hands').uncheck();
+  await openAdvanced(page); await page.locator('#L_hands').uncheck();
   await expect.poll(async () => (await renderer(page)).visibleLayers.peripheralNerves).toBe(16 + 2);
   expect(errors).toEqual([]);
 });

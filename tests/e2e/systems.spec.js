@@ -1,7 +1,7 @@
 import { test, expect, devices } from '@playwright/test';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-import { LIVE_START, fixedStage, rendered, storeSettings, watchErrors } from './helpers.js';
+import { LIVE_START, fixedStage, rendered, storeSettings, watchErrors, openAdvanced } from './helpers.js';
 
 const off = { skull: false, brain: false, muscles: false, eyes: false, outline: false, hands: false,
   spine: false, organs: false, arms: false, legs: false, bodyMuscles: false, joints: false, nerves: false, showdata: false, performance: 'balanced' };
@@ -28,9 +28,9 @@ for (const layer of ['joints', 'nerves']) {
     }
     await page.locator(`[data-style="solid"]`).click();
     await testInfo.attach(`${layer}-solid`, { body: await page.locator('#stage').screenshot(), contentType: 'image/png' });
-    await page.locator(`#L_${layer}`).uncheck();
+    await openAdvanced(page); await page.locator(`#L_${layer}`).uncheck();
     await expect.poll(async () => (await diagnostics(page)).renderer.visibleLayers[layer]).toBe(0);
-    await page.locator(`#L_${layer}`).check();
+    await openAdvanced(page); await page.locator(`#L_${layer}`).check();
     await expect.poll(async () => (await diagnostics(page)).renderer.visibleLayers[layer]).toBeGreaterThan(0);
     expect(bundleRequests(requests, layer)).toHaveLength(2);
     expect(requests.every((url) => new URL(url).origin === new URL(page.url()).origin)).toBe(true);
@@ -131,22 +131,22 @@ test('joints use Pose alone while head and body nerves use Face plus Pose withou
   expect((await diagnostics(page)).trackers.loaded).toEqual(['pose']);
   expect((await diagnostics(page)).renderer.jointsLoaded).toBe(true);
   expect(bundleRequests(requests, 'nerves')).toEqual([]);
-  await page.locator('#L_nerves').check();
+  await openAdvanced(page); await page.locator('#L_nerves').check();
   await expect.poll(async () => (await diagnostics(page)).trackers.calls.face || 0, { timeout: 90000 }).toBeGreaterThanOrEqual(2);
   expect((await diagnostics(page)).trackers.loaded.sort()).toEqual(['face', 'pose']);
   expect((await diagnostics(page)).renderer.nervesLoaded).toBe(true);
   expect(bundleRequests(requests, 'body')).toEqual([]);
   expect(bundleRequests(requests, 'muscles')).toEqual([]);
-  await page.locator('#L_joints').uncheck();
+  await openAdvanced(page); await page.locator('#L_joints').uncheck();
   const first = (await diagnostics(page)).trackers.calls.pose;
   await expect.poll(async () => (await diagnostics(page)).trackers.calls.pose).toBeGreaterThan(first);
-  await page.locator('#L_nerves').uncheck();
+  await openAdvanced(page); await page.locator('#L_nerves').uncheck();
   await expect.poll(async () => (await diagnostics(page)).trackers.inFlight, { timeout: 60000 }).toBe(false);
   const stopped = (await diagnostics(page)).trackers.calls;
   const videoTime = await page.locator('#video').evaluate((video) => video.currentTime);
   await expect.poll(() => page.locator('#video').evaluate((video) => video.currentTime)).toBeGreaterThan(videoTime + 0.5);
   expect((await diagnostics(page)).trackers.calls).toEqual(stopped);
-  await page.locator('#L_joints').check();
+  await openAdvanced(page); await page.locator('#L_joints').check();
   await expect.poll(async () => (await diagnostics(page)).trackers.calls.pose).toBeGreaterThan(stopped.pose);
   expect((await diagnostics(page)).trackers.calls.face).toBe(stopped.face);
   await page.locator('#camera-stop').click();

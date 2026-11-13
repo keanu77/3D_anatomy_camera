@@ -105,23 +105,6 @@
             <button type="button" data-preset="full">全部圖層</button>
           </div>
         </div>
-        <p id="layers-label" class="group-label">個別圖層</p>
-        <div class="checks" role="group" aria-labelledby="layers-label">
-          <label class="ck"><input id="L_skull" type="checkbox"><i style="background:#bfe3ff" aria-hidden="true"></i>頭骨</label>
-          <label class="ck"><input id="L_brain" type="checkbox"><i style="background:#ff9fc0" aria-hidden="true"></i>腦</label>
-          <label class="ck"><input id="L_muscles" type="checkbox"><i style="background:#ff6b5e" aria-hidden="true"></i>頭部肌肉</label>
-          <label class="ck"><input id="L_bodyMuscles" type="checkbox"><i style="background:#ff786e" aria-hidden="true"></i>身體肌肉</label>
-          <label class="ck"><input id="L_joints" type="checkbox"><i style="background:#7ce5d2" aria-hidden="true"></i>關節／韌帶肌腱</label>
-          <label class="ck"><input id="L_nerves" type="checkbox"><i style="background:#ffe17c" aria-hidden="true"></i>脊髓與視神經</label>
-          <label class="ck"><input id="L_peripheralNerves" type="checkbox"><i style="background:#ffc94d" aria-hidden="true"></i>周邊神經</label>
-          <label class="ck"><input id="L_eyes" type="checkbox"><i style="background:#fff3a8" aria-hidden="true"></i>眼球</label>
-          <label class="ck"><input id="L_outline" type="checkbox"><i style="background:#6fb6ff" aria-hidden="true"></i>頭部輪廓</label>
-          <label class="ck"><input id="L_hands" type="checkbox"><i style="background:#d9f0ff" aria-hidden="true"></i>手骨</label>
-          <label class="ck"><input id="L_spine" type="checkbox"><i style="background:#bfe3ff" aria-hidden="true"></i>軀幹骨架</label>
-          <label class="ck"><input id="L_organs" type="checkbox"><i style="background:#ff9fc0" aria-hidden="true"></i>內臟</label>
-          <label class="ck"><input id="L_arms" type="checkbox"><i style="background:#d9f0ff" aria-hidden="true"></i>上肢骨</label>
-          <label class="ck"><input id="L_legs" type="checkbox"><i style="background:#d9f0ff" aria-hidden="true"></i>下肢骨</label>
-        </div>
         <div class="label-options">
           <label class="ck"><input id="labels" type="checkbox">顯示名稱標籤</label>
           <div class="row">
@@ -164,9 +147,30 @@
         <div id="cutrow" class="row"><label id="cutlabel" for="cut">切面位置</label><input id="cut" type="range" min="0" max="1" step="0.005"></div>
       </section>
 
-      <!-- Calibration, done once or rarely: closed until asked for, open again for a viewer who has used it. -->
+      <!-- Fine choices made once or rarely: the single layers, the head fit and the read-out. Closed until asked for,
+           open again for a viewer who has used them. -->
       <details id="advanced" class="panel advanced">
         <summary>進階調整</summary>
+        <section aria-labelledby="layers-label">
+          <h3 id="layers-label">個別圖層</h3>
+          <div class="checks" role="group" aria-labelledby="layers-label">
+            <label class="ck"><input id="L_skull" type="checkbox"><i style="background:#bfe3ff" aria-hidden="true"></i>頭骨</label>
+            <label class="ck"><input id="L_brain" type="checkbox"><i style="background:#ff9fc0" aria-hidden="true"></i>腦</label>
+            <label class="ck"><input id="L_muscles" type="checkbox"><i style="background:#ff6b5e" aria-hidden="true"></i>頭部肌肉</label>
+            <label class="ck"><input id="L_bodyMuscles" type="checkbox"><i style="background:#ff786e" aria-hidden="true"></i>身體肌肉</label>
+            <label class="ck"><input id="L_joints" type="checkbox"><i style="background:#7ce5d2" aria-hidden="true"></i>關節／韌帶肌腱</label>
+            <label class="ck"><input id="L_nerves" type="checkbox"><i style="background:#ffe17c" aria-hidden="true"></i>脊髓與視神經</label>
+            <label class="ck"><input id="L_peripheralNerves" type="checkbox"><i style="background:#ffc94d" aria-hidden="true"></i>周邊神經</label>
+            <label class="ck"><input id="L_eyes" type="checkbox"><i style="background:#fff3a8" aria-hidden="true"></i>眼球</label>
+            <label class="ck"><input id="L_outline" type="checkbox"><i style="background:#6fb6ff" aria-hidden="true"></i>頭部輪廓</label>
+            <label class="ck"><input id="L_hands" type="checkbox"><i style="background:#d9f0ff" aria-hidden="true"></i>手骨</label>
+            <label class="ck"><input id="L_spine" type="checkbox"><i style="background:#bfe3ff" aria-hidden="true"></i>軀幹骨架</label>
+            <label class="ck"><input id="L_organs" type="checkbox"><i style="background:#ff9fc0" aria-hidden="true"></i>內臟</label>
+            <label class="ck"><input id="L_arms" type="checkbox"><i style="background:#d9f0ff" aria-hidden="true"></i>上肢骨</label>
+            <label class="ck"><input id="L_legs" type="checkbox"><i style="background:#d9f0ff" aria-hidden="true"></i>下肢骨</label>
+          </div>
+        </section>
+
         <section aria-labelledby="fit-heading">
           <h3 id="fit-heading">貼合我的頭型</h3>
           <div class="row"><label for="fs">整體大小 <b id="fsv"></b></label><input id="fs" type="range" min="0.7" max="1.4" step="0.005"></div>

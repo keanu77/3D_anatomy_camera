@@ -2,6 +2,12 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.5.0 (unreleased)
+
+### Changed
+
+- **The single layers are under "Advanced".** The fourteen layer checkboxes moved into the folded section, before the head fit and the tracking read-out; the presets stay in view. On a phone, mixed reality is now 30 controls and about 1120 px down the settings instead of 44 controls and 1480 px. The section opens at load for a viewer whose layers match no preset, since then no preset button says what is shown.
+
 ## 3.4.0 (2026-11-14)
 
 ### Changed

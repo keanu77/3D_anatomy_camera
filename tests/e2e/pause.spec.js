@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { test, expect } from '@playwright/test';
 import { PNG } from 'pngjs';
 import pixelmatch from 'pixelmatch';
-import { LIVE_START, rendered, storeSettings, watchErrors } from './helpers.js';
+import { LIVE_START, rendered, storeSettings, watchErrors, openAdvanced } from './helpers.js';
 
 const body = JSON.parse(readFileSync(new URL('../../public/anatomy/individual-body.json', import.meta.url)));
 const part = (name) => body.meshes.flatMap((mesh) => mesh.parts).find((item) => item.name === name);
@@ -79,7 +79,7 @@ test('pausing the camera stops the video and tracking; stop and resume both clea
   expect(await page.locator('#video').evaluate((video) => video.currentTime)).toBe(time);
 
   // Changing a layer while paused keeps the camera frame frozen.
-  await page.locator('#L_brain').check();
+  await openAdvanced(page); await page.locator('#L_brain').check();
   await expect(page.locator('#L_brain')).toBeChecked();
   expect(await paused()).toBe(true);
   expect((await diagnostics(page)).state.paused).toBe(true);
