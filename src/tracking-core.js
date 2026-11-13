@@ -1,5 +1,8 @@
 const MODEL = { face: 'face_landmarker.task', hands: 'hand_landmarker.task', pose: 'pose_landmarker_lite.task' };
 const INTERVALS = { high: { face: 0, hands: 0, pose: 0 }, balanced: { face: 33, hands: 67, pose: 67 }, lite: { face: 67, hands: 125, pose: 125 } };
+// Lite mode beside a body: the hands are followed four times a second. That draws them and, above all,
+// gives the pose something to be checked against; without them a close hand is drawn as a small body.
+const LITE_HANDS_BESIDE_POSE_MS = 250;
 export function createTrackerCore({ onStatus = () => {}, loadVision, assetBase, createCanvas } = {}) {
   const instances = {}, loading = {}, results = {}, last = {}, counts = {}, errors = {}, delegates = {}, retryAt = {};
   let visionPromise, filesPromise, disposed = false, maskEnabled = false;
@@ -46,7 +49,8 @@ export function createTrackerCore({ onStatus = () => {}, loadVision, assetBase, 
     return { failures, loaded: Object.keys(instances) };
   }
   function detect(video, now, needs, callback) {
-    const periods = INTERVALS[needs.performance] || INTERVALS.balanced;
+    const profile = INTERVALS[needs.performance] || INTERVALS.balanced;
+    const periods = needs.performance === 'lite' && needs.pose ? { ...profile, hands: LITE_HANDS_BESIDE_POSE_MS } : profile;
     const due = name => needs[name] && instances[name] && now - (last[name] ?? -Infinity) >= periods[name];
     const mark = name => { last[name] = now; counts[name] = (counts[name] || 0) + 1; };
     for (const name of ['face', 'hands']) {

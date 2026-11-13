@@ -44,11 +44,11 @@ function syncDemoAspect() {
   scene?.resize();
 }
 function needs(performance = state.performance) {
-  let hand = settings.hands || settings.reveal === 'lens' || settings.showdata;
+  const hand = settings.hands || settings.reveal === 'lens' || settings.showdata;
   let pose = bodyOn();
-  if (performance === 'lite' && hand && pose) {
-    if (settings.reveal === 'lens') pose = false; else hand = false;
-  }
+  // Lite mode gives the body up for the fingertip lens. Otherwise it keeps both: the hands, tracked more
+  // slowly there, are what tells a body from the small figure the pose model sees in a close hand.
+  if (performance === 'lite' && hand && pose && settings.reveal === 'lens') pose = false;
   return { face: ['skull', 'brain', 'muscles', 'eyes', 'outline', 'nerves'].some(key => settings[key]) || settings.showdata,
     hands: hand, pose, mask: pose && performance !== 'lite', performance };
 }

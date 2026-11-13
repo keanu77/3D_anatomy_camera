@@ -168,11 +168,12 @@ const zoomRange = (page, milliseconds) => page.evaluate(async (milliseconds) => 
   return { least: Math.min(...seen), most: Math.max(...seen), frames: seen.length };
 }, milliseconds);
 
-test('a close-up of hands draws hand bones only: no arm on a figure the pose model imagines inside them', async ({ page }, testInfo) => {
+// Lite mode is where a phone ends up: the hands must still be tracked there, or nothing contradicts the figure.
+for (const performance of ['balanced', 'lite']) test(`a close-up of hands draws hand bones only, in ${performance} mode: no arm on a figure the pose model imagines inside them`, async ({ page }, testInfo) => {
   test.setTimeout(300000);
   await shakenPhoto(page, 'right_hands.jpg');
   await storeSettings(page, { focus: 'forearm', skull: false, eyes: false, outline: false, hands: true, arms: true, bodyMuscles: true, joints: true,
-    labels: true, focusZoom: true, showdata: true, performance: 'balanced' });
+    labels: true, focusZoom: true, showdata: true, performance });
   // What the trackers answered, kept as numbers only: the arm landmarks of the pose and the wrist and
   // middle fingertip of each hand. A failure here is then a measurement, not only a verdict.
   await page.addInitScript(() => {

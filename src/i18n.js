@@ -20,6 +20,7 @@ const EN = Object.freeze({
   '製作：運動醫學科 吳易澄醫師': 'Made by Dr. 吳易澄, sports medicine',
   '製作：運動醫學科 吳易澄醫師（': 'Made by Dr. 吳易澄, sports medicine (',
   '）': ')',
+  '原始碼公開於 GitHub：': 'The source code is public on GitHub: ',
 
   // Settings drawer
   '3D anatomy camera 設定': '3D anatomy camera settings',
@@ -96,12 +97,11 @@ const EN = Object.freeze({
   '高畫質': 'High quality',
   '平衡': 'Balanced',
   '輕量': 'Lite',
-  '輕量模式優先身體追蹤；使用手指 lens 時優先追蹤手部。': 'Lite mode tracks the body first; with the fingertip lens it tracks the hands first.',
+  '輕量模式以身體追蹤為主，手部更新較慢；使用手指 lens 時只追蹤手部。': 'Lite mode follows the body first and updates the hands more slowly; with the fingertip lens it tracks the hands only.',
   '切換鏡頭': 'Switch camera',
   '停止鏡頭': 'Stop camera',
   '製作與資料來源': 'Credits and data sources',
-  '構想受 Hashem Al-Ghaili 的 X-Ray Mirror 啟發，本專案的程式與資料為獨立製作（': 'The idea was inspired by Hashem Al-Ghaili’s X-Ray Mirror; the code and data of this project were made independently (',
-  '2026 年 11 月 10 日 X 貼文': 'post on X, 10 November 2026',
+  '構想受 Hashem Al-Ghaili 的 X-Ray Mirror 啟發，本專案的程式與資料為獨立製作': 'The idea was inspired by Hashem Al-Ghaili’s X-Ray Mirror; the code and data of this project were made independently',
   '骨骼、肌肉、關節韌帶、內臟、腦與視覺路徑：BodyParts3D，日本生命科學資料庫中心（DBCLS），CC BY-SA 2.1 Japan': 'Bones, muscles, joints and ligaments, organs, brain and visual pathway: BodyParts3D, Database Center for Life Science (DBCLS), Japan, CC BY-SA 2.1 Japan',
   '脊髓：Human Reference Atlas 脊髓參考模型，Browne 與 Schlehlein，HuBMAP，CC BY 4.0': 'Spinal cord: Human Reference Atlas spinal cord reference model, Browne and Schlehlein, HuBMAP, CC BY 4.0',
   '周邊神經走向：Z-Anatomy，Gauthier Kervyn 與貢獻者，CC BY-SA 4.0': 'Peripheral nerve courses: Z-Anatomy, Gauthier Kervyn and contributors, CC BY-SA 4.0',
