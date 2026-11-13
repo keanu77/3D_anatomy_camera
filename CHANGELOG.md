@@ -2,6 +2,13 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.4.0 (unreleased)
+
+### Changed
+
+- **The standing figures on the start screen are upright pictures.** In a 3:2 frame the figure used a third of the width and was shown at about 240 px on a desktop; drawn 600 by 900 it fills its picture and is shown at more than half the height of the start screen.
+- **Settings: one list of presets, and the fine adjustments folded away.** The system presets and the layer presets are one group under "What to show", above the single layers. The layer preset that was also called "Whole body" is "All layers"; "Whole body" now names the region choice alone. Mixed reality, head fit and tracking data are one section, "Advanced", closed until asked for and open again for a viewer who has moved one of its controls. The panel is 2378 px long on a desktop instead of 3143 px.
+
 ## 3.3.0 (2026-11-13)
 
 ### Added
@@ -14,8 +21,6 @@ Versions follow the number in `package.json` and in `/version.json` on the site.
 
 - The lower-leg and foot regions ask for the hips down to the feet in view. The pose model finds no body in a picture of ankles and feet alone, and the foot region used to ask for exactly that; the enlargement of the region does the closing in.
 - Leaving the demo says so, instead of reporting a stopped camera.
-- **The standing figures on the start screen are upright pictures.** In a 3:2 frame the figure used a third of the width and was shown at about 240 px on a desktop; drawn 600 by 900 it fills its picture and is shown at more than half the height of the start screen.
-- **Settings: one list of presets, and the fine adjustments folded away.** The system presets and the layer presets are one group under "What to show", above the single layers. The layer preset that was also called "Whole body" is "All layers"; "Whole body" now names the region choice alone. Mixed reality, head fit and tracking data are one section, "Advanced", closed until asked for and open again for a viewer who has moved one of its controls. The panel is 2378 px long on a desktop instead of 3143 px.
 
 ## 3.2.1 (2026-11-13)
 
