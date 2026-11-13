@@ -132,8 +132,8 @@ export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }
     }
   });
   sync();
-  // The fine adjustments start closed, except for a viewer who has already moved one of them.
-  $('advanced').open = ['real', 'feather', 'reveal', 'cut', 'showdata', 'fs', 'fw', 'fh', 'fd', 'fx', 'fy', 'fz'].some(key => settings[key] !== DEFAULTS[key]);
+  // The calibration starts closed, except for a viewer who has already fitted the head or asked for the read-out.
+  $('advanced').open = ['fs', 'fw', 'fh', 'fd', 'fx', 'fy', 'fz', 'showdata'].some(key => settings[key] !== DEFAULTS[key]);
   return { sync, openDrawer, status(text, cls = '', showOnStage = false) {
     $('status').textContent = text; $('status').className = cls; $('session-note').textContent = text;
     $('intro-note').textContent = text;

@@ -216,7 +216,7 @@ test('the side choice and the enlarge option appear only with a region in focus'
   await expect(page.locator('#focusSide')).toBeHidden();
 });
 
-test('the settings give one list of presets, keep "全身" for the region alone, and fold the fine adjustments away', async ({ page }) => {
+test('the settings give one list of presets, keep "全身" for the region alone, and fold the calibration away', async ({ page }) => {
   const errors = watchErrors(page);
   await page.setViewportSize({ width: 1280, height: 900 }); await page.goto('/');
   const drawer = page.locator('#drawer');
@@ -229,24 +229,35 @@ test('the settings give one list of presets, keep "全身" for the region alone,
   await expect(drawer.getByRole('button', { name: '全身', exact: true })).toHaveCount(1);
   await expect(page.locator('#focus [data-focus=none]')).toHaveText('全身');
   await expect(page.locator('[data-preset=full]')).toHaveText('全部圖層');
-  // The fine adjustments are one closed section; everyday controls stay in view.
-  const advanced = page.locator('#advanced');
+  // The calibration is one closed section: fitting the head, then the tracking read-out.
+  const advanced = page.locator('#advanced'), folded = ['fs', 'fz', 'fitreset', 'showdata'];
   await expect(advanced.locator('summary')).toHaveText('進階調整');
   expect(await advanced.evaluate((node) => node.tagName === 'DETAILS' && !node.open)).toBe(true);
-  for (const id of ['real', 'feather', 'reveal', 'fs', 'fz', 'fitreset', 'showdata']) await expect(page.locator(`#${id}`), id).toBeHidden();
-  for (const id of ['bright', 'labels', 'performance', 'camera-stop']) await expect(page.locator(`#${id}`), id).toBeVisible();
+  for (const id of folded) await expect(page.locator(`#${id}`), id).toBeHidden();
+  // What the model looks like over the camera picture is not calibration: the real image, the half views
+  // and the fingertip lens stay in plain view with the other everyday controls.
+  for (const id of ['bright', 'real', 'feather', 'reveal', 'labels', 'performance', 'camera-stop']) await expect(page.locator(`#${id}`), id).toBeVisible();
+  await expect(page.locator('#reveal option[value=lens]')).toHaveCount(1);
   const closed = await drawer.evaluate((node) => node.scrollHeight);
   await advanced.locator('summary').click();
-  for (const id of ['real', 'feather', 'reveal', 'fs', 'fz', 'fitreset', 'showdata']) await expect(page.locator(`#${id}`), id).toBeVisible();
-  // Folding them away takes at least 600px off a panel that was over 3000px long.
-  expect(await drawer.evaluate((node) => node.scrollHeight) - closed).toBeGreaterThan(600);
-  // A viewer who uses one of them finds the section open on return.
-  for (const stored of [{ reveal: 'lens' }, { fs: 1.1 }, { showdata: true }, { real: 0.5 }]) {
+  for (const id of folded) await expect(page.locator(`#${id}`), id).toBeVisible();
+  expect((await box(page, '#fitreset')).bottom, 'the read-out comes after the fit').toBeLessThan((await box(page, '#showdata')).y);
+  // Folding the calibration away takes the seven fit sliders and the read-out off the panel.
+  expect(await drawer.evaluate((node) => node.scrollHeight) - closed).toBeGreaterThan(450);
+  // A viewer who uses the calibration finds the section open on return; the everyday controls do not open it.
+  for (const [stored, open] of [[{ fs: 1.1 }, true], [{ fx: 1 }, true], [{ showdata: true }, true], [{ reveal: 'lens' }, false], [{ real: 0.5 }, false]]) {
     const other = await page.context().newPage();
     await storeSettings(other, stored); await other.goto('/');
-    expect(await other.locator('#advanced').evaluate((node) => node.open), JSON.stringify(stored)).toBe(true);
+    expect(await other.locator('#advanced').evaluate((node) => node.open), JSON.stringify(stored)).toBe(open);
     await other.close();
   }
+  // On a phone the heading that opens the section is a full-size target.
+  const phone = await page.context().newPage();
+  await phone.setViewportSize({ width: 390, height: 844 }); await phone.goto('/');
+  await phone.locator('#settings-toggle').click();
+  await expect(phone.locator('#settings-close')).toBeFocused();
+  expect((await box(phone, '#advanced > summary')).height).toBeGreaterThanOrEqual(44);
+  await phone.close();
   await page.goto('/?lang=en');
   await expect(page.locator('#advanced summary')).toHaveText('Advanced');
   await expect(page.locator('[data-preset=full]')).toHaveText('All layers');

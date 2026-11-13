@@ -7,11 +7,6 @@ export async function rendered(page, timeout = 30000) {
   await expect.poll(() => page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__?.()?.renderer?.frameCount || 0), { timeout }).toBeGreaterThan(0);
 }
 
-// The fine adjustments are folded away until asked for: open them as a viewer would, by their heading.
-export async function openAdvanced(page) {
-  if (!(await page.locator('#advanced').evaluate((node) => node.open))) await page.locator('#advanced > summary').click();
-}
-
 export async function storeSettings(page, settings) {
   await page.addInitScript((value) => localStorage.setItem('xr_settings', JSON.stringify(value)), settings);
 }
