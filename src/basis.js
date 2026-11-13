@@ -58,8 +58,10 @@ export function segmentVisible(landmarks,ids,threshold=0.5) {
 }
 /** True when a tracked hand is far larger than every arm segment the pose shows. A close-up of a hand
  * makes the pose model report a small, confident figure inside it; its scores cannot tell it from a
- * person, but its arms are a fraction of the hand they should carry. Measured: 0.22 to 0.35 for that
- * figure, 1.9 and more for a person, and never below the limit for a hand held towards the camera. */
+ * person, but its arms are a fraction of the hand they should carry. The arm is measured in the picture:
+ * the depth of that figure is noise, and added 204 px to a forearm 90 px long. The hand keeps its depth,
+ * which the hand tracker measures well, so a hand turned towards the camera is not taken for a small one.
+ * Measured over 780 results: at most 0.42 for the figure, 1.4 and more for a person. */
 export function poseContradictsHands(pose,hands,width,height,limit=0.5) {
   if (!Array.isArray(pose) || pose.length!==33 || !Array.isArray(hands)) return false;
   const point=p=>p && [p.x,p.y,p.z].every(Number.isFinite)?landmarkToPoint(p,width,height):null;
@@ -72,7 +74,8 @@ export function poseContradictsHands(pose,hands,width,height,limit=0.5) {
   let arm=0,seen=false;
   for (const ends of [[13,15],[14,16],[11,13],[12,14]]) {
     if (!segmentVisible(pose,ends)) continue;
-    seen=true;arm=Math.max(arm,length(sub(point(pose[ends[1]]),point(pose[ends[0]]))));
+    const a=point(pose[ends[0]]),b=point(pose[ends[1]]);
+    seen=true;arm=Math.max(arm,Math.hypot(b[0]-a[0],b[1]-a[1]));
   }
   return seen && arm<limit*hand;
 }
