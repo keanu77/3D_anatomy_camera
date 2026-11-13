@@ -137,3 +137,71 @@ test('with a region enlarged and no hand in view, the lens stays under the curso
   }
   await page.locator('#camera-stop').click();
 });
+
+// A camera that shows one official photo, moved a few pixels each frame as a hand-held picture is.
+async function shakenPhoto(page, file) {
+  const source = await fixture(file);
+  await page.route(`**/__qa-fixture/${file}`, (route) => route.fulfill({ body: source, contentType: 'image/jpeg' }));
+  await page.addInitScript((filename) => {
+    Object.defineProperty(navigator.mediaDevices, 'getUserMedia', { value: async () => {
+      const image = new Image(); image.src = `/__qa-fixture/${filename}`; await image.decode();
+      const canvas = document.createElement('canvas');
+      const scale = Math.min(1, 720 / Math.max(image.naturalWidth, image.naturalHeight));
+      canvas.width = Math.round(image.naturalWidth * scale); canvas.height = Math.round(image.naturalHeight * scale);
+      const context = canvas.getContext('2d'); let frame = 0;
+      const draw = () => { frame++; context.fillStyle = '#444'; context.fillRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(image, 3 * Math.sin(frame * 1.7), 3 * Math.cos(frame * 2.3), canvas.width, canvas.height); };
+      draw(); const stream = canvas.captureStream(15); const timer = setInterval(draw, 66);
+      for (const track of stream.getTracks()) { const stop = track.stop.bind(track); track.stop = () => { clearInterval(timer); stop(); }; }
+      return stream;
+    } });
+  }, file);
+}
+const renderer = (page) => page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().renderer);
+// Every enlargement shown over a few seconds, sampled at each display frame.
+const zoomRange = (page, milliseconds) => page.evaluate(async (milliseconds) => {
+  const seen = [], began = performance.now();
+  await new Promise((resolve) => requestAnimationFrame(function sample(now) {
+    seen.push(window.__ANATOMY_DIAGNOSTICS__().renderer.zoom.z);
+    if (now - began >= milliseconds) resolve(); else requestAnimationFrame(sample);
+  }));
+  return { least: Math.min(...seen), most: Math.max(...seen), frames: seen.length };
+}, milliseconds);
+
+test('a close-up of hands draws hand bones only: no arm on a figure the pose model imagines inside them', async ({ page }) => {
+  test.setTimeout(180000);
+  await shakenPhoto(page, 'right_hands.jpg');
+  await storeSettings(page, { focus: 'forearm', skull: false, eyes: false, outline: false, hands: true, arms: true, bodyMuscles: true, joints: true,
+    labels: true, focusZoom: true, showdata: true, performance: 'balanced' });
+  await page.goto('https://127.0.0.1:4173/');
+  await page.locator('#start').click();
+  await expect(page.locator('#data')).toContainText(/hands\s+right \+ right/, { timeout: 120000 });
+  // The pose model does answer for this picture, and its answer is refused.
+  await expect.poll(async () => (await renderer(page)).poseRejected, { timeout: 60000 }).toBe(true);
+  for (let look = 0; look < 6; look++) {
+    const state = await renderer(page);
+    expect(state.visibleParts, 'no forearm bone or muscle is drawn').toBe(0);
+    expect(state.zoom, 'nothing to enlarge').toEqual({ z: 1, bx: 0, by: 0 });
+    await page.waitForTimeout(400);
+  }
+  await expect(page.locator('#status')).toContainText('請讓手肘、手腕與手掌入鏡');
+  await expect(page.locator('#data')).toContainText(/hands\s+right \+ right/);
+  await page.locator('#camera-stop').click();
+});
+
+test('an enlarged region holds still while the tracked body trembles', async ({ page }) => {
+  test.setTimeout(180000);
+  await shakenPhoto(page, 'pose.jpg');
+  await storeSettings(page, { focus: 'knee', skull: false, eyes: false, outline: false, hands: false, legs: true, bodyMuscles: true,
+    labels: true, focusZoom: true, showdata: true, performance: 'balanced' });
+  await page.goto('https://127.0.0.1:4173/');
+  await page.locator('#start').click();
+  await expect(page.locator('#data')).toContainText(/body parts\s+[1-9]/, { timeout: 120000 });
+  await expect.poll(async () => (await renderer(page)).zoom.z, { timeout: 30000 }).toBeGreaterThan(1.2);
+  await page.waitForTimeout(2500);   // the first enlargement has eased in
+  const range = await zoomRange(page, 5000);
+  expect(range.frames).toBeGreaterThan(30);
+  expect(range.least).toBeGreaterThan(1.2);
+  expect(range.most - range.least, `enlargement between ${range.least} and ${range.most}`).toBeLessThan(0.005);
+  await page.locator('#camera-stop').click();
+});

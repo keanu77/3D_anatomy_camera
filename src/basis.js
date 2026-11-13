@@ -56,3 +56,23 @@ export function transformPoint(matrix,p) {
 export function segmentVisible(landmarks,ids,threshold=0.5) {
   return ids.every(i=>landmarks[i] && [landmarks[i].x,landmarks[i].y,landmarks[i].z].every(Number.isFinite) && (landmarks[i].visibility??1)>=threshold && (landmarks[i].presence??1)>=threshold);
 }
+/** True when a tracked hand is far larger than every arm segment the pose shows. A close-up of a hand
+ * makes the pose model report a small, confident figure inside it; its scores cannot tell it from a
+ * person, but its arms are a fraction of the hand they should carry. Measured: 0.22 to 0.35 for that
+ * figure, 1.9 and more for a person, and never below the limit for a hand held towards the camera. */
+export function poseContradictsHands(pose,hands,width,height,limit=0.5) {
+  if (!Array.isArray(pose) || pose.length!==33 || !Array.isArray(hands)) return false;
+  const point=p=>p && [p.x,p.y,p.z].every(Number.isFinite)?landmarkToPoint(p,width,height):null;
+  let hand=0;
+  for (const landmarks of hands) {
+    const wrist=point(landmarks?.[0]),tip=point(landmarks?.[12]);
+    if (wrist && tip) hand=Math.max(hand,length(sub(tip,wrist)));
+  }
+  if (!(hand>0)) return false;
+  let arm=0,seen=false;
+  for (const ends of [[13,15],[14,16],[11,13],[12,14]]) {
+    if (!segmentVisible(pose,ends)) continue;
+    seen=true;arm=Math.max(arm,length(sub(point(pose[ends[1]]),point(pose[ends[0]]))));
+  }
+  return seen && arm<limit*hand;
+}

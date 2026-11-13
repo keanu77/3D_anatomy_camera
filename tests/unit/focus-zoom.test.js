@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { IDENTITY, zoomTarget, easeZoom, zoomPoint, unzoomPoint, layerTransform, gestureZoom } from '../../src/focus-zoom.js';
+import { IDENTITY, zoomTarget, easeZoom, steadyZoom, zoomPoint, unzoomPoint, layerTransform, gestureZoom } from '../../src/focus-zoom.js';
 
 const W = 640, H = 480;
 describe('zoom onto a focused region', () => {
@@ -80,3 +80,26 @@ describe('zoom by hand on a paused picture', () => {
     expect(gestureZoom(start, [320, 240], [320, 240], 0, W, H)).toBe(start);
   });
 });
+
+describe('an enlargement that does not follow tracker jitter', () => {
+  const width = 640, height = 480;
+  const about = (cx, cy, z) => ({ z, bx: width / 2 - z * cx, by: height / 2 - z * cy });
+  test('small changes of size or place keep the enlargement that is already shown', () => {
+    const shown = about(300, 200, 1.6);
+    expect(steadyZoom(shown, about(300, 200, 1.66), width, height)).toBe(shown);
+    expect(steadyZoom(shown, about(306, 203, 1.6), width, height)).toBe(shown);
+    expect(steadyZoom(shown, about(304, 198, 1.55), width, height)).toBe(shown);
+  });
+  test('a real change of size or place is taken whole', () => {
+    const shown = about(300, 200, 1.6), larger = about(300, 200, 1.9), moved = about(340, 200, 1.6);
+    expect(steadyZoom(shown, larger, width, height)).toBe(larger);
+    expect(steadyZoom(shown, moved, width, height)).toBe(moved);
+  });
+  test('starting and ending an enlargement are never treated as jitter', () => {
+    const slight = about(320, 240, 1.06);
+    expect(steadyZoom(IDENTITY, slight, width, height)).toBe(slight);
+    expect(steadyZoom(slight, IDENTITY, width, height)).toBe(IDENTITY);
+    expect(steadyZoom(IDENTITY, IDENTITY, width, height)).toBe(IDENTITY);
+  });
+});
+

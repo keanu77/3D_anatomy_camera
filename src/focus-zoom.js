@@ -26,6 +26,19 @@ export function gestureZoom(start, from, to, factor, width, height, { max = 6 } 
   return { z, bx: clamp(to[0] - z * px, width - z * width, 0), by: clamp(to[1] - z * py, height - z * height, 0) };
 }
 
+/**
+ * The enlargement to aim for, given the one shown and the one the tracked region asks for now.
+ * Landmarks tremble and parts come and go at the edge of the picture; an enlargement that followed
+ * every such change made the whole picture pulse. A change is taken only when it would be seen as one.
+ */
+export function steadyZoom(shown, wanted, width, height, { scale = 0.1, shift = 0.05 } = {}) {
+  if (shown.z === 1 || wanted.z === 1) return shown.z === 1 && wanted.z === 1 ? shown : wanted;
+  const centre = zoom => [(width / 2 - zoom.bx) / zoom.z, (height / 2 - zoom.by) / zoom.z];
+  const [ax, ay] = centre(shown), [bx, by] = centre(wanted);
+  const moved = Math.hypot(ax - bx, ay - by) * shown.z > shift * Math.min(width, height);
+  return moved || Math.abs(wanted.z / shown.z - 1) > scale ? wanted : shown;
+}
+
 export function easeZoom(current, target, elapsedMs, tau = 220) {
   const k = 1 - Math.exp(-Math.max(0, elapsedMs) / tau);
   const next = { z: current.z + (target.z - current.z) * k, bx: current.bx + (target.bx - current.bx) * k, by: current.by + (target.by - current.by) * k };

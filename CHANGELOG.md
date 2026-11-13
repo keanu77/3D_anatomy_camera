@@ -14,6 +14,8 @@ Versions follow the number in `package.json` and in `/version.json` on the site.
 - Dragging any slider while the camera was running discarded every tracking result until the slider was released. Tracking is now reset only when what is tracked changes.
 - Pausing now tracks the frozen frame with every tracker in use and shows that frame's own pose. Before, a throttled tracker could keep a result up to 125 ms old, and the body kept its earlier smoothed pose.
 - With a region enlarged and no hand in view, the lens was drawn away from the pointer (about 200 px at 2.1x). It now stays under it.
+- A close-up of a hand made the pose model report a small figure inside the hand, and forearm bones and muscles were drawn on it, for example along a finger. A pose whose arms are less than half the length of the hand that is tracked is now refused, and the app asks for the elbow, wrist and hand to be in view.
+- An enlarged region no longer pulses. The enlargement followed every tremble of the tracked landmarks and dropped out whenever tracking did for a frame (between 1.44x and 1.91x on a hands close-up). It now changes only when the region really moves or changes size, eases to the new value, and is kept for 1.2 s when tracking drops out.
 - Redrawing a paused picture no longer steps the automatic performance mode down on the frame rate measured before the pause.
 - Name labels are drawn at the display's pixel density. On a phone with a density of 3 they were drawn at one third of it and were hard to read.
 - `version.json` of a release build records the commit time, so rebuilding the same commit gives the same bytes and `npm run verify:deploy` can be repeated from a clean checkout.
