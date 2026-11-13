@@ -8,16 +8,19 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const size = { width: 900, height: 600 };
+// A wide picture for the head and hands, an upright one for a standing figure: in a wide frame the figure
+// used a third of the width and was shown small.
+const wide = { width: 900, height: 600 }, upright = { width: 600, height: 900 };
 // `demo` is the address after `?still#`; `settings` are stored before the page loads; `stage` is the size the picture
-// is drawn at and `crop` the part of it that is kept. Showing the whole real image (real: 1) leaves out the black
-// head shape that hides the camera picture behind the skull: with no camera it would be a dark block at the neck.
+// is drawn at, `crop` where the kept part of it begins and `size` how large that part is. Showing the whole real image
+// (real: 1) leaves out the black head shape that hides the camera picture behind the skull: with no camera it would be
+// a dark block at the neck.
 const POSTERS = {
   // The head-and-hands demo is composed for 4:3; the poster is the 3:2 part of it that holds the skull and both hands.
-  bones: { demo: 'demo', settings: {}, stage: { width: 1200, height: 900 }, crop: { x: 150, y: 190 } },
+  bones: { demo: 'demo', settings: {}, stage: { width: 1200, height: 900 }, crop: { x: 150, y: 190 }, size: wide },
   // The standing figure fills the height of any stage, so these two are drawn at the poster's own size.
-  muscles: { demo: 'demo&bodyMuscles', settings: { real: 1 }, stage: size, crop: { x: 0, y: 0 } },
-  nerves: { demo: 'demo&nervous', settings: { real: 1, bright: 1.6 }, stage: size, crop: { x: 0, y: 0 } },
+  muscles: { demo: 'demo&bodyMuscles', settings: { real: 1 }, stage: upright, crop: { x: 0, y: 0 }, size: upright },
+  nerves: { demo: 'demo&nervous', settings: { real: 1, bright: 1.6 }, stage: upright, crop: { x: 0, y: 0 }, size: upright },
 };
 const args = process.argv.slice(2);
 const origin = args.find(value => /^https?:/.test(value)) || 'https://127.0.0.1:4173';
@@ -29,7 +32,7 @@ const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=sw
 const work = mkdtempSync(join(tmpdir(), 'intro-poster-'));
 try {
   for (const name of names.length ? names : Object.keys(POSTERS)) {
-    const { demo, settings, stage, crop } = POSTERS[name];
+    const { demo, settings, stage, crop, size } = POSTERS[name];
     const page = await browser.newPage({ viewport: { width: 1600, height: 1100 }, ignoreHTTPSErrors: true, locale: 'zh-TW', deviceScaleFactor: 1 });
     await page.addInitScript(({ width, height, stored }) => {
       localStorage.clear(); localStorage.setItem('xr_settings', JSON.stringify(stored));

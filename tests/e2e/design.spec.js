@@ -33,7 +33,8 @@ test('start screen fills the stage column, shows the model and names what the si
     // Three pictures of the model share the frame; one is on show.
     await expect(page.locator('.intro-picture.current')).toHaveCount(1);
     await expect(page.locator('.intro-picture.current')).toBeVisible();
-    await expect.poll(() => page.locator('.intro-picture').evaluateAll((imgs) => imgs.map((img) => (img.complete ? img.naturalWidth : 0)))).toEqual([900, 900, 900]);
+    // The head and hands are a wide picture; the standing figures are upright ones.
+    await expect.poll(() => page.locator('.intro-picture').evaluateAll((imgs) => imgs.map((img) => (img.complete ? `${img.naturalWidth}x${img.naturalHeight}` : '')))).toEqual(['900x600', '600x900', '600x900']);
     const words = await box(page, '#intro h2'), art = await box(page, '.intro-picture.current');
     expect(art.height, `${at} picture height`).toBeGreaterThanOrEqual(viewport.height < 500 ? 120 : 160);
     // Words, picture and both actions stay inside the start screen; the words never lie on the picture.
@@ -52,6 +53,42 @@ test('start screen fills the stage column, shows the model and names what the si
   await expect(page.locator('#intro h2')).not.toHaveText('3D anatomy camera');
   await expect(page.locator('#intro h2')).toContainText('解剖');
   expect(errors).toEqual([]);
+});
+
+test('each picture of the model is filled by the model, and a standing figure is shown tall', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 }); await page.goto('/');
+  await page.locator('#intro').evaluate((el) => Promise.all(el.getAnimations({ subtree: true }).map((animation) => animation.finished)));
+  // How much of each picture the model spans: the box of every pixel that is not the picture's ground.
+  const spans = await page.locator('.intro-picture').evaluateAll(async (imgs) => Promise.all(imgs.map(async (img) => {
+    await img.decode();
+    const canvas = document.createElement('canvas'); canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+    const context = canvas.getContext('2d'); context.drawImage(img, 0, 0);
+    const { data, width, height } = context.getImageData(0, 0, canvas.width, canvas.height), ground = [data[0], data[1], data[2]];
+    let left = width, right = -1, top = height, bottom = -1;
+    for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+      const i = (y * width + x) * 4;
+      if (Math.abs(data[i] - ground[0]) + Math.abs(data[i + 1] - ground[1]) + Math.abs(data[i + 2] - ground[2]) < 60) continue;
+      if (x < left) left = x; if (x > right) right = x; if (y < top) top = y; if (y > bottom) bottom = y;
+    }
+    return { wide: (right - left + 1) / width, tall: (bottom - top + 1) / height };
+  })));
+  for (const [index, name] of ['bones', 'muscles', 'nerves'].entries()) {
+    expect(spans[index].tall, `${name}: height of the picture used`).toBeGreaterThan(0.8);
+    expect(spans[index].wide, `${name}: width of the picture used`).toBeGreaterThan(0.55);
+  }
+  // On a desktop the standing figure is shown at more than half the height of the start screen.
+  const intro = await box(page, '#intro');
+  for (const index of [1, 2]) {
+    await page.locator('.intro-picture-choice button').nth(index).click();
+    await expect(page.locator('.intro-picture').nth(index)).toHaveClass(/current/);
+    const art = await box(page, '.intro-picture.current');
+    expect(art.height * spans[index].tall, `picture ${index}: figure height on screen`).toBeGreaterThan(intro.height * 0.5);
+  }
+  // The wide picture still sits level with the words, not at the top of the taller frame.
+  await page.locator('.intro-picture-choice button').nth(0).click();
+  await expect(page.locator('.intro-picture').nth(0)).toHaveClass(/current/);
+  const [wide, words] = [await box(page, '.intro-picture.current'), await box(page, '.intro-content')];
+  expect(Math.abs((wide.y + wide.bottom) / 2 - (words.y + words.bottom) / 2), 'wide picture centred on the words').toBeLessThan(60);
 });
 
 test('the header keeps the whole name on a 320px screen', async ({ page }) => {
