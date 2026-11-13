@@ -1,4 +1,4 @@
-import { FOCUS_IDS, FOCUS_SIDES, OPTIONAL_FOCUS_LAYERS, regionById } from './regions.js';
+import { FOCUS_IDS, FOCUS_SIDES, regionById } from './regions.js';
 export const DEFAULTS = Object.freeze({
   skull: true, brain: false, muscles: false, eyes: true, outline: true, hands: true,
   spine: false, organs: false, arms: false, legs: false, bodyMuscles: false, joints: false, nerves: false, peripheralNerves: false,
@@ -45,12 +45,12 @@ export function applyPreset(settings, preset) {
   if (!sets[preset]) return;
   for (const key of LAYERS) settings[key] = sets[preset].includes(key);
 }
-/** Isolate one body region: show the layers it needs and name its structures. 'none' keeps the layers. */
+/** Isolate one body region: switch on the layers it needs and name its structures. Nothing the viewer
+ * chose is switched off, on entering a region, changing it or leaving it. */
 export function applyFocus(settings, id) {
   const region = regionById(id);
   settings.focus = region ? region.id : 'none';
   if (!region) return;
-  // Optional layers keep the viewer's own choice from one region to the next.
-  for (const key of LAYERS) settings[key] = region.layers.includes(key) || (OPTIONAL_FOCUS_LAYERS.includes(key) && settings[key]);
+  for (const key of region.layers) settings[key] = true;
   settings.labels = true;
 }

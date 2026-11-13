@@ -210,24 +210,32 @@ describe('focus setting', () => {
     expect(sanitizeSettings({ focus: 'spleen' }).focus).toBe('none');
     expect(sanitizeSettings({ focus: 3 }).focus).toBe('none');
   });
-  test('choosing a region shows exactly its layers and its names; leaving it keeps the layers', () => {
-    const settings = { ...DEFAULTS };
+  test('choosing a region switches on its layers and its names, and switches off nothing the viewer chose', () => {
+    const own = ['skull', 'eyes', 'outline', 'hands', 'organs'];
+    const settings = { ...DEFAULTS, ...Object.fromEntries(LAYERS.map(key => [key, own.includes(key)])), labels: false };
+    const shown = () => LAYERS.filter(key => settings[key]);
     applyFocus(settings, 'shoulder');
-    expect(LAYERS.filter(key => settings[key])).toEqual(['spine', 'arms', 'bodyMuscles']);
+    expect(shown()).toEqual(['skull', 'eyes', 'outline', 'hands', 'spine', 'organs', 'arms', 'bodyMuscles']);
     expect(settings).toMatchObject({ focus: 'shoulder', labels: true });
+    // The next region adds what it needs to what is already shown.
+    applyFocus(settings, 'knee');
+    expect(shown()).toEqual(['skull', 'eyes', 'outline', 'hands', 'spine', 'organs', 'arms', 'legs', 'bodyMuscles']);
+    // A layer the viewer switches off stays off until a region that needs it is chosen.
+    settings.bodyMuscles = false; settings.skull = false;
     applyFocus(settings, 'none');
     expect(settings.focus).toBe('none');
-    expect(LAYERS.filter(key => settings[key])).toEqual(['spine', 'arms', 'bodyMuscles']);
+    expect(shown()).toEqual(['eyes', 'outline', 'hands', 'spine', 'organs', 'arms', 'legs']);
+    applyFocus(settings, 'elbow');
+    expect(shown()).toEqual(['eyes', 'outline', 'hands', 'spine', 'organs', 'arms', 'legs', 'bodyMuscles']);
     applyFocus(settings, 'not-a-region');
     expect(settings.focus).toBe('none');
+    expect(shown()).toEqual(['eyes', 'outline', 'hands', 'spine', 'organs', 'arms', 'legs', 'bodyMuscles']);
   });
   test('nerves are never switched on by a region, and stay on once the viewer chose them', () => {
-    const settings = { ...DEFAULTS };
-    applyFocus(settings, 'elbow');
-    expect(settings.peripheralNerves).toBe(false);
+    const settings = { ...DEFAULTS, ...Object.fromEntries(LAYERS.map(key => [key, false])) };
+    for (const region of REGIONS) { applyFocus(settings, region.id); expect(settings.peripheralNerves, region.id).toBe(false); expect(settings.nerves, region.id).toBe(false); }
     settings.peripheralNerves = true;
     applyFocus(settings, 'knee');
     expect(settings.peripheralNerves).toBe(true);
-    expect(LAYERS.filter(key => settings[key])).toEqual(['legs', 'bodyMuscles', 'peripheralNerves']);
   });
 });
