@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { rendered, watchErrors } from './helpers.js';
+import { rendered, storeSettings, watchErrors } from './helpers.js';
 
 const diagnostics = (page) => page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__());
 const box = (page, selector) => page.locator(selector).first().evaluate((el) => {
@@ -33,7 +33,8 @@ test('start screen fills the stage column, shows the model and names what the si
     // Three pictures of the model share the frame; one is on show.
     await expect(page.locator('.intro-picture.current')).toHaveCount(1);
     await expect(page.locator('.intro-picture.current')).toBeVisible();
-    await expect.poll(() => page.locator('.intro-picture').evaluateAll((imgs) => imgs.map((img) => (img.complete ? img.naturalWidth : 0)))).toEqual([900, 900, 900]);
+    // The head and hands are a wide picture; the standing figures are upright ones.
+    await expect.poll(() => page.locator('.intro-picture').evaluateAll((imgs) => imgs.map((img) => (img.complete ? `${img.naturalWidth}x${img.naturalHeight}` : '')))).toEqual(['900x600', '600x900', '600x900']);
     const words = await box(page, '#intro h2'), art = await box(page, '.intro-picture.current');
     expect(art.height, `${at} picture height`).toBeGreaterThanOrEqual(viewport.height < 500 ? 120 : 160);
     // Words, picture and both actions stay inside the start screen; the words never lie on the picture.
@@ -52,6 +53,42 @@ test('start screen fills the stage column, shows the model and names what the si
   await expect(page.locator('#intro h2')).not.toHaveText('3D anatomy camera');
   await expect(page.locator('#intro h2')).toContainText('解剖');
   expect(errors).toEqual([]);
+});
+
+test('each picture of the model is filled by the model, and a standing figure is shown tall', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 }); await page.goto('/');
+  await page.locator('#intro').evaluate((el) => Promise.all(el.getAnimations({ subtree: true }).map((animation) => animation.finished)));
+  // How much of each picture the model spans: the box of every pixel that is not the picture's ground.
+  const spans = await page.locator('.intro-picture').evaluateAll(async (imgs) => Promise.all(imgs.map(async (img) => {
+    await img.decode();
+    const canvas = document.createElement('canvas'); canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+    const context = canvas.getContext('2d'); context.drawImage(img, 0, 0);
+    const { data, width, height } = context.getImageData(0, 0, canvas.width, canvas.height), ground = [data[0], data[1], data[2]];
+    let left = width, right = -1, top = height, bottom = -1;
+    for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+      const i = (y * width + x) * 4;
+      if (Math.abs(data[i] - ground[0]) + Math.abs(data[i + 1] - ground[1]) + Math.abs(data[i + 2] - ground[2]) < 60) continue;
+      if (x < left) left = x; if (x > right) right = x; if (y < top) top = y; if (y > bottom) bottom = y;
+    }
+    return { wide: (right - left + 1) / width, tall: (bottom - top + 1) / height };
+  })));
+  for (const [index, name] of ['bones', 'muscles', 'nerves'].entries()) {
+    expect(spans[index].tall, `${name}: height of the picture used`).toBeGreaterThan(0.8);
+    expect(spans[index].wide, `${name}: width of the picture used`).toBeGreaterThan(0.55);
+  }
+  // On a desktop the standing figure is shown at more than half the height of the start screen.
+  const intro = await box(page, '#intro');
+  for (const index of [1, 2]) {
+    await page.locator('.intro-picture-choice button').nth(index).click();
+    await expect(page.locator('.intro-picture').nth(index)).toHaveClass(/current/);
+    const art = await box(page, '.intro-picture.current');
+    expect(art.height * spans[index].tall, `picture ${index}: figure height on screen`).toBeGreaterThan(intro.height * 0.5);
+  }
+  // The wide picture still sits level with the words, not at the top of the taller frame.
+  await page.locator('.intro-picture-choice button').nth(0).click();
+  await expect(page.locator('.intro-picture').nth(0)).toHaveClass(/current/);
+  const [wide, words] = [await box(page, '.intro-picture.current'), await box(page, '.intro-content')];
+  expect(Math.abs((wide.y + wide.bottom) / 2 - (words.y + words.bottom) / 2), 'wide picture centred on the words').toBeLessThan(60);
 });
 
 test('the header keeps the whole name on a 320px screen', async ({ page }) => {
@@ -177,4 +214,53 @@ test('the side choice and the enlarge option appear only with a region in focus'
   await expect(page.locator('#focus-zoom-row')).toBeVisible();
   await page.locator('#focus [data-focus=none]').click();
   await expect(page.locator('#focusSide')).toBeHidden();
+});
+
+test('the settings give one list of presets, keep "全身" for the region alone, and fold the calibration away', async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.setViewportSize({ width: 1280, height: 900 }); await page.goto('/');
+  const drawer = page.locator('#drawer');
+  // One group of presets: the four systems and the seven single views.
+  const presets = drawer.getByRole('group', { name: '快速組合' });
+  await expect(presets.locator('[data-preset]')).toHaveCount(11);
+  await expect(drawer.locator('[data-preset]')).toHaveCount(11);
+  await expect(drawer.getByRole('group', { name: '個別圖層' }).getByRole('checkbox')).toHaveCount(14);
+  // "全身" names the whole body in the region choice only; the preset that switches every layer on says so.
+  await expect(drawer.getByRole('button', { name: '全身', exact: true })).toHaveCount(1);
+  await expect(page.locator('#focus [data-focus=none]')).toHaveText('全身');
+  await expect(page.locator('[data-preset=full]')).toHaveText('全部圖層');
+  // The calibration is one closed section: fitting the head, then the tracking read-out.
+  const advanced = page.locator('#advanced'), folded = ['fs', 'fz', 'fitreset', 'showdata'];
+  await expect(advanced.locator('summary')).toHaveText('進階調整');
+  expect(await advanced.evaluate((node) => node.tagName === 'DETAILS' && !node.open)).toBe(true);
+  for (const id of folded) await expect(page.locator(`#${id}`), id).toBeHidden();
+  // What the model looks like over the camera picture is not calibration: the real image, the half views
+  // and the fingertip lens stay in plain view with the other everyday controls.
+  for (const id of ['bright', 'real', 'feather', 'reveal', 'labels', 'performance', 'camera-stop']) await expect(page.locator(`#${id}`), id).toBeVisible();
+  await expect(page.locator('#reveal option[value=lens]')).toHaveCount(1);
+  const closed = await drawer.evaluate((node) => node.scrollHeight);
+  await advanced.locator('summary').click();
+  for (const id of folded) await expect(page.locator(`#${id}`), id).toBeVisible();
+  expect((await box(page, '#fitreset')).bottom, 'the read-out comes after the fit').toBeLessThan((await box(page, '#showdata')).y);
+  // Folding the calibration away takes the seven fit sliders and the read-out off the panel.
+  expect(await drawer.evaluate((node) => node.scrollHeight) - closed).toBeGreaterThan(450);
+  // A viewer who uses the calibration finds the section open on return; the everyday controls do not open it.
+  for (const [stored, open] of [[{ fs: 1.1 }, true], [{ fx: 1 }, true], [{ showdata: true }, true], [{ reveal: 'lens' }, false], [{ real: 0.5 }, false]]) {
+    const other = await page.context().newPage();
+    await storeSettings(other, stored); await other.goto('/');
+    expect(await other.locator('#advanced').evaluate((node) => node.open), JSON.stringify(stored)).toBe(open);
+    await other.close();
+  }
+  // On a phone the heading that opens the section is a full-size target.
+  const phone = await page.context().newPage();
+  await phone.setViewportSize({ width: 390, height: 844 }); await phone.goto('/');
+  await phone.locator('#settings-toggle').click();
+  await expect(phone.locator('#settings-close')).toBeFocused();
+  expect((await box(phone, '#advanced > summary')).height).toBeGreaterThanOrEqual(44);
+  await phone.close();
+  await page.goto('/?lang=en');
+  await expect(page.locator('#advanced summary')).toHaveText('Advanced');
+  await expect(page.locator('[data-preset=full]')).toHaveText('All layers');
+  await expect(page.locator('#drawer').getByRole('group', { name: 'Presets' }).locator('[data-preset]')).toHaveCount(11);
+  expect(errors).toEqual([]);
 });

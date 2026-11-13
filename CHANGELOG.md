@@ -2,6 +2,13 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.4.0 (unreleased)
+
+### Changed
+
+- **The standing figures on the start screen are upright pictures.** In a 3:2 frame the figure used a third of the width and was shown at about 240 px on a desktop; drawn 600 by 900 it fills its picture and is shown at more than half the height of the start screen.
+- **Settings: one list of presets, and the calibration folded away.** The system presets and the layer presets are one group under "What to show", above the single layers. The layer preset that was also called "Whole body" is "All layers"; "Whole body" now names the region choice alone. Fitting the head and the tracking read-out are one section, "Advanced", closed until asked for and open again for a viewer who has used it; closed, the panel is about 580 px shorter on a desktop (2606 px against 3188 px). Mixed reality stays in plain view: the real image, the half views and the fingertip lens are what the model looks like, not calibration. On a phone the headings that open a section are 44 px targets.
+
 ## 3.3.0 (2026-11-13)
 
 ### Added

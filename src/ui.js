@@ -1,4 +1,4 @@
-import { LAYERS, RANGES, applyFocus, applyPreset, saveSettings } from './settings.js';
+import { DEFAULTS, LAYERS, RANGES, applyFocus, applyPreset, saveSettings } from './settings.js';
 import { REGIONS, regionById } from './regions.js';
 import { t, getLanguage } from './i18n.js';
 export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }) {
@@ -132,6 +132,8 @@ export function bindUI({ settings, onChange, onStart, onDemo, onSwitch, onStop }
     }
   });
   sync();
+  // The calibration starts closed, except for a viewer who has already fitted the head or asked for the read-out.
+  $('advanced').open = ['fs', 'fw', 'fh', 'fd', 'fx', 'fy', 'fz', 'showdata'].some(key => settings[key] !== DEFAULTS[key]);
   return { sync, openDrawer, status(text, cls = '', showOnStage = false) {
     $('status').textContent = text; $('status').className = cls; $('session-note').textContent = text;
     $('intro-note').textContent = text;

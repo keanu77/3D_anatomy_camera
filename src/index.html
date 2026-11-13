@@ -55,8 +55,8 @@
         </div>
         <div class="intro-pictures">
           <img class="intro-picture current" src="./intro-poster-bones.webp" width="900" height="600" alt="X 光外觀的頭骨與雙手骨骼 3D 模型" decoding="async">
-          <img class="intro-picture" src="./intro-poster-muscles.webp" width="900" height="600" alt="X 光外觀的全身肌肉 3D 模型" decoding="async" fetchpriority="low" aria-hidden="true">
-          <img class="intro-picture" src="./intro-poster-nerves.webp" width="900" height="600" alt="X 光外觀的腦、脊髓與周邊神經 3D 模型" decoding="async" fetchpriority="low" aria-hidden="true">
+          <img class="intro-picture" src="./intro-poster-muscles.webp" width="600" height="900" alt="X 光外觀的全身肌肉 3D 模型" decoding="async" fetchpriority="low" aria-hidden="true">
+          <img class="intro-picture" src="./intro-poster-nerves.webp" width="600" height="900" alt="X 光外觀的腦、脊髓與周邊神經 3D 模型" decoding="async" fetchpriority="low" aria-hidden="true">
           <div class="intro-picture-choice seg" role="group" aria-label="模型圖片">
             <button type="button" aria-pressed="true">骨骼</button>
             <button type="button" aria-pressed="false">肌肉</button>
@@ -84,25 +84,29 @@
         <p id="focus-note" class="small"></p>
       </section>
 
-      <section class="panel" aria-labelledby="systems-heading">
-        <h3 id="systems-heading">探索三大系統</h3>
-        <div class="chips system-presets">
-          <button type="button" data-preset="skeletal">骨骼與關節</button>
-          <button type="button" data-preset="musculoskeletal">肌肉＋骨骼</button>
-          <button type="button" data-preset="nervous">神經與感覺器官</button>
-          <button type="button" data-preset="systems">三系統一起看</button>
+      <section class="panel" aria-labelledby="content-heading">
+        <h3 id="content-heading">顯示內容</h3>
+        <!-- One list of presets: four systems, then seven single views. -->
+        <p id="presets-label" class="group-label">快速組合</p>
+        <div class="presets" role="group" aria-labelledby="presets-label">
+          <div class="chips system-presets">
+            <button type="button" data-preset="skeletal">骨骼與關節</button>
+            <button type="button" data-preset="musculoskeletal">肌肉＋骨骼</button>
+            <button type="button" data-preset="nervous">神經與感覺器官</button>
+            <button type="button" data-preset="systems">三系統一起看</button>
+          </div>
+          <div class="chips layer-presets">
+            <button type="button" data-preset="skull">頭骨</button>
+            <button type="button" data-preset="brain">腦</button>
+            <button type="button" data-preset="muscles">頭部肌肉</button>
+            <button type="button" data-preset="bodyMuscles">身體肌肉</button>
+            <button type="button" data-preset="all">頭部＋手</button>
+            <button type="button" data-preset="upper">上半身</button>
+            <button type="button" data-preset="full">全部圖層</button>
+          </div>
         </div>
-        <h3 class="layer-heading">圖層</h3>
-        <div class="chips layer-presets">
-          <button type="button" data-preset="skull">頭骨</button>
-          <button type="button" data-preset="brain">腦</button>
-          <button type="button" data-preset="muscles">頭部肌肉</button>
-          <button type="button" data-preset="bodyMuscles">身體肌肉</button>
-          <button type="button" data-preset="all">頭部＋手</button>
-          <button type="button" data-preset="upper">上半身</button>
-          <button type="button" data-preset="full">全身</button>
-        </div>
-        <div class="checks">
+        <p id="layers-label" class="group-label">個別圖層</p>
+        <div class="checks" role="group" aria-labelledby="layers-label">
           <label class="ck"><input id="L_skull" type="checkbox"><i style="background:#bfe3ff" aria-hidden="true"></i>頭骨</label>
           <label class="ck"><input id="L_brain" type="checkbox"><i style="background:#ff9fc0" aria-hidden="true"></i>腦</label>
           <label class="ck"><input id="L_muscles" type="checkbox"><i style="background:#ff6b5e" aria-hidden="true"></i>頭部肌肉</label>
@@ -160,23 +164,27 @@
         <div id="cutrow" class="row"><label id="cutlabel" for="cut">切面位置</label><input id="cut" type="range" min="0" max="1" step="0.005"></div>
       </section>
 
-      <section class="panel">
-        <label class="ck"><input id="showdata" type="checkbox">顯示追蹤資料</label>
-        <pre id="data" hidden></pre>
-      </section>
+      <!-- Calibration, done once or rarely: closed until asked for, open again for a viewer who has used it. -->
+      <details id="advanced" class="panel advanced">
+        <summary>進階調整</summary>
+        <section aria-labelledby="fit-heading">
+          <h3 id="fit-heading">貼合我的頭型</h3>
+          <div class="row"><label for="fs">整體大小 <b id="fsv"></b></label><input id="fs" type="range" min="0.7" max="1.4" step="0.005"></div>
+          <div class="row"><label for="fw">寬度 <b id="fwv"></b></label><input id="fw" type="range" min="0.8" max="1.25" step="0.005"></div>
+          <div class="row"><label for="fh">高度 <b id="fhv"></b></label><input id="fh" type="range" min="0.8" max="1.25" step="0.005"></div>
+          <div class="row"><label for="fd">深度 <b id="fdv"></b></label><input id="fd" type="range" min="0.8" max="1.25" step="0.005"></div>
+          <div class="row"><label for="fx">左右 <b id="fxv"></b></label><input id="fx" type="range" min="-3" max="3" step="0.1"></div>
+          <div class="row"><label for="fy">上下 <b id="fyv"></b></label><input id="fy" type="range" min="-4" max="4" step="0.1"></div>
+          <div class="row"><label for="fz">前後 <b id="fzv"></b></label><input id="fz" type="range" min="-4" max="4" step="0.1"></div>
+          <button id="fitreset" class="linkbtn" type="button">重設貼合</button>
+          <p class="small fit-note">提示：選「實體」外觀，並把「透出真實影像」調到一半左右，再把頭骨對齊自己的臉。</p>
+        </section>
 
-      <section class="panel" aria-labelledby="fit-heading">
-        <h3 id="fit-heading">貼合我的頭型</h3>
-        <div class="row"><label for="fs">整體大小 <b id="fsv"></b></label><input id="fs" type="range" min="0.7" max="1.4" step="0.005"></div>
-        <div class="row"><label for="fw">寬度 <b id="fwv"></b></label><input id="fw" type="range" min="0.8" max="1.25" step="0.005"></div>
-        <div class="row"><label for="fh">高度 <b id="fhv"></b></label><input id="fh" type="range" min="0.8" max="1.25" step="0.005"></div>
-        <div class="row"><label for="fd">深度 <b id="fdv"></b></label><input id="fd" type="range" min="0.8" max="1.25" step="0.005"></div>
-        <div class="row"><label for="fx">左右 <b id="fxv"></b></label><input id="fx" type="range" min="-3" max="3" step="0.1"></div>
-        <div class="row"><label for="fy">上下 <b id="fyv"></b></label><input id="fy" type="range" min="-4" max="4" step="0.1"></div>
-        <div class="row"><label for="fz">前後 <b id="fzv"></b></label><input id="fz" type="range" min="-4" max="4" step="0.1"></div>
-        <button id="fitreset" class="linkbtn" type="button">重設貼合</button>
-        <p class="small fit-note">提示：選「實體」外觀，並把「透出真實影像」調到一半左右，再把頭骨對齊自己的臉。</p>
-      </section>
+        <section>
+          <label class="ck"><input id="showdata" type="checkbox">顯示追蹤資料</label>
+          <pre id="data" hidden></pre>
+        </section>
+      </details>
 
       <section class="panel" aria-labelledby="camera-heading">
         <h3 id="camera-heading">鏡頭與效能</h3>
