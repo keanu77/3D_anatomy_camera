@@ -154,3 +154,37 @@ test('choosing a region keeps every layer the viewer set and adds its own, befor
   expect(await stored()).toMatchObject({ ...inForearm, legs: true, joints: false, focus: 'none' });
   expect(errors).toEqual([]);
 });
+
+test('the forearm and wrist region names the eight carpal bones of each hand; elsewhere the wrist keeps one label', async ({ page }) => {
+  const errors = watchErrors(page);
+  const carpals = ['手舟狀骨', '月狀骨', '三角骨', '豌豆骨', '大多角骨', '小多角骨', '頭狀骨', '鉤狀骨'];
+  const texts = async () => (await renderer(page)).labelLayout.map((item) => item.text);
+  await open(page, '&focus=forearm', { hands: true, arms: true, bodyMuscles: true, joints: true, labels: true });
+  await focused(page, 'forearm:both');
+  // The bones of the hand come with the head's parts, which the region now asks for.
+  await expect.poll(async () => (await renderer(page)).inspection.loaded).toContain('head');
+  await expect.poll(texts).toEqual(expect.arrayContaining([...carpals.map((name) => `左${name}`), ...carpals.map((name) => `右${name}`)]));
+  expect(await texts()).not.toContain('腕骨');
+  // Each name stands on its own bone: sixteen different places, all inside the picture.
+  const places = (await renderer(page)).labelLayout.filter((item) => carpals.some((name) => item.text.endsWith(name)));
+  expect(places).toHaveLength(16);
+  // One side chosen: that hand is named bone by bone. The other hand, back in the picture once the
+  // enlargement is off, keeps its single label.
+  await page.locator('#focusSide button[data-side=L]').click();
+  await focused(page, 'forearm:L');
+  await expect.poll(async () => (await texts()).filter((text) => text.startsWith('右') && carpals.some((name) => text.endsWith(name)))).toEqual([]);
+  expect(await texts()).toEqual(expect.arrayContaining(carpals.map((name) => `左${name}`)));
+  await page.locator('#focusZoom').uncheck();
+  await expect.poll(texts).toEqual(expect.arrayContaining([...carpals.map((name) => `左${name}`), '腕骨']));
+  expect((await texts()).filter((text) => text.startsWith('右') && carpals.some((name) => text.endsWith(name)))).toEqual([]);
+  // English names follow the label language.
+  await page.locator('#labelLanguage').selectOption('en');
+  await expect.poll(texts).toEqual(expect.arrayContaining(['left scaphoid', 'left lunate', 'left hamate']));
+  await page.locator('#labelLanguage').selectOption('zh');
+  // Outside the region the hand is small and keeps its overview.
+  await page.locator('#focus [data-focus=none]').click();
+  await expect.poll(async () => (await renderer(page)).focus).toBeNull();
+  await expect.poll(texts).toContain('腕骨');
+  expect((await texts()).some((text) => carpals.some((name) => text.endsWith(name)))).toBe(false);
+  expect(errors).toEqual([]);
+});

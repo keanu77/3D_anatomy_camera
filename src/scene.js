@@ -9,7 +9,7 @@ export { decodeGeometry } from './geometry.js';
 import { makeMaterial, setMaterialMode } from './anatomy-material.js';
 import { PALETTE, SOLID, GAINS, BASE_LIGHT, SURFACE, solidGain } from './render-style.js';
 import { demoBodyPose, demoHandLandmarks, demoHeadLayout } from './demo-pose.js';
-import { regionById, regionIncludesMesh, regionPartSelector, focusLabels } from './regions.js';
+import { regionById, regionIncludesMesh, regionPartSelector, focusLabels, carpalLabels } from './regions.js';
 import { IDENTITY, zoomTarget, steadyZoom, easeZoom, gestureZoom, layerTransform, unzoomPoint } from './focus-zoom.js';
 import { LEVEL, isLevel, dragOrbit, orbitElements } from './orbit.js';
 
@@ -112,14 +112,21 @@ export async function createScene({ settings, state, onStats = () => {} }) {
   inspection = createInspection({ stage, getTargets: targets, getView: () => ({ width, height, mirror: state.mirror,
     solid: settings.style === 'solid', lens, zoom }), decodeGeometry, asset,
     redraw: requestRefresh, onLoaded: requestRefresh });
+  // In the forearm and wrist region a hand is looked at closely enough to name its wrist bone by bone.
+  const wristNamed = () => focus?.id === 'forearm' && settings.hands && settings.labels;
+  const handLabels = rig => {
+    if (!wristNamed() || !['both', rig.anatomicalSide].includes(settings.focusSide)) return null;
+    const found = inspection.partAnchors({ mesh: rig.palm, parent: 'hand_palm', bundle: 'head' });
+    return found ? carpalLabels(found.anchors, found.allParts, rig.anatomicalSide, settings.labelLanguage) : null;
+  };
   const labels = createLabels({ settings, state, metadata, getSize, headGroup, jawMesh: headMeshes.get('jaw'),
-    headCamera: perspective, handCamera: orthographic, rigs, getBodyLabels: value => body.labels(value),
+    headCamera: perspective, handCamera: orthographic, rigs, getBodyLabels: value => body.labels(value), getHandLabels: handLabels,
     getLens: () => lens, getZoom: () => zoom, getClip: () => clipState });
 
   function syncFocus() {
     focus = regionById(settings.focus);
     inspection.setPartFilter(focus ? { key: `${focus.id}:${settings.focusSide}`,
-      select: target => regionPartSelector(focus, target.parent, settings.focusSide) } : null);
+      select: target => regionPartSelector(focus, target.parent, settings.focusSide), also: () => wristNamed() ? ['head'] : [] } : null);
   }
   function headReveal() {
     const bounds = metadata.meshes.find(mesh => mesh.name === 'skin');

@@ -4,10 +4,12 @@
 // runs, in the last group, so adding a file can never silently skip it.
 import { readdir } from 'node:fs/promises';
 
+// Measured on CI at 3.2.1: the first group took 12 min 13 s of a 15 minute limit against 4 min for
+// each of the others, so the two specs that need no real pose moved out, one to each.
 const GROUPS = [
-  ['positive-inference', 'application', 'pause'],
-  ['worker', 'muscles', 'visual', 'focus', 'peripheral'],
-  ['systems', 'inspection', 'production', 'ui-controls', 'inspection-ui', 'mirror'],
+  ['positive-inference'],
+  ['worker', 'muscles', 'visual', 'focus', 'peripheral', 'pause'],
+  ['systems', 'inspection', 'production', 'ui-controls', 'inspection-ui', 'mirror', 'application'],
 ];
 const index = Number(process.argv[2]) - 1;
 if (!Number.isInteger(index) || !GROUPS[index]) throw new Error(`Shard must be 1-${GROUPS.length}`);

@@ -150,8 +150,8 @@ const EN = Object.freeze({
   '請讓雙肩到髖部入鏡。': 'Keep your shoulders down to your hips in view.',
   '請讓雙肩、髖部與膝蓋入鏡。': 'Keep your shoulders, hips and knees in view.',
   '請讓髖部、膝蓋與腳踝入鏡。': 'Keep your hips, knees and ankles in view.',
-  '請讓膝蓋、腳踝與腳掌入鏡。': 'Keep your knees, ankles and feet in view.',
-  '請讓腳踝、腳跟與腳尖入鏡。': 'Keep your ankles, heels and toes in view.',
+  '請讓髖部到腳掌都入鏡；只拍到小腿與腳時可能無法辨識。': 'Keep your hips down to your feet in view; the lower leg and foot alone may not be recognised.',
+  '請讓髖部到腳尖都入鏡；只拍到腳時無法辨識。': 'Keep your hips down to your toes in view; a foot alone is not recognised.',
 
   // Session status
   '暫停': 'Pause',
@@ -178,6 +178,7 @@ const EN = Object.freeze({
   '示範模式，沒有使用攝影機。': 'Demo mode. The camera is not in use.',
   '請先啟動鏡頭，再切換前後鏡頭。': 'Start the camera before switching between front and rear.',
   '鏡頭已停止。你可以重新啟動或觀看示範。': 'The camera has stopped. You can start it again or watch the demo.',
+  '已回到首頁。你可以啟動鏡頭，或再看一次示範。': 'Back at the start. You can start the camera or watch the demo again.',
   '攝影機連線已中斷，請重新啟動鏡頭，或先看示範。': 'The camera was disconnected. Start it again, or watch the demo.',
   '攝影機權限未開啟。請在瀏覽器允許相機，再按啟動鏡頭。': 'Camera permission is off. Allow the camera in your browser, then press Start camera.',
   '找不到可用的攝影機，仍可使用示範模式。': 'No camera was found. The demo still works.',
@@ -196,6 +197,7 @@ const EN = Object.freeze({
   // Picking a structure
   '構造點選': 'Structure picking',
   '點選構造': 'Pick a structure',
+  '回到首頁': 'Home',
   '重新載入': 'Reload',
   '已選構造': 'Selected structure',
   '清除': 'Clear',

@@ -2,6 +2,7 @@
 // Membership is listed by exact source name. A region never invents a structure: every
 // entry must match a part delivered in the individual anatomy bundle (see the unit test).
 import { formatAnatomyName } from './anatomy-names.js';
+import { displayedPart } from './displayed-part.js';
 
 const ALL = '*';
 const RIBS = /^\w+ rib$/, LOWER_RIBS = /^(fifth|sixth|seventh|eighth|ninth|tenth|eleventh|twelfth) rib$/;
@@ -67,11 +68,11 @@ export const REGIONS = Object.freeze([
       muscle_shin: ['gastrocnemius', 'plantaris', 'popliteus'] } },
   { id: 'lowerleg', label: '小腿腳踝', layers: ['legs', 'bodyMuscles', 'joints'],
     note: '小腿前側、外側與後側肌群、跟腱（阿基里斯腱）、小腿骨間膜，以及脛骨、腓骨與足骨。本版不含踝關節韌帶。',
-    frame: '請讓膝蓋、腳踝與腳掌入鏡。',
+    frame: '請讓髖部到腳掌都入鏡；只拍到小腿與腳時可能無法辨識。',
     meshes: { pn_shin: ALL, pn_foot: ALL, leg_shin: ALL, foot: ALL, muscle_shin: ALL, joint_leg_membrane: ALL, joint_achilles_tendon: ALL } },
   { id: 'foot', label: '足部', layers: ['legs', 'bodyMuscles', 'joints'],
     note: '足底與足背的內在肌、足底長韌帶、跟腱（阿基里斯腱）與 26 塊足骨。',
-    frame: '請讓腳踝、腳跟與腳尖入鏡。',
+    frame: '請讓髖部到腳尖都入鏡；只拍到腳時無法辨識。',
     meshes: { pn_foot: ALL, foot: ALL, muscle_foot: ALL, joint_plantar_ligament: ALL, joint_achilles_tendon: ALL } },
 ]);
 export const FOCUS_IDS = Object.freeze(['none', ...REGIONS.map(region => region.id)]);
@@ -101,9 +102,10 @@ export function regionPartSelector(region, meshName, side = 'both') {
 }
 
 // Numbered families collapse into one label per side; forty rib and toe labels would bury the rest.
+// The five metatarsals are not such a family: each is a bone one looks for by itself.
 const FAMILIES = [
   [RIBS, '肋骨', 'ribs'], [/ cervical vertebra$/, '頸椎', 'cervical vertebrae'], [THORACIC, '胸椎', 'thoracic vertebrae'],
-  [LUMBAR, '腰椎', 'lumbar vertebrae'], [/ metatarsal bone$/, '蹠骨', 'metatarsal bones'], [/ phalanx of .+ toe$/, '趾骨', 'phalanges of foot'],
+  [LUMBAR, '腰椎', 'lumbar vertebrae'], [/ phalanx of .+ toe$/, '趾骨', 'phalanges of foot'],
   [/ lumbrical of foot$/, '足蚓狀肌', 'lumbricals of foot'], [/ plantar interosseous of foot$/, '足底骨間肌', 'plantar interossei of foot'],
 ];
 const SIDE_ZH = { L: '左', R: '右' }, SIDE_EN = { L: 'left ', R: 'right ' };
@@ -139,6 +141,15 @@ export function focusLabels(anchors, allParts, language = 'zh') {
     labels.push(label(zh, english, side, members, language));
   }
   return labels;
+}
+/**
+ * Labels for the eight carpal bones of one tracked hand. `anchors` and `allParts` are those of the palm
+ * mesh, which also holds four metacarpals. The left hand is drawn from the mirrored right-hand bones,
+ * so its parts are renamed for the hand that is shown.
+ */
+export function carpalLabels(anchors, allParts, side, language = 'zh') {
+  const carpals = anchors.filter(({ part }) => !/metacarpal/.test(part.name)).map(anchor => ({ ...anchor, part: displayedPart(anchor.part, side) }));
+  return focusLabels(carpals, allParts, language);
 }
 function label(zh, english, side, members, language) {
   const translated = zh !== english, total = members.reduce((sum, member) => sum + member.weight, 0) || 1;

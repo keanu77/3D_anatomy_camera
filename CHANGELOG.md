@@ -2,6 +2,19 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.3.0 (2026-11-13)
+
+### Added
+
+- **The carpal bones are named one by one.** In the forearm and wrist region each tracked hand carries the names of its eight carpal bones, each at its own bone, in place of the single wrist label. With one side chosen, that hand is named bone by bone and the other keeps its one label.
+- **The metatarsals are named one by one** in the foot region, beside the seven tarsal bones that already were. The fourteen toe bones stay one label per side.
+- **A button over the picture goes back to the start screen**, in the demo and with the camera. In the demo the only way back was "Stop camera" in the settings, inside the drawer on a phone.
+
+### Changed
+
+- The lower-leg and foot regions ask for the hips down to the feet in view. The pose model finds no body in a picture of ankles and feet alone, and the foot region used to ask for exactly that; the enlargement of the region does the closing in.
+- Leaving the demo says so, instead of reporting a stopped camera.
+
 ## 3.2.1 (2026-11-13)
 
 ### Added

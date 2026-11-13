@@ -1,4 +1,7 @@
 import * as THREE from 'three';
+import { displayedPart } from './displayed-part.js';
+
+export { displayedPart };
 
 export function validatePartRanges(entry) {
   let end = 0;
@@ -46,13 +49,6 @@ export function partAtFace(parts, faceIndex) {
   return null;
 }
 
-export function displayedPart(part, side) {
-  if (!side || !part.sourceSide || side === part.sourceSide) return { ...part };
-  // Left-hand display mirrors the original right-hand geometry; source provenance
-  // must remain distinct from the paired anatomical identifier shown to the user.
-  return { ...part, id: part.pairedId || part.id, name: part.pairedName || part.name.replace(/\bright\b/i, 'left'),
-    side, sourceId: part.id, sourceName: part.name, mirrored: true };
-}
 
 export function effectivelyVisible(mesh) {
   for (let object = mesh; object; object = object.parent) if (!object.visible) return false;

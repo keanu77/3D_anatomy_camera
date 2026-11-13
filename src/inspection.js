@@ -133,7 +133,8 @@ export function createInspection({ stage, getTargets, getView, decodeGeometry, a
     const visible = active ? getTargets().filter(target => target.inspectable && !target.ownParts && effectivelyVisible(target.mesh))
       .map(target => target.bundle === 'head' ? 'head' : 'body') : [];
     // Focused meshes stay hidden until their parts arrive, so visibility cannot be what requests them.
-    return [...new Set([...visible, ...(partFilter ? ['body'] : [])])];
+    // A region can also ask for parts it only names, such as the bones of the hand.
+    return [...new Set([...visible, ...(partFilter ? ['body', ...(partFilter.also?.() || [])] : [])])];
   }
   async function loadBundle(name) {
     const prior = bundles.get(name);
