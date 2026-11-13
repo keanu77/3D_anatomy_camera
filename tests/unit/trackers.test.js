@@ -72,6 +72,22 @@ describe('lazy tracking lifecycle and scheduling', () => {
     expect(mocks.face[0].detectForVideo).toHaveBeenCalledTimes(3);
     expect(callback).toHaveBeenLastCalledWith(expect.objectContaining({ face: null, hands: null }));
   });
+  test('lite mode beside a body keeps the hands at a quarter of a second, and every result carries the last ones', async () => {
+    const tracker = createTrackers(); await tracker.prepare({ hands: true, pose: true });
+    const needs = { face: false, hands: true, pose: true, mask: false, performance: 'lite' }, callback = vi.fn();
+    for (const now of [0, 125, 250, 375, 500]) tracker.detect({}, now, needs, callback);
+    expect(mocks.pose[0].detectForVideo).toHaveBeenCalledTimes(5);
+    expect(mocks.hands[0].detectForVideo.mock.calls.map(([, now]) => now)).toEqual([0, 250, 500]);
+    for (const [result] of callback.mock.calls) expect(result.hands).toEqual({ landmarks: [], faceLandmarks: [] });
+    tracker.dispose();
+  });
+  test('lite mode with hands alone keeps their own rate', async () => {
+    const tracker = createTrackers(); await tracker.prepare({ hands: true });
+    const needs = { face: false, hands: true, pose: false, mask: false, performance: 'lite' };
+    for (const now of [0, 125, 250, 375, 500]) tracker.detect({}, now, needs, vi.fn());
+    expect(mocks.hands[0].detectForVideo).toHaveBeenCalledTimes(5);
+    tracker.dispose();
+  });
   test('consumes pose masks within the inference callback and retains only landmarks', async () => {
     const tracker = createTrackers(); await tracker.prepare({ pose: true, mask: true });
     const results = [];

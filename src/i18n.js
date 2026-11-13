@@ -90,7 +90,7 @@ const EN = Object.freeze({
   '高畫質': 'High quality',
   '平衡': 'Balanced',
   '輕量': 'Lite',
-  '輕量模式優先身體追蹤；使用手指 lens 時優先追蹤手部。': 'Lite mode tracks the body first; with the fingertip lens it tracks the hands first.',
+  '輕量模式以身體追蹤為主，手部更新較慢；使用手指 lens 時只追蹤手部。': 'Lite mode follows the body first and updates the hands more slowly; with the fingertip lens it tracks the hands only.',
   '切換鏡頭': 'Switch camera',
   '停止鏡頭': 'Stop camera',
   '製作與資料來源': 'Credits and data sources',
