@@ -168,21 +168,57 @@ const zoomRange = (page, milliseconds) => page.evaluate(async (milliseconds) => 
   return { least: Math.min(...seen), most: Math.max(...seen), frames: seen.length };
 }, milliseconds);
 
-test('a close-up of hands draws hand bones only: no arm on a figure the pose model imagines inside them', async ({ page }) => {
-  test.setTimeout(180000);
+test('a close-up of hands draws hand bones only: no arm on a figure the pose model imagines inside them', async ({ page }, testInfo) => {
+  test.setTimeout(300000);
   await shakenPhoto(page, 'right_hands.jpg');
   await storeSettings(page, { focus: 'forearm', skull: false, eyes: false, outline: false, hands: true, arms: true, bodyMuscles: true, joints: true,
     labels: true, focusZoom: true, showdata: true, performance: 'balanced' });
+  // What the trackers answered, kept as numbers only: the arm landmarks of the pose and the wrist and
+  // middle fingertip of each hand. A failure here is then a measurement, not only a verdict.
+  await page.addInitScript(() => {
+    const Native = window.Worker, kept = window.__TRACKED__ = [];
+    const pick = (p) => p ? [p.x, p.y, p.z, p.visibility].map((value) => Number.isFinite(value) ? +value.toFixed(4) : null) : null;
+    window.Worker = class extends Native {
+      constructor(...args) {
+        super(...args);
+        this.addEventListener('message', ({ data }) => {
+          const result = data?.result?.tracking; if (!result) return;
+          const pose = result.pose?.landmarks?.[0];
+          kept.push({ pose: pose ? [11, 12, 13, 14, 15, 16].map((index) => pick(pose[index])) : null,
+            hands: (result.hands?.landmarks || []).map((hand) => [pick(hand[0]), pick(hand[12])]) });
+          if (kept.length > 150) kept.shift();
+        });
+      }
+    };
+  });
   await page.goto('https://127.0.0.1:4173/');
   await page.locator('#start').click();
   await expect(page.locator('#data')).toContainText(/hands\s+right \+ right/, { timeout: 120000 });
-  // The pose model does answer for this picture, and its answer is refused.
-  await expect.poll(async () => (await renderer(page)).poseRejected, { timeout: 60000 }).toBe(true);
-  for (let look = 0; look < 6; look++) {
-    const state = await renderer(page);
-    expect(state.visibleParts, 'no forearm bone or muscle is drawn').toBe(0);
-    expect(state.zoom, 'nothing to enlarge').toEqual({ z: 1, bx: 0, by: 0 });
-    await page.waitForTimeout(400);
+  const look = () => page.evaluate(() => {
+    const { trackers, renderer } = window.__ANATOMY_DIAGNOSTICS__();
+    return { poseResults: trackers.calls.pose || 0, refused: renderer.poseRejected, visibleParts: renderer.visibleParts, zoom: renderer.zoom };
+  });
+  await expect.poll(async () => (await look()).poseResults, { timeout: 120000, message: 'the pose model is answering' }).toBeGreaterThan(0);
+  // Whether the pose model imagines a figure in this picture depends on the machine: in nearly every
+  // frame on one, in none for a minute on another. So the refusal is counted and reported, not demanded
+  // (tests/unit/pose-plausibility.test.js pins it); whatever the model answers, no arm may be drawn.
+  // Counting its answers, not seconds, watches the same number of them on a slow machine.
+  const first = await look(); let state = first, looks = 0, refused = 0;
+  try {
+    while (state.poseResults - first.poseResults < 60) {
+      state = await look(); looks++; if (state.refused) refused++;
+      expect(state.visibleParts, `look ${looks}: no forearm bone or muscle is drawn`).toBe(0);
+      expect(state.zoom, `look ${looks}: nothing to enlarge`).toEqual({ z: 1, bx: 0, by: 0 });
+      await page.waitForTimeout(200);
+    }
+  } finally {
+    const evidence = await page.evaluate(() => {
+      const { renderer } = window.__ANATOMY_DIAGNOSTICS__();
+      return { width: renderer.width, height: renderer.height, drawn: renderer.bodySegments.map((segment) => segment.name), tracked: window.__TRACKED__ };
+    });
+    const evidencePath = testInfo.outputPath('pose-refusals.json');
+    await writeFile(evidencePath, JSON.stringify({ looks, refused, poseResults: state.poseResults - first.poseResults, ...evidence }));
+    await testInfo.attach('pose-refusals', { path: evidencePath, contentType: 'application/json' });
   }
   await expect(page.locator('#status')).toContainText('請讓手肘、手腕與手掌入鏡');
   await expect(page.locator('#data')).toContainText(/hands\s+right \+ right/);

@@ -32,6 +32,26 @@ describe('a pose must agree with the hands that are tracked', () => {
     expect(poseContradictsHands(phantom, [hand([200, 440], 425), hand([680, 440], 425)], width, height)).toBe(true);
     expect(poseContradictsHands(phantom, [hand([200, 440], 425)], width, height)).toBe(true);
   });
+  test('the depth of an imagined figure is noise and cannot lengthen its arm', () => {
+    // Recorded on CI (876 x 465 stage, official hands close-up): shoulders, elbows and wrists as x, y, z, visibility.
+    // The left forearm is 90 px long in the picture; the depth the model gave its two ends differs by 204 px.
+    const recorded = Array.from({ length: 33 }, () => ({ x: 0.3, y: 0.5, z: 0.5, visibility: 0.9, presence: 0.9 }));
+    [[0.1897, 0.4689, 0.5251, 0.9998], [0.3336, 0.3471, 0.5574, 0.9997], [0.2043, 0.6648, 0.571, 0.8569],
+      [0.4131, 0.4126, 0.6072, 0.7017], [0.2393, 0.8476, 0.804, 0.7243], [0.396, 0.51, 0.7346, 0.4148]]
+      .forEach(([x, y, z, visibility], index) => { recorded[11 + index] = { x, y, z, visibility, presence: visibility }; });
+    const tracked = [[[0.8085, 0.9427, 0], [0.7356, 0.0683, -0.1101]], [[0.1913, 0.0737, 0], [0.2596, 0.9503, -0.1112]]].map(([wrist, tip]) => {
+      const landmarks = Array.from({ length: 21 }, () => ({ x: wrist[0], y: wrist[1], z: wrist[2] }));
+      landmarks[12] = { x: tip[0], y: tip[1], z: tip[2] };
+      return landmarks;
+    });
+    expect(poseContradictsHands(recorded, tracked, width, height)).toBe(true);
+  });
+  test('a hand pointing at the camera is still measured by its real length', () => {
+    // 100 px long in the picture and 413 px deep: the hand is as large as before, only turned.
+    const turned = hand([200, 440], 100); turned[12].z = -413 / width;
+    expect(poseContradictsHands(phantom, [turned], width, height)).toBe(true);
+    expect(poseContradictsHands(person, [turned], width, height)).toBe(false);
+  });
   test('a person whose hand belongs to the arm does not', () => {
     expect(poseContradictsHands(person, [hand([560, 660], 154)], width, height)).toBe(false);
     // A hand brought well towards the camera is drawn larger than its forearm, and is still the same arm.
