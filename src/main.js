@@ -224,10 +224,11 @@ async function switchCamera() {
 }
 function stop() {
   setPaused(false);
+  const fromDemo = state.mode === 'demo';
   operation++; state.mode = 'intro'; camera.stop(); cancelAnimationFrame(raf); raf = 0;
   scene?.clear();
   $('start').disabled = false; $('demo-start').disabled = false;
-  showIntro(true); ui.status(t('鏡頭已停止。你可以重新啟動或觀看示範。'));
+  showIntro(true); ui.status(t(fromDemo ? '已回到首頁。你可以啟動鏡頭，或再看一次示範。' : '鏡頭已停止。你可以重新啟動或觀看示範。'));
 }
 function showError(error) {
   const text = error?.name === 'NotAllowedError' ? t('攝影機權限未開啟。請在瀏覽器允許相機，再按啟動鏡頭。') : error?.name === 'NotFoundError' ? t('找不到可用的攝影機，仍可使用示範模式。') : `${t('無法完成操作：')}${t(error?.message || String(error))}${t('。可重新嘗試。')}`;
@@ -249,6 +250,7 @@ video.addEventListener('resize', () => {
 });
 window.addEventListener('resize', syncDemoAspect);
 $('stage').addEventListener('pausetoggle', () => setPaused(!state.paused));
+$('stage').addEventListener('gohome', stop);
 if (import.meta.env.DEV) {
   window.__ANATOMY_DIAGNOSTICS__ = () => ({ state: { ...state }, renderer: scene?.getDiagnostics() || null, camera: camera.getDiagnostics(), trackers: trackers.getDiagnostics(), inferenceMeanMs: trackers.getDiagnostics().inferenceMeanMs });
   window.__ANATOMY_APP__ = { demo, start, stop, switchCamera, setPaused, settings, changed, inspectionProbe:query=>scene?.inspectionProbe(query) };

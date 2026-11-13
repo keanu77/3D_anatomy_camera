@@ -283,6 +283,7 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   pointer-events: none;
 }
 .stagecol .inspection-tools > button { min-height: 40px; padding: 8px 12px; pointer-events: auto; }
+.stagecol .stage-home { top: 14px; left: 14px; min-height: 40px; padding: 8px 12px; }
 .stagecol #live-status { position: static; grid-column: 1 / -1; width: 100%; margin: 0; padding: 9px 12px; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--overlay); color: var(--text); font-size: var(--t-small); line-height: 1.6; }
 .stagecol .inspection-help { grid-column: 1 / -1; padding: 9px 12px; pointer-events: auto; }
 .stagecol .inspection-card {
@@ -358,6 +359,7 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   .chips button, .seg button, select { min-height: 44px; }
   .stagecol .inspection-tools { top: 10px; right: 10px; width: min(340px, calc(100% - 20px)); gap: 6px; }
   .stagecol .inspection-tools > button { min-height: 44px; }
+  .stagecol .stage-home { top: 10px; left: 10px; min-height: 44px; }
   .stagecol .inspection-card { left: 10px; bottom: 10px; width: min(360px, calc(100% - 20px)); max-height: 45%; padding: 15px; }
 }
 
@@ -383,6 +385,10 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   :root { --t-title: 18px; }
   .workspace-brand { padding-inline: 14px; gap: 9px; }
   #language-toggle { padding-inline: 10px; }
+  /* The English names of the two other controls leave no room for a third word on the narrowest screens: the arrow stands alone there, and the name is still read out. */
+  :lang(en) .stage-home { min-width: 44px; }
+  :lang(en) .stage-home::before { margin-right: 0; }
+  :lang(en) .stage-home-text { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   /* The picture keeps a floor of 120px; where longer words would take it, the start screen scrolls. */
   #intro { grid-template-rows: minmax(172px, 1fr) auto; padding: 12px 14px 14px; gap: 8px; overflow-y: auto; }
   #intro h2 { font-size: 22px; }
@@ -398,6 +404,7 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   .brand-mark { width: 22px; height: 25px; }
   .mobile-controls { padding-top: 7px; padding-bottom: calc(7px + env(safe-area-inset-bottom, 0px)); }
   .stagecol .inspection-tools { top: 8px; right: 8px; width: min(320px, calc(100% - 16px)); gap: 5px; }
+  .stagecol .stage-home { top: 8px; left: 8px; padding-inline: 9px; }
   .stagecol #live-status, .stagecol .inspection-help { padding: 6px 9px; }
   .stagecol .inspection-card { left: 8px; bottom: 8px; max-height: calc(100% - 16px); width: min(300px, 43%); }
   /* A phone on its side has the width for the two-column start screen and not the height for a stack. */

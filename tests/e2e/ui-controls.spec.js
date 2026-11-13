@@ -84,3 +84,56 @@ test('mobile settings behave as a modal and reconcile focus across responsive la
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
   expect(errors).toEqual([]);
 });
+
+test('a button over the picture goes back to the start screen, from the demo and from the camera, on every screen size', async ({ page }) => {
+  test.setTimeout(120000);
+  const errors = watchErrors(page);
+  const box = async (selector) => { const rect = await page.locator(selector).boundingBox(); return { ...rect, right: rect.x + rect.width, bottom: rect.y + rect.height }; };
+  for (const viewport of [{ width: 1280, height: 900 }, { width: 390, height: 844 }, { width: 320, height: 640 }, { width: 844, height: 390 }]) {
+    await page.setViewportSize(viewport);
+    await page.goto('/');
+    await expect(page.locator('#intro')).toBeVisible();
+    await page.locator('#demo-start').click();
+    await page.waitForFunction(() => window.__ANATOMY_DIAGNOSTICS__?.().renderer?.frameCount > 0);
+    const home = page.locator('#home-button');
+    await expect(home, `${viewport.width}`).toBeVisible();
+    await expect(home).toHaveText('回到首頁');
+    // In view without opening the settings, a full touch target, and clear of the two other controls.
+    const [mine, pause, pick] = [await box('#home-button'), await box('#pause-toggle'), await box('#inspection-toggle')];
+    expect(mine.x, `${viewport.width}: left edge`).toBeGreaterThanOrEqual(0);
+    expect(mine.bottom, `${viewport.width}: in view`).toBeLessThanOrEqual(viewport.height);
+    expect(mine.height, `${viewport.width}: touch height`).toBeGreaterThanOrEqual(40);
+    for (const other of [pause, pick]) expect(mine.right <= other.x || other.right <= mine.x || mine.bottom <= other.y || other.bottom <= mine.y, `${viewport.width}: no overlap`).toBe(true);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth), `${viewport.width}: no sideways scroll`).toBe(viewport.width);
+    await home.click();
+    await expect(page.locator('#intro')).toBeVisible();
+    await expect(page.locator('#start')).toBeEnabled();
+    expect(await page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().state.mode)).toBe('intro');
+    // The demo used no camera: the message does not speak of one.
+    await expect(page.locator('#status')).toHaveText('已回到首頁。你可以啟動鏡頭，或再看一次示範。');
+  }
+  // From the camera it also releases the camera.
+  await page.setViewportSize({ width: 1280, height: 900 });
+  await page.goto('/'); await page.locator('#start').click();
+  await expect(page.locator('#intro')).toBeHidden({ timeout: 90000 });
+  expect(await page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().camera.running)).toBe(true);
+  await page.locator('#home-button').click();
+  await expect(page.locator('#intro')).toBeVisible();
+  expect(await page.evaluate(() => window.__ANATOMY_DIAGNOSTICS__().camera.running)).toBe(false);
+  await expect(page.locator('#status')).toHaveText('鏡頭已停止。你可以重新啟動或觀看示範。');
+  // In English the two other controls are wider: the button keeps clear of them down to the narrowest phone,
+  // where its arrow stands alone and its name is still read out.
+  for (const width of [1280, 390, 320]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto('/?lang=en&still#demo');
+    await page.waitForFunction(() => window.__ANATOMY_DIAGNOSTICS__?.().renderer?.frameCount > 0);
+    await expect(page.getByRole('button', { name: 'Home', exact: true })).toBeVisible();
+    const [mine, pause, pick] = [await box('#home-button'), await box('#pause-toggle'), await box('#inspection-toggle')];
+    for (const other of [pause, pick]) expect(mine.right <= other.x || other.right <= mine.x || mine.bottom <= other.y || other.bottom <= mine.y, `English ${width}: no overlap`).toBe(true);
+    expect(mine.width, `English ${width}: touch width`).toBeGreaterThanOrEqual(40);
+    expect(mine.x, `English ${width}: left edge`).toBeGreaterThanOrEqual(0);
+  }
+  await page.locator('#home-button').click();
+  await expect(page.locator('#status')).toHaveText('Back at the start. You can start the camera or watch the demo again.');
+  expect(errors).toEqual([]);
+});

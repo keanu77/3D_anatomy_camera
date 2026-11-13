@@ -28,6 +28,9 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   // Freezing the picture belongs beside picking: a moving body is hard to tap. The app owns the behaviour.
   const pause = button('stage-pause', t('暫停'));
   pause.id = 'pause-toggle'; pause.setAttribute('aria-pressed', 'false'); pause.setAttribute('aria-label', t('暫停畫面'));
+  // The way back to the start screen stands over the picture: in the demo nothing else says how to leave it.
+  const home = button('stage-home');
+  home.id = 'home-button'; home.append(element('span', 'stage-home-text', t('回到首頁')));
   const toggle = button('inspection-toggle', t('點選構造'));
   toggle.id = 'inspection-toggle';
   toggle.setAttribute('aria-pressed', 'false');
@@ -63,7 +66,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   candidates.append(candidateLabel, select);
   // Reference text is quoted in English from its source; the surrounding interface stays Chinese.
   const info = element('section', 'inspection-info'); info.setAttribute('aria-label', t('構造說明'));
-  card.append(top, identity, candidates, info); wrapper.append(tools, card); host.append(wrapper);
+  card.append(top, identity, candidates, info); wrapper.append(home, tools, card); host.append(wrapper);
 
   let active = false, loading = false, error = '', selection = null, disposed = false;
   // In English the source's own name is the title; the Chinese display name is not shown beside it.
@@ -152,6 +155,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
     if (restoreFocus) toggle.focus({ preventScroll: true });
   }
   listen(pause, 'click', () => stage.dispatchEvent(new CustomEvent('pausetoggle')));
+  listen(home, 'click', () => stage.dispatchEvent(new CustomEvent('gohome')));
   listen(toggle, 'click', () => { setActive(!active); onEnable(active); });
   listen(clear, 'click', () => clearSelection(true));
   listen(select, 'change', () => {
