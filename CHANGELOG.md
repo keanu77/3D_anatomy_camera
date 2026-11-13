@@ -2,6 +2,13 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.1.1 (2026-11-13)
+
+### Fixed
+
+- **Lite mode keeps tracking the hands beside a body.** It dropped the hand tracker whenever a body layer was on. That is the mode a phone settles in, and there nothing contradicted the small figure the pose model sees in a close hand: the whole of it was drawn on the hand, and the forearm and wrist region showed no hand bones. The hands are now tracked four times a second in that case. With the fingertip lens, lite mode still gives the body up for the hands.
+- A pose that the tracked hands contradict stays refused for one second after the last contradiction. Before, it was drawn in every result where the hand tracker missed the close hand, and a real arm near the limit flickered on and off.
+
 ## 3.1.0 (2026-11-13)
 
 ### Added
