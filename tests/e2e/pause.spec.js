@@ -266,6 +266,9 @@ test('every pause tracks the frozen frame with each tracker in use, whatever the
       document.getElementById('pause-toggle').click(); resolve({ ...tracking.calls });
     })()));
     await expect(pause).toHaveAttribute('aria-pressed', 'true');
+    // Software-rendered inference can take longer than the half second that counts as settled: wait for the result itself.
+    await expect.poll(async () => (await calls()).hands - before.hands, { timeout: 30000, message: `round ${round}: hands inferred from the frozen frame` }).toBe(1);
+    await expect.poll(async () => { const earlier = await calls(); await page.waitForTimeout(700); const later = await calls(); return later.face - earlier.face + later.hands - earlier.hands; }).toBe(0);
     await settled(page);
     const after = await calls();
     expect(after.face - before.face, `round ${round}: face inferred once from the frozen frame`).toBe(1);
