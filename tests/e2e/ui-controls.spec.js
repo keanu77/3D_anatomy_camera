@@ -137,3 +137,26 @@ test('a button over the picture goes back to the start screen, from the demo and
   await expect(page.locator('#status')).toHaveText('Back at the start. You can start the camera or watch the demo again.');
   expect(errors).toEqual([]);
 });
+
+test('the pause button stands at the foot of the picture, in the middle, on every screen size', async ({ page }) => {
+  const errors = watchErrors(page);
+  const box = async (selector) => { const rect = await page.locator(selector).boundingBox(); return { ...rect, right: rect.x + rect.width, bottom: rect.y + rect.height }; };
+  for (const viewport of [{ width: 1280, height: 900 }, { width: 390, height: 844 }, { width: 320, height: 640 }, { width: 844, height: 390 }]) {
+    await page.setViewportSize(viewport);
+    await page.goto('/?still#demo');
+    await page.waitForFunction(() => window.__ANATOMY_DIAGNOSTICS__?.().renderer?.frameCount > 0);
+    const [stage, pause, home, pick] = [await box('#stage'), await box('#pause-toggle'), await box('#home-button'), await box('#inspection-toggle')];
+    const label = `${viewport.width}x${viewport.height}`;
+    expect(Math.abs((pause.x + pause.right) / 2 - (stage.x + stage.right) / 2), `${label}: centred`).toBeLessThanOrEqual(1);
+    expect(stage.bottom - pause.bottom, `${label}: at the foot`).toBeGreaterThanOrEqual(4);
+    expect(stage.bottom - pause.bottom, `${label}: at the foot`).toBeLessThanOrEqual(16);
+    expect(pause.height, `${label}: touch height`).toBeGreaterThanOrEqual(40);
+    for (const other of [home, pick]) expect(pause.bottom <= other.y || other.bottom <= pause.y, `${label}: clear of the top controls`).toBe(true);
+    await page.locator('#pause-toggle').click();
+    await expect(page.locator('#pause-toggle')).toHaveAttribute('aria-pressed', 'true');
+    // The next size reuses this page (only the hash repeats): leave it running.
+    await page.locator('#pause-toggle').click();
+    await expect(page.locator('#pause-toggle')).toHaveAttribute('aria-pressed', 'false');
+  }
+  expect(errors).toEqual([]);
+});

@@ -2,17 +2,17 @@
 .inspection-host { position:relative; }
 .inspection-ui { position:absolute; inset:0; z-index:12; pointer-events:none; color:var(--text); text-align:left; }
 .inspection-ui [hidden] { display:none !important; }
-.inspection-tools { position:absolute; top:12px; left:12px; right:12px; display:grid; grid-template-columns:minmax(0, 1fr) auto auto; align-items:start; gap:10px; }
+.inspection-tools { position:absolute; top:12px; left:12px; right:12px; display:grid; grid-template-columns:minmax(0, 1fr) auto; align-items:start; gap:10px; }
 .inspection-ui #live-status { position:static; grid-column:1; grid-row:1; min-width:0; max-width:100%; overflow-wrap:anywhere; }
 .inspection-ui button, .inspection-ui select { font:inherit; min-height:44px; cursor:pointer; }
 /* The two controls over the picture are the page's ordinary buttons on an opaque ground, with a drawn sign each. */
 .stage-pause, .inspection-toggle { grid-row:1; pointer-events:auto; padding:9px 15px; border-color:var(--line-strong); background:var(--overlay); font-weight:600; }
-.stage-pause { grid-column:2; }
+.stage-pause { position:absolute; z-index:4; left:50%; bottom:12px; transform:translateX(-50%); min-height:44px; font:inherit; cursor:pointer; color:var(--text); white-space:nowrap; }
 /* The way back to the start screen: opposite the two controls, with a drawn arrow. */
 .stage-home { position:absolute; top:12px; left:12px; pointer-events:auto; padding:9px 15px; border-color:var(--line-strong); background:var(--overlay); font-weight:600; }
 .stage-home:hover { border-color:var(--muted); background:var(--control-hover); }
 .stage-home::before { content:''; display:inline-block; box-sizing:border-box; width:9px; height:9px; margin-right:7px; vertical-align:0; border-left:2px solid currentColor; border-bottom:2px solid currentColor; transform:rotate(45deg); }
-.inspection-toggle { grid-column:3; }
+.inspection-toggle { grid-column:2; }
 .stage-pause:hover, .inspection-toggle:hover { border-color:var(--muted); background:var(--control-hover); }
 .stage-pause::before, .inspection-toggle::before { content:''; display:inline-block; box-sizing:border-box; margin-right:8px; vertical-align:-1px; }
 .stage-pause::before { width:9px; height:12px; border-inline:3px solid currentColor; }

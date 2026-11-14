@@ -187,6 +187,9 @@ test('individual skull, carpal and finger surfaces use source labels with deskto
     expect(card.x + card.width).toBeLessThanOrEqual(390);
     expect(card.y).toBeGreaterThanOrEqual(0);
     expect(card.y + card.height).toBeLessThanOrEqual(controls.y);
+    // The pause stays reachable under the card: the card keeps above it.
+    const pause = await mobile.locator('#pause-toggle').boundingBox();
+    expect(card.y + card.height).toBeLessThanOrEqual(pause.y);
     expect(await mobile.evaluate(() => document.documentElement.scrollWidth)).toBe(390);
     await testInfo.attach('individual-mobile-touch', { body: await mobile.screenshot(), contentType: 'image/png' });
     expect(mobileErrors).toEqual([]);

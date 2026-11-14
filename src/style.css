@@ -290,6 +290,8 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   pointer-events: none;
 }
 .stagecol .inspection-tools > button { min-height: 40px; padding: 8px 12px; pointer-events: auto; }
+/* Pause stands at the foot of the picture, in the middle; the card of a picked structure keeps above it. */
+.stage .stage-pause { bottom: 12px; min-height: 40px; padding: 8px 14px; }
 .stagecol .stage-home { top: 14px; left: 14px; min-height: 40px; padding: 8px 12px; }
 .stagecol #live-status { position: static; grid-column: 1 / -1; width: 100%; margin: 0; padding: 9px 12px; border: 1px solid var(--line-strong); border-radius: var(--r-sm); background: var(--overlay); color: var(--text); font-size: var(--t-small); line-height: 1.6; }
 .stagecol .inspection-help { grid-column: 1 / -1; padding: 9px 12px; pointer-events: auto; }
@@ -298,7 +300,7 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   left: 14px;
   right: auto;
   top: auto;
-  bottom: 14px;
+  bottom: max(14px, calc(var(--stage-foot, 0px) + 64px));
   width: min(360px, calc(100% - 28px));
   max-height: min(50%, 430px);
   overflow-y: auto;
@@ -366,8 +368,9 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   .chips button, .seg button, select, .advanced > summary, .coverage summary { min-height: 44px; }
   .stagecol .inspection-tools { top: 10px; right: 10px; width: min(340px, calc(100% - 20px)); gap: 6px; }
   .stagecol .inspection-tools > button { min-height: 44px; }
+  .stage .stage-pause { bottom: 10px; min-height: 44px; }
   .stagecol .stage-home { top: 10px; left: 10px; min-height: 44px; }
-  .stagecol .inspection-card { left: 10px; bottom: 10px; width: min(360px, calc(100% - 20px)); max-height: 45%; padding: 15px; }
+  .stagecol .inspection-card { left: 10px; bottom: calc(var(--stage-foot, 0px) + 64px); width: min(360px, calc(100% - 20px)); max-height: 45%; padding: 15px; }
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
@@ -413,7 +416,8 @@ input[type="range"] { width: 100%; min-width: 0; height: 30px; margin: 0; accent
   .stagecol .inspection-tools { top: 8px; right: 8px; width: min(320px, calc(100% - 16px)); gap: 5px; }
   .stagecol .stage-home { top: 8px; left: 8px; padding-inline: 9px; }
   .stagecol #live-status, .stagecol .inspection-help { padding: 6px 9px; }
-  .stagecol .inspection-card { left: 8px; bottom: 8px; max-height: calc(100% - 16px); width: min(300px, 43%); }
+  .stage .stage-pause { bottom: 8px; }
+  .stagecol .inspection-card { left: 8px; bottom: 8px; max-height: calc(100% - 16px); width: min(300px, calc(50% - 60px)); }
   /* A phone on its side has the width for the two-column start screen and not the height for a stack. */
   #intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); gap: 20px; padding: 10px 20px; }
   .intro-pictures { order: 0; gap: 6px; }
