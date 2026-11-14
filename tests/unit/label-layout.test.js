@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, test } from 'vitest';
-import { layoutOverview } from '../../src/label-layout.js';
+import { createOverviewLayout, layoutOverview } from '../../src/label-layout.js';
 import { landmarkToPoint, torsoBasis, boneBasis, footBasis, transformPoint } from '../../src/basis.js';
 
 const metadata = ['body', 'muscles', 'joints', 'nerves'].map((name) => JSON.parse(readFileSync(new URL(`../../public/anatomy/${name}.json`, import.meta.url))));
@@ -63,5 +63,53 @@ describe('combined system label layout', () => {
     expect(layout).toHaveLength(2);
     for (const entry of layout) expect(entry.text.endsWith('…')).toBe(true);
     assertReadable(layout, 320, 200);
+  });
+});
+
+describe('labels held steady from frame to frame', () => {
+  const at = (layout, text) => layout.find(entry => entry.text === text);
+  const sideCount = (frames, text) => frames.reduce((flips, layout, i) => flips + (i && at(layout, text)?.align !== at(frames[i - 1], text)?.align ? 1 : 0), 0);
+
+  test('an anchor wavering across the middle keeps its column, and moves once it is clearly across', () => {
+    const steady = createOverviewLayout(), width = 400, height = 300;
+    const frames = [195, 205, 196, 204, 195].map(ax => steady.layout([{ text: 'Radius', ax, ay: 100 }], width, height, measure));
+    expect(frames.map(layout => at(layout, 'Radius').align)).toEqual(['left', 'left', 'left', 'left', 'left']);
+    expect(at(steady.layout([{ text: 'Radius', ax: 240, ay: 100 }], width, height, measure), 'Radius').align).toBe('right');
+  });
+
+  test('two anchors at nearly the same height do not trade rows until they are clearly apart', () => {
+    const steady = createOverviewLayout(), width = 400, height = 300;
+    const frame = (a, b) => steady.layout([{ text: 'Ulna', ax: 50, ay: a }, { text: 'Radius', ax: 60, ay: b }], width, height, measure);
+    const first = frame(100, 103);
+    expect(at(first, 'Ulna').y).toBeLessThan(at(first, 'Radius').y);
+    const wavered = frame(103, 100);
+    expect(at(wavered, 'Ulna').y).toBeLessThan(at(wavered, 'Radius').y);
+    const apart = frame(120, 100);
+    expect(at(apart, 'Radius').y).toBeLessThan(at(apart, 'Ulna').y);
+  });
+
+  test('when there are more labels than rows, one more anchor does not replace the labels on screen', () => {
+    const steady = createOverviewLayout(), width = 400, height = 120;
+    const items = count => Array.from({ length: count }, (_, i) => ({ text: `Structure ${i}`, ax: 40, ay: 10 + i * 2 }));
+    const before = new Set(steady.layout(items(30), width, height, measure).map(entry => entry.text));
+    const after = new Set(steady.layout(items(31), width, height, measure).map(entry => entry.text));
+    expect(before.size).toBe(after.size);
+    expect([...before].filter(text => after.has(text)).length).toBeGreaterThanOrEqual(before.size - 1);
+  });
+
+  test('wavering atlas labels stay readable every frame and change column far less often', () => {
+    const width = 390, height = 693, base = actualProjectedLabels(width, height);
+    let seed = 7;
+    const noise = () => { seed = (seed * 16807) % 2147483647; return (seed / 2147483647 - 0.5) * 12; };
+    const jittered = Array.from({ length: 60 }, () => base.map(item => ({ ...item, ax: item.ax + noise(), ay: item.ay + noise() })));
+    const steady = createOverviewLayout();
+    const held = jittered.map(items => steady.layout(items, width, height, measure));
+    const fresh = jittered.map(items => layoutOverview(items, width, height, measure));
+    for (const layout of held) assertReadable(layout, width, height);
+    const texts = [...new Set(base.map(item => item.text))];
+    const flips = frames => texts.reduce((sum, text) => sum + sideCount(frames, text), 0);
+    const rowMoves = frames => frames.reduce((sum, layout, i) => sum + (i ? layout.filter(entry => { const last = at(frames[i - 1], entry.text); return !last || Math.abs(last.y - entry.y) > 6; }).length : 0), 0);
+    expect(flips(held)).toBe(0);
+    expect(rowMoves(held)).toBeLessThan(rowMoves(fresh) / 2);
   });
 });

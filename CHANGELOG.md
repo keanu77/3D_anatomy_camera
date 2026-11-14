@@ -2,6 +2,12 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.5.2 (2026-11-14)
+
+### Fixed
+
+- **Labels hold still while their structures waver.** With many structures named at once, the labels jumped: each frame the layout started afresh, so an anchor near the middle sent its label from one column to the other, two anchors at nearly the same height traded rows, and when there were more labels than rows one more or one fewer replaced the whole set on screen. The layout now remembers the last frame. A label changes column only once its anchor is past the middle by 5% of the width, two labels trade rows only once their anchors are 8 px apart, and the labels already on screen are kept when the set must be thinned. Labels still never overlap. A paused picture does not waver and is laid out afresh, so a view turned and levelled again is the same picture. With the atlas labels shaken by 6 px a frame, columns changed 336 times in 60 frames before and none after, and rows moved by more than 6 px 2685 times before and 1063 after.
+
 ## 3.5.1 (2026-11-14)
 
 ### Fixed
