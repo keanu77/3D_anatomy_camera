@@ -2,6 +2,12 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.5.1 (2026-11-14)
+
+### Fixed
+
+- **A region draws only its own layers.** In the foot region, with the camera on the feet, a hand model was drawn: choosing a region keeps the viewer's layers switched on (3.3.0), and the hand and head layers were drawn whatever the region. They are now drawn only in a region that lists them, and come back on leaving it; the settings themselves are not changed. The hands stay tracked, because the pose check needs them.
+
 ## 3.5.0 (2026-11-14)
 
 ### Changed
