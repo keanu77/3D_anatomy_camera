@@ -121,7 +121,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
   };
   const labels = createLabels({ settings, state, metadata, getSize, headGroup, jawMesh: headMeshes.get('jaw'),
     headCamera: perspective, handCamera: orthographic, rigs, getBodyLabels: value => body.labels(value), getHandLabels: handLabels,
-    getLens: () => lens, getZoom: () => zoom, getClip: () => clipState });
+    getLens: () => lens, getZoom: () => zoom, getClip: () => clipState, isFrozen: () => frozen });
 
   function syncFocus() {
     focus = regionById(settings.focus);

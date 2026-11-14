@@ -1,5 +1,5 @@
 import { Color, Matrix4, Vector3 } from 'three';
-import { layoutOverview } from './label-layout.js';
+import { createOverviewLayout } from './label-layout.js';
 import { labelText } from './label-names.js';
 import { layerShown } from './regions.js';
 import { zoomPoint } from './focus-zoom.js';
@@ -19,15 +19,18 @@ export function projectAnchor({ point, matrix, camera, width, height, mirror = f
 }
 
 export function createLabels({ settings, state, metadata, getSize, headGroup, jawMesh, headCamera,
-  handCamera, rigs, getBodyLabels, getHandLabels = () => null, getLens, getZoom, getClip }) {
+  handCamera, rigs, getBodyLabels, getHandLabels = () => null, getLens, getZoom, getClip, isFrozen = () => false }) {
   let lastLayout = [], painted = false;
+  // Remembers the last frame so a label keeps its column and row while its anchor wavers.
+  // A frozen picture does not waver: it is laid out afresh, so the same view always gives the same picture.
+  const overview = createOverviewLayout();
   function draw(context) {
     // Nothing was drawn and nothing will be: leave the hidden canvas alone.
     if (!settings.labels && !painted) return;
     const { width, height } = getSize();
     context.clearRect(0, 0, width, height);
     lastLayout = []; painted = false;
-    if (!settings.labels) return;
+    if (!settings.labels) { overview.reset(); return; }
     const lens = getLens(), items = getBodyLabels(lens), clip = getClip();
     const color = layer => `#${new Color(PALETTE[layer]).getHexString()}`;
     if (headGroup.visible) {
@@ -74,7 +77,8 @@ export function createLabels({ settings, state, metadata, getSize, headGroup, ja
     context.save();
     context.font = '12px "PingFang TC", "Noto Sans TC", sans-serif';
     context.textBaseline = 'middle';
-    lastLayout = layoutOverview(visible, width, height, text => context.measureText(text).width);
+    if (isFrozen()) overview.reset();
+    lastLayout = overview.layout(visible, width, height, text => context.measureText(text).width);
     painted = lastLayout.length > 0;
     for (const item of lastLayout) {
       context.strokeStyle = item.color;
