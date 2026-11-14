@@ -2,6 +2,12 @@
 
 Versions follow the number in `package.json` and in `/version.json` on the site.
 
+## 3.5.3 (2026-11-14)
+
+### Changed
+
+- **Pause stands at the foot of the picture, in the middle.** It sat top right beside "Pick a structure", out of reach of the thumb on a phone. It is now centred at the bottom edge of the camera picture on every screen size, and a tap on it neither picks a structure nor turns a paused view. The card of a picked structure keeps above it; on a phone held sideways the card keeps to the left half.
+
 ## 3.5.2 (2026-11-14)
 
 ### Fixed

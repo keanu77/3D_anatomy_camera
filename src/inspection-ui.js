@@ -25,7 +25,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   const wrapper = element('section', 'inspection-ui');
   wrapper.setAttribute('aria-label', t('構造點選'));
   const tools = element('div', 'inspection-tools');
-  // Freezing the picture belongs beside picking: a moving body is hard to tap. The app owns the behaviour.
+  // Freezing the picture sits at the foot of the picture, in the middle, under the thumb. The app owns the behaviour.
   const pause = button('stage-pause', t('暫停'));
   pause.id = 'pause-toggle'; pause.setAttribute('aria-pressed', 'false'); pause.setAttribute('aria-label', t('暫停畫面'));
   // The way back to the start screen stands over the picture: in the demo nothing else says how to leave it.
@@ -39,7 +39,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   const status = element('p', 'inspection-status'); status.setAttribute('role', 'status');
   status.setAttribute('aria-live', 'polite');
   const retry = button('inspection-retry', t('重新載入'));
-  help.append(status, retry); tools.append(pause, toggle, help);
+  help.append(status, retry); tools.append(toggle, help);
   // Put application status and inspector controls in the same layout flow. Their
   // previous independent stage/host coordinates overlap when the stage is centered.
   const liveStatus = stage.querySelector('#live-status');
@@ -66,7 +66,9 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   candidates.append(candidateLabel, select);
   // Reference text is quoted in English from its source; the surrounding interface stays Chinese.
   const info = element('section', 'inspection-info'); info.setAttribute('aria-label', t('構造說明'));
-  card.append(top, identity, candidates, info); wrapper.append(home, tools, card); host.append(wrapper);
+  card.append(top, identity, candidates, info); wrapper.append(home, tools, card);
+  // Pause lives on the picture itself, so it sits at the picture's foot however the picture is letterboxed.
+  stage.append(pause); host.append(wrapper);
 
   let active = false, loading = false, error = '', selection = null, disposed = false;
   // In English the source's own name is the title; the Chinese display name is not shown beside it.
@@ -173,7 +175,16 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
   // The UI may be adjacent to other delegated picking handlers; keep its gestures local.
   for (const type of ['pointerdown', 'pointerup', 'click', 'dblclick', 'touchstart', 'touchend']) {
     listen(wrapper, type, event => event.stopPropagation());
+    listen(pause, type, event => event.stopPropagation());
   }
+  // The card keeps above the pause: tell the CSS how far the picture's foot stands from the host's.
+  const placeFoot = () => {
+    const gap = host.getBoundingClientRect().bottom - stage.getBoundingClientRect().bottom;
+    host.style.setProperty('--stage-foot', `${Math.max(0, Math.round(gap))}px`);
+  };
+  const footObserver = new ResizeObserver(placeFoot); footObserver.observe(stage); footObserver.observe(host);
+  cleanup.push(() => { footObserver.disconnect(); host.style.removeProperty('--stage-foot'); });
+  placeFoot();
   render();
   return {
     setActive,
@@ -186,7 +197,7 @@ export function createInspectionUI({ stage, onEnable = () => {}, onChoose = () =
       if (disposed) return;
       disposed = true; for (const remove of cleanup) remove();
       if (liveStatus) stage.insertBefore(liveStatus, liveStatusNext?.parentNode === stage ? liveStatusNext : null);
-      wrapper.remove();
+      wrapper.remove(); pause.remove();
       if (!hadHostClass) host.classList.remove('inspection-host');
     },
   };
