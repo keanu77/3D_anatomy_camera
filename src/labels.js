@@ -1,6 +1,7 @@
 import { Color, Matrix4, Vector3 } from 'three';
 import { layoutOverview } from './label-layout.js';
 import { labelText } from './label-names.js';
+import { layerShown } from './regions.js';
 import { zoomPoint } from './focus-zoom.js';
 import { PALETTE, SURFACE } from './render-style.js';
 
@@ -32,7 +33,7 @@ export function createLabels({ settings, state, metadata, getSize, headGroup, ja
     if (headGroup.visible) {
       headGroup.updateWorldMatrix(true, true);
       for (const label of metadata.labels) {
-        if (!settings[label.layer]) continue;
+        if (!layerShown(settings, label.layer)) continue;
         // One entry per source label, choosing the anchor facing its text column.
         const projected = label.pts.map(point => projectAnchor({ point,
           matrix: label.jaw ? jawMesh.matrixWorld : headGroup.matrixWorld, camera: headCamera,
@@ -44,7 +45,7 @@ export function createLabels({ settings, state, metadata, getSize, headGroup, ja
         items.push({ ...anchor, text: label.t, color: color(label.layer) });
       }
     }
-    if (settings.hands) for (const rig of rigs) {
+    if (layerShown(settings, 'hands')) for (const rig of rigs) {
       if (!rig.group.visible || !rig.pts) continue;
       rig.group.updateWorldMatrix(true, true);
       // A hand looked at closely names its carpal bones one by one, each at its own bone in the palm mesh.

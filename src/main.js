@@ -1,5 +1,5 @@
 import { loadSettings, LAYERS, BODY_LAYERS, applyFocus, applyPreset } from './settings.js';
-import { regionById } from './regions.js';
+import { regionById, layerShown } from './regions.js';
 import { createCamera } from './camera.js';
 import { createTrackers } from './trackers.js';
 import { bindUI } from './ui.js';
@@ -44,12 +44,14 @@ function syncDemoAspect() {
   scene?.resize();
 }
 function needs(performance = state.performance) {
+  // The hands stay tracked in a region that does not draw them: they are what tells a body from the
+  // small figure the pose model sees in a close hand.
   const hand = settings.hands || settings.reveal === 'lens' || settings.showdata;
   let pose = bodyOn();
   // Lite mode gives the body up for the fingertip lens. Otherwise it keeps both: the hands, tracked more
   // slowly there, are what tells a body from the small figure the pose model sees in a close hand.
   if (performance === 'lite' && hand && pose && settings.reveal === 'lens') pose = false;
-  return { face: ['skull', 'brain', 'muscles', 'eyes', 'outline', 'nerves'].some(key => settings[key]) || settings.showdata,
+  return { face: ['skull', 'brain', 'muscles', 'eyes', 'outline', 'nerves'].some(key => layerShown(settings, key)) || settings.showdata,
     hands: hand, pose, mask: pose && performance !== 'lite', performance };
 }
 // Everything the trackers, the camera profile and the anatomy bundles depend on. Brightness, fit,
