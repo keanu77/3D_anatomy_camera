@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, test } from 'vitest';
-import { REGIONS, FOCUS_IDS, OPTIONAL_FOCUS_LAYERS, regionById, regionIncludesMesh, regionPartSelector, focusLabels, carpalLabels, sourceKey } from '../../src/regions.js';
+import { REGIONS, FOCUS_IDS, OPTIONAL_FOCUS_LAYERS, layerShown, regionById, regionIncludesMesh, regionPartSelector, focusLabels, carpalLabels, sourceKey } from '../../src/regions.js';
 import { DEFAULTS, LAYERS, applyFocus, sanitizeSettings } from '../../src/settings.js';
 import { filterPartRanges, partCentroids, validatePartRanges } from '../../src/picking.js';
 
@@ -231,6 +231,23 @@ describe('focused labels', () => {
       }
     }
     expect([...untranslated]).toEqual([]);
+  });
+});
+
+describe('what a region draws', () => {
+  // Reported on a phone: the foot region drew a hand while the camera looked at the feet.
+  const viewer = { ...DEFAULTS, skull: true, eyes: true, outline: true, hands: true, legs: true, bodyMuscles: true, joints: true, peripheralNerves: true };
+  test('a region draws its own layers only; the others stay chosen and come back on leaving', () => {
+    for (const key of ['hands', 'skull', 'eyes', 'outline']) expect(layerShown({ ...viewer, focus: 'foot' }, key), key).toBe(false);
+    for (const key of ['legs', 'bodyMuscles', 'joints', 'peripheralNerves']) expect(layerShown({ ...viewer, focus: 'foot' }, key), key).toBe(true);
+    for (const key of ['hands', 'skull', 'legs']) expect(layerShown({ ...viewer, focus: 'none' }, key), key).toBe(true);
+  });
+  test('a region that lists a layer draws it, and nothing is drawn that the viewer switched off', () => {
+    expect(layerShown({ ...viewer, focus: 'forearm' }, 'hands')).toBe(true);
+    expect(layerShown({ ...viewer, focus: 'neck' }, 'skull')).toBe(true);
+    expect(layerShown({ ...viewer, focus: 'neck' }, 'eyes')).toBe(false);
+    expect(layerShown({ ...viewer, focus: 'forearm', hands: false }, 'hands')).toBe(false);
+    expect(layerShown({ ...viewer, focus: 'not-a-region' }, 'hands')).toBe(true);
   });
 });
 

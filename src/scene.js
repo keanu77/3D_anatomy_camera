@@ -9,7 +9,7 @@ export { decodeGeometry } from './geometry.js';
 import { makeMaterial, setMaterialMode } from './anatomy-material.js';
 import { PALETTE, SOLID, GAINS, BASE_LIGHT, SURFACE, solidGain } from './render-style.js';
 import { demoBodyPose, demoHandLandmarks, demoHeadLayout } from './demo-pose.js';
-import { regionById, regionIncludesMesh, regionPartSelector, focusLabels, carpalLabels } from './regions.js';
+import { regionById, regionIncludesMesh, regionPartSelector, focusLabels, carpalLabels, layerShown } from './regions.js';
 import { IDENTITY, zoomTarget, steadyZoom, easeZoom, gestureZoom, layerTransform, unzoomPoint } from './focus-zoom.js';
 import { LEVEL, isLevel, dragOrbit, orbitElements } from './orbit.js';
 
@@ -144,7 +144,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
     for (const [name, mesh] of [...headMeshes, ['mask', skinMask]]) {
       const material = mesh.material, u = material.uniforms, layer = layerFor[name];
       const mask = name === 'mask', outline = name === 'skin';
-      mesh.visible = mask ? (settings.real < 1) : !!settings[layer];
+      mesh.visible = mask ? (settings.real < 1) : layerShown(settings, layer);
       setMaterialMode(material, mask ? 2 : outline ? 0 : settings.style === 'solid' ? 1 : 0);
       u.uOpacity.value = mask ? 1 - settings.real : 1;
       u.uFeather.value = settings.feather * .75;
@@ -233,7 +233,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
         rig.anatomicalSide = /^r/i.test(name) ? 'R' : 'L';
         hands.update(rig, frame.hands?.landmarks?.[index], rig.anatomicalSide === 'R');
         if (rig.pts) handNames.push(name.toLowerCase());
-        rig.group.visible &&= settings.hands;
+        rig.group.visible &&= layerShown(settings, 'hands');
       });
       headReveal();
       body.update({ ...frame, instant, hold, settle });
@@ -250,7 +250,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
         veilContext.restore();
       } else {
         body.drawVeil(veilContext, frame.mask);
-        if (settings.hands) for (const landmarks of frame.hands?.landmarks || []) hands.drawVeil(veilContext, landmarks, 1 - settings.real);
+        if (layerShown(settings, 'hands')) for (const landmarks of frame.hands?.landmarks || []) hands.drawVeil(veilContext, landmarks, 1 - settings.real);
       }
       renderer.clear(true, true, true);
       renderer.render(body.scene, orthographic);
@@ -419,6 +419,7 @@ export async function createScene({ settings, state, onStats = () => {} }) {
   function getDiagnostics() {
     return { width, height, pixelRatio, labelRatio, frameCount, fps, headFound: headTracker.state.found, frozen,
       focus: focus?.id || null, orbit: { ...orbit }, zoom: { ...zoom },
+      handsShown: rigs.filter(rig => rig.group.visible).length, headShown: headGroup.visible && [...headMeshes].some(([name, mesh]) => name !== 'skin' && mesh.visible),
       labelLayout: labels.getLayout(), inspection: inspection.getDiagnostics(), ...body.getDiagnostics() };
   }
   resize();

@@ -82,6 +82,13 @@ export const OPTIONAL_FOCUS_LAYERS = Object.freeze(['peripheralNerves']);
 export const FOCUS_SIDES = Object.freeze(['both', 'L', 'R']);
 
 export const regionById = id => REGIONS.find(region => region.id === id) || null;
+/** Whether a layer is drawn: the viewer's choice, narrowed in a region to the layers that region lists.
+ * The settings are not changed, so the other layers come back on leaving the region. */
+export function layerShown(settings, key) {
+  if (!settings[key]) return false;
+  const region = regionById(settings.focus);
+  return !region || region.layers.includes(key) || OPTIONAL_FOCUS_LAYERS.includes(key);
+}
 const meshBase = name => name.replace(/_[LR]$/, '');
 /** Source name without its side word, so one list serves both sides. */
 export const sourceKey = name => name.toLowerCase().replace(/\b(left|right)\b\s*/g, '').replace(/\s+/g, ' ').trim().replace(/ muscle$/, '');

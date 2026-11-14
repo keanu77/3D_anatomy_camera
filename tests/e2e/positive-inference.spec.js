@@ -242,3 +242,29 @@ test('an enlarged region holds still while the tracked body trembles', async ({ 
   expect(range.most - range.least, `enlargement between ${range.least} and ${range.most}`).toBeLessThan(0.005);
   await page.locator('#camera-stop').click();
 });
+
+// Reported on a phone: with the foot region chosen and the camera on the feet, a hand model was drawn.
+test('a region that does not list the hands or the head draws neither, though both layers stay switched on', async ({ page }) => {
+  test.setTimeout(180000);
+  // The official portrait shows a face and a hand, as a camera turned on the feet may see one.
+  await shakenPhoto(page, 'portrait.jpg');
+  await storeSettings(page, { focus: 'foot', skull: true, eyes: true, outline: true, hands: true, legs: true, bodyMuscles: true, joints: true,
+    labels: true, showdata: true, performance: 'balanced' });
+  await page.goto('https://127.0.0.1:4173/');
+  await page.locator('#start').click();
+  // Both are tracked; neither is drawn in the foot region.
+  await expect(page.locator('#data')).toContainText(/face\s+tracked/, { timeout: 120000 });
+  await expect(page.locator('#data')).toContainText(/hands\s+(right|left)/, { timeout: 60000 });
+  for (let look = 0; look < 5; look++) {
+    const state = await renderer(page);
+    expect(state.handsShown, `look ${look}: hand models drawn`).toBe(0);
+    expect(state.headShown, `look ${look}: head drawn`).toBe(false);
+    expect(state.labelLayout.map((item) => item.text).filter((text) => /指骨|掌骨|腕骨|頂骨|額骨/.test(text)), `look ${look}: hand or head labels`).toEqual([]);
+    await page.waitForTimeout(300);
+  }
+  // The layers are still the viewer's: leaving the region draws them again.
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('xr_settings')))).toMatchObject({ hands: true, skull: true });
+  await page.locator('#focus [data-focus=none]').click();
+  await expect.poll(async () => (await renderer(page)).handsShown, { timeout: 30000 }).toBeGreaterThan(0);
+  await page.locator('#camera-stop').evaluate((button) => button.click());
+});

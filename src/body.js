@@ -1,3 +1,4 @@
+import { layerShown } from './regions.js';
 import * as THREE from 'three';
 import {landmarkToPoint,torsoBasis,boneBasis,footBasis,segmentVisible,transformPoint,palmNormal,poseContradictsHands} from './basis.js';
 import {createPointFilter} from './one-euro.js';
@@ -200,7 +201,7 @@ export function createBodyRenderer({settings:S,state,getSize,getHeadContext=()=>
       // A hand-frame mesh is a child of a hand rig piece: it needs no pose, only that hand being shown.
       const handFrame=entry.frame==='hand',ownFrame=headFrame||handFrame;
       const ids=entry.frame==='torso'?[11,12,23,24]:entry.landmarks;
-      const selected=enabled&&!!S[entry.layer]&&(!focus||focus.includes(rig))&&(!handFrame||!!S.hands);
+      const selected=enabled&&!!S[entry.layer]&&(!focus||focus.includes(rig))&&(!handFrame||layerShown(S,'hands'));
       const tracked=selected&&(headFrame?!!headContext?.head.found:handFrame?!!getHandContext()?.rigs[rig.hand]?.group.visible:fresh&&segmentVisible(lms,ids)&&(!entry.cervical||neckAligned));
       const basis=tracked?(ownFrame?HEAD_IDENTITY:basisFor(entry,smoothed,torso,hands)):null;
       const target=basis?1:0;
